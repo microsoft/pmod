@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">powershell.exe</PowerShellExe>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetManifestMetadata">
+  </Target>
+  <Target Name="Build" DependsOnTargets="GetBuildVersion">
+    <Message Text="Nuget Package Version = $(NuGetPackageVersion)" />
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted  -command &quot;&amp; { .\autopkg.ps1 -NugetVersion $(NuGetPackageVersion) }&quot;" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Nerdbank.GitVersioning.1.4.6\build\NerdBank.GitVersioning.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Nerdbank.GitVersioning.1.4.6\build\NerdBank.GitVersioning.targets'))" />
+  </Target>
+  <Import Project="..\packages\Nerdbank.GitVersioning.1.4.6\build\NerdBank.GitVersioning.targets" Condition="Exists('..\packages\Nerdbank.GitVersioning.1.4.6\build\NerdBank.GitVersioning.targets')" />
+
+</Project>

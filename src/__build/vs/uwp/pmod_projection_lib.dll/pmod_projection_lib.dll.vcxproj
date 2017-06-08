@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\uwp.cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2091D816-9CFF-4296-B857-656FC1FC3965}</ProjectGuid>
+    <Keyword>DynamicLibrary</Keyword>
+    <ProjectName>pmod_projection_lib_uwp</ProjectName>
+    <RootNamespace>pmod_projection_lib_uwp</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <TargetName>Microsoft.PropertyModel.Library</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\proj\pmod_winrt_projection_lib_files.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\version\Microsoft.PropertyModel.Library.rc" />
+  </ItemGroup>
+  <Import Project="..\uwp.cpp.props" />
+  <Import Project="..\uwp.cpp.props" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SRC_DIR)\winrt\projection_lib\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="$(SRC_DIR)\winrt\idl\Microsoft.PropertyModel.Library.idl">
+      <AdditionalIncludeDirectories>$(SRC_DIR)\public\idl</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">DEBUG</PreprocessorDefinitions>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <MetadataFileName>%(Filename).winmd</MetadataFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <Enumclass>false</Enumclass>
+    </Midl>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\inc;$(SRC_DIR)\public\inc;$(SRC_DIR)\foundation_library;$(SRC_DIR)\winrt\projection;$(IntDir);$(IntDir)..\pmod_projection.dll</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <ModuleDefinitionFile>$(SRC_DIR)\winrt\dll\Microsoft.PropertyModel.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <MergedWinmdFiles Include="$(IntermediateOutputPath)\winmdfiles\Microsoft.PropertyModel.Library.winmd" />
+    <!-- Master winmd Files -->
+    <MasterWinmdFiles Include="$(OutDir)\Microsoft.PropertyModel.Library.winmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pmod.dll\pmod.dll.vcxproj">
+      <Project>{7462512e-f72e-4a01-bcfb-ec97fa553b99}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pmod_lib.dll\pmod_lib.dll.vcxproj">
+      <Project>{1cd46dd7-ee84-424b-8f11-13748ca4780d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pmod_projection.dll\pmod_projection.dll.vcxproj">
+      <Project>{0806fdf3-ab41-421f-b542-f0cd3aaf7c01}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="merge" AfterTargets="ClCompile" Inputs="$(SRC_DIR)\winrt\idl\Microsoft.PropertyModel.Library.idl" Outputs="$(OutDir)\Microsoft.PropertyModel.Library.winmd">
+    <MakeDir Directories="$(IntermediateOutputPath)\winmdfiles" />
+    <Delete Files="$(OutDir)\winmd\Microsoft.PropertyModel.Library.winmd" />
+    <!-- Invoke mdmerge -->
+    <Exec Command="&quot;$(WindowsSdkDir)\bin\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir &quot;$(OutDir)\winmd&quot; -i $(IntermediateOutputPath) -o $(IntermediateOutputPath)\winmdfiles" />
+    <Copy SourceFiles="@(MergedWinmdFiles)" DestinationFolder="$(OutDir)" />
+    <!-- Create the 'Master' winmd file in our Output directory -->
+    <MakeDir Directories="$(OutDir)\winmd" />
+    <Copy SourceFiles="@(MasterWinmdFiles)" DestinationFolder="$(OutDir)\winmd" />
+  </Target>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

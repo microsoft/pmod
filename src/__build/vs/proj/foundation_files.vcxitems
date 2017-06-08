@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{BF1E7953-4DDF-4FA7-A14F-C5B6E6E7E8CA}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ActivationFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\AdapterFactoryFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\AsyncOperationClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\AsyncOperationTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\DebugUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\DictionaryFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumerableClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumerableTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumTypeClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumValue.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationAssert.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationPrivateInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationLibraryInstance.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationTracker.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\GenericAdapterFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\InterfaceAdapterFactoryHost.cpp" />
+	<ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\MethodInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\NamespaceStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\NodeStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectUniqueId.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectDispatchInfoBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectDispatchClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectDispatchInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyInfoProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyValueInternalStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeAdapterFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfoStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\__generated\foundation\FoundationErrorsTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ActivationFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\AdapterFactoryFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\AsyncOperationClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\AsyncOperationTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\DebugUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\DictionaryBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\DictionaryFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumerableClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumerableTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationBaseTracker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumTypeClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\EnumValue.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\FoundationLibraryInstance.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\GenericAdapterFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\InterfaceAdapterFactoryBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\InterfaceAdapterFactoryHost.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\MethodInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\NodeStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\NamespaceStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyInfoProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectDispatchInfoBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectDispatchInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\ObjectDispatchClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\PropertyValueInternalStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeAdapterFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation\TypeInfoStatics.h" />
+  </ItemGroup>
+</Project>

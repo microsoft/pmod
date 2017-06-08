@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C813558C-BCCB-492D-8A25-4249B5ECC48E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\classic\foundation_lib_static.lib\foundation_lib_static.lib.vcxproj">
+      <Project>{a8dba7c9-79d1-4302-8708-7402b6d5bbc3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\classic\foundation_static.lib\foundation_static.lib.vcxproj">
+      <Project>{a38d2041-8e74-4310-b3aa-7b4edb4f96a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\classic\jansson\jansson.vcxproj">
+      <Project>{d77c232b-94d4-4289-84fe-e12d76508b44}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\version\pmodcodegen.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="commands.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\proj\pmodcodegen_files.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <Import Project="..\codegen.cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;PAL_API_STATIC_LIB;FOUNDATION_LIBRARY_STATIC_LIB;FOUNDATION_LIB_LIBRARY_STATIC_LIB;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\inc;$(SRC_DIR)\public\inc;$(SRC_DIR)\codegen\inc;$(SRC_DIR)\jansson\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>runtimeobject.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>api-ms-win-core-winrt-string-l1-1-0.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

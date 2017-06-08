@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\pmod.nuget.targets" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>7D1431B6-E376-41B8-BC9A-356774053EA4</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Id>pmod_lib.net</Id>
+    <Title>pmod_lib for .NET</Title>
+    <Authors>rodrigov</Authors>
+    <Owners>rodrigov</Owners>
+    <Summary>.NET runtime support for pmod library SDK</Summary>
+    <Description>.NET runtime support for pmod library SDK</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Microsoft</Copyright>
+    <Tags>.NET pmod library SDK</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="$(Product)\classic\x86\$(Configuration)\pmod_lib.dll">
+      <TargetPath>build\native\x86</TargetPath>
+    </File>
+    <File Include="pmod_lib.net.targets">
+      <TargetPath>build\dotnet</TargetPath>
+    </File>
+    <Content Include="pmod_lib.net.txt" />
+  </ItemGroup>
+</Project>

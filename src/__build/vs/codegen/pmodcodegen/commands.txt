@@ -1,0 +1,58 @@
+
+-pschema=..\..\..\..\..\tests\src\schemas\test_model.schema -pgrammars=..\..\..\..\..\src\codegen\parser\csharp\grammars\ -poutput=..\..\..\..\..\bin\tests\__generated\TestModel.schema.json
+-pschema=..\..\..\unitTest\schema\UnitTestViewModel.schema -pgrammars=..\..\..\codegen\gpengine\grammars\ -poutput=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -pinc_dir=inc -pschema_attributes=..\..\..\unitTest\schema\UnitTestModelAttributes.json
+-pschema=..\..\..\foundation_library\schema\FoundationErrors.schema -pgrammars=..\..\..\codegen\gpengine\grammars\ -poutput=..\..\..\__codegen\foundation\__generated\FoundationErrorsSchema.json
+-pschema=..\..\..\core_modules\model_inspector\schema\model_inspector.schema -pgrammars=..\..\..\codegen\gpengine\grammars\ -poutput=..\..\..\__codegen\core_modules\model_inspector\__generated\ModelInspector.schema.json
+-printParameters -pschema=I:\tekchile\pmodfx\src\__build\vs\LoggerViewModelSchemaStub\..\..\..\logger_viewmodel\schema\LoggerViewModel.schema -pcheckdependencies=false -pschema_attributes= -pgrammars=I:\tekchile\pmod.oss\bin\Product\x86\Debug\ -poutput=I:\tekchile\pmodfx\src\__build\vs\LoggerViewModelSchemaStub\..\..\..\..\bin\__generated\LoggerViewModel\LoggerViewModel.schema.json -pgenerated_dir=I:\tekchile\pmodfx\src\__build\vs\LoggerViewModelSchemaStub\..\..\..\..\bin\__generated\LoggerViewModel
+
+gentypeinfo -pmodel=..\..\..\__codegen\foundation\__generated\FoundationLoggerSchema.json -pprivate=true -penumUniqueValues=true -pmodelInc=..\..\..\public\inc\foundation\foundation_logger_type_info.h -pmodelSrc=..\..\..\__codegen\foundation\__generated\FoundationErrorsTypeInfo.g.cpp -pmodelapi=FOUNDATION_API
+gentypeinfo -pmodel=..\..\..\__codegen\foundation\__generated\FoundationErrorsSchema.json -pmodelInc=..\..\..\public\inc\foundation\foundation_errors_.h -pmodelSrc=..\..\..\__codegen\foundation\__generated\FoundationErrorsTypeInfo.g.cpp -pmodelapi=FOUNDATION_API -penumPrefixValues=false
+
+gentypeinfo -pmodel=..\sample\model.bin -pmodelInc=..\sample\UnitTestModelTypeInfo.g.h -pmodelSrc=..\sample\modelInc.g.cpp -pmodelapi=MODEL_API -pnamespacelookup=MyNamespace:SampleModel,MyRefNamespace:SampleRefModel -pmodelIncReferences=modelRefInc.g.h
+
+genmodeladapter -pmodel=..\..\..\..\..\bin\tests\__generated\test_model.json -pmodeladapterapi=MODEL_ADAPTER_API -pmodelAdapterInc=..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.h -pmodelAdapterSrc=..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.cpp
+
+genmodeladapter -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pmodeladapterapi=MODEL_ADAPTER_API -pmodelAdapterInc=..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.h -pmodelAdapterSrc=..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.cpp -pnamespacelookup=UnitTest.Model:UnitTestModel -pmodelIncReferences=UnitTestModelTypeInfo.g.h
+genmodelptr -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pmodelPtrInc=..\..\..\..\..\bin\tests\__generated\UnitTestModelPtr.g.h -pnamespacelookup=UnitTest.Model:UnitTestModel -pmodelAdapterInc=TestModelInterfaces.g.h
+genmodelptr -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -pmodelPtrInc=..\..\..\..\..\bin\tests\__generated\UnitTestViewModelPtr.g.h -pnamespacelookup=UnitTest.Model:UnitTestViewModel -pmodelAdapterInc=UnitTestModelViewInterfaces.g.h
+gencpptemplate -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pmodelCppTemplateInc=..\..\..\..\..\bin\tests\__generated\TestModelInternal.g.h -pnamespacelookup=UnitTest.Model:UnitTestModel -pmodelIncReferences=UnitTestModelTypeInfo.g.h -pdelegateTypeInfoOption=wrapper
+
+genfastcpptemplate -pmodel=..\..\..\..\..\bin\tests\__generated\test_model.json -pmodelCppTemplateInc=..\..\..\..\..\bin\tests\__generated\TestModelInternal.g.h -pnamespacelookup=UnitTest.Model:UnitTestModel -pmodelIncReferences=UnitTestModelTypeInfo.g.h,ICustomDefinitions.h -puseAsyncOperationClassPtr=true -pgenerateMethodInternal=true -pdelegateTypeInfoOption=interface -pmodelAdapterInc=..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.h -pmodelFastCppTemplateInc=..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.h -pmodelFastInterfaceHeaderInc=..\..\..\..\..\bin\tests\__generated\TestModelPrivateInterfaces.g.h
+genimplcpptemplate -pmodel=..\..\..\..\..\bin\tests\__generated\test_model.json -pimplCppTemplateInc=..\..\..\..\..\bin\tests\__generated\TestModelImplInternal.g.h 
+
+gentypeinfo -pmodel=..\..\..\..\..\bin\tests\__generated\TestModel.schema.json -pmodelapi=MODEL_API -pmodelInc=..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.h -pmodelSrc=..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.cpp
+
+gentypeinfo -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pmodelapi=MODEL_API -pmodelInc=..\..\..\..\..\bin\tests\__generated\UnitTestModelTypeInfo.g.h -pmodelSrc=..\..\..\..\..\bin\tests\__generated\UnitTestModelTypeInfo.g.cpp -pnamespacelookup=UnitTest.Model:UnitTestModel
+gentypeinfo -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -pmodelapi=VIEW_MODEL_API -pmodelInc=..\..\..\..\..\bin\tests\__generated\UnitTestViewModelTypeInfo.g.h -pmodelSrc=..\..\..\..\..\bin\tests\__generated\UnitTestViewModelTypeInfo.g.cpp -pnamespacelookup=UnitTest.Model:UnitTestModel,UnitTest.ViewModel:UnitTestViewModel -pmodelIncReferences=UnitTestModelTypeInfo.g.h
+genmodeladapter -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -pmodeladapterapi=VIEW_MODEL_ADAPTER_API -pmodelAdapterInc=..\..\..\..\..\bin\tests\__generated\viewModelAdapterInc.g.h -pmodelAdapterSrc=..\..\..\..\..\bin\tests\__generated\viewModelAdapterInc.g.cpp -pnamespacelookup=UnitTest.Model:UnitTestModel,UnitTest.ViewModel:UnitTestViewModel -pmodelIncReferences=UnitTestModelTypeInfo.g.h,viewModelInc.g.h -pmodelAdapterIncReferences=TestModelInterfaces.g.h
+
+
+genwinrtadapter -pmodel=..\..\..\..\..\bin\tests\__generated\test_model.json -pmodelAdapterIdl=..\..\..\..\..\bin\tests\__generated\TestModel.g.idl -pmodelAdapterSrc=..\..\..\..\..\bin\tests\__generated\TestModel.winrt.g.cpp
+genwinrtadapter -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -pmodelAdapterIdl=..\..\..\..\..\bin\tests\__generated\UnitTest.ViewModel.g.idl -pmodelAdapterSrc=..\..\..\..\..\bin\tests\__generated\UnitTest.ViewModel.g.cpp
+
+gencsharpclasses -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pcsharpClassSrc=..\..\..\..\..\bin\tests\__generated\UnitTestModel.g.cs -pcsharpClassEnumsSrc=..\..\..\..\..\bin\tests\__generated\UnitTestModel.Enums.g.cs
+
+gennsadapter -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pmodelNSAdapterInc=..\..\..\..\..\bin\tests\__generated\NSUnitTestModel.g.h -pmodelNSAdapterSrc=..\..\..\..\..\bin\tests\__generated\NSUnitTestModel.g.mm -pmodelIncReferences=UnitTestModelTypeInfo.g.h
+
+genjava -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pjavapackagename=com.microsoft.unittestmodel -pjavasourcedir=..\..\..\..\..\bin\tests\__generated\java\model\
+
+gennetinterop -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pnetInteropSrc=..\..\..\..\..\bin\tests\__generated\UnitTest.Model.Interop.g.cs
+gennetinterop -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -pnetInteropSrc=..\..\..\..\..\bin\tests\__generated\UnitTest.ViewModel.Interop.g.cs
+
+genjsproxy -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pjsProxyFile=..\..\..\..\..\bin\tests\__generated\UnitTestModel.g.js
+genkojsmodel -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pjsProxyFile=..\..\..\..\..\bin\tests\__generated\UnitTestKoModel.g.js
+
+gencsharptypeinfo -pmodel=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -pcsharpTypeInfoSrc=..\..\..\..\..\bin\tests\__generated\UnitTestModel.TypeInfo.g.cs -pnamespacelookup={namespace}:{namespace}.TypeInfo_
+
+
+-pconfig_file=..\..\..\__codegen\unitTest\codegen_model.json -pmodelschema=..\..\..\..\..\bin\tests\__generated\UnitTestModel.json -poutputdir=..\..\..\..\..\bin\tests\__generated\ -pproductname=UnitTestModel
+-pconfig_file=..\..\..\__codegen\unitTest\codegen_viewmodel.json -pmodelschema=..\..\..\..\..\bin\tests\__generated\UnitTestViewModel.json -poutputdir=..\..\..\..\..\bin\tests\__generated\ -pproductname=UnitTestViewModel
+
+
+
+-pconfig_file=..\..\..\..\..\tests\src\schemas\test_model_codegen_config.json -pmodelschema=..\..\..\..\..\bin\tests\__generated\test_model.json -poutputdir=..\..\..\..\..\bin\tests\__generated\ -pproductname=TestModel
+-pconfig_file=..\..\..\..\public\codegen\util\codegen.json -pmodelschema=..\..\..\..\..\bin\Product\__generated\Proxy\Proxy.schema.json -poutputdir=..\..\..\..\..\bin\Product\__generated\Proxy -pproductname=Proxy
+
+genwinrtadapter -pmodel=..\..\..\..\..\bin\Product\__generated\Proxy\Proxy.schema.json -pmodelAdapterIdl=..\..\..\..\..\bin\Product\__generated\Proxy\pmod.proxy.g.idl -pmodelAdapterSrc=..\..\..\..\..\bin\Product\__generated\Proxy\Proxy.winrt.g.cpp -pwinrtNamespacelookup=pmod.proxy:Microsoft.PropertyModel.Proxy
+genimplcpptemplate -pmodel=..\..\..\..\..\bin\Product\__generated\Proxy\Proxy.schema.json -pimplCppTemplateInc=..\..\..\..\..\bin\Product\__generated\Proxy\ProxyImplInternal.g.h 
+

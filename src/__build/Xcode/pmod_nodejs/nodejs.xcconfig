@@ -1,0 +1,15 @@
+//+-----------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation. All rights reserved.
+//
+// Module name : common.xcconfig
+// Namespace   : -
+//------------------------------------------------------------------------------
+
+NODE_GYP=/var/folders/n3/6cwrwl3129q8s22b18pxvjwm0000gn/T/.node-gyp/5.8.0/
+OTHER_CFLAGS = $(OTHER_CFLAGS) -fvisibility=default -DFOUNDATION_LIBRARY_STATIC_LIB
+
+
+HEADER_SEARCH_PATHS = ../../../public/inc $(NODE_GYP)include/node
+
+OTHER_LDFLAGS = -undefined dynamic_lookup -Wl,-search_paths_first
+EXECUTABLE_EXTENSION = node

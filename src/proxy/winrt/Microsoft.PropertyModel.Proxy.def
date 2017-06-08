@@ -1,0 +1,7 @@
+; Microsoft.PropertyModel.Proxy.def : Declares the module parameters.
+
+LIBRARY
+
+EXPORTS
+	DllGetActivationFactory PRIVATE
+	

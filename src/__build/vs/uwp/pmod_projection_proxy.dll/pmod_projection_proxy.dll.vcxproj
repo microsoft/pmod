@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\uwp.cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{961A6535-257A-4229-B880-F39B1BE6510E}</ProjectGuid>
+    <Keyword>DynamicLibrary</Keyword>
+    <ProjectName>pmod_projection_proxy_uwp</ProjectName>
+    <RootNamespace>pmod_projection_proxy_uwp</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <TargetName>Microsoft.PropertyModel.Proxy</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="..\uwp.cpp.props" />
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\version\Microsoft.PropertyModel.Proxy.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SRC_DIR)\proxy\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\Product\__generated\Proxy\Proxy.winrt.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\proxy\winrt\dllmain.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="$(SRC_DIR)\proxy\winrt\Proxy.idl">
+      <AdditionalIncludeDirectories>$(SRC_DIR)\public\idl;$(REPO_ROOT)\bin\Product\__generated\Proxy</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">DEBUG</PreprocessorDefinitions>
+      <HeaderFileName>Microsoft.PropertyModel.Proxy.h</HeaderFileName>
+      <MetadataFileName>Microsoft.PropertyModel.Proxy.winmd</MetadataFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <Enumclass>false</Enumclass>
+    </Midl>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32_LEAN_AND_MEAN;Proxy_MODEL_API_IMPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\inc;$(SRC_DIR)\public\inc;$(REPO_ROOT)\bin\Product\__generated\Proxy;$(IntDir);$(IntDir)..\pmod_projection.dll</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <ModuleDefinitionFile>$(SRC_DIR)\proxy\winrt\Microsoft.PropertyModel.Proxy.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <MergedWinmdFiles Include="$(IntermediateOutputPath)\winmdfiles\Microsoft.PropertyModel.Proxy.winmd" />
+    <!-- Master winmd Files -->
+    <MasterWinmdFiles Include="$(OutDir)\Microsoft.PropertyModel.Proxy.winmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pmod.dll\pmod.dll.vcxproj">
+      <Project>{7462512e-f72e-4a01-bcfb-ec97fa553b99}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pmod_proxy.dll\pmod_proxy.dll.vcxproj">
+      <Project>{7a0dd678-73d7-485a-a7d5-42816d377325}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="merge" AfterTargets="ClCompile" Inputs="$(REPO_ROOT)\bin\Product\__generated\Proxy\pmod.proxy.g.idl" Outputs="$(OutDir)\Microsoft.PropertyModel.Proxy.winmd">
+    <MakeDir Directories="$(IntermediateOutputPath)\winmdfiles" />
+    <Delete Files="$(OutDir)\winmd\Microsoft.PropertyModel.Proxy.winmd" />
+    <!-- Invoke mdmerge -->
+    <Exec Command="&quot;$(WindowsSdkDir)\bin\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir &quot;$(OutDir)\winmd&quot; -i $(IntermediateOutputPath) -o $(IntermediateOutputPath)\winmdfiles" />
+    <Copy SourceFiles="@(MergedWinmdFiles)" DestinationFolder="$(OutDir)" />
+    <!-- Create the 'Master' winmd file in our Output directory -->
+    <MakeDir Directories="$(OutDir)\winmd" />
+    <Copy SourceFiles="@(MasterWinmdFiles)" DestinationFolder="$(OutDir)\winmd" />
+  </Target>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

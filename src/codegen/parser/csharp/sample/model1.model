@@ -1,0 +1,60 @@
+
+
+enum MyEnum
+{
+    Value1 = 10,
+    Value2 = 20,
+}
+
+enum MyEnum2
+{
+    Value1,
+    Value2,
+}
+
+interface IFoo
+{
+    int MyIntProperty { get; set; }
+    string MyStringProperty { get; set; }
+    bool MyBooleanProperty { get; set; }
+    MyEnum MyEnumProperty { get; set; }
+
+    [PropertyAttribute(IsParent = true,IsAncestor = false)]
+    IBar MyParent { get; }
+
+    [CommandAttribute(Parameter = typeof(IFoo),Result = typeof(IBar))]
+    ICommand AddBar { get; }
+
+    [CollectionAttribute(ItemType = typeof(int))]
+    ICollection MyInCollection { get; }
+
+    [CollectionAttribute(ItemType = typeof(IBar))]
+    ICollection MyCollection { get; }
+
+    ICollection MySimpleCollection { get; }
+
+    void MyMethod(string strValue, int intValue,IBar bar);
+    void MySimpleMethod();
+}
+
+interface IFoo2 : IFoo
+{
+    int MyFoo2Property { get; set; }
+}
+
+interface IFoo3
+{
+    MyRefNamespace.IRefModel MyrefModel { get; }
+}
+
+interface IFoo4 : MyRefNamespace.IRefModel
+{
+    int Foo3Property { get; set; }
+}
+
+
+[ModelAttribute(SourceType = typeof(IFoo))]
+interface IFooView
+{
+    int MyViewProperty { get; set; }
+}

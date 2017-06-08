@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\pmod.nuget.targets" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>ec89c3e1-551a-4da2-8b53-eea4bb04885e</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Id>PMODCodeGenPackage</Id>
+    <Title>PMOD CodeGenPackage</Title>
+    <Authors>rodrigov</Authors>
+    <Owners>rodrigov</Owners>
+    <Summary>PMOD code generation package</Summary>
+    <Description>Parser and Codegen tools for PMOD SDK</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Microsoft</Copyright>
+    <Tags>CodeGenPackage</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="$(Product)\$(Configuration)\Microsoft.PropertyModel.Codegen.dll">
+      <TargetPath>lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10</TargetPath>
+    </File>
+    <File Include="$(Product)\x86\$(Configuration)\pmodcodegentask.exe">
+      <TargetPath>tools</TargetPath>
+    </File>
+    <File Include="$(Product)\x86\$(Configuration)\pmodcodegen.exe">
+      <TargetPath>tools</TargetPath>
+    </File>
+    <File Include="$(Product)\x86\$(Configuration)\pmodschemaparser.exe">
+      <TargetPath>tools</TargetPath>
+    </File>
+    <File Include="$(REPO_ROOT)\src\codegen\parser\csharp\grammars\CSharp_2.0_r7.cgt">
+      <TargetPath>tools</TargetPath>
+    </File>
+    <File Include="$(REPO_ROOT)src\codegen\util\codegen.json">
+      <TargetPath>tools</TargetPath>
+    </File>
+    <File Include="PMODCodeGenPackage.targets">
+      <TargetPath>build\dotnet</TargetPath>
+    </File>
+    <Content Include="CodeGenPackage.txt" />
+  </ItemGroup>
+</Project>

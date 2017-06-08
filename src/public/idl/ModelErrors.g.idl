@@ -1,0 +1,41 @@
+#include "sdkddkver.h"
+
+namespace Microsoft.PropertyModel
+{
+
+    // Forward declarations
+
+
+    // Enum Types declarations
+    [version(NTDDI_WIN8)]
+    typedef [v1_enum] enum Errors
+    {
+		E_PROPERTY_NOT_FOUND = 0x80f70100,
+		E_PROPERTY_NOT_DEFINED = 0x80f70101,
+		E_PROPERTY_READ_ONLY = 0x80f70102,
+		E_COLLECTION_READ_ONLY = 0x80f70103,
+		E_EVENT_NOT_DEFINED = 0x80f70104,
+		E_METHOD_NOT_DEFINED = 0x80f70105,
+		E_PROPERTY_EXIST = 0x80f70106,
+		E_COMMAND_NOT_ENABLED = 0x80f70107,
+		E_PROXY_DISPOSED = 0x80f70400,
+		E_PROXY_NO_SOURCE = 0x80f70401,
+		E_PROXY_NO_FACTORY = 0x80f70402,
+
+    }Errors;
+
+
+
+
+
+    // Declare Generic IReference
+    declare
+    {
+      interface Windows.Foundation.IReference<Errors>;
+ 
+    }
+
+    // Interface Types declarations
+
+
+}

@@ -1,0 +1,156 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25115.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmod", "android\pmod\pmod.vcxproj", "{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmod_lib", "android\pmod_lib\pmod_lib.vcxproj", "{84335453-53FB-41DE-BDD0-151D3549C3B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D} = {85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foundation_files", "proj\foundation_files.vcxitems", "{BF1E7953-4DDF-4FA7-A14F-C5B6E6E7E8CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foundation_library_files", "proj\foundation_library_files.vcxitems", "{A2124A67-39E4-4E84-8649-F0B80C8EE1A7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foundation_pal_files", "proj\foundation_pal_files.vcxitems", "{CC9134D2-B81B-41F9-A978-C23F031A60E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jansson_files", "proj\jansson_files.vcxitems", "{CABB465B-FE94-445E-9724-AE64F66DC545}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jni_files", "proj\jni_files.vcxitems", "{32093866-08AA-45B1-B9D5-4225214E87E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "model_files", "proj\model_files.vcxitems", "{BAF5DDE6-3664-4AB4-A432-E27C97264186}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "model_library_files", "proj\model_library_files.vcxitems", "{308BEC37-490D-497D-99DF-6A6D281C3307}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "src_files", "proj\src_files.vcxitems", "{7EE50E0E-9F9F-4299-A2BC-A7F75013B8C3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foundation_pal_files_android", "proj\foundation_pal_files_android.vcxitems", "{B7A88D64-68DE-4975-9A33-27C27FFDFFE9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pinvoke_files", "proj\pinvoke_files.vcxitems", "{FB04A704-73CF-4E86-8F8B-73B0A161858C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared Projects", "Shared Projects", "{47751A6F-9386-4278-BF3B-BBE3EA8E821E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.PropertyModel.Net", "csharp\Microsoft.PropertyModel.Net\Microsoft.PropertyModel.Net.csproj", "{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		proj\jansson_files.vcxitems*{cabb465b-fe94-445e-9724-ae64f66dc545}*SharedItemsImports = 9
+		proj\foundation_pal_files.vcxitems*{cc9134d2-b81b-41f9-a978-c23f031a60e5}*SharedItemsImports = 9
+		proj\model_library_files.vcxitems*{84335453-53fb-41de-bdd0-151d3549c3b6}*SharedItemsImports = 4
+		proj\foundation_library_files.vcxitems*{84335453-53fb-41de-bdd0-151d3549c3b6}*SharedItemsImports = 4
+		proj\src_files.vcxitems*{84335453-53fb-41de-bdd0-151d3549c3b6}*SharedItemsImports = 4
+		proj\jansson_files.vcxitems*{84335453-53fb-41de-bdd0-151d3549c3b6}*SharedItemsImports = 4
+		proj\foundation_pal_files_android.vcxitems*{b7a88d64-68de-4975-9a33-27c27ffdffe9}*SharedItemsImports = 9
+		proj\pinvoke_files.vcxitems*{fb04a704-73cf-4e86-8f8b-73b0a161858c}*SharedItemsImports = 9
+		proj\model_library_files.vcxitems*{308bec37-490d-497d-99df-6a6d281c3307}*SharedItemsImports = 9
+		proj\pinvoke_files.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\foundation_files.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\foundation_pal_files_android.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\foundation_pal_files.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\model_files.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\jni_files.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\src_files.vcxitems*{85bf84e2-8cde-44cb-9830-234a7bd1be7d}*SharedItemsImports = 4
+		proj\foundation_files.vcxitems*{bf1e7953-4ddf-4fa7-a14f-c5b6e6e7e8ca}*SharedItemsImports = 9
+		proj\src_files.vcxitems*{7ee50e0e-9f9f-4299-a2bc-a7f75013b8c3}*SharedItemsImports = 9
+		proj\foundation_library_files.vcxitems*{a2124a67-39e4-4e84-8649-f0b80c8ee1a7}*SharedItemsImports = 9
+		proj\model_files.vcxitems*{baf5dde6-3664-4ab4-a432-e27c97264186}*SharedItemsImports = 9
+		proj\jni_files.vcxitems*{32093866-08aa-45b1-b9d5-4225214e87e5}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Debug|Xamarin.Droid = Debug|Xamarin.Droid
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		Release|Xamarin.Droid = Release|Xamarin.Droid
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|ARM.Build.0 = Debug|ARM
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|ARM64.Build.0 = Debug|ARM64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|x64.ActiveCfg = Debug|x64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|x64.Build.0 = Debug|x64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|x86.ActiveCfg = Debug|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|x86.Build.0 = Debug|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Debug|Xamarin.Droid.ActiveCfg = Debug|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|Any CPU.ActiveCfg = Release|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|ARM.ActiveCfg = Release|ARM
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|ARM.Build.0 = Release|ARM
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|ARM64.ActiveCfg = Release|ARM64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|ARM64.Build.0 = Release|ARM64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|x64.ActiveCfg = Release|x64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|x64.Build.0 = Release|x64
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|x86.ActiveCfg = Release|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|x86.Build.0 = Release|x86
+		{85BF84E2-8CDE-44CB-9830-234A7BD1BE7D}.Release|Xamarin.Droid.ActiveCfg = Release|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|ARM.ActiveCfg = Debug|ARM
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|ARM.Build.0 = Debug|ARM
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|ARM64.Build.0 = Debug|ARM64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|x64.ActiveCfg = Debug|x64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|x64.Build.0 = Debug|x64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|x86.ActiveCfg = Debug|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|x86.Build.0 = Debug|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Debug|Xamarin.Droid.ActiveCfg = Debug|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|Any CPU.ActiveCfg = Release|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|ARM.ActiveCfg = Release|ARM
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|ARM.Build.0 = Release|ARM
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|ARM64.ActiveCfg = Release|ARM64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|ARM64.Build.0 = Release|ARM64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|x64.ActiveCfg = Release|x64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|x64.Build.0 = Release|x64
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|x86.ActiveCfg = Release|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|x86.Build.0 = Release|x86
+		{84335453-53FB-41DE-BDD0-151D3549C3B6}.Release|Xamarin.Droid.ActiveCfg = Release|x86
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|ARM.ActiveCfg = Debug|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|ARM.Build.0 = Debug|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|x64.Build.0 = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|x86.Build.0 = Debug|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|Xamarin.Droid.ActiveCfg = Debug|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Debug|Xamarin.Droid.Build.0 = Debug|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|ARM.ActiveCfg = Release|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|ARM.Build.0 = Release|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|ARM64.Build.0 = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|x64.ActiveCfg = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|x64.Build.0 = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|x86.ActiveCfg = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|x86.Build.0 = Release|Any CPU
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|Xamarin.Droid.ActiveCfg = Release|Xamarin.Droid
+		{D9AA7BDE-C737-4271-A311-3E783D4A4FF9}.Release|Xamarin.Droid.Build.0 = Release|Xamarin.Droid
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF1E7953-4DDF-4FA7-A14F-C5B6E6E7E8CA} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{A2124A67-39E4-4E84-8649-F0B80C8EE1A7} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{CC9134D2-B81B-41F9-A978-C23F031A60E5} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{CABB465B-FE94-445E-9724-AE64F66DC545} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{32093866-08AA-45B1-B9D5-4225214E87E5} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{BAF5DDE6-3664-4AB4-A432-E27C97264186} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{308BEC37-490D-497D-99DF-6A6D281C3307} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{7EE50E0E-9F9F-4299-A2BC-A7F75013B8C3} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{B7A88D64-68DE-4975-9A33-27C27FFDFFE9} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+		{FB04A704-73CF-4E86-8F8B-73B0A161858C} = {47751A6F-9386-4278-BF3B-BBE3EA8E821E}
+	EndGlobalSection
+EndGlobal

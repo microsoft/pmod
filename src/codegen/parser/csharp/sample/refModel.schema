@@ -1,0 +1,6 @@
+{
+"namespace":"MyRefNamespace",
+"models":[
+"refModel.model"
+]
+}

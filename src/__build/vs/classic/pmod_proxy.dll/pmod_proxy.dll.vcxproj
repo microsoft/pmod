@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DA39FF92-6515-4AFF-BB92-07026341F957}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pmod.dll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <TargetName>pmod_proxy</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\proj\pmod_proxy_files.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <Import Project="..\classic.cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;FOUNDATION_LIB_LIBRARY_STATIC_LIB;PMOD_LIB_LIBRARY_STATIC_LIB;Proxy_MODEL_API_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\inc;$(SRC_DIR)\public\inc;$(SRC_DIR)\foundation;$(SRC_DIR)\foundation_library;$(SRC_DIR)\model_library;..\..\..\..\..\bin\Product\__generated</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SRC_DIR)\proxy\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\pal\win32\TimerService.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pmod.dll\pmod.dll.vcxproj">
+      <Project>{d60dd8f7-55f3-4336-955c-42633acc4c7c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,36 @@
+<Project DefaultTargets="codegen" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+
+  <PropertyGroup>
+
+    <Product>..\..\..\..\bin\Product</Product>
+    <pmodschemaparser>$(Product)\x86\Debug\pmodschemaparser.exe</pmodschemaparser>
+    <pmodcodegen>$(Product)\x86\Debug\pmodcodegen.exe</pmodcodegen>
+    <src>..\..\..</src>
+    <foundation_schema>$(src)\foundation\schema</foundation_schema>
+    
+    <GrammarsDir>$(src)\codegen\parser\csharp\grammars\</GrammarsDir>
+
+    <!-- Foundation Errors properties-->
+    <FoundationErrorsSchema>$(foundation_schema)\FoundationErrors.schema</FoundationErrorsSchema>
+    <FoundationErrorsIncFile>$(src)\public\inc\foundation\errors.h</FoundationErrorsIncFile>
+    <FoundationErrorsSrcFile>$(src)\__generated\foundation\FoundationErrorsTypeInfo.g.cpp</FoundationErrorsSrcFile>
+    <FoundationErrorsSchemaJson>$(Product)\__generated\FoundationErrorsSchema.json</FoundationErrorsSchemaJson>
+
+  </PropertyGroup>
+
+  <Target Name="errors">
+
+
+    <!-- Generate Foundation Error Types -->
+    <Exec Command="$(pmodschemaparser) -pschema=$(FoundationErrorsSchema) -pgrammars=$(GrammarsDir) -poutput=$(FoundationErrorsSchemaJson)"/>
+    <Exec Command="$(pmodcodegen) gentypeinfo -pregisterEntryPoint=register_foundation_errors_type_info -pmodel=$(FoundationErrorsSchemaJson) -pprivate=true -pmodelInc=$(FoundationErrorsIncFile) -pmodelSrc=$(FoundationErrorsSrcFile) -pmodelapi=FOUNDATION_API -penumPrefixValues=false"/>
+    <Exec Command="$(pmodcodegen) genwinrtadapter -pmodelFactoryEntries=_foundationErrorsFactoryEntries -pmodel=$(FoundationErrorsSchemaJson) -pmodelAdapterIdl=$(src)\public\winrt\idl\FoundationErrors.g.idl -pmodelAdapterSrc=$(src)\__generated\winrt\FoundationErrors.winrt.g.cpp -pnamespacelookup=foundation:Microsoft.PropertyModel" />
+
+  </Target>
+  
+  <Target Name="codegen">
+    <CallTarget Targets="errors" />
+  </Target>
+
+</Project>

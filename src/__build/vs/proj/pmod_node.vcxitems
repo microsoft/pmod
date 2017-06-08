@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\Addon.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\AsyncOperationWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\CommandWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\DictionaryWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\DispatcherWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\InspectableBaseWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\NodeJsHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObjectWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObservableCollectionWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObservableObjectWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObjectDispatchWrap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\Statics.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\AsyncOperationWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\CommandWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\DictionaryWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\DispatcherWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\InspectableBaseWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\NodeJsHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObjectWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObservableCollectionWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObservableObjectWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\ObjectDispatchWrap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\nodejs\Statics.h" />
+  </ItemGroup>
+</Project>

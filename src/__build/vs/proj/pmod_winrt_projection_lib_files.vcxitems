@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{9101BBF8-AB46-4197-BFE4-1230AADB34BD}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoAsyncOperationFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoAsyncOperationTypeInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableCollectionFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableCollectionInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCollectionViewModelAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCollectionViewModelFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandViewModelAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandViewModelFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoEnumTypeInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoModelOverridesBaseAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoMultiSourceCollectionViewModelAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoMultiSourceCollectionViewModelFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoMultiSourceViewModelAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoMultiSourceViewModelFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObjectDispatchFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableObjectFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableObjectInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelFactoryAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelFactoryFactory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\dllLibrary\dllmain.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection\comModule.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoAsyncOperationFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoAsyncOperationTypeInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableCollectionFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableCollectionInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCollectionViewModelFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandViewModelFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoEnumTypeInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoMultiSourceCollectionViewModelFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoMultiSourceViewModelFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableObjectFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableObjectInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoViewModelFactoryFactory.cpp" />
+
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoAsyncOperationClassAdapter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableCollectionClassAdapter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCommandClassAdapter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoObservableObjectClassAdapter.cpp" />
+
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoCoreLibraryAdapterFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\winrt\projection_lib\MoLibraryFactory.cpp" />
+
+  </ItemGroup>
+
+</Project>

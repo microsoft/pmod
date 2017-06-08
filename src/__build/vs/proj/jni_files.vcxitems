@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{32093866-08AA-45B1-B9D5-4225214E87E5}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\AsyncOperationImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\CanExecuteChangedEventArgs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JniActivationFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\CommandImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\CompletedEventArgs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\Dictionary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\Dispatcher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\EventModelEventArgs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\FactoryObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\InspectableObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableListImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\Logger.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\NotifyCollectionChangedEventArgs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\FoundationObjectImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObjectFactoryImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObjectTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableCollectionImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableObjectImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableObjectInfoImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyChangedEventArgs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyInfoImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyTypeInfoImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyValueImpl.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JClass.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JniLoadLibrary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JniCoreUtils.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JniUtility.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JString.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JVMEnv.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JsonUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\AsyncOperationImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\CanExecuteChangedEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\CommandImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\CompletedEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\Dispatcher.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\EventModelEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\FactoryObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\InspectableObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableListImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\NotifyCollectionChangedEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\FoundationObjectImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableCollectionImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObjectFactoryImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObjectTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableObjectImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\ObservableObjectInfoImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyChangedEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyInfoImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyTypeInfoImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\PropertyValueImpl.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JCallbackBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JClass.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\jniConnection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\jniCoreUtils.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JniUtility.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JString.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\java\pmod\jni\JVMEnv.h" />
+  </ItemGroup>
+</Project>

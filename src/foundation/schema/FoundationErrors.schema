@@ -1,0 +1,7 @@
+{
+"namespace":"foundation",
+"typeId":150,
+"models":[
+"FoundationErrors.cs"
+]
+}

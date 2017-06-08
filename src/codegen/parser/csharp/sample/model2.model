@@ -1,0 +1,5 @@
+
+interface IBar
+{
+    int MyBarProperty { get; set; }
+}

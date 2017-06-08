@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="InjectReference_53BD31CC-7A76-4C45-8B05-BF5B15C156B6" BeforeTargets="ResolveAssemblyReferences">
+    <ItemGroup Condition=" '$(Platform)' == 'x86' ">
+      <Content Include="$(MSBuildThisFileDirectory)..\..\build\native\x86\pmod.dll">
+        <Link>pmod.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="$(MSBuildThisFileDirectory)..\..\build\native\x86\pmod_pinvoke.dll">
+        <Link>pmod_pinvoke.dll</Link>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <ResolveAssemblyReferencesDependsOn>$(ResolveAssemblyReferencesDependsOn);InjectReference_53BD31CC-7A76-4C45-8B05-BF5B15C156B6</ResolveAssemblyReferencesDependsOn>
+  </PropertyGroup>
+
+</Project>

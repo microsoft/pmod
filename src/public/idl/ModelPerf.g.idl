@@ -1,0 +1,83 @@
+#include "sdkddkver.h"
+
+namespace Microsoft.PropertyModel
+{
+
+    // Forward declarations
+
+
+    // Enum Types declarations
+    [version(NTDDI_WIN8)]
+    typedef [v1_enum] enum Core_PerfId
+    {
+		Object_GetContent = 0x300,
+		PropertyModel_GetProperty = 0x301,
+		PropertyModel_SetProperty = 0x302,
+		PropertyModel_SetPropertyInternal = 0x303,
+		PropertyModel_Invoke = 0x304,
+		PropertyModel_InvokeCallback = 0x305,
+		PropertyModel_GetProperties = 0x306,
+		PropertyModel_FirePropertyChanged = 0x307,
+		PropertyModel_FireBatchPropertyChanged = 0x308,
+		PropertyModel_FireEventModel = 0x309,
+		CollectionModel_GetCount = 0x30a,
+		CollectionModel_GetItem = 0x30b,
+		CollectionModel_FireNotifyCollectionChanged = 0x30c,
+		CommandModel_Execute = 0x30d,
+		CommandModel_ExecuteCallback = 0x30e,
+		CommandModel_CanExecute = 0x30f,
+		CommandModel_FireCanExecuteChanged = 0x310,
+		BindingBase_GetValue = 0x311,
+		BindingBase_FireValueChanged = 0x312,
+
+    }Core_PerfId;
+
+    [version(NTDDI_WIN8)]
+    typedef [v1_enum] enum ProxyFactory_PerfId
+    {
+		Object_GetContent = 0x350,
+		PropertyModel_GetProperty = 0x351,
+		PropertyModel_SetProperty = 0x352,
+		PropertyModel_Invoke = 0x353,
+		PropertyModel_GetProperties = 0x354,
+		CollectionModel_GetCount = 0x355,
+		CollectionModel_GetItem = 0x356,
+		CommandModel_Execute = 0x357,
+		CommandModel_CanExecute = 0x358,
+
+    }ProxyFactory_PerfId;
+
+    [version(NTDDI_WIN8)]
+    typedef [v1_enum] enum CoreProxyFactory_PerfId
+    {
+		Object_GetContent = 0x3a0,
+		PropertyModel_GetProperty = 0x3a1,
+		PropertyModel_SetProperty = 0x3a2,
+		PropertyModel_Invoke = 0x3a3,
+		PropertyModel_GetProperties = 0x3a4,
+		CollectionModel_GetCount = 0x3a5,
+		CollectionModel_GetItem = 0x3a6,
+		CommandModel_Execute = 0x3a7,
+		CommandModel_CanExecute = 0x3a8,
+
+    }CoreProxyFactory_PerfId;
+
+
+
+
+
+    // Declare Generic IReference
+    declare
+    {
+      interface Windows.Foundation.IReference<Core_PerfId>;
+       interface Windows.Foundation.IReference<ProxyFactory_PerfId>;
+       interface Windows.Foundation.IReference<CoreProxyFactory_PerfId>;
+ 
+    }
+
+
+
+    // Interface Types declarations
+
+
+}

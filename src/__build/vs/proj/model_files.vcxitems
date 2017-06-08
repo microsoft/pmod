@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{BAF5DDE6-3664-4AB4-A432-E27C97264186}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableCollectionInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableCollectionClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\CommandClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\CommandInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ModelInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ModelTypeInfoStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ModelTypeInfoFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ModelTypeInfoLibrary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\EventInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableObjectClassInfoCache.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableObjectInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableObjectInfoBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\__generated\model\ErrorsTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\__generated\model\PerfTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableCollectionClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableCollectionInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\CommandClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\CommandInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\ModelTypeInfoFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\EventInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\PropertyIdContainer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableObjectClassInfoCache.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableObjectInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model\ObservableObjectInfoBase.h" />
+  </ItemGroup>
+</Project>

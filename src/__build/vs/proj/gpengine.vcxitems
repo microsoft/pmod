@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{04BB215A-031D-4177-94F5-0B0D2E082D87}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\gpengine\CGTParser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\gpengine\Parser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\gpengine\SymbolParser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\gpengine\CGTParser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\gpengine\Parser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\gpengine\SymbolParser.cpp" />
+  </ItemGroup>
+</Project>

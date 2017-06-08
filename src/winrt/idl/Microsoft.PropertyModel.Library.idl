@@ -1,0 +1,1249 @@
+/***
+* Copyright (C) Microsoft. All rights reserved.
+* Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
+*
+* File:Microsoft.PropertyModel.Library.idl
+****/
+#include "sdkddkver.h"
+
+import "Microsoft.PropertyModel.idl";
+
+namespace Microsoft.PropertyModel.Library
+{
+    // Forward runtime classes
+    runtimeclass ObjectClass;
+
+	runtimeclass ObjectDispatch;
+	runtimeclass ObservableObject;
+    runtimeclass AsyncOperation;
+    runtimeclass ObservableCollection;
+    runtimeclass Command;
+    runtimeclass EnumTypeInfo;
+    runtimeclass m_parameterName;
+    runtimeclass ObservableCollectionInfo;
+    runtimeclass CommandInfo;
+    runtimeclass AsyncOperationTypeInfo;
+    runtimeclass ObservableObjectInfo;
+
+    runtimeclass ViewModelInfo;
+    runtimeclass ViewModel;
+    runtimeclass CollectionViewModel;
+    runtimeclass MultiSourceCollectionViewModel;
+    runtimeclass MultiSourceViewModel;
+    runtimeclass CommandViewModel;
+    runtimeclass ViewModelFactory;
+
+
+    // Forward interfaces
+
+    [version(NTDDI_WIN8)]
+    [object]
+    [uuid(EB7658F1-7120-4C1F-BD7D-D9069306F5AA)]
+    delegate HRESULT CanExecuteDelegate([in]IInspectable *pParameter, [out, retval]boolean* bEnable);
+
+    [version(NTDDI_WIN8)]
+    [object]
+    [uuid(394C6D89-CA39-4AA0-8DF1-E9E8E0F6B7E5)]
+    delegate HRESULT ExecuteDelegate([in]IInspectable *pParameter, [out, retval]IInspectable** ppResult);
+
+    [version(NTDDI_WIN8)]
+    [object]
+    [uuid(63F04213-B2FD-4DAC-99EF-AE57F3304F3F)]
+    delegate HRESULT InvokeDelegate([in] int methodId, [in] UINT32 length_param, [in, size_is(length_param)] IInspectable** parameters, [out, retval] IInspectable **result);
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum CommonModelOptions
+    {
+        None = 0,
+        IsFreeThreadApartment = 0x100,
+        ContinueOnFireEventError = 0x200,
+        NotifyInModelChanges = 0x20000,
+    } CommonModelOptions;
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum BatchModelChangesOptions
+    {
+        None = 0x00,
+        Transaction = 0x04,
+    } BatchModelChangesOptions;
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum EndModelChangesOptions
+    {
+        None = 0x00,
+        Abort = 0x01,
+    } EndModelChangesOptions;
+
+    /////////////////////////////// IObjectClass ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(D5996463-D7B0-428B-936D-62CEB26A82C0)]
+    interface IObjectClass : IInspectable
+    {
+        // Properties.
+        [propget] HRESULT IsObserved([out, retval] boolean *value);
+        [propget] HRESULT FoundationOptions([out, retval] unsigned short *value);
+
+        [propget] HRESULT EventDispatcher([out, retval]Microsoft.PropertyModel.IDispatcher **ppDispatcher);
+        [propput] HRESULT EventDispatcher([in]Microsoft.PropertyModel.IDispatcher *pDispatcher);
+    }
+
+    /////////////////////////////// IObjectClassStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(B8721647-79D3-4020-946D-381ED9328D79)]
+    [exclusiveto(ObjectClass)]
+    interface IObjectClassStatics : IInspectable
+    {
+        // Event Dispatcher property
+        [propget] HRESULT EventDispatcher([out, retval] Microsoft.PropertyModel.IDispatcher** value);
+        [propput] HRESULT EventDispatcher([in] Microsoft.PropertyModel.IDispatcher* value);
+
+        // Working Dispatcher property
+        [propget] HRESULT WorkingDispatcher([out, retval] Microsoft.PropertyModel.IDispatcher** value);
+        [propput] HRESULT WorkingDispatcher([in] Microsoft.PropertyModel.IDispatcher* value);
+
+    }
+
+    [version(NTDDI_WIN8)]
+    [static(IObjectClassStatics, NTDDI_WIN8)]
+    runtimeclass ObjectClass
+    {
+    }
+    /////////////////////////////// IObjectNodeClass ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(010E1E4B-37D2-4A06-8C84-47B6F37D227E)]
+    interface IObjectNodeClass : IInspectable requires IObjectClass
+    {
+        // Properties.
+        [propget] HRESULT ParentInternal([out, retval]Microsoft.PropertyModel.IObject **ppModel);
+        [propput] HRESULT ParentInternal([in]Microsoft.PropertyModel.IObject *pModel);
+
+        [propget] HRESULT LocalWorkingDispatcher([out, retval]Microsoft.PropertyModel.IDispatcher **ppDispatcher);
+        [propput] HRESULT LocalWorkingDispatcher([in]Microsoft.PropertyModel.IDispatcher *pDispatcher);
+        [propget] HRESULT WorkingDispatcher([out, retval]Microsoft.PropertyModel.IDispatcher **ppDispatcher);
+
+        // Methods
+        HRESULT BeginModelChanges(BatchModelChangesOptions options);
+        HRESULT EndModelChanges(EndModelChangesOptions options);
+    }
+    /////////////////////////////// IObjectOverridesBase ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(761E28B3-282E-4F55-81A6-23F52966481F)]
+    interface IObjectOverridesBase : IInspectable
+    {
+        HRESULT OnRuntimeInitialize();
+        HRESULT OnStartObserve();
+        HRESULT OnStopObserve();
+    };
+
+    /////////////////////////////// IEnumTypeInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(1A144166-4396-4807-80E0-F65787902ECA)]
+    [exclusiveto(EnumTypeInfo)]
+    interface IEnumTypeInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]int typeId,
+            [in]GUID iidType,
+            [in]HSTRING name,
+            [in]boolean isflags,
+            [in]UINT32 length_names, [in, size_is(length_names)] HSTRING* names,
+            [in]UINT32 length_values, [in, size_is(length_values)] UINT32* values,
+            [out, retval] EnumTypeInfo** instance);
+    }
+    /////////////////////////////// IEnumTypeInfoStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(48B41A68-9A11-40B5-97B2-17252E4F4F3E)]
+    [exclusiveto(EnumTypeInfo)]
+    interface IEnumTypeInfoStatics : IInspectable
+    {
+        HRESULT RegisterType([in]EnumTypeInfo *enumTypeInfo);
+    }
+
+    /////////////////////////////// EnumTypeInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IEnumTypeInfoStatics, NTDDI_WIN8)]
+    [activatable(IEnumTypeInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass EnumTypeInfo
+    {
+        interface Microsoft.PropertyModel.IObjectTypeInfo;
+        [default] interface Microsoft.PropertyModel.IEnumTypeInfo;
+    }
+
+    /////////////////////////////// ICommandInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(0F032576-6F37-40DB-9589-BC3594EED8DB)]
+    [exclusiveto(CommandInfo)]
+    interface ICommandInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]int typeId,
+            [in]GUID iidType,
+            [in]HSTRING name,
+            [in]Microsoft.PropertyModel.PropertyTypeInfo parameterTypeInfo,
+            [in]Microsoft.PropertyModel.PropertyTypeInfo resultTypeInfo,
+            [in]boolean isAsync,
+            [out, retval] CommandInfo** instance);
+    }
+    /////////////////////////////// ICommandInfoStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(CFE28706-4F70-4807-98E7-85A37BDBCB6C)]
+    [exclusiveto(CommandInfo)]
+    interface ICommandInfoStatics : IInspectable
+    {
+        HRESULT RegisterType([in]CommandInfo *commandModelInfo);
+    }
+
+    /////////////////////////////// CommandInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(ICommandInfoStatics, NTDDI_WIN8)]
+    [activatable(ICommandInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass CommandInfo
+    {
+        interface Microsoft.PropertyModel.IObjectTypeInfo;
+        [default] interface Microsoft.PropertyModel.ICommandInfo;
+    }
+
+    /////////////////////////////// IObservableCollectionInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(2CC6D803-B42A-4C27-8DAD-7298CAEBF84A)]
+    [exclusiveto(ObservableCollectionInfo)]
+    interface IObservableCollectionInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]int typeId,
+            [in]GUID iidType,
+            [in]HSTRING name,
+            [in]Microsoft.PropertyModel.PropertyTypeInfo itemTypeInfo,
+            [out, retval] ObservableCollectionInfo** instance);
+    }
+    /////////////////////////////// IObservableCollectionInfoStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(51EAC344-63B7-4916-8A0A-D0E3C3CDDF7B)]
+    [exclusiveto(ObservableCollectionInfo)]
+    interface IObservableCollectionInfoStatics : IInspectable
+    {
+        HRESULT RegisterType([in]ObservableCollectionInfo *collectionModelInfo);
+    }
+
+    /////////////////////////////// ObservableCollectionInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IObservableCollectionInfoStatics, NTDDI_WIN8)]
+    [activatable(IObservableCollectionInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ObservableCollectionInfo
+    {
+        interface Microsoft.PropertyModel.IObjectTypeInfo;
+        [default] interface Microsoft.PropertyModel.IEnumerableTypeInfo;
+    }
+
+    /////////////////////////////// IMethodInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(069509B9-40EA-4D76-8194-A362FE152B4C)]
+    [exclusiveto(m_parameterName)]
+    interface IMethodInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]unsigned int methodId,
+            [in]HSTRING name,
+            [in]Windows.Foundation.PropertyType resultType,
+            [in]GUID resultModelType,
+            [in]boolean isAsync,
+            [in]UINT32 length, [in, size_is(length)] Microsoft.PropertyModel.ParameterInfo* parametersInfo,
+            [out, retval] m_parameterName** instance);
+    }
+    /////////////////////////////// m_parameterName ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [activatable(IMethodInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass m_parameterName
+    {
+        [default] interface Microsoft.PropertyModel.IMethodInfo;
+    }
+
+    /////////////////////////////// IObservableObjectInfoStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(BB27501D-2C9F-4411-9FFC-171A8E0AFF0F)]
+    [exclusiveto(ObservableObjectInfo)]
+    interface IObservableObjectInfoStatics : IInspectable
+    {
+        HRESULT RegisterType([in]Microsoft.PropertyModel.IObservableObjectInfo *pPropertyModelInfo);
+        HRESULT GetPropertyModelInfo([in]GUID iidType, [out, retval]ObservableObjectInfo **ppPropertyModelInfo);
+    }
+
+    /////////////////////////////// IObservableObjectInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(0A4F65E8-7279-4C32-BA73-346A33BEF7C7)]
+    [exclusiveto(ObservableObjectInfo)]
+    interface IObservableObjectInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]int typeId,
+            [in]GUID iidType,
+            [in]HSTRING name,
+            [in]Microsoft.PropertyModel.IObservableObjectInfo *baseType,
+            [in] UINT32 length_properties, [in, size_is(length_properties)] Microsoft.PropertyModel.PropertyInfo* propertyInfos,
+            [in] UINT32 length_methods, [in, size_is(length_methods)] m_parameterName** methodInfos,
+            [in] UINT32 length_events, [in, size_is(length_events)] Microsoft.PropertyModel.EventInfo* eventInfos,
+            [out, retval] ObservableObjectInfo** instance);
+    }
+
+    /////////////////////////////// PropertModelInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IObservableObjectInfoStatics, NTDDI_WIN8)]
+    [activatable(IObservableObjectInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ObservableObjectInfo
+    {
+        interface Microsoft.PropertyModel.IObjectTypeInfo;
+        [default] interface Microsoft.PropertyModel.IObservableObjectInfo;
+    }
+
+    /////////////////////////////// IViewModelInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(96801753-7B68-4B6E-AE97-47417EC1590C)]
+    [exclusiveto(ViewModelInfo)]
+    interface IViewModelInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]int typeId,
+            [in]GUID iidType,
+            [in]HSTRING name,
+            [in]Microsoft.PropertyModel.IObservableObjectInfo *baseType,
+            [in] UINT32 length_properties, [in, size_is(length_properties)] Microsoft.PropertyModel.PropertyInfo* propertyInfos,
+            [in] UINT32 length_methods, [in, size_is(length_methods)] m_parameterName** methodInfos,
+            [in] UINT32 length_events, [in, size_is(length_events)] Microsoft.PropertyModel.EventInfo* eventInfos,
+            [in]Microsoft.PropertyModel.IObservableObjectInfo *sourceType,
+            [in]boolean isInherited,
+            [out, retval] ViewModelInfo** instance);
+    }
+
+    /////////////////////////////// ViewModelInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [activatable(IViewModelInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ViewModelInfo
+    {
+        interface Microsoft.PropertyModel.IObservableObjectInfo;
+        [default] interface Microsoft.PropertyModel.IViewModelInfo;
+    }
+
+	[version(NTDDI_WIN8)]
+	typedef[v1_enum] enum ObjectDispatchOptions
+	{
+		None = 0,
+	} ObjectDispatchOptions;
+
+	/////////////////////////////// IObjectDispatchFactory ////////////////////////////////
+	[version(NTDDI_WIN8)]
+	[uuid(842F03A7-E5A7-4E7D-A411-C83FC805C0D9)]
+	[exclusiveto(ObjectDispatch)]
+	interface IObjectDispatchFactory : IInspectable
+	{
+		HRESULT CreateInstance(
+			[in]GUID iidType,
+			[in] ObjectDispatchOptions options,
+			[out, retval] ObjectDispatch** instance);
+	}
+	/////////////////////////////// ObjectDispatch ////////////////////////////////
+	[version(NTDDI_WIN8)]
+	[activatable(IObjectDispatchFactory, NTDDI_WIN8)]
+	[threading(both)]
+	[marshaling_behavior(agile)]
+	runtimeclass ObjectDispatch
+	{
+		[default] interface Microsoft.PropertyModel.IObjectDispatch;
+	}
+
+    /////////////////////////////// IObservableObjectOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(6EF444E6-DEAB-432A-A7C0-E465970CA169)]
+    interface IObservableObjectOverrides : IInspectable requires IObjectOverridesBase
+    {
+        // Properties.
+
+        // Methods.
+        HRESULT OnGetProperty([in] int propertyId, [out, retval] IInspectable **value);
+        HRESULT OnSetProperty([in] int propertyId, [in] boolean isPublic, [in] IInspectable *oldValue, [in] IInspectable *newValue);
+        HRESULT OnInvoke([in] int methodId, [in] UINT32 length_param, [in, size_is(length_param)] IInspectable** parameters, [out, retval] IInspectable **result);
+    }
+
+    /////////////////////////////// IObservableObjectRuntimeOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(0550BA1B-6925-42FE-9EA8-9B543F9E78A7)]
+    [exclusiveto(ObservableObject)]
+    interface IObservableObjectRuntimeOverrides : IInspectable requires IObservableObjectOverrides
+    {
+    }
+
+    /////////////////////////////// IObservableObjectClass ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(BEA8DFA9-A64C-499C-84DF-3F3341EB1ACA)]
+    interface IObservableObjectClass: IInspectable requires IObjectNodeClass
+    {
+        // Properties.
+        [propget] HRESULT InvokeDelegate([out, retval] InvokeDelegate** value);
+        [propput] HRESULT InvokeDelegate([in] InvokeDelegate* value);
+
+        // Methods.
+        HRESULT SetPropertyInternal([in]unsigned int propertyId, [in] IInspectable *value);
+        HRESULT FirePropertyChanged([in]unsigned  int propertyId, [in]boolean useCallback);
+        HRESULT FireEventModel([in]unsigned  int eventId, [in] IInspectable *eventArgs);
+        HRESULT SetBinding([in]unsigned  int propertyId, [in] Microsoft.PropertyModel.IBindingBase *propertyBinding);
+        HRESULT ClearBinding([in] unsigned int propertyId);
+        // called during construction
+        HRESULT InitializeModel();
+    }
+
+    /////////////////////////////// IObservableObjectProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(B42CC21A-2E99-4F1F-A025-19DB79DD96AE)]
+    [exclusiveto(ObservableObject)]
+    interface IObservableObjectProtected : IInspectable
+    {
+    }
+
+    /////////////////////////////// IObservableObjectStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(68B63135-10D2-4EB1-9773-74B49A050C9C)]
+    [exclusiveto(ObservableObject)]
+    interface IObservableObjectStatics : IInspectable
+    {
+        // Methods.
+        HRESULT GetPropertyValue([in]Microsoft.PropertyModel.IObservableObject *pObservableObject, [in]IInspectable *pPath, [out, retval]IInspectable **ppValue);
+        HRESULT CreateBatchEventHandler(
+            [in]Microsoft.PropertyModel.PropertyChangedEventHandler *pPropertyChangedEventHandler,
+            [in]Microsoft.PropertyModel.BatchPropertyChangedEventHandler *pBatchPropertyChangedEventHandler,
+            [out, retval] Microsoft.PropertyModel.PropertyChangedEventHandler** ppPropertyChangedEventHandler);
+    }
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum ObservableObjectOptions
+    {
+        None = 0,
+        InitializeProperties = 1,
+        SupportRootProperty = 2,
+        NoAutoParent = 4,
+        UseGetPropertyDispatcher = 0x08,
+        UseSetPropertyDispatcher = 0x10,
+        UseGetPropertiesDispatcher = 0x20,
+        UseFastPropertiesContainer = 0x40,
+        ClassOnSetProperty = 0x80,
+    } ObservableObjectOptions;
+
+    /////////////////////////////// IObservableObjectFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(CE937D83-1022-4A6F-8BA6-A777B0DF39A7)]
+    [exclusiveto(ObservableObject)]
+    interface IObservableObjectFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] ObservableObjectOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ObservableObject** instance);
+        HRESULT CreateInstanceWithType(
+            [in]GUID iidType,
+            [in] ObservableObjectOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ObservableObject** instance);
+    }
+
+
+    /////////////////////////////// PropertyModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IObservableObjectStatics, NTDDI_WIN8)]
+    [composable(IObservableObjectFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ObservableObject
+    {
+        [default] interface Microsoft.PropertyModel.IObservableObject;
+        interface IObservableObjectClass;
+        [overridable] interface IObservableObjectRuntimeOverrides;
+        [protected] interface IObservableObjectProtected;
+    }
+
+    /////////////////////////////// IAsyncOperationTypeInfoFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(5577D95D-0713-4B23-B1E5-7ADBF7F7AFC6)]
+    [exclusiveto(AsyncOperationTypeInfo)]
+    interface IAsyncOperationTypeInfoFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in]int typeId,
+            [in]GUID iidType,
+            [in]HSTRING name,
+            [in]Microsoft.PropertyModel.PropertyTypeInfo resultTypeInfo,
+            [out, retval] AsyncOperationTypeInfo** instance);
+    }
+
+    [version(NTDDI_WIN8)]
+    [uuid(5BB77B1A-E496-4D48-B6C8-62A3785B6519)]
+    [exclusiveto(AsyncOperationTypeInfo)]
+    interface IAsyncOperationTypeInfoStatics : IInspectable
+    {
+        HRESULT RegisterType([in]AsyncOperationTypeInfo *enumTypeInfo);
+    }
+
+    /////////////////////////////// AsyncOperationTypeInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [activatable(IAsyncOperationTypeInfoFactory, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass AsyncOperationTypeInfo
+    {
+        interface Microsoft.PropertyModel.IObjectTypeInfo;
+        [default] interface Microsoft.PropertyModel.IAsyncOperationTypeInfo;
+    }
+
+    /////////////////////////////// IAsyncOperationOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(A1CE53A3-0C49-4370-B8BD-1F94498561F2)]
+    [exclusiveto(AsyncOperation)]
+    interface IAsyncOperationOverrides : IInspectable requires IObjectOverridesBase
+    {
+        // Properties.
+        // Methods.
+        HRESULT OnCancel();
+    }
+
+    /////////////////////////////// IAsyncOperationModelClass ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(5FD057E5-2DD1-4CB5-8CAF-6ECB0EA95A99)]
+    [exclusiveto(AsyncOperation)]
+    interface IAsyncOperationClass : IInspectable requires IObjectClass
+    {
+        // Properties.
+        // Methods.
+        HRESULT SetCompleted([in] UINT32 resultCode, [in] IInspectable *result);
+        HRESULT FireProgress([in] IInspectable *pProgressValue);
+    }
+    /////////////////////////////// IAsyncOperationModelProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(73186F6E-6A08-4D8C-A544-8088CC5A1AC9)]
+    [exclusiveto(AsyncOperation)]
+    interface IAsyncOperationProtected : IInspectable
+    {
+    }
+
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum AsyncOperationOptions
+    {
+        None = 0,
+    } AsyncOperationOptions;
+
+    /////////////////////////////// IAsyncOperationFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(8A73FFAF-515A-423E-8172-829B3EDA46F5)]
+    [exclusiveto(AsyncOperation)]
+    interface IAsyncOperationFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] AsyncOperationOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] AsyncOperation** instance);
+        HRESULT CreateInstanceWithType(
+            [in]GUID iidType,
+            [in] AsyncOperationOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] AsyncOperation** instance);
+    }
+
+    /////////////////////////////// AsyncOperation ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [composable(IAsyncOperationFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass AsyncOperation
+    {
+        [default] interface Microsoft.PropertyModel.IAsyncOperation;
+        interface IAsyncOperationClass;
+        //interface IObservableObject;
+        [overridable] interface IAsyncOperationOverrides;
+        [protected] interface IAsyncOperationProtected;
+    }
+
+    /////////////////////////////// IObservableCollectionBaseOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(F88017DF-61C8-4FC3-8149-ECF1ED574D1A)]
+    interface IObservableCollectionBaseOverrides : IInspectable
+    {
+        // Properties.
+
+        // Methods.
+        HRESULT OnCollectionChanged([in]Microsoft.PropertyModel.NotifyCollectionChangedEventArgs* e);
+    }
+
+    /////////////////////////////// IObservableCollectionOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(5E2B3932-796C-461A-91F1-51313FF08155)]
+    [exclusiveto(ObservableCollection)]
+    //[overridable]
+    interface IObservableCollectionOverrides : IInspectable requires IObjectOverridesBase, IObservableCollectionBaseOverrides
+    {
+        // Properties.
+
+        // Methods.
+    }
+    /////////////////////////////// IObservableCollectionClass ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(64C9FE15-4D58-4CA6-9747-1C4520ED118C)]
+    //[protected]
+    interface IObservableCollectionClass: IInspectable requires IObjectNodeClass
+    {
+        // Properties.
+
+        // Methods.
+        HRESULT AddItemInternal([in]IInspectable* item);
+        HRESULT InsertItemInternal([in] int nIndex, [in]IInspectable* item);
+        HRESULT ReplaceItemInternal([in] int nIndex, [in]IInspectable* item);
+
+        HRESULT InsertItems([in] int nIndex, [in] UINT32 size, [in, size_is(size)] IInspectable** items);
+        HRESULT ReplaceItems([in] int nIndex, [in] UINT32 size, [in, size_is(size)] IInspectable** items);
+        HRESULT RemoveItems([in] int nIndex, [in] UINT32 count);
+
+    }
+    /////////////////////////////// IObservableCollectionProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(54D2F46A-0C0C-4FE1-B126-DD22467014DA)]
+    [exclusiveto(ObservableCollection)]
+    //[protected]
+    interface IObservableCollectionProtected : IInspectable
+    {
+    }
+
+    /////////////////////////////// IObservableCollectionStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(C2DB2BD5-45DE-4279-AD7A-9DDCE7E2346D)]
+    [exclusiveto(ObservableCollection)]
+    interface IObservableCollectionStatics : IInspectable
+    {
+        [propget] HRESULT StringType([out, retval] GUID *value);
+        [propget] HRESULT Int16Type([out, retval] GUID *value);
+        [propget] HRESULT UInt16Type([out, retval] GUID *value);
+        [propget] HRESULT Int32Type([out, retval] GUID *value);
+        [propget] HRESULT UInt32Type([out, retval] GUID *value);
+        [propget] HRESULT BooleanType([out, retval] GUID *value);
+        [propget] HRESULT DateTimeType([out, retval] GUID *value);
+        [propget] HRESULT ByteType([out, retval] GUID *value);
+        [propget] HRESULT ObjectType([out, retval] GUID *value);
+    }
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum ObservableCollectionOptions
+    {
+        None = 0,
+        IsReadOnly = 1,          // If collection is read only
+        IsSet = 2,          // If collection behave as a Set
+        UseFastItemsContainer = 0x20,
+    } ObservableCollectionOptions;
+
+    /////////////////////////////// IObservableCollectionFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(B944EA89-115D-4CED-A085-674A6373053D)]
+    [exclusiveto(ObservableCollection)]
+    interface IObservableCollectionFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ObservableCollection** instance);
+        HRESULT CreateInstanceWithOptions(
+            [in] ObservableCollectionOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ObservableCollection** instance);
+        HRESULT CreateInstanceWithTypeAndOptions(
+            [in] GUID iidType,
+            [in] ObservableCollectionOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ObservableCollection** instance);
+    }
+
+    /////////////////////////////// ObservableCollection ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IObservableCollectionStatics, NTDDI_WIN8)]
+    //[abstract_interface]
+    [composable(IObservableCollectionFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ObservableCollection
+    {
+        [default] interface Microsoft.PropertyModel.IObservableCollection;
+        interface IObservableCollectionClass;
+        [overridable] interface IObservableCollectionOverrides;
+        [protected] interface IObservableCollectionProtected;
+    }
+
+    /////////////////////////////// ICommandOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(EB068B37-09B1-4B96-BD37-4EBEABDC3AA8)]
+    interface ICommandOverrides : IInspectable requires IObjectOverridesBase
+    {
+        // Properties.
+
+        // Methods.
+        HRESULT OnCanExecute([in]IInspectable *parameter, [out, retval] boolean* value);
+        HRESULT OnExecute([in]IInspectable *parameter, [out, retval] IInspectable** result);
+    }
+
+    /////////////////////////////// ICommandRuntimeOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(8630A24B-13C8-486D-8E5A-0D2E00926CA4)]
+    [exclusiveto(Command)]
+    interface ICommandRuntimeOverrides : IInspectable requires ICommandOverrides
+    {
+    }
+
+    /////////////////////////////// ICommandClass ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(9FC3B2B8-2BCE-457F-BEB8-43F66190FDA3)]
+    //[protected]
+    interface ICommandClass: IInspectable requires IObjectNodeClass
+    {
+        // Properties.
+        [propget] HRESULT CanExecuteDelegate([out, retval] CanExecuteDelegate** value);
+        [propput] HRESULT CanExecuteDelegate([in] CanExecuteDelegate* value);
+        [propget] HRESULT ExecuteDelegate([out, retval] ExecuteDelegate** value);
+        [propput] HRESULT ExecuteDelegate([in] ExecuteDelegate* value);
+
+        // Methods.
+        HRESULT SetCommandState([in] int commandState, [in] boolean fireCanExecute);
+        HRESULT FireCanExecuteChanged();
+    }
+    /////////////////////////////// ICommandProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(98D0C2ED-5A3E-4027-9DDB-2B20DFAFEAF9)]
+    [exclusiveto(Command)]
+    //[protected]
+    interface ICommandProtected : IInspectable
+    {
+    }
+
+    /////////////////////////////// ICommandStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(C96B7CE6-B6D1-470A-9DC7-3A74E6AA79B5)]
+    [exclusiveto(Command)]
+    interface ICommandStatics : IInspectable
+    {
+        [propget] HRESULT CommandType([out, retval] GUID *value);
+        [propget] HRESULT SimpleCommandType([out, retval] GUID *value);
+    }
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum CommandOptions
+    {
+        None = 0,
+    } CommandOptions;
+
+    /////////////////////////////// ICommandFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(4B70EE27-B64D-46E1-AD61-468E5B008598)]
+    [exclusiveto(Command)]
+    interface ICommandFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] CommandOptions options,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] Command** instance);
+        HRESULT CreateInstanceWithType(
+            [in] CommandOptions options,
+            [in] GUID iidType,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] Command** instance);
+    }
+
+    /////////////////////////////// Command ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(ICommandStatics, NTDDI_WIN8)]
+    //[abstract_interface]
+    [composable(ICommandFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass Command
+    {
+        [default] interface Microsoft.PropertyModel.ICommand;
+        interface ICommandClass;
+        interface Microsoft.PropertyModel.IObservableObject;
+        [overridable] interface ICommandRuntimeOverrides;
+        [protected] interface ICommandProtected;
+    }
+
+    /////////////////////////////// IViewModelFactoryOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(97C49C6C-3E58-40C9-9C86-20F1993D05F8)]
+    [exclusiveto(ViewModelFactory)]
+    //[overridable]
+    interface IViewModelFactoryOverrides : IInspectable
+    {
+        // Properties.
+        // Methods.
+    }
+    /////////////////////////////// IViewModelFactoryProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(FEBBB8BD-E65C-4595-977A-EA7469F89573)]
+    [exclusiveto(ViewModelFactory)]
+    interface IViewModelFactoryProtected : IInspectable
+    {
+        // Properties.
+        // Methods.
+    }
+
+    /////////////////////////////// IViewModelFactoryStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(ED8C5EC2-1D8D-4FCE-9958-45D6B2342E8A)]
+    [exclusiveto(ViewModelFactory)]
+    interface IViewModelFactoryStatics : IInspectable
+    {
+    }
+
+    /////////////////////////////// IViewModelFactoryFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(D40C4757-FDF6-4085-B400-0DD29E14D2D5)]
+    [exclusiveto(ViewModelFactory)]
+    interface IViewModelFactoryFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ViewModelFactory** instance);
+    }
+
+    /////////////////////////////// ViewModelFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IViewModelFactoryStatics, NTDDI_WIN8)]
+    [composable(IViewModelFactoryFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ViewModelFactory
+    {
+        [default] interface Microsoft.PropertyModel.IViewModelFactory;
+        [overridable] interface IViewModelFactoryOverrides;
+        [protected] interface IViewModelFactoryProtected;
+    }
+
+    /////////////////////////////// IAdapterProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(FDBC3D6A-C223-4B77-B67F-07A925A7F7FA)]
+    interface IAdapterProtected : IInspectable
+    {
+        // Properties.
+        [propget] HRESULT CountHandlers([out, retval] int *value);
+    }
+
+    /////////////////////////////// IAdapterOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(F017573F-29A4-46F8-8441-E590666416A6)]
+    interface IAdapterOverrides : IInspectable
+    {
+        // Methods.
+        HRESULT OnAddHandler();
+        HRESULT OnRemoveHandler();
+    }
+
+    /////////////////////////////// ICollectionViewModelBaseOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(9355A776-5341-484B-AAED-C36221A95DF7)]
+    interface ICollectionViewModelBaseOverrides : IInspectable
+    {
+        HRESULT OnSourceCollectionChanged([in] Microsoft.PropertyModel.INotifyCollectionChangedEventArgs* pEventArgs);
+        HRESULT OnSourceItemPropertyChanged([in] Microsoft.PropertyModel.IObservableObject *item, [in] int propertyId, [in] IInspectable *oldValue, [in] IInspectable* newValue, [out, retval]boolean *bNeedRefresh);
+        HRESULT FilterItem([in] IInspectable *item, [out, retval] boolean *bResult);
+        HRESULT CompareItem([in] IInspectable *item1, [in] IInspectable *item2, [out, retval]int *result);
+        HRESULT OnItemSourceAttached([in] Microsoft.PropertyModel.IObservableObject *item);
+        HRESULT OnItemSourceDetached([in] Microsoft.PropertyModel.IObservableObject *item);
+        HRESULT CreateModelAdapter([in]IInspectable *item, [out, retval]Microsoft.PropertyModel.ISourceModel **ppSourceModel);
+    }
+
+    /////////////////////////////// ICollectionViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(B3E7E25B-FD41-4D6B-9507-76FAE8435246)]
+    [exclusiveto(CollectionViewModel)]
+    interface ICollectionViewModel : IInspectable requires
+        Microsoft.PropertyModel.IObservableCollection,
+        Microsoft.PropertyModel.ISourceModel
+    {
+        // Methods.
+    }
+
+    /////////////////////////////// ICollectionViewModelClass ////////////////////////////////
+    [version(NTDDI_WIN8), object, uuid(D8432F21-906E-45EF-BBC9-AAE2CAFAE5A5)]
+    delegate HRESULT CreateItemAdapterCallback([in] IInspectable* item, [out, retval] Microsoft.PropertyModel.ISourceModel **ppSourceModel);
+
+    [version(NTDDI_WIN8), object, uuid(BE0CE755-D06C-4A62-A417-A2D1DEF7A091)]
+    delegate HRESULT CompareItemCallback([in] IInspectable *item1, [in] IInspectable *item2, [out, retval]int *result);
+
+    [version(NTDDI_WIN8), object, uuid(8D030ED1-FE75-489A-A6BD-FF9991EADC38)]
+    delegate HRESULT FilterItemCallback([in] IInspectable *item, [out, retval] boolean *bResult);
+
+    [version(NTDDI_WIN8)]
+    [uuid(28AE97F9-CBEC-4543-8796-84700F88694C)]
+    [exclusiveto(CollectionViewModel)]
+    interface ICollectionViewModelClass : IInspectable
+    {
+        // Properties.
+        [propget] HRESULT CreateItemAdapterCallback([out, retval] CreateItemAdapterCallback **value);
+        [propput] HRESULT CreateItemAdapterCallback([in] CreateItemAdapterCallback *value);
+
+        [propget] HRESULT CompareItemCallback([out, retval] CompareItemCallback **value);
+        [propput] HRESULT CompareItemCallback([in] CompareItemCallback *value);
+
+        [propget] HRESULT FilterItemCallback([out, retval] FilterItemCallback **value);
+        [propput] HRESULT FilterItemCallback([in] FilterItemCallback *value);
+
+        // Methods.
+        HRESULT AddSortInfo([in]IInspectable *sortInfoPath, [in]boolean isAscending);
+        HRESULT SetFilterInfo([in]Microsoft.PropertyModel.Expression *filterExpression);
+        HRESULT RefreshSourceItem([in] IInspectable *item);
+    }
+    /////////////////////////////// ICollectionViewModelProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(FF53B020-268A-483B-B84C-306FE05A799D)]
+    [exclusiveto(CollectionViewModel)]
+    interface ICollectionViewModelProtected : IInspectable
+    {
+    }
+    /////////////////////////////// ICollectionViewModelOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(CE594C7E-8746-4FB4-9E56-79450EF9558E)]
+    [exclusiveto(CollectionViewModel)]
+    interface ICollectionViewModelOverrides : IInspectable requires
+        IObservableCollectionBaseOverrides, 
+        ICollectionViewModelBaseOverrides, 
+        Microsoft.PropertyModel.ISourceModelOverrides
+    {
+    }
+
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum CollectionViewModelOptions
+    {
+        None = 0,
+        UseResetForBatchNotify = 1,          // if Use Reset for batch Notify
+        NoSort = 2,
+        NoFilter = 0x08,
+        NoModelAdapter = 0x10,
+        ForceAttachSourceItems = 0x20,
+    } CollectionViewModelOptions;
+
+    /////////////////////////////// ICollectionViewModelFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(7E264A64-5676-4467-9037-A0604C5C74DC)]
+    [exclusiveto(CollectionViewModel)]
+    interface ICollectionViewModelFactory : IInspectable
+    {
+        HRESULT CreateInstanceWithSource(
+            [in]Microsoft.PropertyModel.IObservableCollection *pSource,
+            [in] ObservableCollectionOptions modelOptions,
+            [in] CollectionViewModelOptions viewModelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] CollectionViewModel** instance);
+        HRESULT CreateInstanceWithSourceAndType(
+            [in]GUID iidType,
+            [in]Microsoft.PropertyModel.IObservableCollection *pSource,
+            [in] ObservableCollectionOptions modelOptions,
+            [in] CollectionViewModelOptions viewModelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] CollectionViewModel** instance);
+    }
+    /////////////////////////////// ICollectionViewModelStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(08CCE268-9400-40CB-9484-B1FAC2560D8F)]
+    [exclusiveto(CollectionViewModel)]
+    interface ICollectionViewModelStatics : IInspectable
+    {
+        HRESULT CreateCollectionViewModel(
+            [in] GUID iidType,
+            [in] Microsoft.PropertyModel.IObservableCollection *pSource,
+            [in] UINT32 length_sortInfoExpressions, [in, size_is(length_sortInfoExpressions)] HSTRING* sortInfoExpressions,
+            [in] UINT32 length_sortInfoAscending, [in, size_is(length_sortInfoAscending)] boolean* sortInfoAscending,
+            [in] HSTRING filter_expression,
+            [out, retval] Microsoft.PropertyModel.IObservableCollection** instance);
+    }
+    /////////////////////////////// CollectionViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(ICollectionViewModelStatics, NTDDI_WIN8)]
+    [composable(ICollectionViewModelFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass CollectionViewModel
+    {
+        [default] interface ICollectionViewModel;
+        interface IObservableCollectionClass;
+        interface ICollectionViewModelClass;
+        [overridable] interface ICollectionViewModelOverrides;
+        [protected] interface ICollectionViewModelProtected;
+    }
+
+    /////////////////////////////// IMultiSourceCollectionViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(5E56A9E3-BA8A-45A7-B247-1348F353CA4E)]
+    [exclusiveto(MultiSourceCollectionViewModel)]
+    interface IMultiSourceCollectionViewModel : IInspectable requires
+        Microsoft.PropertyModel.IObservableCollection,
+        Microsoft.PropertyModel.IMultiSourceModel
+    {
+        // Methods.
+    }
+
+    /////////////////////////////// IMultiSourceCollectionViewModelOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(A02BD186-98FF-4428-A719-BB4B12902CD2)]
+    [exclusiveto(MultiSourceCollectionViewModel)]
+    interface IMultiSourceCollectionViewModelOverrides : IInspectable requires 
+        IObservableCollectionBaseOverrides, 
+        ICollectionViewModelBaseOverrides, 
+        Microsoft.PropertyModel.IMultiSourceModelOverrides
+    {
+        HRESULT OnMultiSourceCollectionChanged([in]Microsoft.PropertyModel.IObservableCollection *pSource, [in] Microsoft.PropertyModel.INotifyCollectionChangedEventArgs* pEventArgs);
+    }
+
+    /////////////////////////////// IMultiSourceCollectionViewModelFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(86DB8509-3473-48E4-9F83-62EC111FE48C)]
+    [exclusiveto(MultiSourceCollectionViewModel)]
+    interface IMultiSourceCollectionViewModelFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] ObservableCollectionOptions modelOptions,
+            [in] CollectionViewModelOptions viewModelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] MultiSourceCollectionViewModel** instance);
+        HRESULT CreateInstanceWithType(
+            [in]GUID iidType,
+            [in] ObservableCollectionOptions modelOptions,
+            [in] CollectionViewModelOptions viewModelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] MultiSourceCollectionViewModel** instance);
+    }
+    /////////////////////////////// MultiSourceCollectionViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [composable(IMultiSourceCollectionViewModelFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass MultiSourceCollectionViewModel
+    {
+        [default] interface IMultiSourceCollectionViewModel;
+        interface IObservableCollectionClass;
+        [overridable] interface IMultiSourceCollectionViewModelOverrides;
+    }
+
+    /////////////////////////////// IViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(E1B2F26C-F31D-4645-8CB3-1900A8FB58B5)]
+    [exclusiveto(ViewModel)]
+    interface IViewModel : IInspectable requires 
+        Microsoft.PropertyModel.IObservableObject,
+        Microsoft.PropertyModel.ISourceModel
+    {
+        // Methods.
+    }
+
+    /////////////////////////////// IViewModelProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(A3D2132F-C927-48E4-B3D3-A75E8DACBA28)]
+    [exclusiveto(ViewModel)]
+    interface IViewModelProtected : IInspectable
+    {
+        // Methods.
+    }
+    /////////////////////////////// IViewModelOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(84D0DCD6-0805-4104-A420-7DB811DCDDB4)]
+    [exclusiveto(ViewModel)]
+    interface IViewModelOverrides : IInspectable requires 
+        IObservableObjectOverrides,
+        Microsoft.PropertyModel.ISourceModelOverrides
+    {
+        HRESULT OnSourcePropertyChanged([in] int propertyId, [in] IInspectable *oldValue, [in] IInspectable* newValue);
+        HRESULT OnSourceEventModel([in] int eventId, [in] IInspectable *pEventArgs);
+    }
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum ViewModelOptions
+    {
+        None = 0,
+        UseSourceWeakReference = 1,          // Use Weak reference for the Source
+    } ViewModelOptions;
+
+    /////////////////////////////// IViewModelFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(4D824162-FB93-4472-BD51-0E98846EF4E2)]
+    [exclusiveto(ViewModel)]
+    interface IViewModelFactory : IInspectable
+    {
+        HRESULT CreateInstanceWithSource(
+            [in] Microsoft.PropertyModel.IObservableObject *pSource,
+            [in] ObservableObjectOptions modelOptions,
+            [in] ViewModelOptions options,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ViewModel** instance);
+        HRESULT CreateInstanceWithSourceAndType(
+            [in] GUID iidType,
+            [in] Microsoft.PropertyModel.IObservableObject *pSource,
+            [in] ObservableObjectOptions modelOptions,
+            [in] ViewModelOptions options,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] ViewModel** instance);
+    }
+
+    /////////////////////////////// IMultiSourcePropertyViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(866D93FF-5948-48BA-9897-F104E29154C6)]
+    [exclusiveto(MultiSourceViewModel)]
+    interface IMultiSourceViewModel : IInspectable requires 
+        Microsoft.PropertyModel.IObservableObject,
+        Microsoft.PropertyModel.IMultiSourceModel
+    {
+        // Methods.
+    }
+
+    /////////////////////////////// IMultiSourcePropertyViewModelOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(36003D7F-7FEF-43A7-9F1F-17B1BDBAFF66)]
+    [exclusiveto(MultiSourceViewModel)]
+    interface IMultiSourceViewModelOverrides : IInspectable requires
+        IObservableObjectOverrides,
+        Microsoft.PropertyModel.IMultiSourceModelOverrides
+    {
+        HRESULT OnMultiSourceSourceChanged([in]Microsoft.PropertyModel.IObservableObject *pSource, [in] int propertyId, [in] IInspectable *oldValue, [in] IInspectable* newValue);
+    }
+
+    /////////////////////////////// IMultiSourcePropertyViewModelFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(9370090A-548C-471A-A622-7B77B0FD2E18)]
+    [exclusiveto(MultiSourceViewModel)]
+    interface IMultiSourceViewModelFactory : IInspectable
+    {
+        HRESULT CreateInstance(
+            [in] ObservableObjectOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] MultiSourceViewModel** instance);
+        HRESULT CreateInstanceWithType(
+            [in]GUID iidType,
+            [in] ObservableObjectOptions modelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] MultiSourceViewModel** instance);
+    }
+    /////////////////////////////// MultiSourceViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [composable(IMultiSourceViewModelFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass MultiSourceViewModel
+    {
+        [default] interface IMultiSourceViewModel;
+        interface IObservableObjectClass;
+        [overridable] interface IMultiSourceViewModelOverrides;
+    }
+
+    /////////////////////////////// ViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [composable(IViewModelFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass ViewModel
+    {
+        [default] interface IViewModel;
+        interface IObservableObjectClass;
+        [overridable] interface IViewModelOverrides;
+        [protected] interface IViewModelProtected;
+    }
+
+    /////////////////////////////// ICommandViewModelOverrides ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(B368D2DC-19BC-4850-8159-FC8FF3BCB722)]
+    [exclusiveto(CommandViewModel)]
+    interface ICommandViewModelOverrides : IInspectable requires ICommandOverrides
+    {
+        HRESULT OnSourceCommandStateChanged([in] int oldState, [in] int newState);
+    }
+
+    /////////////////////////////// ICommandViewModelProtected ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(F1D29043-4265-4F15-AB16-C2DB0440ECA5)]
+    [exclusiveto(CommandViewModel)]
+    interface ICommandViewModelProtected : IInspectable
+    {
+        HRESULT SetCommandLabel([in] HSTRING commandLabel);
+    }
+
+    /////////////////////////////// ICommandViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(9CB9B096-79BB-4792-A841-2C20B37C68C4)]
+    [exclusiveto(CommandViewModel)]
+    interface ICommandViewModel : IInspectable requires
+        Microsoft.PropertyModel.ICommand,
+        Microsoft.PropertyModel.ISourceModel
+    {
+        // Methods.
+    }
+
+
+    [version(NTDDI_WIN8)]
+    typedef[v1_enum] enum CommandViewModelOptions
+    {
+        None = 0,
+    } CommandViewModelOptions;
+
+    /////////////////////////////// ICommandViewModelFactory ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(671EA3D9-5FE0-4638-B252-09EE16A273FF)]
+    [exclusiveto(CommandViewModel)]
+    interface ICommandViewModelFactory : IInspectable
+    {
+        HRESULT CreateInstanceWithSource(
+            [in] Microsoft.PropertyModel.ICommandBase *pSource,
+            [in] CommandOptions modelOptions,
+            [in] CommandViewModelOptions viewModelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] CommandViewModel** instance);
+        HRESULT CreateInstanceWithSourceAndType(
+            [in] GUID iidType,
+            [in] Microsoft.PropertyModel.ICommandBase *pSource,
+            [in] CommandOptions modelOptions,
+            [in] CommandViewModelOptions viewModelOptions,
+            [in] IInspectable* outer,
+            [out] IInspectable** inner,
+            [out, retval] CommandViewModel** instance);
+    }
+    /////////////////////////////// CommandViewModel ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [composable(ICommandViewModelFactory, public, NTDDI_WIN8)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass CommandViewModel
+    {
+        [default] interface ICommandViewModel;
+        interface ICommandClass;
+        interface Microsoft.PropertyModel.IObservableObject;
+        [overridable] interface ICommandViewModelOverrides;
+        [protected] interface ICommandViewModelProtected;
+    }
+
+}
+

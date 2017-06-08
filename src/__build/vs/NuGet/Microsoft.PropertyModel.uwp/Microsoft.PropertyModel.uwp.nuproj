@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\pmod.nuget.targets" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>c0e477f1-13ef-4e42-9ffc-9beda08fd89d</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Id>Microsoft.PropertyModel.uwp</Id>
+    <Title>Microsoft.PropertyModel PMOD Package</Title>
+    <Authors>rodrigov</Authors>
+    <Owners>rodrigov</Owners>
+    <Summary>UWP projection for PMOD package</Summary>
+    <Description>UWP projection for PMOD SDK</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Microsoft</Copyright>
+    <Tags>PMOD</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--<Dependency Include="pmod.uwp">
+      <Version>1.0.0</Version>
+    </Dependency>-->
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.PropertyModel.winmd" />
+    <File Include="$(Product)\uwp\x86\$(Configuration)\Microsoft.PropertyModel.winmd">
+      <TargetPath>lib\netcore45</TargetPath>
+    </File>
+    <!-- x86 runtimes support-->
+    <File Include="$(Product)\uwp\x86\$(Configuration)\Microsoft.PropertyModel.dll">
+      <TargetPath>runtimes\win10-x86\native</TargetPath>
+    </File>
+   <!-- ARM runtimes support-->
+    <File Include="$(Product)\uwp\ARM\$(Configuration)\Microsoft.PropertyModel.dll">
+      <TargetPath>runtimes\win10-arm\native</TargetPath>
+    </File>
+    <Content Include="Microsoft.PropertyModel.uwp.txt" />
+  </ItemGroup>
+</Project>

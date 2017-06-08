@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NodeGyp>C:\Users\rodrigov\.node-gyp\0.37.2</NodeGyp>
+    <NodeJsInc>$(NodeGyp)\include\node;$(NodeGyp)\src;$(NodeGyp)\deps\uv\include;$(NodeGyp)\deps\v8\include</NodeJsInc>
+    <NodeJsLibx86>$(NodeGyp)\ia32</NodeJsLibx86>
+    <NodeJsLibx64>$(NodeGyp)\x64</NodeJsLibx64>
+  </PropertyGroup>
+
+</Project>

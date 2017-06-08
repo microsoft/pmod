@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1AD280A-05AC-4669-9816-35822C7C6090}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pmod.dll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <TargetName>pmod_lib</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\proj\foundation_library_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\model_library_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\src_files.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\version\pmod_lib.rc" />
+  </ItemGroup>
+  <Import Project="..\classic.cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;FOUNDATION_LIB_API_EXPORTS;PMOD_LIB_API_EXPORTS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\inc;$(SRC_DIR)\foundation;$(SRC_DIR)\foundation_library;$(SRC_DIR)\public\inc;$(SRC_DIR)\jansson\src</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SRC_DIR)\model\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\jansson\jansson.vcxproj">
+      <Project>{d77c232b-94d4-4289-84fe-e12d76508b44}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\pmod.dll\pmod.dll.vcxproj">
+      <Project>{d60dd8f7-55f3-4336-955c-42633acc4c7c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

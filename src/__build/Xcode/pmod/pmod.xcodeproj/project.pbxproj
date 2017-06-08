@@ -1,0 +1,1598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D868BD5F1C8AAE010076900D /* PMODInspectable.mm in Sources */ = {isa = PBXBuildFile; fileRef = D868BD5E1C8AAE010076900D /* PMODInspectable.mm */; };
+		D868BD601C8AAE010076900D /* PMODInspectable.mm in Sources */ = {isa = PBXBuildFile; fileRef = D868BD5E1C8AAE010076900D /* PMODInspectable.mm */; };
+		D86970481C8BCDCA001753C0 /* PMODLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86970471C8BCDCA001753C0 /* PMODLogger.mm */; };
+		D86970491C8BD06C001753C0 /* PMODLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86970471C8BCDCA001753C0 /* PMODLogger.mm */; };
+		D86A22081C8CB49600E966FB /* PMODDispatcherQueueAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D86A22071C8CB49600E966FB /* PMODDispatcherQueueAdapter.h */; };
+		D86A220A1C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86A22091C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm */; };
+		D86A220B1C8CBA1100E966FB /* PMODDispatcherQueueAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86A22091C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm */; };
+		D86A22CF1C8D17C300E966FB /* pal_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A22CE1C8D17C300E966FB /* pal_common.cpp */; };
+		D86A22D01C8D17D600E966FB /* pal_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A22CE1C8D17C300E966FB /* pal_common.cpp */; };
+		D86A515E1BEFBA4A007D3AA7 /* CommandClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F756C1BEEE46300D9503D /* CommandClassInfoCache.cpp */; };
+		D86A515F1BEFBA4A007D3AA7 /* CommandInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F756E1BEEE46300D9503D /* CommandInfo.cpp */; };
+		D86A51601BEFBA4A007D3AA7 /* EventInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75701BEEE46300D9503D /* EventInfo.cpp */; };
+		D86A51621BEFBA4A007D3AA7 /* ModelInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75741BEEE46300D9503D /* ModelInterfaces.cpp */; };
+		D86A51631BEFBA4A007D3AA7 /* ModelTypeInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75751BEEE46300D9503D /* ModelTypeInfoFactory.cpp */; };
+		D86A51641BEFBA4A007D3AA7 /* ModelTypeInfoLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75771BEEE46300D9503D /* ModelTypeInfoLibrary.cpp */; };
+		D86A51651BEFBA4A007D3AA7 /* ModelTypeInfoStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75781BEEE46300D9503D /* ModelTypeInfoStatics.cpp */; };
+		D86A51661BEFBA4A007D3AA7 /* ObservableCollectionClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757A1BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp */; };
+		D86A51671BEFBA4A007D3AA7 /* ObservableCollectionInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757C1BEEE46300D9503D /* ObservableCollectionInfo.cpp */; };
+		D86A51681BEFBA4A007D3AA7 /* ObservableObjectClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757E1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp */; };
+		D86A51691BEFBA4A007D3AA7 /* ObservableObjectInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75801BEEE46300D9503D /* ObservableObjectInfo.cpp */; };
+		D86A516A1BEFBA4A007D3AA7 /* ObservableObjectInfoBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75821BEEE46300D9503D /* ObservableObjectInfoBase.cpp */; };
+		D86A516C1BEFBA93007D3AA7 /* ErrorsTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75A61BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp */; };
+		D86A516D1BEFBA93007D3AA7 /* PerfTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75A71BEEE4A500D9503D /* PerfTypeInfo.g.cpp */; };
+		D86A516E1BEFBA93007D3AA7 /* FoundationErrorsTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75691BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp */; };
+		D86A516F1BEFBA93007D3AA7 /* ActivationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74E91BEEE3D100D9503D /* ActivationFactory.cpp */; };
+		D86A51701BEFBA93007D3AA7 /* AdapterFactoryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74EB1BEEE3D100D9503D /* AdapterFactoryFactory.cpp */; };
+		D86A51711BEFBA93007D3AA7 /* AsyncOperationClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74ED1BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp */; };
+		D86A51721BEFBA93007D3AA7 /* AsyncOperationTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74EF1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp */; };
+		D86A51731BEFBA93007D3AA7 /* DebugUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F11BEEE3D100D9503D /* DebugUtil.cpp */; };
+		D86A51741BEFBA93007D3AA7 /* DictionaryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F41BEEE3D100D9503D /* DictionaryFactory.cpp */; };
+		D86A51751BEFBA93007D3AA7 /* EnumTypeClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F61BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp */; };
+		D86A51761BEFBA93007D3AA7 /* EnumTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F81BEEE3D100D9503D /* EnumTypeInfo.cpp */; };
+		D86A51771BEFBA93007D3AA7 /* EnumValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FA1BEEE3D100D9503D /* EnumValue.cpp */; };
+		D86A51781BEFBA93007D3AA7 /* FoundationAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FC1BEEE3D100D9503D /* FoundationAssert.cpp */; };
+		D86A51791BEFBA93007D3AA7 /* FoundationInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FE1BEEE3D100D9503D /* FoundationInterfaces.cpp */; };
+		D86A517A1BEFBA93007D3AA7 /* FoundationLibraryInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FF1BEEE3D100D9503D /* FoundationLibraryInstance.cpp */; };
+		D86A517B1BEFBA93007D3AA7 /* FoundationPrivateInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75011BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp */; };
+		D86A517C1BEFBA93007D3AA7 /* FoundationTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75021BEEE3D100D9503D /* FoundationTracker.cpp */; };
+		D86A517D1BEFBA93007D3AA7 /* GenericAdapterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75041BEEE3D100D9503D /* GenericAdapterFactory.cpp */; };
+		D86A517E1BEFBA93007D3AA7 /* InterfaceAdapterFactoryHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75071BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp */; };
+		D86A517F1BEFBA93007D3AA7 /* NamespaceStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75091BEEE3D100D9503D /* NamespaceStatics.cpp */; };
+		D86A51801BEFBA93007D3AA7 /* NodeStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750B1BEEE3D100D9503D /* NodeStatics.cpp */; };
+		D86A51811BEFBA93007D3AA7 /* ObjectUniqueId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750D1BEEE3D100D9503D /* ObjectUniqueId.cpp */; };
+		D86A51851BEFBA93007D3AA7 /* PropertyInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75161BEEE3D100D9503D /* PropertyInfo.cpp */; };
+		D86A51861BEFBA93007D3AA7 /* PropertyTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75181BEEE3D100D9503D /* PropertyTypeInfo.cpp */; };
+		D86A51871BEFBA93007D3AA7 /* PropertyValueInternalStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751A1BEEE3D100D9503D /* PropertyValueInternalStatics.cpp */; };
+		D86A51881BEFBA93007D3AA7 /* TypeAdapterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751C1BEEE3D100D9503D /* TypeAdapterFactory.cpp */; };
+		D86A51891BEFBA93007D3AA7 /* TypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751E1BEEE3D100D9503D /* TypeInfo.cpp */; };
+		D86A518A1BEFBA93007D3AA7 /* TypeInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75211BEEE3D100D9503D /* TypeInfoFactory.cpp */; };
+		D86A518B1BEFBA93007D3AA7 /* TypeInfoStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75231BEEE3D100D9503D /* TypeInfoStatics.cpp */; };
+		D86A518C1BEFBAB5007D3AA7 /* DateTime.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88F74E61BEEE35E00D9503D /* DateTime.mm */; };
+		D86A518D1BEFBAB5007D3AA7 /* FoundationUtilHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75641BEEE41E00D9503D /* FoundationUtilHelper.cpp */; };
+		D86A518E1BEFBAB5007D3AA7 /* GuidHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75651BEEE41E00D9503D /* GuidHelper.cpp */; };
+		D86A518F1BEFBAB5007D3AA7 /* pal_trace_printf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74CD1BEEE19900D9503D /* pal_trace_printf.cpp */; };
+		D86A51901BEFBAB5007D3AA7 /* palApi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C81BEEE16A00D9503D /* palApi.cpp */; };
+		D86A51911BEFBAB5007D3AA7 /* palApiInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C91BEEE16A00D9503D /* palApiInternal.cpp */; };
+		D86A51921BEFBAB5007D3AA7 /* ComInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BC1BEEE13900D9503D /* ComInterfaces.cpp */; };
+		D86A51931BEFBAB5007D3AA7 /* FoundationExports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BD1BEEE13900D9503D /* FoundationExports.cpp */; };
+		D86A51941BEFBAB5007D3AA7 /* hstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BE1BEEE13900D9503D /* hstring.cpp */; };
+		D86A51951BEFBAB5007D3AA7 /* PropertyValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C01BEEE13900D9503D /* PropertyValue.cpp */; };
+		D88A63AD1C94B5430090D8C4 /* dispatch_queue_adapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D401BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp */; };
+		D88A63AE1C94B5430090D8C4 /* PMODAdapterLogCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8C1BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp */; };
+		D88A63AF1C94B5430090D8C4 /* PMODAdapterLoggerTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896625C1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp */; };
+		D88A63B01C94B5430090D8C4 /* ErrorsTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75A61BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp */; };
+		D88A63B11C94B5430090D8C4 /* PerfTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75A71BEEE4A500D9503D /* PerfTypeInfo.g.cpp */; };
+		D88A63B21C94B5430090D8C4 /* FoundationErrorsTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75691BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp */; };
+		D88A63B31C94B5430090D8C4 /* CommandClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F756C1BEEE46300D9503D /* CommandClassInfoCache.cpp */; };
+		D88A63B41C94B5430090D8C4 /* CommandInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F756E1BEEE46300D9503D /* CommandInfo.cpp */; };
+		D88A63B51C94B5430090D8C4 /* EventInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75701BEEE46300D9503D /* EventInfo.cpp */; };
+		D88A63B71C94B5430090D8C4 /* ModelInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75741BEEE46300D9503D /* ModelInterfaces.cpp */; };
+		D88A63B81C94B5430090D8C4 /* ModelTypeInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75751BEEE46300D9503D /* ModelTypeInfoFactory.cpp */; };
+		D88A63B91C94B5430090D8C4 /* ModelTypeInfoLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75771BEEE46300D9503D /* ModelTypeInfoLibrary.cpp */; };
+		D88A63BA1C94B5430090D8C4 /* ModelTypeInfoStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75781BEEE46300D9503D /* ModelTypeInfoStatics.cpp */; };
+		D88A63BB1C94B5430090D8C4 /* ObservableCollectionClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757A1BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp */; };
+		D88A63BC1C94B5430090D8C4 /* ObservableCollectionInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757C1BEEE46300D9503D /* ObservableCollectionInfo.cpp */; };
+		D88A63BD1C94B5430090D8C4 /* ObservableObjectClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757E1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp */; };
+		D88A63BE1C94B5430090D8C4 /* ObservableObjectInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75801BEEE46300D9503D /* ObservableObjectInfo.cpp */; };
+		D88A63BF1C94B5430090D8C4 /* ObservableObjectInfoBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75821BEEE46300D9503D /* ObservableObjectInfoBase.cpp */; };
+		D88A63C01C94B5430090D8C4 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75841BEEE46300D9503D /* pch.cpp */; };
+		D88A63C21C94B5430090D8C4 /* EnumerableClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D511C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp */; };
+		D88A63C31C94B5430090D8C4 /* EnumerableTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D531C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp */; };
+		D88A63C41C94B5430090D8C4 /* ActivationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74E91BEEE3D100D9503D /* ActivationFactory.cpp */; };
+		D88A63C51C94B5430090D8C4 /* AdapterFactoryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74EB1BEEE3D100D9503D /* AdapterFactoryFactory.cpp */; };
+		D88A63C61C94B5430090D8C4 /* AsyncOperationClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74ED1BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp */; };
+		D88A63C71C94B5430090D8C4 /* AsyncOperationTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74EF1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp */; };
+		D88A63C81C94B5430090D8C4 /* DebugUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F11BEEE3D100D9503D /* DebugUtil.cpp */; };
+		D88A63C91C94B5430090D8C4 /* DictionaryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F41BEEE3D100D9503D /* DictionaryFactory.cpp */; };
+		D88A63CA1C94B5430090D8C4 /* EnumTypeClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F61BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp */; };
+		D88A63CB1C94B5430090D8C4 /* EnumTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F81BEEE3D100D9503D /* EnumTypeInfo.cpp */; };
+		D88A63CC1C94B5430090D8C4 /* EnumValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FA1BEEE3D100D9503D /* EnumValue.cpp */; };
+		D88A63CD1C94B5430090D8C4 /* FoundationAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FC1BEEE3D100D9503D /* FoundationAssert.cpp */; };
+		D88A63CE1C94B5430090D8C4 /* FoundationInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FE1BEEE3D100D9503D /* FoundationInterfaces.cpp */; };
+		D88A63CF1C94B5430090D8C4 /* FoundationLibraryInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FF1BEEE3D100D9503D /* FoundationLibraryInstance.cpp */; };
+		D88A63D01C94B5430090D8C4 /* FoundationPrivateInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75011BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp */; };
+		D88A63D11C94B5430090D8C4 /* FoundationTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75021BEEE3D100D9503D /* FoundationTracker.cpp */; };
+		D88A63D21C94B5430090D8C4 /* GenericAdapterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75041BEEE3D100D9503D /* GenericAdapterFactory.cpp */; };
+		D88A63D31C94B5430090D8C4 /* InterfaceAdapterFactoryHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75071BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp */; };
+		D88A63D41C94B5430090D8C4 /* NamespaceStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75091BEEE3D100D9503D /* NamespaceStatics.cpp */; };
+		D88A63D51C94B5430090D8C4 /* NodeStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750B1BEEE3D100D9503D /* NodeStatics.cpp */; };
+		D88A63D61C94B5430090D8C4 /* ObjectUniqueId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750D1BEEE3D100D9503D /* ObjectUniqueId.cpp */; };
+		D88A63D71C94B5430090D8C4 /* ObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CE12401BF51AE6001DE311 /* ObjectFactory.cpp */; };
+		D88A63D81C94B5430090D8C4 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750E1BEEE3D100D9503D /* pch.cpp */; };
+		D88A63DC1C94B5430090D8C4 /* PropertyInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75161BEEE3D100D9503D /* PropertyInfo.cpp */; };
+		D88A63DD1C94B5430090D8C4 /* PropertyTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75181BEEE3D100D9503D /* PropertyTypeInfo.cpp */; };
+		D88A63DE1C94B5430090D8C4 /* PropertyValueInternalStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751A1BEEE3D100D9503D /* PropertyValueInternalStatics.cpp */; };
+		D88A63DF1C94B5430090D8C4 /* TypeAdapterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751C1BEEE3D100D9503D /* TypeAdapterFactory.cpp */; };
+		D88A63E01C94B5430090D8C4 /* TypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751E1BEEE3D100D9503D /* TypeInfo.cpp */; };
+		D88A63E11C94B5430090D8C4 /* TypeInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75211BEEE3D100D9503D /* TypeInfoFactory.cpp */; };
+		D88A63E21C94B5430090D8C4 /* TypeInfoStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75231BEEE3D100D9503D /* TypeInfoStatics.cpp */; };
+		D88A63E31C94B5430090D8C4 /* FoundationUtilHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75641BEEE41E00D9503D /* FoundationUtilHelper.cpp */; };
+		D88A63E41C94B5430090D8C4 /* GuidHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75651BEEE41E00D9503D /* GuidHelper.cpp */; };
+		D88A63E51C94B5430090D8C4 /* pal_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A22CE1C8D17C300E966FB /* pal_common.cpp */; };
+		D88A63E61C94B5430090D8C4 /* pal_trace_printf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74CD1BEEE19900D9503D /* pal_trace_printf.cpp */; };
+		D88A63E71C94B5430090D8C4 /* palApi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C81BEEE16A00D9503D /* palApi.cpp */; };
+		D88A63E81C94B5430090D8C4 /* palApiInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C91BEEE16A00D9503D /* palApiInternal.cpp */; };
+		D88A63E91C94B5430090D8C4 /* ComInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BC1BEEE13900D9503D /* ComInterfaces.cpp */; };
+		D88A63EA1C94B5430090D8C4 /* FoundationExports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BD1BEEE13900D9503D /* FoundationExports.cpp */; };
+		D88A63EB1C94B5440090D8C4 /* hstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BE1BEEE13900D9503D /* hstring.cpp */; };
+		D88A63EC1C94B5440090D8C4 /* PropertyValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C01BEEE13900D9503D /* PropertyValue.cpp */; };
+		D88A63ED1C94B5530090D8C4 /* PMODDispatcherQueueAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86A22091C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm */; };
+		D88A63EE1C94B5530090D8C4 /* PMODAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8A1BEFDE7C0077E57D /* PMODAdapter.mm */; };
+		D88A63EF1C94B5530090D8C4 /* PMODAdapterFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8B1BEFDE7C0077E57D /* PMODAdapterFactory.mm */; };
+		D88A63F01C94B5530090D8C4 /* PMODAdapterUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8F1BEFDE7C0077E57D /* PMODAdapterUtil.mm */; };
+		D88A63F11C94B5530090D8C4 /* PMODAsyncOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A901BEFDE7C0077E57D /* PMODAsyncOperation.mm */; };
+		D88A63F21C94B5530090D8C4 /* PMODCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A921BEFDE7C0077E57D /* PMODCollection.mm */; };
+		D88A63F31C94B5530090D8C4 /* PMODCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A931BEFDE7C0077E57D /* PMODCommand.mm */; };
+		D88A63F41C94B5530090D8C4 /* PMODDictionary.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A951BEFDE7C0077E57D /* PMODDictionary.mm */; };
+		D88A63F51C94B5530090D8C4 /* PMODEnumValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A961BEFDE7C0077E57D /* PMODEnumValue.mm */; };
+		D88A63F61C94B5530090D8C4 /* PMODFoundation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A971BEFDE7C0077E57D /* PMODFoundation.mm */; };
+		D88A63F71C94B5530090D8C4 /* PMODGuid.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A981BEFDE7C0077E57D /* PMODGuid.mm */; };
+		D88A63F81C94B5530090D8C4 /* PMODInterop.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A991BEFDE7C0077E57D /* PMODInterop.mm */; };
+		D88A63F91C94B5530090D8C4 /* PMODList.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9A1BEFDE7C0077E57D /* PMODList.mm */; };
+		D88A63FA1C94B5530090D8C4 /* PMODObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9B1BEFDE7C0077E57D /* PMODObjectBase.mm */; };
+		D88A63FB1C94B5530090D8C4 /* PMODObjectNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9C1BEFDE7C0077E57D /* PMODObjectNode.mm */; };
+		D88A63FC1C94B5530090D8C4 /* PMODObservableObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9D1BEFDE7C0077E57D /* PMODObservableObject.mm */; };
+		D88A63FD1C94B5530090D8C4 /* PMODInspectable.mm in Sources */ = {isa = PBXBuildFile; fileRef = D868BD5E1C8AAE010076900D /* PMODInspectable.mm */; };
+		D88A63FE1C94B5530090D8C4 /* PMODLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86970471C8BCDCA001753C0 /* PMODLogger.mm */; };
+		D88A63FF1C94B5530090D8C4 /* DateTime.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88F74E61BEEE35E00D9503D /* DateTime.mm */; };
+		D88D0A6D1BEFDE5B0077E57D /* PMODAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A511BEFDE5B0077E57D /* PMODAdapter.h */; };
+		D88D0A6E1BEFDE5B0077E57D /* PMODAdapterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A521BEFDE5B0077E57D /* PMODAdapterFactory.h */; };
+		D88D0A6F1BEFDE5B0077E57D /* PMODAdapterLoggerTypeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A531BEFDE5B0077E57D /* PMODAdapterLoggerTypeInfo.h */; };
+		D88D0A701BEFDE5B0077E57D /* PMODAdapterProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A541BEFDE5B0077E57D /* PMODAdapterProtocol.h */; };
+		D88D0A711BEFDE5B0077E57D /* PMODAsyncOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A551BEFDE5B0077E57D /* PMODAsyncOperation.h */; };
+		D88D0A721BEFDE5B0077E57D /* PMODAsyncOperationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A561BEFDE5B0077E57D /* PMODAsyncOperationProtocol.h */; };
+		D88D0A741BEFDE5B0077E57D /* PMODBindingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A581BEFDE5B0077E57D /* PMODBindingProtocol.h */; };
+		D88D0A751BEFDE5B0077E57D /* PMODCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A591BEFDE5B0077E57D /* PMODCollection.h */; };
+		D88D0A761BEFDE5B0077E57D /* PMODCollectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A5A1BEFDE5B0077E57D /* PMODCollectionProtocol.h */; };
+		D88D0A771BEFDE5B0077E57D /* PMODCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A5B1BEFDE5B0077E57D /* PMODCommand.h */; };
+		D88D0A781BEFDE5B0077E57D /* PMODCommandProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A5C1BEFDE5B0077E57D /* PMODCommandProtocol.h */; };
+		D88D0A791BEFDE5B0077E57D /* PMODEnumValue.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A5D1BEFDE5B0077E57D /* PMODEnumValue.h */; };
+		D88D0A7A1BEFDE5B0077E57D /* PMODEventHandlerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A5E1BEFDE5B0077E57D /* PMODEventHandlerAdapter.h */; };
+		D88D0A7B1BEFDE5B0077E57D /* PMODFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A5F1BEFDE5B0077E57D /* PMODFoundation.h */; };
+		D88D0A7C1BEFDE5B0077E57D /* PMODFoundationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A601BEFDE5B0077E57D /* PMODFoundationProtocol.h */; };
+		D88D0A7D1BEFDE5B0077E57D /* PMODGuid.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A611BEFDE5B0077E57D /* PMODGuid.h */; };
+		D88D0A7E1BEFDE5B0077E57D /* PMODInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A621BEFDE5B0077E57D /* PMODInterfaces.h */; };
+		D88D0A7F1BEFDE5B0077E57D /* PMODInterop.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A631BEFDE5B0077E57D /* PMODInterop.h */; };
+		D88D0A801BEFDE5B0077E57D /* PMODList.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A641BEFDE5B0077E57D /* PMODList.h */; };
+		D88D0A811BEFDE5C0077E57D /* PMODListProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A651BEFDE5B0077E57D /* PMODListProtocol.h */; };
+		D88D0A821BEFDE5C0077E57D /* PMODObjectBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A661BEFDE5B0077E57D /* PMODObjectBase.h */; };
+		D88D0A831BEFDE5C0077E57D /* PMODObjectBaseProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A671BEFDE5B0077E57D /* PMODObjectBaseProtocol.h */; };
+		D88D0A841BEFDE5C0077E57D /* PMODObjectNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A681BEFDE5B0077E57D /* PMODObjectNode.h */; };
+		D88D0A851BEFDE5C0077E57D /* PMODObjectNodeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A691BEFDE5B0077E57D /* PMODObjectNodeProtocol.h */; };
+		D88D0A861BEFDE5C0077E57D /* PMODObjectTypeInfoProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A6A1BEFDE5B0077E57D /* PMODObjectTypeInfoProtocol.h */; };
+		D88D0A871BEFDE5C0077E57D /* PMODObservableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A6B1BEFDE5B0077E57D /* PMODObservableObject.h */; };
+		D88D0A881BEFDE5C0077E57D /* PMODObservableObjectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A6C1BEFDE5B0077E57D /* PMODObservableObjectProtocol.h */; };
+		D88D0A9E1BEFDE7C0077E57D /* PMODAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8A1BEFDE7C0077E57D /* PMODAdapter.mm */; };
+		D88D0A9F1BEFDE7C0077E57D /* PMODAdapterFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8B1BEFDE7C0077E57D /* PMODAdapterFactory.mm */; };
+		D88D0AA01BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8C1BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp */; };
+		D88D0AA11BEFDE7C0077E57D /* PMODAdapterLogCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A8D1BEFDE7C0077E57D /* PMODAdapterLogCategory.h */; };
+		D88D0AA21BEFDE7D0077E57D /* PMODAdapterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D88D0A8E1BEFDE7C0077E57D /* PMODAdapterUtil.h */; };
+		D88D0AA31BEFDE7D0077E57D /* PMODAdapterUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8F1BEFDE7C0077E57D /* PMODAdapterUtil.mm */; };
+		D88D0AA41BEFDE7D0077E57D /* PMODAsyncOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A901BEFDE7C0077E57D /* PMODAsyncOperation.mm */; };
+		D88D0AA61BEFDE7D0077E57D /* PMODCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A921BEFDE7C0077E57D /* PMODCollection.mm */; };
+		D88D0AA71BEFDE7D0077E57D /* PMODCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A931BEFDE7C0077E57D /* PMODCommand.mm */; };
+		D88D0AA91BEFDE7D0077E57D /* PMODDictionary.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A951BEFDE7C0077E57D /* PMODDictionary.mm */; };
+		D88D0AAA1BEFDE7D0077E57D /* PMODEnumValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A961BEFDE7C0077E57D /* PMODEnumValue.mm */; };
+		D88D0AAB1BEFDE7D0077E57D /* PMODFoundation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A971BEFDE7C0077E57D /* PMODFoundation.mm */; };
+		D88D0AAC1BEFDE7D0077E57D /* PMODGuid.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A981BEFDE7C0077E57D /* PMODGuid.mm */; };
+		D88D0AAD1BEFDE7D0077E57D /* PMODInterop.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A991BEFDE7C0077E57D /* PMODInterop.mm */; };
+		D88D0AAE1BEFDE7D0077E57D /* PMODList.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9A1BEFDE7C0077E57D /* PMODList.mm */; };
+		D88D0AAF1BEFDE7D0077E57D /* PMODObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9B1BEFDE7C0077E57D /* PMODObjectBase.mm */; };
+		D88D0AB01BEFDE7D0077E57D /* PMODObjectNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9C1BEFDE7C0077E57D /* PMODObjectNode.mm */; };
+		D88D0AB11BEFDE7D0077E57D /* PMODObservableObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9D1BEFDE7C0077E57D /* PMODObservableObject.mm */; };
+		D88F74C11BEEE13900D9503D /* ComInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BC1BEEE13900D9503D /* ComInterfaces.cpp */; };
+		D88F74C21BEEE13900D9503D /* FoundationExports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BD1BEEE13900D9503D /* FoundationExports.cpp */; };
+		D88F74C31BEEE13900D9503D /* hstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74BE1BEEE13900D9503D /* hstring.cpp */; };
+		D88F74C41BEEE13900D9503D /* hstring.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74BF1BEEE13900D9503D /* hstring.h */; };
+		D88F74C51BEEE13900D9503D /* PropertyValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C01BEEE13900D9503D /* PropertyValue.cpp */; };
+		D88F74CA1BEEE16A00D9503D /* palApi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C81BEEE16A00D9503D /* palApi.cpp */; };
+		D88F74CB1BEEE16A00D9503D /* palApiInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74C91BEEE16A00D9503D /* palApiInternal.cpp */; };
+		D88F74CE1BEEE19900D9503D /* pal_trace_printf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74CD1BEEE19900D9503D /* pal_trace_printf.cpp */; };
+		D88F74DA1BEEE30400D9503D /* CastHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D01BEEE30400D9503D /* CastHelper.h */; };
+		D88F74DD1BEEE30400D9503D /* CriticalSection.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D31BEEE30400D9503D /* CriticalSection.h */; };
+		D88F74DE1BEEE30400D9503D /* FoundationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D41BEEE30400D9503D /* FoundationTypes.h */; };
+		D88F74DF1BEEE30400D9503D /* FoundationUtilHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D51BEEE30400D9503D /* FoundationUtilHelper.h */; };
+		D88F74E01BEEE30400D9503D /* GuidHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D61BEEE30400D9503D /* GuidHelper.h */; };
+		D88F74E11BEEE30400D9503D /* pal_str.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D71BEEE30400D9503D /* pal_str.h */; };
+		D88F74E21BEEE30400D9503D /* PtrSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D81BEEE30400D9503D /* PtrSingleton.h */; };
+		D88F74E31BEEE30400D9503D /* SerializeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74D91BEEE30400D9503D /* SerializeUtil.h */; };
+		D88F74E71BEEE35E00D9503D /* DateTime.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88F74E61BEEE35E00D9503D /* DateTime.mm */; };
+		D88F75251BEEE3D100D9503D /* ActivationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74E91BEEE3D100D9503D /* ActivationFactory.cpp */; };
+		D88F75261BEEE3D100D9503D /* ActivationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74EA1BEEE3D100D9503D /* ActivationFactory.h */; };
+		D88F75271BEEE3D100D9503D /* AdapterFactoryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74EB1BEEE3D100D9503D /* AdapterFactoryFactory.cpp */; };
+		D88F75281BEEE3D100D9503D /* AdapterFactoryFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74EC1BEEE3D100D9503D /* AdapterFactoryFactory.h */; };
+		D88F75291BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74ED1BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp */; };
+		D88F752A1BEEE3D100D9503D /* AsyncOperationClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74EE1BEEE3D100D9503D /* AsyncOperationClassInfoCache.h */; };
+		D88F752B1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74EF1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp */; };
+		D88F752C1BEEE3D100D9503D /* AsyncOperationTypeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74F01BEEE3D100D9503D /* AsyncOperationTypeInfo.h */; };
+		D88F752D1BEEE3D100D9503D /* DebugUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F11BEEE3D100D9503D /* DebugUtil.cpp */; };
+		D88F752E1BEEE3D100D9503D /* DebugUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74F21BEEE3D100D9503D /* DebugUtil.h */; };
+		D88F752F1BEEE3D100D9503D /* DictionaryBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74F31BEEE3D100D9503D /* DictionaryBase.h */; };
+		D88F75301BEEE3D100D9503D /* DictionaryFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F41BEEE3D100D9503D /* DictionaryFactory.cpp */; };
+		D88F75311BEEE3D100D9503D /* DictionaryFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74F51BEEE3D100D9503D /* DictionaryFactory.h */; };
+		D88F75321BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F61BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp */; };
+		D88F75331BEEE3D100D9503D /* EnumTypeClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74F71BEEE3D100D9503D /* EnumTypeClassInfoCache.h */; };
+		D88F75341BEEE3D100D9503D /* EnumTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74F81BEEE3D100D9503D /* EnumTypeInfo.cpp */; };
+		D88F75351BEEE3D100D9503D /* EnumTypeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74F91BEEE3D100D9503D /* EnumTypeInfo.h */; };
+		D88F75361BEEE3D100D9503D /* EnumValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FA1BEEE3D100D9503D /* EnumValue.cpp */; };
+		D88F75371BEEE3D100D9503D /* EnumValue.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74FB1BEEE3D100D9503D /* EnumValue.h */; };
+		D88F75381BEEE3D100D9503D /* FoundationAssert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FC1BEEE3D100D9503D /* FoundationAssert.cpp */; };
+		D88F75391BEEE3D100D9503D /* FoundationBaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F74FD1BEEE3D100D9503D /* FoundationBaseTracker.h */; };
+		D88F753A1BEEE3D100D9503D /* FoundationInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FE1BEEE3D100D9503D /* FoundationInterfaces.cpp */; };
+		D88F753B1BEEE3D100D9503D /* FoundationLibraryInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F74FF1BEEE3D100D9503D /* FoundationLibraryInstance.cpp */; };
+		D88F753C1BEEE3D100D9503D /* FoundationLibraryInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75001BEEE3D100D9503D /* FoundationLibraryInstance.h */; };
+		D88F753D1BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75011BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp */; };
+		D88F753E1BEEE3D100D9503D /* FoundationTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75021BEEE3D100D9503D /* FoundationTracker.cpp */; };
+		D88F753F1BEEE3D100D9503D /* FoundationTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75031BEEE3D100D9503D /* FoundationTracker.h */; };
+		D88F75401BEEE3D100D9503D /* GenericAdapterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75041BEEE3D100D9503D /* GenericAdapterFactory.cpp */; };
+		D88F75411BEEE3D100D9503D /* GenericAdapterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75051BEEE3D100D9503D /* GenericAdapterFactory.h */; };
+		D88F75421BEEE3D100D9503D /* InterfaceAdapterFactoryBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75061BEEE3D100D9503D /* InterfaceAdapterFactoryBase.h */; };
+		D88F75431BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75071BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp */; };
+		D88F75441BEEE3D100D9503D /* InterfaceAdapterFactoryHost.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75081BEEE3D100D9503D /* InterfaceAdapterFactoryHost.h */; };
+		D88F75451BEEE3D100D9503D /* NamespaceStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75091BEEE3D100D9503D /* NamespaceStatics.cpp */; };
+		D88F75461BEEE3D100D9503D /* NamespaceStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F750A1BEEE3D100D9503D /* NamespaceStatics.h */; };
+		D88F75471BEEE3D100D9503D /* NodeStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750B1BEEE3D100D9503D /* NodeStatics.cpp */; };
+		D88F75481BEEE3D100D9503D /* NodeStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F750C1BEEE3D100D9503D /* NodeStatics.h */; };
+		D88F75491BEEE3D100D9503D /* ObjectUniqueId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750D1BEEE3D100D9503D /* ObjectUniqueId.cpp */; };
+		D88F754A1BEEE3D100D9503D /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F750E1BEEE3D100D9503D /* pch.cpp */; };
+		D88F754B1BEEE3D100D9503D /* pch.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F750F1BEEE3D100D9503D /* pch.h */; };
+		D88F754D1BEEE3D100D9503D /* ObjectDispatchClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75111BEEE3D100D9503D /* ObjectDispatchClassInfoCache.h */; };
+		D88F754F1BEEE3D100D9503D /* ObjectDispatchInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75131BEEE3D100D9503D /* ObjectDispatchInfo.h */; };
+		D88F75511BEEE3D100D9503D /* ObjectDispatchInfoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75151BEEE3D100D9503D /* ObjectDispatchInfoBase.h */; };
+		D88F75521BEEE3D100D9503D /* PropertyInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75161BEEE3D100D9503D /* PropertyInfo.cpp */; };
+		D88F75531BEEE3D100D9503D /* PropertyInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75171BEEE3D100D9503D /* PropertyInfo.h */; };
+		D88F75541BEEE3D100D9503D /* PropertyTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75181BEEE3D100D9503D /* PropertyTypeInfo.cpp */; };
+		D88F75551BEEE3D100D9503D /* PropertyTypeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75191BEEE3D100D9503D /* PropertyTypeInfo.h */; };
+		D88F75561BEEE3D100D9503D /* PropertyValueInternalStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751A1BEEE3D100D9503D /* PropertyValueInternalStatics.cpp */; };
+		D88F75571BEEE3D100D9503D /* PropertyValueInternalStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F751B1BEEE3D100D9503D /* PropertyValueInternalStatics.h */; };
+		D88F75581BEEE3D100D9503D /* TypeAdapterFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751C1BEEE3D100D9503D /* TypeAdapterFactory.cpp */; };
+		D88F75591BEEE3D100D9503D /* TypeAdapterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F751D1BEEE3D100D9503D /* TypeAdapterFactory.h */; };
+		D88F755A1BEEE3D100D9503D /* TypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F751E1BEEE3D100D9503D /* TypeInfo.cpp */; };
+		D88F755B1BEEE3D100D9503D /* TypeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F751F1BEEE3D100D9503D /* TypeInfo.h */; };
+		D88F755C1BEEE3D100D9503D /* TypeInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75201BEEE3D100D9503D /* TypeInfoCache.h */; };
+		D88F755D1BEEE3D100D9503D /* TypeInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75211BEEE3D100D9503D /* TypeInfoFactory.cpp */; };
+		D88F755E1BEEE3D100D9503D /* TypeInfoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75221BEEE3D100D9503D /* TypeInfoFactory.h */; };
+		D88F755F1BEEE3D100D9503D /* TypeInfoStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75231BEEE3D100D9503D /* TypeInfoStatics.cpp */; };
+		D88F75601BEEE3D100D9503D /* TypeInfoStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75241BEEE3D100D9503D /* TypeInfoStatics.h */; };
+		D88F75621BEEE3E900D9503D /* ArrayHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75611BEEE3E900D9503D /* ArrayHelper.h */; };
+		D88F75661BEEE41E00D9503D /* FoundationUtilHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75641BEEE41E00D9503D /* FoundationUtilHelper.cpp */; };
+		D88F75671BEEE41E00D9503D /* GuidHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75651BEEE41E00D9503D /* GuidHelper.cpp */; };
+		D88F756A1BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75691BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp */; };
+		D88F75891BEEE46300D9503D /* CommandClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F756C1BEEE46300D9503D /* CommandClassInfoCache.cpp */; };
+		D88F758A1BEEE46300D9503D /* CommandClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F756D1BEEE46300D9503D /* CommandClassInfoCache.h */; };
+		D88F758B1BEEE46300D9503D /* CommandInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F756E1BEEE46300D9503D /* CommandInfo.cpp */; };
+		D88F758C1BEEE46300D9503D /* CommandInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F756F1BEEE46300D9503D /* CommandInfo.h */; };
+		D88F758D1BEEE46300D9503D /* EventInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75701BEEE46300D9503D /* EventInfo.cpp */; };
+		D88F758E1BEEE46300D9503D /* EventInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75711BEEE46300D9503D /* EventInfo.h */; };
+		D88F75911BEEE46300D9503D /* ModelInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75741BEEE46300D9503D /* ModelInterfaces.cpp */; };
+		D88F75921BEEE46300D9503D /* ModelTypeInfoFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75751BEEE46300D9503D /* ModelTypeInfoFactory.cpp */; };
+		D88F75931BEEE46300D9503D /* ModelTypeInfoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75761BEEE46300D9503D /* ModelTypeInfoFactory.h */; };
+		D88F75941BEEE46300D9503D /* ModelTypeInfoLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75771BEEE46300D9503D /* ModelTypeInfoLibrary.cpp */; };
+		D88F75951BEEE46300D9503D /* ModelTypeInfoStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75781BEEE46300D9503D /* ModelTypeInfoStatics.cpp */; };
+		D88F75961BEEE46300D9503D /* ModelTypeInfoStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75791BEEE46300D9503D /* ModelTypeInfoStatics.h */; };
+		D88F75971BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757A1BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp */; };
+		D88F75981BEEE46300D9503D /* ObservableCollectionClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F757B1BEEE46300D9503D /* ObservableCollectionClassInfoCache.h */; };
+		D88F75991BEEE46300D9503D /* ObservableCollectionInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757C1BEEE46300D9503D /* ObservableCollectionInfo.cpp */; };
+		D88F759A1BEEE46300D9503D /* ObservableCollectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F757D1BEEE46300D9503D /* ObservableCollectionInfo.h */; };
+		D88F759B1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F757E1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp */; };
+		D88F759C1BEEE46300D9503D /* ObservableObjectClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F757F1BEEE46300D9503D /* ObservableObjectClassInfoCache.h */; };
+		D88F759D1BEEE46300D9503D /* ObservableObjectInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75801BEEE46300D9503D /* ObservableObjectInfo.cpp */; };
+		D88F759E1BEEE46300D9503D /* ObservableObjectInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75811BEEE46300D9503D /* ObservableObjectInfo.h */; };
+		D88F759F1BEEE46300D9503D /* ObservableObjectInfoBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75821BEEE46300D9503D /* ObservableObjectInfoBase.cpp */; };
+		D88F75A01BEEE46300D9503D /* ObservableObjectInfoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75831BEEE46300D9503D /* ObservableObjectInfoBase.h */; };
+		D88F75A11BEEE46300D9503D /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75841BEEE46300D9503D /* pch.cpp */; };
+		D88F75A21BEEE46300D9503D /* pch.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75851BEEE46300D9503D /* pch.h */; };
+		D88F75A31BEEE46300D9503D /* PropertyIdContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = D88F75861BEEE46300D9503D /* PropertyIdContainer.h */; };
+		D88F75A81BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75A61BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp */; };
+		D88F75A91BEEE4A500D9503D /* PerfTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88F75A71BEEE4A500D9503D /* PerfTypeInfo.g.cpp */; };
+		D896625D1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896625C1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp */; };
+		D89662611BEFF43900451877 /* PMODAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8A1BEFDE7C0077E57D /* PMODAdapter.mm */; };
+		D89662621BEFF43900451877 /* PMODAdapterFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8B1BEFDE7C0077E57D /* PMODAdapterFactory.mm */; };
+		D89662631BEFF43900451877 /* PMODAdapterLogCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8C1BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp */; };
+		D89662641BEFF43900451877 /* PMODAdapterUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A8F1BEFDE7C0077E57D /* PMODAdapterUtil.mm */; };
+		D89662651BEFF43900451877 /* PMODAsyncOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A901BEFDE7C0077E57D /* PMODAsyncOperation.mm */; };
+		D89662661BEFF43900451877 /* PMODCollection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A921BEFDE7C0077E57D /* PMODCollection.mm */; };
+		D89662671BEFF43900451877 /* PMODCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A931BEFDE7C0077E57D /* PMODCommand.mm */; };
+		D89662681BEFF43900451877 /* PMODDictionary.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A951BEFDE7C0077E57D /* PMODDictionary.mm */; };
+		D89662691BEFF43900451877 /* PMODEnumValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A961BEFDE7C0077E57D /* PMODEnumValue.mm */; };
+		D896626A1BEFF43A00451877 /* PMODFoundation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A971BEFDE7C0077E57D /* PMODFoundation.mm */; };
+		D896626B1BEFF43A00451877 /* PMODGuid.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A981BEFDE7C0077E57D /* PMODGuid.mm */; };
+		D896626C1BEFF43A00451877 /* PMODInterop.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A991BEFDE7C0077E57D /* PMODInterop.mm */; };
+		D896626D1BEFF43A00451877 /* PMODList.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9A1BEFDE7C0077E57D /* PMODList.mm */; };
+		D896626E1BEFF43A00451877 /* PMODObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9B1BEFDE7C0077E57D /* PMODObjectBase.mm */; };
+		D896626F1BEFF43A00451877 /* PMODObjectNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9C1BEFDE7C0077E57D /* PMODObjectNode.mm */; };
+		D89662701BEFF43A00451877 /* PMODObservableObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = D88D0A9D1BEFDE7C0077E57D /* PMODObservableObject.mm */; };
+		D89662721BEFF4C900451877 /* PMODAdapterLoggerTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896625C1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp */; };
+		D8A8084C1D24325F002485F2 /* ObjectDispatchClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A808491D24325F002485F2 /* ObjectDispatchClassInfoCache.cpp */; };
+		D8A8084D1D24325F002485F2 /* ObjectDispatchInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A8084A1D24325F002485F2 /* ObjectDispatchInfo.cpp */; };
+		D8A8084E1D24325F002485F2 /* ObjectDispatchInfoBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A8084B1D24325F002485F2 /* ObjectDispatchInfoBase.cpp */; };
+		D8A808571D2433F1002485F2 /* ObjectDispatchClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A808491D24325F002485F2 /* ObjectDispatchClassInfoCache.cpp */; };
+		D8A808581D2433F1002485F2 /* ObjectDispatchInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A8084A1D24325F002485F2 /* ObjectDispatchInfo.cpp */; };
+		D8A808591D2433F1002485F2 /* ObjectDispatchInfoBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A8084B1D24325F002485F2 /* ObjectDispatchInfoBase.cpp */; };
+		D8A808641D24CBB2002485F2 /* PMODObjectDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A808621D24CBB2002485F2 /* PMODObjectDispatch.h */; };
+		D8A808651D24CBB2002485F2 /* PMODObjectDispatchProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A808631D24CBB2002485F2 /* PMODObjectDispatchProtocol.h */; };
+		D8A808671D24CCB0002485F2 /* PMODObjectDispatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8A808661D24CCB0002485F2 /* PMODObjectDispatch.mm */; };
+		D8A808681D4063E9002485F2 /* PMODObjectDispatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8A808661D24CCB0002485F2 /* PMODObjectDispatch.mm */; };
+		D8A9055E1D233D1A00BAFCD6 /* MethodInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A9055A1D233D1A00BAFCD6 /* MethodInfo.cpp */; };
+		D8A9055F1D233D1A00BAFCD6 /* MethodInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A9055B1D233D1A00BAFCD6 /* MethodInfo.h */; };
+		D8A905601D233D1A00BAFCD6 /* PropertyInfoProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A9055C1D233D1A00BAFCD6 /* PropertyInfoProxy.cpp */; };
+		D8A905611D233D1A00BAFCD6 /* PropertyInfoProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A9055D1D233D1A00BAFCD6 /* PropertyInfoProxy.h */; };
+		D8A905621D233D3200BAFCD6 /* MethodInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A9055A1D233D1A00BAFCD6 /* MethodInfo.cpp */; };
+		D8A905631D233D3200BAFCD6 /* PropertyInfoProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A9055C1D233D1A00BAFCD6 /* PropertyInfoProxy.cpp */; };
+		D8CE12421BF51AE6001DE311 /* ObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CE12401BF51AE6001DE311 /* ObjectFactory.cpp */; };
+		D8CE12431BF51AE6001DE311 /* ObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8CE12411BF51AE6001DE311 /* ObjectFactory.h */; };
+		D8CE12461BF51E07001DE311 /* ObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CE12401BF51AE6001DE311 /* ObjectFactory.cpp */; };
+		D8EE7D411BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D401BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp */; };
+		D8EE7D431BFFF76800FDF0A3 /* dispatch_queue_adapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EE7D421BFFF76800FDF0A3 /* dispatch_queue_adapter.h */; };
+		D8EE7D441BFFFA8E00FDF0A3 /* dispatch_queue_adapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D401BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp */; };
+		D8EE7D501C0B81D000FDF0A3 /* PMODDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EE7D4F1C0B81D000FDF0A3 /* PMODDictionary.h */; };
+		D8EE7D551C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D511C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp */; };
+		D8EE7D561C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EE7D521C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.h */; };
+		D8EE7D571C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D531C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp */; };
+		D8EE7D581C0E5F0E00FDF0A3 /* EnumerableTypeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EE7D541C0E5F0E00FDF0A3 /* EnumerableTypeInfo.h */; };
+		D8EE7D591C0E5F3800FDF0A3 /* EnumerableClassInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D511C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp */; };
+		D8EE7D5A1C0E5F3800FDF0A3 /* EnumerableTypeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D531C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp */; };
+		D8F66B6E1CA4361E00DA856C /* pal_load_library.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F66B6D1CA4361E00DA856C /* pal_load_library.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D88F74A31BEEE10800D9503D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D868BD5D1C8AAD7B0076900D /* PMODInspectable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PMODInspectable.h; path = ../../../public/objectivec/PMODAdapter/PMODInspectable.h; sourceTree = "<group>"; };
+		D868BD5E1C8AAE010076900D /* PMODInspectable.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODInspectable.mm; path = ../../../objectivec/PMODAdapter/PMODInspectable.mm; sourceTree = "<group>"; };
+		D86970461C8BCD9E001753C0 /* PMODLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PMODLogger.h; path = ../../../public/objectivec/PMODAdapter/PMODLogger.h; sourceTree = "<group>"; };
+		D86970471C8BCDCA001753C0 /* PMODLogger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODLogger.mm; path = ../../../objectivec/PMODAdapter/PMODLogger.mm; sourceTree = "<group>"; };
+		D86A22071C8CB49600E966FB /* PMODDispatcherQueueAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODDispatcherQueueAdapter.h; path = ../../../public/objectivec/PMODAdapter/PMODDispatcherQueueAdapter.h; sourceTree = "<group>"; };
+		D86A22091C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODDispatcherQueueAdapter.mm; path = ../../../objectivec/PMODAdapter/PMODDispatcherQueueAdapter.mm; sourceTree = "<group>"; };
+		D86A22CE1C8D17C300E966FB /* pal_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pal_common.cpp; path = ../../../pal/pal_common.cpp; sourceTree = "<group>"; };
+		D88A63A21C94B5080090D8C4 /* libpmod_static.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpmod_static.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88D0A511BEFDE5B0077E57D /* PMODAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAdapter.h; path = ../../../public/objectivec/PMODAdapter/PMODAdapter.h; sourceTree = "<group>"; };
+		D88D0A521BEFDE5B0077E57D /* PMODAdapterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAdapterFactory.h; path = ../../../public/objectivec/PMODAdapter/PMODAdapterFactory.h; sourceTree = "<group>"; };
+		D88D0A531BEFDE5B0077E57D /* PMODAdapterLoggerTypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAdapterLoggerTypeInfo.h; path = ../../../public/objectivec/PMODAdapter/PMODAdapterLoggerTypeInfo.h; sourceTree = "<group>"; };
+		D88D0A541BEFDE5B0077E57D /* PMODAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAdapterProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODAdapterProtocol.h; sourceTree = "<group>"; };
+		D88D0A551BEFDE5B0077E57D /* PMODAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAsyncOperation.h; path = ../../../public/objectivec/PMODAdapter/PMODAsyncOperation.h; sourceTree = "<group>"; };
+		D88D0A561BEFDE5B0077E57D /* PMODAsyncOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAsyncOperationProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODAsyncOperationProtocol.h; sourceTree = "<group>"; };
+		D88D0A581BEFDE5B0077E57D /* PMODBindingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODBindingProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODBindingProtocol.h; sourceTree = "<group>"; };
+		D88D0A591BEFDE5B0077E57D /* PMODCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODCollection.h; path = ../../../public/objectivec/PMODAdapter/PMODCollection.h; sourceTree = "<group>"; };
+		D88D0A5A1BEFDE5B0077E57D /* PMODCollectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODCollectionProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODCollectionProtocol.h; sourceTree = "<group>"; };
+		D88D0A5B1BEFDE5B0077E57D /* PMODCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODCommand.h; path = ../../../public/objectivec/PMODAdapter/PMODCommand.h; sourceTree = "<group>"; };
+		D88D0A5C1BEFDE5B0077E57D /* PMODCommandProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODCommandProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODCommandProtocol.h; sourceTree = "<group>"; };
+		D88D0A5D1BEFDE5B0077E57D /* PMODEnumValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODEnumValue.h; path = ../../../public/objectivec/PMODAdapter/PMODEnumValue.h; sourceTree = "<group>"; };
+		D88D0A5E1BEFDE5B0077E57D /* PMODEventHandlerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODEventHandlerAdapter.h; path = ../../../public/objectivec/PMODAdapter/PMODEventHandlerAdapter.h; sourceTree = "<group>"; };
+		D88D0A5F1BEFDE5B0077E57D /* PMODFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODFoundation.h; path = ../../../public/objectivec/PMODAdapter/PMODFoundation.h; sourceTree = "<group>"; };
+		D88D0A601BEFDE5B0077E57D /* PMODFoundationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODFoundationProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODFoundationProtocol.h; sourceTree = "<group>"; };
+		D88D0A611BEFDE5B0077E57D /* PMODGuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODGuid.h; path = ../../../public/objectivec/PMODAdapter/PMODGuid.h; sourceTree = "<group>"; };
+		D88D0A621BEFDE5B0077E57D /* PMODInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODInterfaces.h; path = ../../../public/objectivec/PMODAdapter/PMODInterfaces.h; sourceTree = "<group>"; };
+		D88D0A631BEFDE5B0077E57D /* PMODInterop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODInterop.h; path = ../../../public/objectivec/PMODAdapter/PMODInterop.h; sourceTree = "<group>"; };
+		D88D0A641BEFDE5B0077E57D /* PMODList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODList.h; path = ../../../public/objectivec/PMODAdapter/PMODList.h; sourceTree = "<group>"; };
+		D88D0A651BEFDE5B0077E57D /* PMODListProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODListProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODListProtocol.h; sourceTree = "<group>"; };
+		D88D0A661BEFDE5B0077E57D /* PMODObjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectBase.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectBase.h; sourceTree = "<group>"; };
+		D88D0A671BEFDE5B0077E57D /* PMODObjectBaseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectBaseProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectBaseProtocol.h; sourceTree = "<group>"; };
+		D88D0A681BEFDE5B0077E57D /* PMODObjectNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectNode.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectNode.h; sourceTree = "<group>"; };
+		D88D0A691BEFDE5B0077E57D /* PMODObjectNodeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectNodeProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectNodeProtocol.h; sourceTree = "<group>"; };
+		D88D0A6A1BEFDE5B0077E57D /* PMODObjectTypeInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectTypeInfoProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectTypeInfoProtocol.h; sourceTree = "<group>"; };
+		D88D0A6B1BEFDE5B0077E57D /* PMODObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObservableObject.h; path = ../../../public/objectivec/PMODAdapter/PMODObservableObject.h; sourceTree = "<group>"; };
+		D88D0A6C1BEFDE5B0077E57D /* PMODObservableObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObservableObjectProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODObservableObjectProtocol.h; sourceTree = "<group>"; };
+		D88D0A8A1BEFDE7C0077E57D /* PMODAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODAdapter.mm; path = ../../../objectivec/PMODAdapter/PMODAdapter.mm; sourceTree = "<group>"; };
+		D88D0A8B1BEFDE7C0077E57D /* PMODAdapterFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODAdapterFactory.mm; path = ../../../objectivec/PMODAdapter/PMODAdapterFactory.mm; sourceTree = "<group>"; };
+		D88D0A8C1BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PMODAdapterLogCategory.cpp; path = ../../../objectivec/PMODAdapter/PMODAdapterLogCategory.cpp; sourceTree = "<group>"; };
+		D88D0A8D1BEFDE7C0077E57D /* PMODAdapterLogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAdapterLogCategory.h; path = ../../../objectivec/PMODAdapter/PMODAdapterLogCategory.h; sourceTree = "<group>"; };
+		D88D0A8E1BEFDE7C0077E57D /* PMODAdapterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODAdapterUtil.h; path = ../../../objectivec/PMODAdapter/PMODAdapterUtil.h; sourceTree = "<group>"; };
+		D88D0A8F1BEFDE7C0077E57D /* PMODAdapterUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODAdapterUtil.mm; path = ../../../objectivec/PMODAdapter/PMODAdapterUtil.mm; sourceTree = "<group>"; };
+		D88D0A901BEFDE7C0077E57D /* PMODAsyncOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODAsyncOperation.mm; path = ../../../objectivec/PMODAdapter/PMODAsyncOperation.mm; sourceTree = "<group>"; };
+		D88D0A921BEFDE7C0077E57D /* PMODCollection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODCollection.mm; path = ../../../objectivec/PMODAdapter/PMODCollection.mm; sourceTree = "<group>"; };
+		D88D0A931BEFDE7C0077E57D /* PMODCommand.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODCommand.mm; path = ../../../objectivec/PMODAdapter/PMODCommand.mm; sourceTree = "<group>"; };
+		D88D0A951BEFDE7C0077E57D /* PMODDictionary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODDictionary.mm; path = ../../../objectivec/PMODAdapter/PMODDictionary.mm; sourceTree = "<group>"; };
+		D88D0A961BEFDE7C0077E57D /* PMODEnumValue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODEnumValue.mm; path = ../../../objectivec/PMODAdapter/PMODEnumValue.mm; sourceTree = "<group>"; };
+		D88D0A971BEFDE7C0077E57D /* PMODFoundation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODFoundation.mm; path = ../../../objectivec/PMODAdapter/PMODFoundation.mm; sourceTree = "<group>"; };
+		D88D0A981BEFDE7C0077E57D /* PMODGuid.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODGuid.mm; path = ../../../objectivec/PMODAdapter/PMODGuid.mm; sourceTree = "<group>"; };
+		D88D0A991BEFDE7C0077E57D /* PMODInterop.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODInterop.mm; path = ../../../objectivec/PMODAdapter/PMODInterop.mm; sourceTree = "<group>"; };
+		D88D0A9A1BEFDE7C0077E57D /* PMODList.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODList.mm; path = ../../../objectivec/PMODAdapter/PMODList.mm; sourceTree = "<group>"; };
+		D88D0A9B1BEFDE7C0077E57D /* PMODObjectBase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODObjectBase.mm; path = ../../../objectivec/PMODAdapter/PMODObjectBase.mm; sourceTree = "<group>"; };
+		D88D0A9C1BEFDE7C0077E57D /* PMODObjectNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODObjectNode.mm; path = ../../../objectivec/PMODAdapter/PMODObjectNode.mm; sourceTree = "<group>"; };
+		D88D0A9D1BEFDE7C0077E57D /* PMODObservableObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODObservableObject.mm; path = ../../../objectivec/PMODAdapter/PMODObservableObject.mm; sourceTree = "<group>"; };
+		D88F74921BEEE08B00D9503D /* libpmod.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libpmod.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88F74A51BEEE10800D9503D /* libpmod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpmod.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88F74BC1BEEE13900D9503D /* ComInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ComInterfaces.cpp; path = ../../../foundation_pal/ComInterfaces.cpp; sourceTree = "<group>"; };
+		D88F74BD1BEEE13900D9503D /* FoundationExports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationExports.cpp; path = ../../../foundation_pal/FoundationExports.cpp; sourceTree = "<group>"; };
+		D88F74BE1BEEE13900D9503D /* hstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hstring.cpp; path = ../../../foundation_pal/hstring.cpp; sourceTree = "<group>"; };
+		D88F74BF1BEEE13900D9503D /* hstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hstring.h; path = ../../../foundation_pal/hstring.h; sourceTree = "<group>"; };
+		D88F74C01BEEE13900D9503D /* PropertyValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyValue.cpp; path = ../../../foundation_pal/PropertyValue.cpp; sourceTree = "<group>"; };
+		D88F74C81BEEE16A00D9503D /* palApi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = palApi.cpp; path = ../../../pal/unix/palApi.cpp; sourceTree = "<group>"; };
+		D88F74C91BEEE16A00D9503D /* palApiInternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = palApiInternal.cpp; path = ../../../pal/unix/palApiInternal.cpp; sourceTree = "<group>"; };
+		D88F74CD1BEEE19900D9503D /* pal_trace_printf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pal_trace_printf.cpp; path = ../../../pal/pal_trace_printf.cpp; sourceTree = "<group>"; };
+		D88F74D01BEEE30400D9503D /* CastHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CastHelper.h; path = ../../../inc/CastHelper.h; sourceTree = "<group>"; };
+		D88F74D31BEEE30400D9503D /* CriticalSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CriticalSection.h; path = ../../../inc/CriticalSection.h; sourceTree = "<group>"; };
+		D88F74D41BEEE30400D9503D /* FoundationTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationTypes.h; path = ../../../inc/FoundationTypes.h; sourceTree = "<group>"; };
+		D88F74D51BEEE30400D9503D /* FoundationUtilHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationUtilHelper.h; path = ../../../inc/FoundationUtilHelper.h; sourceTree = "<group>"; };
+		D88F74D61BEEE30400D9503D /* GuidHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuidHelper.h; path = ../../../inc/GuidHelper.h; sourceTree = "<group>"; };
+		D88F74D71BEEE30400D9503D /* pal_str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pal_str.h; path = ../../../inc/pal_str.h; sourceTree = "<group>"; };
+		D88F74D81BEEE30400D9503D /* PtrSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PtrSingleton.h; path = ../../../inc/PtrSingleton.h; sourceTree = "<group>"; };
+		D88F74D91BEEE30400D9503D /* SerializeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerializeUtil.h; path = ../../../inc/SerializeUtil.h; sourceTree = "<group>"; };
+		D88F74E61BEEE35E00D9503D /* DateTime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DateTime.mm; path = ../../../objectivec/pal/DateTime.mm; sourceTree = "<group>"; };
+		D88F74E91BEEE3D100D9503D /* ActivationFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ActivationFactory.cpp; path = ../../../foundation/ActivationFactory.cpp; sourceTree = "<group>"; };
+		D88F74EA1BEEE3D100D9503D /* ActivationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivationFactory.h; path = ../../../foundation/ActivationFactory.h; sourceTree = "<group>"; };
+		D88F74EB1BEEE3D100D9503D /* AdapterFactoryFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdapterFactoryFactory.cpp; path = ../../../foundation/AdapterFactoryFactory.cpp; sourceTree = "<group>"; };
+		D88F74EC1BEEE3D100D9503D /* AdapterFactoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdapterFactoryFactory.h; path = ../../../foundation/AdapterFactoryFactory.h; sourceTree = "<group>"; };
+		D88F74ED1BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AsyncOperationClassInfoCache.cpp; path = ../../../foundation/AsyncOperationClassInfoCache.cpp; sourceTree = "<group>"; };
+		D88F74EE1BEEE3D100D9503D /* AsyncOperationClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncOperationClassInfoCache.h; path = ../../../foundation/AsyncOperationClassInfoCache.h; sourceTree = "<group>"; };
+		D88F74EF1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AsyncOperationTypeInfo.cpp; path = ../../../foundation/AsyncOperationTypeInfo.cpp; sourceTree = "<group>"; };
+		D88F74F01BEEE3D100D9503D /* AsyncOperationTypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncOperationTypeInfo.h; path = ../../../foundation/AsyncOperationTypeInfo.h; sourceTree = "<group>"; };
+		D88F74F11BEEE3D100D9503D /* DebugUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebugUtil.cpp; path = ../../../foundation/DebugUtil.cpp; sourceTree = "<group>"; };
+		D88F74F21BEEE3D100D9503D /* DebugUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugUtil.h; path = ../../../foundation/DebugUtil.h; sourceTree = "<group>"; };
+		D88F74F31BEEE3D100D9503D /* DictionaryBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictionaryBase.h; path = ../../../foundation/DictionaryBase.h; sourceTree = "<group>"; };
+		D88F74F41BEEE3D100D9503D /* DictionaryFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DictionaryFactory.cpp; path = ../../../foundation/DictionaryFactory.cpp; sourceTree = "<group>"; };
+		D88F74F51BEEE3D100D9503D /* DictionaryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DictionaryFactory.h; path = ../../../foundation/DictionaryFactory.h; sourceTree = "<group>"; };
+		D88F74F61BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnumTypeClassInfoCache.cpp; path = ../../../foundation/EnumTypeClassInfoCache.cpp; sourceTree = "<group>"; };
+		D88F74F71BEEE3D100D9503D /* EnumTypeClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnumTypeClassInfoCache.h; path = ../../../foundation/EnumTypeClassInfoCache.h; sourceTree = "<group>"; };
+		D88F74F81BEEE3D100D9503D /* EnumTypeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnumTypeInfo.cpp; path = ../../../foundation/EnumTypeInfo.cpp; sourceTree = "<group>"; };
+		D88F74F91BEEE3D100D9503D /* EnumTypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnumTypeInfo.h; path = ../../../foundation/EnumTypeInfo.h; sourceTree = "<group>"; };
+		D88F74FA1BEEE3D100D9503D /* EnumValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnumValue.cpp; path = ../../../foundation/EnumValue.cpp; sourceTree = "<group>"; };
+		D88F74FB1BEEE3D100D9503D /* EnumValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnumValue.h; path = ../../../foundation/EnumValue.h; sourceTree = "<group>"; };
+		D88F74FC1BEEE3D100D9503D /* FoundationAssert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationAssert.cpp; path = ../../../foundation/FoundationAssert.cpp; sourceTree = "<group>"; };
+		D88F74FD1BEEE3D100D9503D /* FoundationBaseTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationBaseTracker.h; path = ../../../foundation/FoundationBaseTracker.h; sourceTree = "<group>"; };
+		D88F74FE1BEEE3D100D9503D /* FoundationInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationInterfaces.cpp; path = ../../../foundation/FoundationInterfaces.cpp; sourceTree = "<group>"; };
+		D88F74FF1BEEE3D100D9503D /* FoundationLibraryInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationLibraryInstance.cpp; path = ../../../foundation/FoundationLibraryInstance.cpp; sourceTree = "<group>"; };
+		D88F75001BEEE3D100D9503D /* FoundationLibraryInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationLibraryInstance.h; path = ../../../foundation/FoundationLibraryInstance.h; sourceTree = "<group>"; };
+		D88F75011BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationPrivateInterfaces.cpp; path = ../../../foundation/FoundationPrivateInterfaces.cpp; sourceTree = "<group>"; };
+		D88F75021BEEE3D100D9503D /* FoundationTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationTracker.cpp; path = ../../../foundation/FoundationTracker.cpp; sourceTree = "<group>"; };
+		D88F75031BEEE3D100D9503D /* FoundationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationTracker.h; path = ../../../foundation/FoundationTracker.h; sourceTree = "<group>"; };
+		D88F75041BEEE3D100D9503D /* GenericAdapterFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GenericAdapterFactory.cpp; path = ../../../foundation/GenericAdapterFactory.cpp; sourceTree = "<group>"; };
+		D88F75051BEEE3D100D9503D /* GenericAdapterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericAdapterFactory.h; path = ../../../foundation/GenericAdapterFactory.h; sourceTree = "<group>"; };
+		D88F75061BEEE3D100D9503D /* InterfaceAdapterFactoryBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterfaceAdapterFactoryBase.h; path = ../../../foundation/InterfaceAdapterFactoryBase.h; sourceTree = "<group>"; };
+		D88F75071BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InterfaceAdapterFactoryHost.cpp; path = ../../../foundation/InterfaceAdapterFactoryHost.cpp; sourceTree = "<group>"; };
+		D88F75081BEEE3D100D9503D /* InterfaceAdapterFactoryHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterfaceAdapterFactoryHost.h; path = ../../../foundation/InterfaceAdapterFactoryHost.h; sourceTree = "<group>"; };
+		D88F75091BEEE3D100D9503D /* NamespaceStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NamespaceStatics.cpp; path = ../../../foundation/NamespaceStatics.cpp; sourceTree = "<group>"; };
+		D88F750A1BEEE3D100D9503D /* NamespaceStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NamespaceStatics.h; path = ../../../foundation/NamespaceStatics.h; sourceTree = "<group>"; };
+		D88F750B1BEEE3D100D9503D /* NodeStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeStatics.cpp; path = ../../../foundation/NodeStatics.cpp; sourceTree = "<group>"; };
+		D88F750C1BEEE3D100D9503D /* NodeStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeStatics.h; path = ../../../foundation/NodeStatics.h; sourceTree = "<group>"; };
+		D88F750D1BEEE3D100D9503D /* ObjectUniqueId.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectUniqueId.cpp; path = ../../../foundation/ObjectUniqueId.cpp; sourceTree = "<group>"; };
+		D88F750E1BEEE3D100D9503D /* pch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = ../../../foundation/pch.cpp; sourceTree = "<group>"; };
+		D88F750F1BEEE3D100D9503D /* pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.h; path = ../../../foundation/pch.h; sourceTree = "<group>"; };
+		D88F75111BEEE3D100D9503D /* ObjectDispatchClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDispatchClassInfoCache.h; path = ../../../foundation/ObjectDispatchClassInfoCache.h; sourceTree = "<group>"; };
+		D88F75131BEEE3D100D9503D /* ObjectDispatchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDispatchInfo.h; path = ../../../foundation/ObjectDispatchInfo.h; sourceTree = "<group>"; };
+		D88F75151BEEE3D100D9503D /* ObjectDispatchInfoBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDispatchInfoBase.h; path = ../../../foundation/ObjectDispatchInfoBase.h; sourceTree = "<group>"; };
+		D88F75161BEEE3D100D9503D /* PropertyInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyInfo.cpp; path = ../../../foundation/PropertyInfo.cpp; sourceTree = "<group>"; };
+		D88F75171BEEE3D100D9503D /* PropertyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyInfo.h; path = ../../../foundation/PropertyInfo.h; sourceTree = "<group>"; };
+		D88F75181BEEE3D100D9503D /* PropertyTypeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyTypeInfo.cpp; path = ../../../foundation/PropertyTypeInfo.cpp; sourceTree = "<group>"; };
+		D88F75191BEEE3D100D9503D /* PropertyTypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyTypeInfo.h; path = ../../../foundation/PropertyTypeInfo.h; sourceTree = "<group>"; };
+		D88F751A1BEEE3D100D9503D /* PropertyValueInternalStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyValueInternalStatics.cpp; path = ../../../foundation/PropertyValueInternalStatics.cpp; sourceTree = "<group>"; };
+		D88F751B1BEEE3D100D9503D /* PropertyValueInternalStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyValueInternalStatics.h; path = ../../../foundation/PropertyValueInternalStatics.h; sourceTree = "<group>"; };
+		D88F751C1BEEE3D100D9503D /* TypeAdapterFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TypeAdapterFactory.cpp; path = ../../../foundation/TypeAdapterFactory.cpp; sourceTree = "<group>"; };
+		D88F751D1BEEE3D100D9503D /* TypeAdapterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeAdapterFactory.h; path = ../../../foundation/TypeAdapterFactory.h; sourceTree = "<group>"; };
+		D88F751E1BEEE3D100D9503D /* TypeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TypeInfo.cpp; path = ../../../foundation/TypeInfo.cpp; sourceTree = "<group>"; };
+		D88F751F1BEEE3D100D9503D /* TypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeInfo.h; path = ../../../foundation/TypeInfo.h; sourceTree = "<group>"; };
+		D88F75201BEEE3D100D9503D /* TypeInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeInfoCache.h; path = ../../../foundation/TypeInfoCache.h; sourceTree = "<group>"; };
+		D88F75211BEEE3D100D9503D /* TypeInfoFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TypeInfoFactory.cpp; path = ../../../foundation/TypeInfoFactory.cpp; sourceTree = "<group>"; };
+		D88F75221BEEE3D100D9503D /* TypeInfoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeInfoFactory.h; path = ../../../foundation/TypeInfoFactory.h; sourceTree = "<group>"; };
+		D88F75231BEEE3D100D9503D /* TypeInfoStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TypeInfoStatics.cpp; path = ../../../foundation/TypeInfoStatics.cpp; sourceTree = "<group>"; };
+		D88F75241BEEE3D100D9503D /* TypeInfoStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeInfoStatics.h; path = ../../../foundation/TypeInfoStatics.h; sourceTree = "<group>"; };
+		D88F75611BEEE3E900D9503D /* ArrayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayHelper.h; path = ../../../inc/ArrayHelper.h; sourceTree = "<group>"; };
+		D88F75641BEEE41E00D9503D /* FoundationUtilHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationUtilHelper.cpp; path = ../../../src/FoundationUtilHelper.cpp; sourceTree = "<group>"; };
+		D88F75651BEEE41E00D9503D /* GuidHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GuidHelper.cpp; path = ../../../src/GuidHelper.cpp; sourceTree = "<group>"; };
+		D88F75691BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationErrorsTypeInfo.g.cpp; path = ../../../__generated/foundation/FoundationErrorsTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D88F756C1BEEE46300D9503D /* CommandClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommandClassInfoCache.cpp; path = ../../../model/CommandClassInfoCache.cpp; sourceTree = "<group>"; };
+		D88F756D1BEEE46300D9503D /* CommandClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandClassInfoCache.h; path = ../../../model/CommandClassInfoCache.h; sourceTree = "<group>"; };
+		D88F756E1BEEE46300D9503D /* CommandInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommandInfo.cpp; path = ../../../model/CommandInfo.cpp; sourceTree = "<group>"; };
+		D88F756F1BEEE46300D9503D /* CommandInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandInfo.h; path = ../../../model/CommandInfo.h; sourceTree = "<group>"; };
+		D88F75701BEEE46300D9503D /* EventInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventInfo.cpp; path = ../../../model/EventInfo.cpp; sourceTree = "<group>"; };
+		D88F75711BEEE46300D9503D /* EventInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventInfo.h; path = ../../../model/EventInfo.h; sourceTree = "<group>"; };
+		D88F75741BEEE46300D9503D /* ModelInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelInterfaces.cpp; path = ../../../model/ModelInterfaces.cpp; sourceTree = "<group>"; };
+		D88F75751BEEE46300D9503D /* ModelTypeInfoFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelTypeInfoFactory.cpp; path = ../../../model/ModelTypeInfoFactory.cpp; sourceTree = "<group>"; };
+		D88F75761BEEE46300D9503D /* ModelTypeInfoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelTypeInfoFactory.h; path = ../../../model/ModelTypeInfoFactory.h; sourceTree = "<group>"; };
+		D88F75771BEEE46300D9503D /* ModelTypeInfoLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelTypeInfoLibrary.cpp; path = ../../../model/ModelTypeInfoLibrary.cpp; sourceTree = "<group>"; };
+		D88F75781BEEE46300D9503D /* ModelTypeInfoStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelTypeInfoStatics.cpp; path = ../../../model/ModelTypeInfoStatics.cpp; sourceTree = "<group>"; };
+		D88F75791BEEE46300D9503D /* ModelTypeInfoStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelTypeInfoStatics.h; path = ../../../model/ModelTypeInfoStatics.h; sourceTree = "<group>"; };
+		D88F757A1BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableCollectionClassInfoCache.cpp; path = ../../../model/ObservableCollectionClassInfoCache.cpp; sourceTree = "<group>"; };
+		D88F757B1BEEE46300D9503D /* ObservableCollectionClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableCollectionClassInfoCache.h; path = ../../../model/ObservableCollectionClassInfoCache.h; sourceTree = "<group>"; };
+		D88F757C1BEEE46300D9503D /* ObservableCollectionInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableCollectionInfo.cpp; path = ../../../model/ObservableCollectionInfo.cpp; sourceTree = "<group>"; };
+		D88F757D1BEEE46300D9503D /* ObservableCollectionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableCollectionInfo.h; path = ../../../model/ObservableCollectionInfo.h; sourceTree = "<group>"; };
+		D88F757E1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObjectClassInfoCache.cpp; path = ../../../model/ObservableObjectClassInfoCache.cpp; sourceTree = "<group>"; };
+		D88F757F1BEEE46300D9503D /* ObservableObjectClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableObjectClassInfoCache.h; path = ../../../model/ObservableObjectClassInfoCache.h; sourceTree = "<group>"; };
+		D88F75801BEEE46300D9503D /* ObservableObjectInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObjectInfo.cpp; path = ../../../model/ObservableObjectInfo.cpp; sourceTree = "<group>"; };
+		D88F75811BEEE46300D9503D /* ObservableObjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableObjectInfo.h; path = ../../../model/ObservableObjectInfo.h; sourceTree = "<group>"; };
+		D88F75821BEEE46300D9503D /* ObservableObjectInfoBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObjectInfoBase.cpp; path = ../../../model/ObservableObjectInfoBase.cpp; sourceTree = "<group>"; };
+		D88F75831BEEE46300D9503D /* ObservableObjectInfoBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableObjectInfoBase.h; path = ../../../model/ObservableObjectInfoBase.h; sourceTree = "<group>"; };
+		D88F75841BEEE46300D9503D /* pch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = ../../../model/pch.cpp; sourceTree = "<group>"; };
+		D88F75851BEEE46300D9503D /* pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.h; path = ../../../model/pch.h; sourceTree = "<group>"; };
+		D88F75861BEEE46300D9503D /* PropertyIdContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyIdContainer.h; path = ../../../model/PropertyIdContainer.h; sourceTree = "<group>"; };
+		D88F75A61BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ErrorsTypeInfo.g.cpp; path = ../../../__generated/model/ErrorsTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D88F75A71BEEE4A500D9503D /* PerfTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PerfTypeInfo.g.cpp; path = ../../../__generated/model/PerfTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D896625C1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PMODAdapterLoggerTypeInfo.cpp; path = ../../../__generated/objectivec/PMODAdapterLoggerTypeInfo.cpp; sourceTree = "<group>"; };
+		D8A808491D24325F002485F2 /* ObjectDispatchClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectDispatchClassInfoCache.cpp; path = ../../../foundation/ObjectDispatchClassInfoCache.cpp; sourceTree = "<group>"; };
+		D8A8084A1D24325F002485F2 /* ObjectDispatchInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectDispatchInfo.cpp; path = ../../../foundation/ObjectDispatchInfo.cpp; sourceTree = "<group>"; };
+		D8A8084B1D24325F002485F2 /* ObjectDispatchInfoBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectDispatchInfoBase.cpp; path = ../../../foundation/ObjectDispatchInfoBase.cpp; sourceTree = "<group>"; };
+		D8A808621D24CBB2002485F2 /* PMODObjectDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectDispatch.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectDispatch.h; sourceTree = "<group>"; };
+		D8A808631D24CBB2002485F2 /* PMODObjectDispatchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODObjectDispatchProtocol.h; path = ../../../public/objectivec/PMODAdapter/PMODObjectDispatchProtocol.h; sourceTree = "<group>"; };
+		D8A808661D24CCB0002485F2 /* PMODObjectDispatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODObjectDispatch.mm; path = ../../../objectivec/PMODAdapter/PMODObjectDispatch.mm; sourceTree = "<group>"; };
+		D8A9055A1D233D1A00BAFCD6 /* MethodInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MethodInfo.cpp; path = ../../../foundation/MethodInfo.cpp; sourceTree = "<group>"; };
+		D8A9055B1D233D1A00BAFCD6 /* MethodInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MethodInfo.h; path = ../../../foundation/MethodInfo.h; sourceTree = "<group>"; };
+		D8A9055C1D233D1A00BAFCD6 /* PropertyInfoProxy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyInfoProxy.cpp; path = ../../../foundation/PropertyInfoProxy.cpp; sourceTree = "<group>"; };
+		D8A9055D1D233D1A00BAFCD6 /* PropertyInfoProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyInfoProxy.h; path = ../../../foundation/PropertyInfoProxy.h; sourceTree = "<group>"; };
+		D8CE12401BF51AE6001DE311 /* ObjectFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectFactory.cpp; path = ../../../foundation/ObjectFactory.cpp; sourceTree = "<group>"; };
+		D8CE12411BF51AE6001DE311 /* ObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectFactory.h; path = ../../../foundation/ObjectFactory.h; sourceTree = "<group>"; };
+		D8EE7D401BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dispatch_queue_adapter.cpp; path = ../../../objectivec/foundation/dispatch_queue_adapter.cpp; sourceTree = "<group>"; };
+		D8EE7D421BFFF76800FDF0A3 /* dispatch_queue_adapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dispatch_queue_adapter.h; path = ../../../public/objectivec/inc/dispatch_queue_adapter.h; sourceTree = "<group>"; };
+		D8EE7D4F1C0B81D000FDF0A3 /* PMODDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODDictionary.h; path = ../../../public/objectivec/PMODAdapter/PMODDictionary.h; sourceTree = "<group>"; };
+		D8EE7D511C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnumerableClassInfoCache.cpp; path = ../../../foundation/EnumerableClassInfoCache.cpp; sourceTree = "<group>"; };
+		D8EE7D521C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnumerableClassInfoCache.h; path = ../../../foundation/EnumerableClassInfoCache.h; sourceTree = "<group>"; };
+		D8EE7D531C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnumerableTypeInfo.cpp; path = ../../../foundation/EnumerableTypeInfo.cpp; sourceTree = "<group>"; };
+		D8EE7D541C0E5F0E00FDF0A3 /* EnumerableTypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnumerableTypeInfo.h; path = ../../../foundation/EnumerableTypeInfo.h; sourceTree = "<group>"; };
+		D8F66B6D1CA4361E00DA856C /* pal_load_library.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pal_load_library.cpp; path = ../../../pal/pal_load_library.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D88A639F1C94B5080090D8C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88F748F1BEEE08B00D9503D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88F74A21BEEE10800D9503D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D88D0A4F1BEFDB500077E57D /* objective_projection */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D421BFFF76800FDF0A3 /* dispatch_queue_adapter.h */,
+				D8EE7D401BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp */,
+				D88D0A891BEFDE610077E57D /* src */,
+				D88D0A501BEFDE3A0077E57D /* public */,
+			);
+			name = objective_projection;
+			sourceTree = "<group>";
+		};
+		D88D0A501BEFDE3A0077E57D /* public */ = {
+			isa = PBXGroup;
+			children = (
+				D8A808621D24CBB2002485F2 /* PMODObjectDispatch.h */,
+				D8A808631D24CBB2002485F2 /* PMODObjectDispatchProtocol.h */,
+				D86A22071C8CB49600E966FB /* PMODDispatcherQueueAdapter.h */,
+				D8EE7D4F1C0B81D000FDF0A3 /* PMODDictionary.h */,
+				D88D0A511BEFDE5B0077E57D /* PMODAdapter.h */,
+				D88D0A521BEFDE5B0077E57D /* PMODAdapterFactory.h */,
+				D88D0A531BEFDE5B0077E57D /* PMODAdapterLoggerTypeInfo.h */,
+				D88D0A541BEFDE5B0077E57D /* PMODAdapterProtocol.h */,
+				D88D0A551BEFDE5B0077E57D /* PMODAsyncOperation.h */,
+				D88D0A561BEFDE5B0077E57D /* PMODAsyncOperationProtocol.h */,
+				D88D0A581BEFDE5B0077E57D /* PMODBindingProtocol.h */,
+				D88D0A591BEFDE5B0077E57D /* PMODCollection.h */,
+				D88D0A5A1BEFDE5B0077E57D /* PMODCollectionProtocol.h */,
+				D88D0A5B1BEFDE5B0077E57D /* PMODCommand.h */,
+				D88D0A5C1BEFDE5B0077E57D /* PMODCommandProtocol.h */,
+				D88D0A5D1BEFDE5B0077E57D /* PMODEnumValue.h */,
+				D88D0A5E1BEFDE5B0077E57D /* PMODEventHandlerAdapter.h */,
+				D88D0A5F1BEFDE5B0077E57D /* PMODFoundation.h */,
+				D88D0A601BEFDE5B0077E57D /* PMODFoundationProtocol.h */,
+				D88D0A611BEFDE5B0077E57D /* PMODGuid.h */,
+				D88D0A621BEFDE5B0077E57D /* PMODInterfaces.h */,
+				D88D0A631BEFDE5B0077E57D /* PMODInterop.h */,
+				D88D0A641BEFDE5B0077E57D /* PMODList.h */,
+				D88D0A651BEFDE5B0077E57D /* PMODListProtocol.h */,
+				D88D0A661BEFDE5B0077E57D /* PMODObjectBase.h */,
+				D88D0A671BEFDE5B0077E57D /* PMODObjectBaseProtocol.h */,
+				D88D0A681BEFDE5B0077E57D /* PMODObjectNode.h */,
+				D88D0A691BEFDE5B0077E57D /* PMODObjectNodeProtocol.h */,
+				D88D0A6A1BEFDE5B0077E57D /* PMODObjectTypeInfoProtocol.h */,
+				D88D0A6B1BEFDE5B0077E57D /* PMODObservableObject.h */,
+				D88D0A6C1BEFDE5B0077E57D /* PMODObservableObjectProtocol.h */,
+				D868BD5D1C8AAD7B0076900D /* PMODInspectable.h */,
+				D86970461C8BCD9E001753C0 /* PMODLogger.h */,
+			);
+			name = public;
+			sourceTree = "<group>";
+		};
+		D88D0A891BEFDE610077E57D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D8A808661D24CCB0002485F2 /* PMODObjectDispatch.mm */,
+				D86A22091C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm */,
+				D88D0A8A1BEFDE7C0077E57D /* PMODAdapter.mm */,
+				D88D0A8B1BEFDE7C0077E57D /* PMODAdapterFactory.mm */,
+				D88D0A8C1BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp */,
+				D88D0A8D1BEFDE7C0077E57D /* PMODAdapterLogCategory.h */,
+				D88D0A8E1BEFDE7C0077E57D /* PMODAdapterUtil.h */,
+				D88D0A8F1BEFDE7C0077E57D /* PMODAdapterUtil.mm */,
+				D88D0A901BEFDE7C0077E57D /* PMODAsyncOperation.mm */,
+				D88D0A921BEFDE7C0077E57D /* PMODCollection.mm */,
+				D88D0A931BEFDE7C0077E57D /* PMODCommand.mm */,
+				D88D0A951BEFDE7C0077E57D /* PMODDictionary.mm */,
+				D88D0A961BEFDE7C0077E57D /* PMODEnumValue.mm */,
+				D88D0A971BEFDE7C0077E57D /* PMODFoundation.mm */,
+				D88D0A981BEFDE7C0077E57D /* PMODGuid.mm */,
+				D88D0A991BEFDE7C0077E57D /* PMODInterop.mm */,
+				D88D0A9A1BEFDE7C0077E57D /* PMODList.mm */,
+				D88D0A9B1BEFDE7C0077E57D /* PMODObjectBase.mm */,
+				D88D0A9C1BEFDE7C0077E57D /* PMODObjectNode.mm */,
+				D88D0A9D1BEFDE7C0077E57D /* PMODObservableObject.mm */,
+				D868BD5E1C8AAE010076900D /* PMODInspectable.mm */,
+				D86970471C8BCDCA001753C0 /* PMODLogger.mm */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D88F74891BEEE08B00D9503D = {
+			isa = PBXGroup;
+			children = (
+				D88D0A4F1BEFDB500077E57D /* objective_projection */,
+				D88F75681BEEE42C00D9503D /* __generated */,
+				D88F756B1BEEE44E00D9503D /* model */,
+				D88F74E81BEEE3B500D9503D /* foundation */,
+				D88F74E41BEEE33400D9503D /* objectivec */,
+				D88F74CF1BEEE2DC00D9503D /* inc */,
+				D88F75631BEEE40500D9503D /* src */,
+				D88F74C71BEEE14A00D9503D /* pal */,
+				D88F74A01BEEE0D700D9503D /* foundation_pal */,
+				D88F74931BEEE08B00D9503D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D88F74931BEEE08B00D9503D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D88F74921BEEE08B00D9503D /* libpmod.dylib */,
+				D88F74A51BEEE10800D9503D /* libpmod.a */,
+				D88A63A21C94B5080090D8C4 /* libpmod_static.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D88F74A01BEEE0D700D9503D /* foundation_pal */ = {
+			isa = PBXGroup;
+			children = (
+				D88F74BC1BEEE13900D9503D /* ComInterfaces.cpp */,
+				D88F74BD1BEEE13900D9503D /* FoundationExports.cpp */,
+				D88F74BE1BEEE13900D9503D /* hstring.cpp */,
+				D88F74BF1BEEE13900D9503D /* hstring.h */,
+				D88F74C01BEEE13900D9503D /* PropertyValue.cpp */,
+			);
+			name = foundation_pal;
+			sourceTree = "<group>";
+		};
+		D88F74C71BEEE14A00D9503D /* pal */ = {
+			isa = PBXGroup;
+			children = (
+				D8F66B6D1CA4361E00DA856C /* pal_load_library.cpp */,
+				D86A22CE1C8D17C300E966FB /* pal_common.cpp */,
+				D88F74CD1BEEE19900D9503D /* pal_trace_printf.cpp */,
+				D88F74CC1BEEE17000D9503D /* unix */,
+			);
+			name = pal;
+			sourceTree = "<group>";
+		};
+		D88F74CC1BEEE17000D9503D /* unix */ = {
+			isa = PBXGroup;
+			children = (
+				D88F74C81BEEE16A00D9503D /* palApi.cpp */,
+				D88F74C91BEEE16A00D9503D /* palApiInternal.cpp */,
+			);
+			name = unix;
+			sourceTree = "<group>";
+		};
+		D88F74CF1BEEE2DC00D9503D /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				D88F75611BEEE3E900D9503D /* ArrayHelper.h */,
+				D88F74D01BEEE30400D9503D /* CastHelper.h */,
+				D88F74D31BEEE30400D9503D /* CriticalSection.h */,
+				D88F74D41BEEE30400D9503D /* FoundationTypes.h */,
+				D88F74D51BEEE30400D9503D /* FoundationUtilHelper.h */,
+				D88F74D61BEEE30400D9503D /* GuidHelper.h */,
+				D88F74D71BEEE30400D9503D /* pal_str.h */,
+				D88F74D81BEEE30400D9503D /* PtrSingleton.h */,
+				D88F74D91BEEE30400D9503D /* SerializeUtil.h */,
+			);
+			name = inc;
+			sourceTree = "<group>";
+		};
+		D88F74E41BEEE33400D9503D /* objectivec */ = {
+			isa = PBXGroup;
+			children = (
+				D88F74E51BEEE33C00D9503D /* pal */,
+			);
+			name = objectivec;
+			sourceTree = "<group>";
+		};
+		D88F74E51BEEE33C00D9503D /* pal */ = {
+			isa = PBXGroup;
+			children = (
+				D88F74E61BEEE35E00D9503D /* DateTime.mm */,
+			);
+			name = pal;
+			sourceTree = "<group>";
+		};
+		D88F74E81BEEE3B500D9503D /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D8A808491D24325F002485F2 /* ObjectDispatchClassInfoCache.cpp */,
+				D8A8084A1D24325F002485F2 /* ObjectDispatchInfo.cpp */,
+				D8A8084B1D24325F002485F2 /* ObjectDispatchInfoBase.cpp */,
+				D8A9055A1D233D1A00BAFCD6 /* MethodInfo.cpp */,
+				D8A9055B1D233D1A00BAFCD6 /* MethodInfo.h */,
+				D8A9055C1D233D1A00BAFCD6 /* PropertyInfoProxy.cpp */,
+				D8A9055D1D233D1A00BAFCD6 /* PropertyInfoProxy.h */,
+				D8EE7D511C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp */,
+				D8EE7D521C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.h */,
+				D8EE7D531C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp */,
+				D8EE7D541C0E5F0E00FDF0A3 /* EnumerableTypeInfo.h */,
+				D88F74E91BEEE3D100D9503D /* ActivationFactory.cpp */,
+				D88F74EA1BEEE3D100D9503D /* ActivationFactory.h */,
+				D88F74EB1BEEE3D100D9503D /* AdapterFactoryFactory.cpp */,
+				D88F74EC1BEEE3D100D9503D /* AdapterFactoryFactory.h */,
+				D88F74ED1BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp */,
+				D88F74EE1BEEE3D100D9503D /* AsyncOperationClassInfoCache.h */,
+				D88F74EF1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp */,
+				D88F74F01BEEE3D100D9503D /* AsyncOperationTypeInfo.h */,
+				D88F74F11BEEE3D100D9503D /* DebugUtil.cpp */,
+				D88F74F21BEEE3D100D9503D /* DebugUtil.h */,
+				D88F74F31BEEE3D100D9503D /* DictionaryBase.h */,
+				D88F74F41BEEE3D100D9503D /* DictionaryFactory.cpp */,
+				D88F74F51BEEE3D100D9503D /* DictionaryFactory.h */,
+				D88F74F61BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp */,
+				D88F74F71BEEE3D100D9503D /* EnumTypeClassInfoCache.h */,
+				D88F74F81BEEE3D100D9503D /* EnumTypeInfo.cpp */,
+				D88F74F91BEEE3D100D9503D /* EnumTypeInfo.h */,
+				D88F74FA1BEEE3D100D9503D /* EnumValue.cpp */,
+				D88F74FB1BEEE3D100D9503D /* EnumValue.h */,
+				D88F74FC1BEEE3D100D9503D /* FoundationAssert.cpp */,
+				D88F74FD1BEEE3D100D9503D /* FoundationBaseTracker.h */,
+				D88F74FE1BEEE3D100D9503D /* FoundationInterfaces.cpp */,
+				D88F74FF1BEEE3D100D9503D /* FoundationLibraryInstance.cpp */,
+				D88F75001BEEE3D100D9503D /* FoundationLibraryInstance.h */,
+				D88F75011BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp */,
+				D88F75021BEEE3D100D9503D /* FoundationTracker.cpp */,
+				D88F75031BEEE3D100D9503D /* FoundationTracker.h */,
+				D88F75041BEEE3D100D9503D /* GenericAdapterFactory.cpp */,
+				D88F75051BEEE3D100D9503D /* GenericAdapterFactory.h */,
+				D88F75061BEEE3D100D9503D /* InterfaceAdapterFactoryBase.h */,
+				D88F75071BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp */,
+				D88F75081BEEE3D100D9503D /* InterfaceAdapterFactoryHost.h */,
+				D88F75091BEEE3D100D9503D /* NamespaceStatics.cpp */,
+				D88F750A1BEEE3D100D9503D /* NamespaceStatics.h */,
+				D88F750B1BEEE3D100D9503D /* NodeStatics.cpp */,
+				D88F750C1BEEE3D100D9503D /* NodeStatics.h */,
+				D88F750D1BEEE3D100D9503D /* ObjectUniqueId.cpp */,
+				D8CE12401BF51AE6001DE311 /* ObjectFactory.cpp */,
+				D8CE12411BF51AE6001DE311 /* ObjectFactory.h */,
+				D88F750E1BEEE3D100D9503D /* pch.cpp */,
+				D88F750F1BEEE3D100D9503D /* pch.h */,
+				D88F75111BEEE3D100D9503D /* ObjectDispatchClassInfoCache.h */,
+				D88F75131BEEE3D100D9503D /* ObjectDispatchInfo.h */,
+				D88F75151BEEE3D100D9503D /* ObjectDispatchInfoBase.h */,
+				D88F75161BEEE3D100D9503D /* PropertyInfo.cpp */,
+				D88F75171BEEE3D100D9503D /* PropertyInfo.h */,
+				D88F75181BEEE3D100D9503D /* PropertyTypeInfo.cpp */,
+				D88F75191BEEE3D100D9503D /* PropertyTypeInfo.h */,
+				D88F751A1BEEE3D100D9503D /* PropertyValueInternalStatics.cpp */,
+				D88F751B1BEEE3D100D9503D /* PropertyValueInternalStatics.h */,
+				D88F751C1BEEE3D100D9503D /* TypeAdapterFactory.cpp */,
+				D88F751D1BEEE3D100D9503D /* TypeAdapterFactory.h */,
+				D88F751E1BEEE3D100D9503D /* TypeInfo.cpp */,
+				D88F751F1BEEE3D100D9503D /* TypeInfo.h */,
+				D88F75201BEEE3D100D9503D /* TypeInfoCache.h */,
+				D88F75211BEEE3D100D9503D /* TypeInfoFactory.cpp */,
+				D88F75221BEEE3D100D9503D /* TypeInfoFactory.h */,
+				D88F75231BEEE3D100D9503D /* TypeInfoStatics.cpp */,
+				D88F75241BEEE3D100D9503D /* TypeInfoStatics.h */,
+			);
+			name = foundation;
+			sourceTree = "<group>";
+		};
+		D88F75631BEEE40500D9503D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D88F75641BEEE41E00D9503D /* FoundationUtilHelper.cpp */,
+				D88F75651BEEE41E00D9503D /* GuidHelper.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D88F75681BEEE42C00D9503D /* __generated */ = {
+			isa = PBXGroup;
+			children = (
+				D896625C1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp */,
+				D88F75A61BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp */,
+				D88F75A71BEEE4A500D9503D /* PerfTypeInfo.g.cpp */,
+				D88F75691BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp */,
+			);
+			name = __generated;
+			sourceTree = "<group>";
+		};
+		D88F756B1BEEE44E00D9503D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D88F756C1BEEE46300D9503D /* CommandClassInfoCache.cpp */,
+				D88F756D1BEEE46300D9503D /* CommandClassInfoCache.h */,
+				D88F756E1BEEE46300D9503D /* CommandInfo.cpp */,
+				D88F756F1BEEE46300D9503D /* CommandInfo.h */,
+				D88F75701BEEE46300D9503D /* EventInfo.cpp */,
+				D88F75711BEEE46300D9503D /* EventInfo.h */,
+				D88F75741BEEE46300D9503D /* ModelInterfaces.cpp */,
+				D88F75751BEEE46300D9503D /* ModelTypeInfoFactory.cpp */,
+				D88F75761BEEE46300D9503D /* ModelTypeInfoFactory.h */,
+				D88F75771BEEE46300D9503D /* ModelTypeInfoLibrary.cpp */,
+				D88F75781BEEE46300D9503D /* ModelTypeInfoStatics.cpp */,
+				D88F75791BEEE46300D9503D /* ModelTypeInfoStatics.h */,
+				D88F757A1BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp */,
+				D88F757B1BEEE46300D9503D /* ObservableCollectionClassInfoCache.h */,
+				D88F757C1BEEE46300D9503D /* ObservableCollectionInfo.cpp */,
+				D88F757D1BEEE46300D9503D /* ObservableCollectionInfo.h */,
+				D88F757E1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp */,
+				D88F757F1BEEE46300D9503D /* ObservableObjectClassInfoCache.h */,
+				D88F75801BEEE46300D9503D /* ObservableObjectInfo.cpp */,
+				D88F75811BEEE46300D9503D /* ObservableObjectInfo.h */,
+				D88F75821BEEE46300D9503D /* ObservableObjectInfoBase.cpp */,
+				D88F75831BEEE46300D9503D /* ObservableObjectInfoBase.h */,
+				D88F75841BEEE46300D9503D /* pch.cpp */,
+				D88F75851BEEE46300D9503D /* pch.h */,
+				D88F75861BEEE46300D9503D /* PropertyIdContainer.h */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D88A63A01C94B5080090D8C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88F74901BEEE08B00D9503D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88D0A7D1BEFDE5B0077E57D /* PMODGuid.h in Headers */,
+				D8A808641D24CBB2002485F2 /* PMODObjectDispatch.h in Headers */,
+				D88D0A761BEFDE5B0077E57D /* PMODCollectionProtocol.h in Headers */,
+				D88F754D1BEEE3D100D9503D /* ObjectDispatchClassInfoCache.h in Headers */,
+				D86A22081C8CB49600E966FB /* PMODDispatcherQueueAdapter.h in Headers */,
+				D88F75621BEEE3E900D9503D /* ArrayHelper.h in Headers */,
+				D88F75A01BEEE46300D9503D /* ObservableObjectInfoBase.h in Headers */,
+				D88D0A811BEFDE5C0077E57D /* PMODListProtocol.h in Headers */,
+				D88F74DD1BEEE30400D9503D /* CriticalSection.h in Headers */,
+				D88F75A31BEEE46300D9503D /* PropertyIdContainer.h in Headers */,
+				D88F752C1BEEE3D100D9503D /* AsyncOperationTypeInfo.h in Headers */,
+				D88D0A821BEFDE5C0077E57D /* PMODObjectBase.h in Headers */,
+				D88F755B1BEEE3D100D9503D /* TypeInfo.h in Headers */,
+				D88D0A801BEFDE5B0077E57D /* PMODList.h in Headers */,
+				D88D0A851BEFDE5C0077E57D /* PMODObjectNodeProtocol.h in Headers */,
+				D88F755E1BEEE3D100D9503D /* TypeInfoFactory.h in Headers */,
+				D88D0A711BEFDE5B0077E57D /* PMODAsyncOperation.h in Headers */,
+				D88D0A7E1BEFDE5B0077E57D /* PMODInterfaces.h in Headers */,
+				D88D0A6F1BEFDE5B0077E57D /* PMODAdapterLoggerTypeInfo.h in Headers */,
+				D88F75281BEEE3D100D9503D /* AdapterFactoryFactory.h in Headers */,
+				D88F74E01BEEE30400D9503D /* GuidHelper.h in Headers */,
+				D88D0A7C1BEFDE5B0077E57D /* PMODFoundationProtocol.h in Headers */,
+				D88F752E1BEEE3D100D9503D /* DebugUtil.h in Headers */,
+				D88F75441BEEE3D100D9503D /* InterfaceAdapterFactoryHost.h in Headers */,
+				D88D0A7B1BEFDE5B0077E57D /* PMODFoundation.h in Headers */,
+				D88F75391BEEE3D100D9503D /* FoundationBaseTracker.h in Headers */,
+				D8EE7D561C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.h in Headers */,
+				D88F759A1BEEE46300D9503D /* ObservableCollectionInfo.h in Headers */,
+				D88F75351BEEE3D100D9503D /* EnumTypeInfo.h in Headers */,
+				D88F752F1BEEE3D100D9503D /* DictionaryBase.h in Headers */,
+				D88D0A881BEFDE5C0077E57D /* PMODObservableObjectProtocol.h in Headers */,
+				D88D0AA21BEFDE7D0077E57D /* PMODAdapterUtil.h in Headers */,
+				D88F75331BEEE3D100D9503D /* EnumTypeClassInfoCache.h in Headers */,
+				D88F75981BEEE46300D9503D /* ObservableCollectionClassInfoCache.h in Headers */,
+				D8EE7D431BFFF76800FDF0A3 /* dispatch_queue_adapter.h in Headers */,
+				D88F74DE1BEEE30400D9503D /* FoundationTypes.h in Headers */,
+				D88D0A871BEFDE5C0077E57D /* PMODObservableObject.h in Headers */,
+				D88D0A701BEFDE5B0077E57D /* PMODAdapterProtocol.h in Headers */,
+				D88D0A751BEFDE5B0077E57D /* PMODCollection.h in Headers */,
+				D88F74E11BEEE30400D9503D /* pal_str.h in Headers */,
+				D88D0A721BEFDE5B0077E57D /* PMODAsyncOperationProtocol.h in Headers */,
+				D88D0A841BEFDE5C0077E57D /* PMODObjectNode.h in Headers */,
+				D88D0A7A1BEFDE5B0077E57D /* PMODEventHandlerAdapter.h in Headers */,
+				D88F74E31BEEE30400D9503D /* SerializeUtil.h in Headers */,
+				D88F75421BEEE3D100D9503D /* InterfaceAdapterFactoryBase.h in Headers */,
+				D8EE7D501C0B81D000FDF0A3 /* PMODDictionary.h in Headers */,
+				D8EE7D581C0E5F0E00FDF0A3 /* EnumerableTypeInfo.h in Headers */,
+				D88F74C41BEEE13900D9503D /* hstring.h in Headers */,
+				D88F752A1BEEE3D100D9503D /* AsyncOperationClassInfoCache.h in Headers */,
+				D88F759E1BEEE46300D9503D /* ObservableObjectInfo.h in Headers */,
+				D88F75601BEEE3D100D9503D /* TypeInfoStatics.h in Headers */,
+				D88F755C1BEEE3D100D9503D /* TypeInfoCache.h in Headers */,
+				D88F75551BEEE3D100D9503D /* PropertyTypeInfo.h in Headers */,
+				D88F75511BEEE3D100D9503D /* ObjectDispatchInfoBase.h in Headers */,
+				D88F754F1BEEE3D100D9503D /* ObjectDispatchInfo.h in Headers */,
+				D88F75571BEEE3D100D9503D /* PropertyValueInternalStatics.h in Headers */,
+				D88F754B1BEEE3D100D9503D /* pch.h in Headers */,
+				D88F75481BEEE3D100D9503D /* NodeStatics.h in Headers */,
+				D88D0A741BEFDE5B0077E57D /* PMODBindingProtocol.h in Headers */,
+				D88F758A1BEEE46300D9503D /* CommandClassInfoCache.h in Headers */,
+				D88D0A831BEFDE5C0077E57D /* PMODObjectBaseProtocol.h in Headers */,
+				D88F759C1BEEE46300D9503D /* ObservableObjectClassInfoCache.h in Headers */,
+				D88F758E1BEEE46300D9503D /* EventInfo.h in Headers */,
+				D88D0A781BEFDE5B0077E57D /* PMODCommandProtocol.h in Headers */,
+				D88F74DF1BEEE30400D9503D /* FoundationUtilHelper.h in Headers */,
+				D88F74DA1BEEE30400D9503D /* CastHelper.h in Headers */,
+				D88F75531BEEE3D100D9503D /* PropertyInfo.h in Headers */,
+				D88F75311BEEE3D100D9503D /* DictionaryFactory.h in Headers */,
+				D88F75A21BEEE46300D9503D /* pch.h in Headers */,
+				D88D0A771BEFDE5B0077E57D /* PMODCommand.h in Headers */,
+				D88F753C1BEEE3D100D9503D /* FoundationLibraryInstance.h in Headers */,
+				D88F75961BEEE46300D9503D /* ModelTypeInfoStatics.h in Headers */,
+				D88F753F1BEEE3D100D9503D /* FoundationTracker.h in Headers */,
+				D88F74E21BEEE30400D9503D /* PtrSingleton.h in Headers */,
+				D88F758C1BEEE46300D9503D /* CommandInfo.h in Headers */,
+				D88D0A6E1BEFDE5B0077E57D /* PMODAdapterFactory.h in Headers */,
+				D88F75591BEEE3D100D9503D /* TypeAdapterFactory.h in Headers */,
+				D88D0A6D1BEFDE5B0077E57D /* PMODAdapter.h in Headers */,
+				D88D0A791BEFDE5B0077E57D /* PMODEnumValue.h in Headers */,
+				D88D0A7F1BEFDE5B0077E57D /* PMODInterop.h in Headers */,
+				D8A905611D233D1A00BAFCD6 /* PropertyInfoProxy.h in Headers */,
+				D88F75461BEEE3D100D9503D /* NamespaceStatics.h in Headers */,
+				D88D0AA11BEFDE7C0077E57D /* PMODAdapterLogCategory.h in Headers */,
+				D88F75931BEEE46300D9503D /* ModelTypeInfoFactory.h in Headers */,
+				D88F75261BEEE3D100D9503D /* ActivationFactory.h in Headers */,
+				D8A808651D24CBB2002485F2 /* PMODObjectDispatchProtocol.h in Headers */,
+				D88D0A861BEFDE5C0077E57D /* PMODObjectTypeInfoProtocol.h in Headers */,
+				D88F75371BEEE3D100D9503D /* EnumValue.h in Headers */,
+				D88F75411BEEE3D100D9503D /* GenericAdapterFactory.h in Headers */,
+				D8CE12431BF51AE6001DE311 /* ObjectFactory.h in Headers */,
+				D8A9055F1D233D1A00BAFCD6 /* MethodInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D88A63A11C94B5080090D8C4 /* pmod_static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D88A63AC1C94B5080090D8C4 /* Build configuration list for PBXNativeTarget "pmod_static" */;
+			buildPhases = (
+				D88A639E1C94B5080090D8C4 /* Sources */,
+				D88A639F1C94B5080090D8C4 /* Frameworks */,
+				D88A63A01C94B5080090D8C4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pmod_static;
+			productName = pmod_static;
+			productReference = D88A63A21C94B5080090D8C4 /* libpmod_static.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D88F74911BEEE08B00D9503D /* pmod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D88F749D1BEEE08B00D9503D /* Build configuration list for PBXNativeTarget "pmod" */;
+			buildPhases = (
+				D88F748E1BEEE08B00D9503D /* Sources */,
+				D88F748F1BEEE08B00D9503D /* Frameworks */,
+				D88F74901BEEE08B00D9503D /* Headers */,
+				D81DFD231BEF0180004391D8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pmod;
+			productName = pmod;
+			productReference = D88F74921BEEE08B00D9503D /* libpmod.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		D88F74A41BEEE10800D9503D /* pmod_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D88F74B61BEEE10900D9503D /* Build configuration list for PBXNativeTarget "pmod_iOS" */;
+			buildPhases = (
+				D88F74A11BEEE10800D9503D /* Sources */,
+				D88F74A21BEEE10800D9503D /* Frameworks */,
+				D88F74A31BEEE10800D9503D /* CopyFiles */,
+				D86A51961BEFBCE5007D3AA7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pmod_iOS;
+			productName = pmod_iOS;
+			productReference = D88F74A51BEEE10800D9503D /* libpmod.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D88F748A1BEEE08B00D9503D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Rodrigo Varas";
+				TargetAttributes = {
+					D88A63A11C94B5080090D8C4 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D88F74911BEEE08B00D9503D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					D88F74A41BEEE10800D9503D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = D88F748D1BEEE08B00D9503D /* Build configuration list for PBXProject "pmod" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D88F74891BEEE08B00D9503D;
+			productRefGroup = D88F74931BEEE08B00D9503D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D88F74911BEEE08B00D9503D /* pmod */,
+				D88F74A41BEEE10800D9503D /* pmod_iOS */,
+				D88A63A11C94B5080090D8C4 /* pmod_static */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D81DFD231BEF0180004391D8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "products=../../../../bin/Products/macosx/$CONFIGURATION\n\nif [ ! -d \"$products\" ]; then\nmkdir -p $products\nfi\ncp ${TARGET_BUILD_DIR}/libpmod.dylib $products";
+		};
+		D86A51961BEFBCE5007D3AA7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "products=../../../../bin/Products/iOS/$CONFIGURATION/$PLATFORM_NAME\n    \nif [ ! -d \"$products\" ]; then\nmkdir -p $products\nfi\ncp ${TARGET_BUILD_DIR}/libpmod.a $products";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D88A639E1C94B5080090D8C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88A63ED1C94B5530090D8C4 /* PMODDispatcherQueueAdapter.mm in Sources */,
+				D88A63EE1C94B5530090D8C4 /* PMODAdapter.mm in Sources */,
+				D88A63EF1C94B5530090D8C4 /* PMODAdapterFactory.mm in Sources */,
+				D88A63F01C94B5530090D8C4 /* PMODAdapterUtil.mm in Sources */,
+				D88A63F11C94B5530090D8C4 /* PMODAsyncOperation.mm in Sources */,
+				D88A63F21C94B5530090D8C4 /* PMODCollection.mm in Sources */,
+				D88A63F31C94B5530090D8C4 /* PMODCommand.mm in Sources */,
+				D88A63F41C94B5530090D8C4 /* PMODDictionary.mm in Sources */,
+				D88A63F51C94B5530090D8C4 /* PMODEnumValue.mm in Sources */,
+				D88A63F61C94B5530090D8C4 /* PMODFoundation.mm in Sources */,
+				D88A63F71C94B5530090D8C4 /* PMODGuid.mm in Sources */,
+				D88A63F81C94B5530090D8C4 /* PMODInterop.mm in Sources */,
+				D88A63F91C94B5530090D8C4 /* PMODList.mm in Sources */,
+				D88A63FA1C94B5530090D8C4 /* PMODObjectBase.mm in Sources */,
+				D88A63FB1C94B5530090D8C4 /* PMODObjectNode.mm in Sources */,
+				D88A63FC1C94B5530090D8C4 /* PMODObservableObject.mm in Sources */,
+				D88A63FD1C94B5530090D8C4 /* PMODInspectable.mm in Sources */,
+				D88A63FE1C94B5530090D8C4 /* PMODLogger.mm in Sources */,
+				D88A63FF1C94B5530090D8C4 /* DateTime.mm in Sources */,
+				D88A63AD1C94B5430090D8C4 /* dispatch_queue_adapter.cpp in Sources */,
+				D88A63AE1C94B5430090D8C4 /* PMODAdapterLogCategory.cpp in Sources */,
+				D88A63AF1C94B5430090D8C4 /* PMODAdapterLoggerTypeInfo.cpp in Sources */,
+				D88A63B01C94B5430090D8C4 /* ErrorsTypeInfo.g.cpp in Sources */,
+				D88A63B11C94B5430090D8C4 /* PerfTypeInfo.g.cpp in Sources */,
+				D88A63B21C94B5430090D8C4 /* FoundationErrorsTypeInfo.g.cpp in Sources */,
+				D88A63B31C94B5430090D8C4 /* CommandClassInfoCache.cpp in Sources */,
+				D88A63B41C94B5430090D8C4 /* CommandInfo.cpp in Sources */,
+				D88A63B51C94B5430090D8C4 /* EventInfo.cpp in Sources */,
+				D88A63B71C94B5430090D8C4 /* ModelInterfaces.cpp in Sources */,
+				D88A63B81C94B5430090D8C4 /* ModelTypeInfoFactory.cpp in Sources */,
+				D88A63B91C94B5430090D8C4 /* ModelTypeInfoLibrary.cpp in Sources */,
+				D88A63BA1C94B5430090D8C4 /* ModelTypeInfoStatics.cpp in Sources */,
+				D88A63BB1C94B5430090D8C4 /* ObservableCollectionClassInfoCache.cpp in Sources */,
+				D88A63BC1C94B5430090D8C4 /* ObservableCollectionInfo.cpp in Sources */,
+				D88A63BD1C94B5430090D8C4 /* ObservableObjectClassInfoCache.cpp in Sources */,
+				D88A63BE1C94B5430090D8C4 /* ObservableObjectInfo.cpp in Sources */,
+				D88A63BF1C94B5430090D8C4 /* ObservableObjectInfoBase.cpp in Sources */,
+				D88A63C01C94B5430090D8C4 /* pch.cpp in Sources */,
+				D88A63C21C94B5430090D8C4 /* EnumerableClassInfoCache.cpp in Sources */,
+				D88A63C31C94B5430090D8C4 /* EnumerableTypeInfo.cpp in Sources */,
+				D88A63C41C94B5430090D8C4 /* ActivationFactory.cpp in Sources */,
+				D88A63C51C94B5430090D8C4 /* AdapterFactoryFactory.cpp in Sources */,
+				D88A63C61C94B5430090D8C4 /* AsyncOperationClassInfoCache.cpp in Sources */,
+				D88A63C71C94B5430090D8C4 /* AsyncOperationTypeInfo.cpp in Sources */,
+				D88A63C81C94B5430090D8C4 /* DebugUtil.cpp in Sources */,
+				D88A63C91C94B5430090D8C4 /* DictionaryFactory.cpp in Sources */,
+				D88A63CA1C94B5430090D8C4 /* EnumTypeClassInfoCache.cpp in Sources */,
+				D88A63CB1C94B5430090D8C4 /* EnumTypeInfo.cpp in Sources */,
+				D88A63CC1C94B5430090D8C4 /* EnumValue.cpp in Sources */,
+				D88A63CD1C94B5430090D8C4 /* FoundationAssert.cpp in Sources */,
+				D88A63CE1C94B5430090D8C4 /* FoundationInterfaces.cpp in Sources */,
+				D88A63CF1C94B5430090D8C4 /* FoundationLibraryInstance.cpp in Sources */,
+				D88A63D01C94B5430090D8C4 /* FoundationPrivateInterfaces.cpp in Sources */,
+				D88A63D11C94B5430090D8C4 /* FoundationTracker.cpp in Sources */,
+				D88A63D21C94B5430090D8C4 /* GenericAdapterFactory.cpp in Sources */,
+				D88A63D31C94B5430090D8C4 /* InterfaceAdapterFactoryHost.cpp in Sources */,
+				D88A63D41C94B5430090D8C4 /* NamespaceStatics.cpp in Sources */,
+				D88A63D51C94B5430090D8C4 /* NodeStatics.cpp in Sources */,
+				D88A63D61C94B5430090D8C4 /* ObjectUniqueId.cpp in Sources */,
+				D88A63D71C94B5430090D8C4 /* ObjectFactory.cpp in Sources */,
+				D88A63D81C94B5430090D8C4 /* pch.cpp in Sources */,
+				D88A63DC1C94B5430090D8C4 /* PropertyInfo.cpp in Sources */,
+				D88A63DD1C94B5430090D8C4 /* PropertyTypeInfo.cpp in Sources */,
+				D88A63DE1C94B5430090D8C4 /* PropertyValueInternalStatics.cpp in Sources */,
+				D88A63DF1C94B5430090D8C4 /* TypeAdapterFactory.cpp in Sources */,
+				D88A63E01C94B5430090D8C4 /* TypeInfo.cpp in Sources */,
+				D88A63E11C94B5430090D8C4 /* TypeInfoFactory.cpp in Sources */,
+				D88A63E21C94B5430090D8C4 /* TypeInfoStatics.cpp in Sources */,
+				D88A63E31C94B5430090D8C4 /* FoundationUtilHelper.cpp in Sources */,
+				D88A63E41C94B5430090D8C4 /* GuidHelper.cpp in Sources */,
+				D88A63E51C94B5430090D8C4 /* pal_common.cpp in Sources */,
+				D88A63E61C94B5430090D8C4 /* pal_trace_printf.cpp in Sources */,
+				D88A63E71C94B5430090D8C4 /* palApi.cpp in Sources */,
+				D88A63E81C94B5430090D8C4 /* palApiInternal.cpp in Sources */,
+				D88A63E91C94B5430090D8C4 /* ComInterfaces.cpp in Sources */,
+				D88A63EA1C94B5430090D8C4 /* FoundationExports.cpp in Sources */,
+				D88A63EB1C94B5440090D8C4 /* hstring.cpp in Sources */,
+				D88A63EC1C94B5440090D8C4 /* PropertyValue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88F748E1BEEE08B00D9503D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D88D0AB01BEFDE7D0077E57D /* PMODObjectNode.mm in Sources */,
+				D88F75321BEEE3D100D9503D /* EnumTypeClassInfoCache.cpp in Sources */,
+				D88D0AAF1BEFDE7D0077E57D /* PMODObjectBase.mm in Sources */,
+				D88D0AA01BEFDE7C0077E57D /* PMODAdapterLogCategory.cpp in Sources */,
+				D88F75561BEEE3D100D9503D /* PropertyValueInternalStatics.cpp in Sources */,
+				D868BD5F1C8AAE010076900D /* PMODInspectable.mm in Sources */,
+				D88F75301BEEE3D100D9503D /* DictionaryFactory.cpp in Sources */,
+				D86A22CF1C8D17C300E966FB /* pal_common.cpp in Sources */,
+				D8EE7D411BFFF73900FDF0A3 /* dispatch_queue_adapter.cpp in Sources */,
+				D88F753D1BEEE3D100D9503D /* FoundationPrivateInterfaces.cpp in Sources */,
+				D88F75991BEEE46300D9503D /* ObservableCollectionInfo.cpp in Sources */,
+				D8EE7D571C0E5F0E00FDF0A3 /* EnumerableTypeInfo.cpp in Sources */,
+				D88F759F1BEEE46300D9503D /* ObservableObjectInfoBase.cpp in Sources */,
+				D88F754A1BEEE3D100D9503D /* pch.cpp in Sources */,
+				D88D0A9E1BEFDE7C0077E57D /* PMODAdapter.mm in Sources */,
+				D88F759D1BEEE46300D9503D /* ObservableObjectInfo.cpp in Sources */,
+				D8CE12421BF51AE6001DE311 /* ObjectFactory.cpp in Sources */,
+				D88D0AA61BEFDE7D0077E57D /* PMODCollection.mm in Sources */,
+				D88D0AAE1BEFDE7D0077E57D /* PMODList.mm in Sources */,
+				D88F752B1BEEE3D100D9503D /* AsyncOperationTypeInfo.cpp in Sources */,
+				D88F75361BEEE3D100D9503D /* EnumValue.cpp in Sources */,
+				D88F74E71BEEE35E00D9503D /* DateTime.mm in Sources */,
+				D88D0AAD1BEFDE7D0077E57D /* PMODInterop.mm in Sources */,
+				D88F75341BEEE3D100D9503D /* EnumTypeInfo.cpp in Sources */,
+				D88F752D1BEEE3D100D9503D /* DebugUtil.cpp in Sources */,
+				D88F755A1BEEE3D100D9503D /* TypeInfo.cpp in Sources */,
+				D88F758B1BEEE46300D9503D /* CommandInfo.cpp in Sources */,
+				D86970481C8BCDCA001753C0 /* PMODLogger.mm in Sources */,
+				D88F75491BEEE3D100D9503D /* ObjectUniqueId.cpp in Sources */,
+				D8A8084E1D24325F002485F2 /* ObjectDispatchInfoBase.cpp in Sources */,
+				D88D0AA31BEFDE7D0077E57D /* PMODAdapterUtil.mm in Sources */,
+				D88F75271BEEE3D100D9503D /* AdapterFactoryFactory.cpp in Sources */,
+				D88F75661BEEE41E00D9503D /* FoundationUtilHelper.cpp in Sources */,
+				D8A808671D24CCB0002485F2 /* PMODObjectDispatch.mm in Sources */,
+				D88F75291BEEE3D100D9503D /* AsyncOperationClassInfoCache.cpp in Sources */,
+				D88F74CA1BEEE16A00D9503D /* palApi.cpp in Sources */,
+				D88D0AAC1BEFDE7D0077E57D /* PMODGuid.mm in Sources */,
+				D88F75381BEEE3D100D9503D /* FoundationAssert.cpp in Sources */,
+				D88F753B1BEEE3D100D9503D /* FoundationLibraryInstance.cpp in Sources */,
+				D88F753E1BEEE3D100D9503D /* FoundationTracker.cpp in Sources */,
+				D8A8084C1D24325F002485F2 /* ObjectDispatchClassInfoCache.cpp in Sources */,
+				D88F75581BEEE3D100D9503D /* TypeAdapterFactory.cpp in Sources */,
+				D88F75A11BEEE46300D9503D /* pch.cpp in Sources */,
+				D88F74C51BEEE13900D9503D /* PropertyValue.cpp in Sources */,
+				D88F75521BEEE3D100D9503D /* PropertyInfo.cpp in Sources */,
+				D88F758D1BEEE46300D9503D /* EventInfo.cpp in Sources */,
+				D88D0AAA1BEFDE7D0077E57D /* PMODEnumValue.mm in Sources */,
+				D8A9055E1D233D1A00BAFCD6 /* MethodInfo.cpp in Sources */,
+				D88D0AB11BEFDE7D0077E57D /* PMODObservableObject.mm in Sources */,
+				D88F74CE1BEEE19900D9503D /* pal_trace_printf.cpp in Sources */,
+				D88F75671BEEE41E00D9503D /* GuidHelper.cpp in Sources */,
+				D88F75911BEEE46300D9503D /* ModelInterfaces.cpp in Sources */,
+				D88D0AA41BEFDE7D0077E57D /* PMODAsyncOperation.mm in Sources */,
+				D88F75941BEEE46300D9503D /* ModelTypeInfoLibrary.cpp in Sources */,
+				D88F756A1BEEE44300D9503D /* FoundationErrorsTypeInfo.g.cpp in Sources */,
+				D896625D1BEFE88600451877 /* PMODAdapterLoggerTypeInfo.cpp in Sources */,
+				D88F75451BEEE3D100D9503D /* NamespaceStatics.cpp in Sources */,
+				D88F75A91BEEE4A500D9503D /* PerfTypeInfo.g.cpp in Sources */,
+				D88F755D1BEEE3D100D9503D /* TypeInfoFactory.cpp in Sources */,
+				D88F75471BEEE3D100D9503D /* NodeStatics.cpp in Sources */,
+				D88F75971BEEE46300D9503D /* ObservableCollectionClassInfoCache.cpp in Sources */,
+				D88F75431BEEE3D100D9503D /* InterfaceAdapterFactoryHost.cpp in Sources */,
+				D88F75891BEEE46300D9503D /* CommandClassInfoCache.cpp in Sources */,
+				D88F75401BEEE3D100D9503D /* GenericAdapterFactory.cpp in Sources */,
+				D88D0A9F1BEFDE7C0077E57D /* PMODAdapterFactory.mm in Sources */,
+				D86A220A1C8CB4A300E966FB /* PMODDispatcherQueueAdapter.mm in Sources */,
+				D88F74C31BEEE13900D9503D /* hstring.cpp in Sources */,
+				D88F74C21BEEE13900D9503D /* FoundationExports.cpp in Sources */,
+				D88F753A1BEEE3D100D9503D /* FoundationInterfaces.cpp in Sources */,
+				D88F75251BEEE3D100D9503D /* ActivationFactory.cpp in Sources */,
+				D88F759B1BEEE46300D9503D /* ObservableObjectClassInfoCache.cpp in Sources */,
+				D8A8084D1D24325F002485F2 /* ObjectDispatchInfo.cpp in Sources */,
+				D88D0AA91BEFDE7D0077E57D /* PMODDictionary.mm in Sources */,
+				D8F66B6E1CA4361E00DA856C /* pal_load_library.cpp in Sources */,
+				D88F74C11BEEE13900D9503D /* ComInterfaces.cpp in Sources */,
+				D88F75921BEEE46300D9503D /* ModelTypeInfoFactory.cpp in Sources */,
+				D88F75A81BEEE4A500D9503D /* ErrorsTypeInfo.g.cpp in Sources */,
+				D8EE7D551C0E5F0E00FDF0A3 /* EnumerableClassInfoCache.cpp in Sources */,
+				D8A905601D233D1A00BAFCD6 /* PropertyInfoProxy.cpp in Sources */,
+				D88F75951BEEE46300D9503D /* ModelTypeInfoStatics.cpp in Sources */,
+				D88F755F1BEEE3D100D9503D /* TypeInfoStatics.cpp in Sources */,
+				D88F74CB1BEEE16A00D9503D /* palApiInternal.cpp in Sources */,
+				D88D0AAB1BEFDE7D0077E57D /* PMODFoundation.mm in Sources */,
+				D88F75541BEEE3D100D9503D /* PropertyTypeInfo.cpp in Sources */,
+				D88D0AA71BEFDE7D0077E57D /* PMODCommand.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88F74A11BEEE10800D9503D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A808681D4063E9002485F2 /* PMODObjectDispatch.mm in Sources */,
+				D8A808571D2433F1002485F2 /* ObjectDispatchClassInfoCache.cpp in Sources */,
+				D8A808581D2433F1002485F2 /* ObjectDispatchInfo.cpp in Sources */,
+				D8A808591D2433F1002485F2 /* ObjectDispatchInfoBase.cpp in Sources */,
+				D8A905621D233D3200BAFCD6 /* MethodInfo.cpp in Sources */,
+				D8A905631D233D3200BAFCD6 /* PropertyInfoProxy.cpp in Sources */,
+				D86A22D01C8D17D600E966FB /* pal_common.cpp in Sources */,
+				D86A220B1C8CBA1100E966FB /* PMODDispatcherQueueAdapter.mm in Sources */,
+				D86970491C8BD06C001753C0 /* PMODLogger.mm in Sources */,
+				D8EE7D591C0E5F3800FDF0A3 /* EnumerableClassInfoCache.cpp in Sources */,
+				D8EE7D5A1C0E5F3800FDF0A3 /* EnumerableTypeInfo.cpp in Sources */,
+				D8EE7D441BFFFA8E00FDF0A3 /* dispatch_queue_adapter.cpp in Sources */,
+				D8CE12461BF51E07001DE311 /* ObjectFactory.cpp in Sources */,
+				D89662721BEFF4C900451877 /* PMODAdapterLoggerTypeInfo.cpp in Sources */,
+				D89662611BEFF43900451877 /* PMODAdapter.mm in Sources */,
+				D89662621BEFF43900451877 /* PMODAdapterFactory.mm in Sources */,
+				D89662631BEFF43900451877 /* PMODAdapterLogCategory.cpp in Sources */,
+				D89662641BEFF43900451877 /* PMODAdapterUtil.mm in Sources */,
+				D89662651BEFF43900451877 /* PMODAsyncOperation.mm in Sources */,
+				D89662661BEFF43900451877 /* PMODCollection.mm in Sources */,
+				D89662671BEFF43900451877 /* PMODCommand.mm in Sources */,
+				D89662681BEFF43900451877 /* PMODDictionary.mm in Sources */,
+				D89662691BEFF43900451877 /* PMODEnumValue.mm in Sources */,
+				D896626A1BEFF43A00451877 /* PMODFoundation.mm in Sources */,
+				D896626B1BEFF43A00451877 /* PMODGuid.mm in Sources */,
+				D896626C1BEFF43A00451877 /* PMODInterop.mm in Sources */,
+				D896626D1BEFF43A00451877 /* PMODList.mm in Sources */,
+				D868BD601C8AAE010076900D /* PMODInspectable.mm in Sources */,
+				D896626E1BEFF43A00451877 /* PMODObjectBase.mm in Sources */,
+				D896626F1BEFF43A00451877 /* PMODObjectNode.mm in Sources */,
+				D89662701BEFF43A00451877 /* PMODObservableObject.mm in Sources */,
+				D86A518C1BEFBAB5007D3AA7 /* DateTime.mm in Sources */,
+				D86A518D1BEFBAB5007D3AA7 /* FoundationUtilHelper.cpp in Sources */,
+				D86A518E1BEFBAB5007D3AA7 /* GuidHelper.cpp in Sources */,
+				D86A518F1BEFBAB5007D3AA7 /* pal_trace_printf.cpp in Sources */,
+				D86A51901BEFBAB5007D3AA7 /* palApi.cpp in Sources */,
+				D86A51911BEFBAB5007D3AA7 /* palApiInternal.cpp in Sources */,
+				D86A51921BEFBAB5007D3AA7 /* ComInterfaces.cpp in Sources */,
+				D86A51931BEFBAB5007D3AA7 /* FoundationExports.cpp in Sources */,
+				D86A51941BEFBAB5007D3AA7 /* hstring.cpp in Sources */,
+				D86A51951BEFBAB5007D3AA7 /* PropertyValue.cpp in Sources */,
+				D86A516C1BEFBA93007D3AA7 /* ErrorsTypeInfo.g.cpp in Sources */,
+				D86A516D1BEFBA93007D3AA7 /* PerfTypeInfo.g.cpp in Sources */,
+				D86A516E1BEFBA93007D3AA7 /* FoundationErrorsTypeInfo.g.cpp in Sources */,
+				D86A516F1BEFBA93007D3AA7 /* ActivationFactory.cpp in Sources */,
+				D86A51701BEFBA93007D3AA7 /* AdapterFactoryFactory.cpp in Sources */,
+				D86A51711BEFBA93007D3AA7 /* AsyncOperationClassInfoCache.cpp in Sources */,
+				D86A51721BEFBA93007D3AA7 /* AsyncOperationTypeInfo.cpp in Sources */,
+				D86A51731BEFBA93007D3AA7 /* DebugUtil.cpp in Sources */,
+				D86A51741BEFBA93007D3AA7 /* DictionaryFactory.cpp in Sources */,
+				D86A51751BEFBA93007D3AA7 /* EnumTypeClassInfoCache.cpp in Sources */,
+				D86A51761BEFBA93007D3AA7 /* EnumTypeInfo.cpp in Sources */,
+				D86A51771BEFBA93007D3AA7 /* EnumValue.cpp in Sources */,
+				D86A51781BEFBA93007D3AA7 /* FoundationAssert.cpp in Sources */,
+				D86A51791BEFBA93007D3AA7 /* FoundationInterfaces.cpp in Sources */,
+				D86A517A1BEFBA93007D3AA7 /* FoundationLibraryInstance.cpp in Sources */,
+				D86A517B1BEFBA93007D3AA7 /* FoundationPrivateInterfaces.cpp in Sources */,
+				D86A517C1BEFBA93007D3AA7 /* FoundationTracker.cpp in Sources */,
+				D86A517D1BEFBA93007D3AA7 /* GenericAdapterFactory.cpp in Sources */,
+				D86A517E1BEFBA93007D3AA7 /* InterfaceAdapterFactoryHost.cpp in Sources */,
+				D86A517F1BEFBA93007D3AA7 /* NamespaceStatics.cpp in Sources */,
+				D86A51801BEFBA93007D3AA7 /* NodeStatics.cpp in Sources */,
+				D86A51811BEFBA93007D3AA7 /* ObjectUniqueId.cpp in Sources */,
+				D86A51851BEFBA93007D3AA7 /* PropertyInfo.cpp in Sources */,
+				D86A51861BEFBA93007D3AA7 /* PropertyTypeInfo.cpp in Sources */,
+				D86A51871BEFBA93007D3AA7 /* PropertyValueInternalStatics.cpp in Sources */,
+				D86A51881BEFBA93007D3AA7 /* TypeAdapterFactory.cpp in Sources */,
+				D86A51891BEFBA93007D3AA7 /* TypeInfo.cpp in Sources */,
+				D86A518A1BEFBA93007D3AA7 /* TypeInfoFactory.cpp in Sources */,
+				D86A518B1BEFBA93007D3AA7 /* TypeInfoStatics.cpp in Sources */,
+				D86A515E1BEFBA4A007D3AA7 /* CommandClassInfoCache.cpp in Sources */,
+				D86A515F1BEFBA4A007D3AA7 /* CommandInfo.cpp in Sources */,
+				D86A51601BEFBA4A007D3AA7 /* EventInfo.cpp in Sources */,
+				D86A51621BEFBA4A007D3AA7 /* ModelInterfaces.cpp in Sources */,
+				D86A51631BEFBA4A007D3AA7 /* ModelTypeInfoFactory.cpp in Sources */,
+				D86A51641BEFBA4A007D3AA7 /* ModelTypeInfoLibrary.cpp in Sources */,
+				D86A51651BEFBA4A007D3AA7 /* ModelTypeInfoStatics.cpp in Sources */,
+				D86A51661BEFBA4A007D3AA7 /* ObservableCollectionClassInfoCache.cpp in Sources */,
+				D86A51671BEFBA4A007D3AA7 /* ObservableCollectionInfo.cpp in Sources */,
+				D86A51681BEFBA4A007D3AA7 /* ObservableObjectClassInfoCache.cpp in Sources */,
+				D86A51691BEFBA4A007D3AA7 /* ObservableObjectInfo.cpp in Sources */,
+				D86A516A1BEFBA4A007D3AA7 /* ObservableObjectInfoBase.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D88A63AA1C94B5080090D8C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D88A63AB1C94B5080090D8C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D88F749B1BEEE08B00D9503D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../public/inc,
+					../../../public/objectivec/inc,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D88F749C1BEEE08B00D9503D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../public/inc,
+					../../../public/objectivec/inc,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D88F749E1BEEE08B00D9503D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../public/inc,
+				);
+				INSTALL_PATH = "@rpath";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		D88F749F1BEEE08B00D9503D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../public/inc,
+				);
+				INSTALL_PATH = "@rpath";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		D88F74B71BEEE10900D9503D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = ../../../public/inc;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = pmod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D88F74B81BEEE10900D9503D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = ../../../public/inc;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = pmod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D88A63AC1C94B5080090D8C4 /* Build configuration list for PBXNativeTarget "pmod_static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88A63AA1C94B5080090D8C4 /* Debug */,
+				D88A63AB1C94B5080090D8C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D88F748D1BEEE08B00D9503D /* Build configuration list for PBXProject "pmod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88F749B1BEEE08B00D9503D /* Debug */,
+				D88F749C1BEEE08B00D9503D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D88F749D1BEEE08B00D9503D /* Build configuration list for PBXNativeTarget "pmod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88F749E1BEEE08B00D9503D /* Debug */,
+				D88F749F1BEEE08B00D9503D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D88F74B61BEEE10900D9503D /* Build configuration list for PBXNativeTarget "pmod_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88F74B71BEEE10900D9503D /* Debug */,
+				D88F74B81BEEE10900D9503D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D88F748A1BEEE08B00D9503D /* Project object */;
+}

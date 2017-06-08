@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\android.cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{85bf84e2-8cde-44cb-9830-234a7bd1be7d}</ProjectGuid>
+    <Keyword>Android</Keyword>
+    <RootNamespace>pmod</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Android</ApplicationType>
+    <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Clang_3_8</PlatformToolset>
+    <!--<UseOfStl>gnustl_shared</UseOfStl>-->
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\proj\foundation_pal_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\foundation_pal_files_android.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\foundation_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\model_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\jni_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\src_files.vcxitems" Label="Shared" />
+    <Import Project="..\..\proj\pinvoke_files.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <Import Project="..\android.cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_HAS_CPP0X;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\inc;$(SRC_DIR)\foundation;$(SRC_DIR)\public\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SRC_DIR)\model\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

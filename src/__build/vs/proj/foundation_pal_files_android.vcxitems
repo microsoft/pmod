@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{B7A88D64-68DE-4975-9A33-27C27FFDFFE9}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\android\mbstowcs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\android\pal_trace_log.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\android\wcstombs.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_pal\ComInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\pal\date_time.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\pal\unix\palApi.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\pal\unix\palApiInternal.cpp" />
+  </ItemGroup>
+</Project>

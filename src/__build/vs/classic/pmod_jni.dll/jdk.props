@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup Label="Globals" Condition="'$(JAVA_HOME)' == ''">                  
+        <sdkpath>C:\Program Files\Java\jdk1.8.0_60</sdkpath>
+    </PropertyGroup>
+    <PropertyGroup Label="Globals" Condition="'$(JAVA_HOME)' != ''">
+        <sdkpath>$(JAVA_HOME)</sdkpath>
+    </PropertyGroup>
+</Project>

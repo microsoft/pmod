@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\PInvokeUtils.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeActivationFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeDispatcherAdapter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeEnumerable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeAsyncOperation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeDictionary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeEnumValue.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeInspectable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeLogger.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeObjectTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokePropertyValue.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokePropertyTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\model\PInvokeObjectStaticsUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\model\PInvokeCommand.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\model\PInvokeObservableCollection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\model\PInvokeObservableObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\foundation\PInvokeObjectDispatch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\coreclr\cpp\PInvokeUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="foundation">
+      <UniqueIdentifier>{9e000d94-c8e0-4d55-84e7-dd92c91ee5a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="model">
+      <UniqueIdentifier>{1b128658-22a6-45f4-9940-a9f71c9c09e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

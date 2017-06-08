@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:pmod_nodejs/pmod_nodejs.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:pmod_lib/pmod_lib.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "codegen">
+      <FileRef
+         location = "group:codegen/pmodcodegentask/pmodcodegentask.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:codegen/pmodcodegen/pmodcodegen.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:codegen/pmodschemaparser/pmodschemaparser.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:codegen/codegen_shared/codegen_shared.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:pmod/pmod.xcodeproj">
+   </FileRef>
+</Workspace>

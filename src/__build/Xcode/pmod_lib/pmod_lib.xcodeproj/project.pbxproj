@@ -1,0 +1,1088 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D82240741BF267CC004A10A9 /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1615E1BF2452600C5E381 /* Expression.cpp */; };
+		D8A808531D2432AC002485F2 /* ObjectDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A8084F1D2432AC002485F2 /* ObjectDispatch.cpp */; };
+		D8A808541D2432AC002485F2 /* ObjectDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A808501D2432AC002485F2 /* ObjectDispatch.h */; };
+		D8A808551D2432AC002485F2 /* ObjectDispatchFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A808511D2432AC002485F2 /* ObjectDispatchFactory.cpp */; };
+		D8A808561D2432AC002485F2 /* ObjectDispatchFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8A808521D2432AC002485F2 /* ObjectDispatchFactory.h */; };
+		D8A8085A1D24342B002485F2 /* ObjectDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A8084F1D2432AC002485F2 /* ObjectDispatch.cpp */; };
+		D8A8085B1D24342B002485F2 /* ObjectDispatchFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A808511D2432AC002485F2 /* ObjectDispatchFactory.cpp */; };
+		D8F161871BF2452600C5E381 /* AsyncOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161551BF2452600C5E381 /* AsyncOperation.cpp */; };
+		D8F161881BF2452600C5E381 /* AsyncOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161561BF2452600C5E381 /* AsyncOperation.h */; };
+		D8F161891BF2452600C5E381 /* BinaryLogListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161571BF2452600C5E381 /* BinaryLogListener.cpp */; };
+		D8F1618A1BF2452600C5E381 /* BinaryLogListener.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161581BF2452600C5E381 /* BinaryLogListener.h */; };
+		D8F1618B1BF2452600C5E381 /* BinaryStreamProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161591BF2452600C5E381 /* BinaryStreamProvider.cpp */; };
+		D8F1618C1BF2452600C5E381 /* BinaryStreamProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1615A1BF2452600C5E381 /* BinaryStreamProvider.h */; };
+		D8F1618D1BF2452600C5E381 /* CreateFoundationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1615B1BF2452600C5E381 /* CreateFoundationHelper.h */; };
+		D8F1618E1BF2452600C5E381 /* EventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1615C1BF2452600C5E381 /* EventHandler.h */; };
+		D8F1618F1BF2452600C5E381 /* EventSourceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1615D1BF2452600C5E381 /* EventSourceBase.h */; };
+		D8F161901BF2452600C5E381 /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1615E1BF2452600C5E381 /* Expression.cpp */; };
+		D8F161911BF2452600C5E381 /* Expression.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1615F1BF2452600C5E381 /* Expression.h */; };
+		D8F161921BF2452600C5E381 /* ExpressionFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161601BF2452600C5E381 /* ExpressionFactory.cpp */; };
+		D8F161931BF2452600C5E381 /* ExpressionFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161611BF2452600C5E381 /* ExpressionFactory.h */; };
+		D8F161941BF2452600C5E381 /* FastContainerUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161621BF2452600C5E381 /* FastContainerUtil.cpp */; };
+		D8F161951BF2452600C5E381 /* FastContainerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161631BF2452600C5E381 /* FastContainerUtil.h */; };
+		D8F161961BF2452600C5E381 /* FastPropertiesContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161641BF2452600C5E381 /* FastPropertiesContainer.cpp */; };
+		D8F161971BF2452600C5E381 /* FastPropertiesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161651BF2452600C5E381 /* FastPropertiesContainer.h */; };
+		D8F161981BF2452600C5E381 /* FoundationBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161661BF2452600C5E381 /* FoundationBase.h */; };
+		D8F161991BF2452600C5E381 /* FoundationLibraryInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161671BF2452600C5E381 /* FoundationLibraryInterfaces.cpp */; };
+		D8F1619A1BF2452600C5E381 /* JsonStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161681BF2452600C5E381 /* JsonStatics.cpp */; };
+		D8F1619B1BF2452600C5E381 /* JsonStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161691BF2452600C5E381 /* JsonStatics.h */; };
+		D8F1619C1BF2452600C5E381 /* LogCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1616A1BF2452600C5E381 /* LogCategory.cpp */; };
+		D8F1619D1BF2452600C5E381 /* LogCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1616B1BF2452600C5E381 /* LogCategory.h */; };
+		D8F1619E1BF2452600C5E381 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1616C1BF2452600C5E381 /* Logger.cpp */; };
+		D8F1619F1BF2452600C5E381 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1616D1BF2452600C5E381 /* Logger.h */; };
+		D8F161A01BF2452600C5E381 /* LoggerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1616E1BF2452600C5E381 /* LoggerFactory.cpp */; };
+		D8F161A11BF2452600C5E381 /* LoggerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1616F1BF2452600C5E381 /* LoggerFactory.h */; };
+		D8F161A21BF2452600C5E381 /* LoggerUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161701BF2452600C5E381 /* LoggerUtil.cpp */; };
+		D8F161A31BF2452600C5E381 /* LogRecordStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161711BF2452600C5E381 /* LogRecordStatics.cpp */; };
+		D8F161A41BF2452600C5E381 /* LogRecordStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161721BF2452600C5E381 /* LogRecordStatics.h */; };
+		D8F161A51BF2452600C5E381 /* Mailbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161731BF2452600C5E381 /* Mailbox.cpp */; };
+		D8F161A61BF2452600C5E381 /* Mailbox.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161741BF2452600C5E381 /* Mailbox.h */; };
+		D8F161A71BF2452600C5E381 /* MailboxDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161751BF2452600C5E381 /* MailboxDispatcher.cpp */; };
+		D8F161A81BF2452600C5E381 /* MailboxDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161761BF2452600C5E381 /* MailboxDispatcher.h */; };
+		D8F161A91BF2452600C5E381 /* ObjectBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161771BF2452600C5E381 /* ObjectBase.cpp */; };
+		D8F161AA1BF2452600C5E381 /* ObjectBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161781BF2452600C5E381 /* ObjectBase.h */; };
+		D8F161AB1BF2452600C5E381 /* ObjectBaseFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161791BF2452600C5E381 /* ObjectBaseFactory.cpp */; };
+		D8F161AC1BF2452600C5E381 /* ObjectBaseFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1617A1BF2452600C5E381 /* ObjectBaseFactory.h */; };
+		D8F161AD1BF2452600C5E381 /* ObjectCreatedEventArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1617B1BF2452600C5E381 /* ObjectCreatedEventArgs.h */; };
+		D8F161B01BF2452600C5E381 /* pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1617E1BF2452600C5E381 /* pch.cpp */; };
+		D8F161B11BF2452600C5E381 /* pch.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1617F1BF2452600C5E381 /* pch.h */; };
+		D8F161B41BF2452600C5E381 /* ObjectDispatchDictionaryAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161821BF2452600C5E381 /* ObjectDispatchDictionaryAdapter.h */; };
+		D8F161B71BF2452600C5E381 /* TextLogListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161851BF2452600C5E381 /* TextLogListener.cpp */; };
+		D8F161B81BF2452600C5E381 /* TextLogListener.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161861BF2452600C5E381 /* TextLogListener.h */; };
+		D8F161C11BF2455000C5E381 /* CriticalSection.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161BC1BF2455000C5E381 /* CriticalSection.h */; };
+		D8F161C21BF2455000C5E381 /* FoundationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161BD1BF2455000C5E381 /* FoundationTypes.h */; };
+		D8F161C31BF2455000C5E381 /* FoundationUtilHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161BE1BF2455000C5E381 /* FoundationUtilHelper.h */; };
+		D8F161C51BF2456A00C5E381 /* ArrayHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161C41BF2456A00C5E381 /* ArrayHelper.h */; };
+		D8F161C71BF2458200C5E381 /* auto_delete_vector.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161C61BF2458200C5E381 /* auto_delete_vector.h */; };
+		D8F161C91BF245A300C5E381 /* CastHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161C81BF245A300C5E381 /* CastHelper.h */; };
+		D8F161CB1BF245B600C5E381 /* SerializeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161CA1BF245B600C5E381 /* SerializeUtil.h */; };
+		D8F161E21BF2461000C5E381 /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161CD1BF2461000C5E381 /* dump.c */; };
+		D8F161E31BF2461000C5E381 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161CE1BF2461000C5E381 /* error.c */; };
+		D8F161E41BF2461000C5E381 /* hashtable_seed.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161CF1BF2461000C5E381 /* hashtable_seed.c */; };
+		D8F161E51BF2461000C5E381 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161D01BF2461000C5E381 /* hashtable.c */; };
+		D8F161E61BF2461000C5E381 /* hashtable.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161D11BF2461000C5E381 /* hashtable.h */; };
+		D8F161E71BF2461000C5E381 /* jansson_config.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161D21BF2461000C5E381 /* jansson_config.h */; };
+		D8F161E81BF2461000C5E381 /* jansson_private.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161D41BF2461000C5E381 /* jansson_private.h */; };
+		D8F161E91BF2461000C5E381 /* jansson.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161D61BF2461000C5E381 /* jansson.h */; };
+		D8F161EA1BF2461000C5E381 /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161D71BF2461000C5E381 /* load.c */; };
+		D8F161EB1BF2461000C5E381 /* lookup3.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161D81BF2461000C5E381 /* lookup3.h */; };
+		D8F161EC1BF2461000C5E381 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DA1BF2461000C5E381 /* memory.c */; };
+		D8F161ED1BF2461000C5E381 /* pack_unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DB1BF2461000C5E381 /* pack_unpack.c */; };
+		D8F161EE1BF2461000C5E381 /* strbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DC1BF2461000C5E381 /* strbuffer.c */; };
+		D8F161EF1BF2461000C5E381 /* strbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161DD1BF2461000C5E381 /* strbuffer.h */; };
+		D8F161F01BF2461000C5E381 /* strconv.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DE1BF2461000C5E381 /* strconv.c */; };
+		D8F161F11BF2461000C5E381 /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DF1BF2461000C5E381 /* utf.c */; };
+		D8F161F21BF2461000C5E381 /* utf.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161E01BF2461000C5E381 /* utf.h */; };
+		D8F161F31BF2461000C5E381 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161E11BF2461000C5E381 /* value.c */; };
+		D8F161F51BF2462D00C5E381 /* pal_str.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161F41BF2462D00C5E381 /* pal_str.h */; };
+		D8F161F71BF246AA00C5E381 /* libpmod.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F161F61BF246AA00C5E381 /* libpmod.dylib */; };
+		D8F161FA1BF246D300C5E381 /* FoundationLoggerTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161F91BF246D300C5E381 /* FoundationLoggerTypeInfo.g.cpp */; };
+		D8F161FC1BF246E500C5E381 /* LoggerTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161FB1BF246E400C5E381 /* LoggerTypeInfo.g.cpp */; };
+		D8F162391BF2483500C5E381 /* BaseModelSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161FD1BF2483500C5E381 /* BaseModelSource.cpp */; };
+		D8F1623A1BF2483500C5E381 /* BaseModelSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161FE1BF2483500C5E381 /* BaseModelSource.h */; };
+		D8F1623B1BF2483500C5E381 /* BatchPropertyChangedHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F161FF1BF2483500C5E381 /* BatchPropertyChangedHelper.h */; };
+		D8F1623C1BF2483500C5E381 /* BindingBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162001BF2483500C5E381 /* BindingBase.h */; };
+		D8F1623F1BF2483500C5E381 /* BindingValueChangedEventArgs.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162031BF2483500C5E381 /* BindingValueChangedEventArgs.h */; };
+		D8F162401BF2483500C5E381 /* ClassStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162041BF2483500C5E381 /* ClassStatics.cpp */; };
+		D8F162411BF2483500C5E381 /* ClassStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162051BF2483500C5E381 /* ClassStatics.h */; };
+		D8F162421BF2483500C5E381 /* CollectionViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162061BF2483500C5E381 /* CollectionViewModel.cpp */; };
+		D8F162431BF2483500C5E381 /* CollectionViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162071BF2483500C5E381 /* CollectionViewModel.h */; };
+		D8F162441BF2483500C5E381 /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162081BF2483500C5E381 /* Command.cpp */; };
+		D8F162451BF2483500C5E381 /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162091BF2483500C5E381 /* Command.h */; };
+		D8F162461BF2483500C5E381 /* CommandViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1620A1BF2483500C5E381 /* CommandViewModel.cpp */; };
+		D8F162471BF2483500C5E381 /* CommandViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1620B1BF2483500C5E381 /* CommandViewModel.h */; };
+		D8F162481BF2483500C5E381 /* DebugUtilCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1620D1BF2483500C5E381 /* DebugUtilCommand.cpp */; };
+		D8F162491BF2483500C5E381 /* ExpressionBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1620E1BF2483500C5E381 /* ExpressionBinding.cpp */; };
+		D8F1624A1BF2483500C5E381 /* ExpressionBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1620F1BF2483500C5E381 /* ExpressionBinding.h */; };
+		D8F1624B1BF2483500C5E381 /* FactoryBindingConverters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162101BF2483500C5E381 /* FactoryBindingConverters.cpp */; };
+		D8F1624C1BF2483500C5E381 /* FactoryBindingConverters.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162111BF2483500C5E381 /* FactoryBindingConverters.h */; };
+		D8F1624D1BF2483500C5E381 /* FastItemsContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162121BF2483500C5E381 /* FastItemsContainer.cpp */; };
+		D8F1624E1BF2483500C5E381 /* FastItemsContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162131BF2483500C5E381 /* FastItemsContainer.h */; };
+		D8F1624F1BF2483500C5E381 /* ItemsContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162141BF2483500C5E381 /* ItemsContainer.h */; };
+		D8F162521BF2483500C5E381 /* ModelLibraryInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162171BF2483500C5E381 /* ModelLibraryInstance.cpp */; };
+		D8F162531BF2483500C5E381 /* ModelLibraryInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162181BF2483500C5E381 /* ModelLibraryInterfaces.cpp */; };
+		D8F162541BF2483500C5E381 /* ModelPrivateInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162191BF2483500C5E381 /* ModelPrivateInterfaces.cpp */; };
+		D8F162551BF2483500C5E381 /* ModelSerializerAdapters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1621A1BF2483500C5E381 /* ModelSerializerAdapters.cpp */; };
+		D8F162561BF2483500C5E381 /* MultiSourceBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1621B1BF2483500C5E381 /* MultiSourceBinding.cpp */; };
+		D8F162571BF2483500C5E381 /* MultiSourceBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1621C1BF2483500C5E381 /* MultiSourceBinding.h */; };
+		D8F162581BF2483500C5E381 /* MultiSourceCollectionViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1621D1BF2483500C5E381 /* MultiSourceCollectionViewModel.cpp */; };
+		D8F162591BF2483500C5E381 /* MultiSourceCollectionViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1621E1BF2483500C5E381 /* MultiSourceCollectionViewModel.h */; };
+		D8F1625A1BF2483500C5E381 /* MultiSourceModelBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1621F1BF2483500C5E381 /* MultiSourceModelBase.h */; };
+		D8F1625B1BF2483500C5E381 /* MultiSourceViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162201BF2483500C5E381 /* MultiSourceViewModel.cpp */; };
+		D8F1625C1BF2483500C5E381 /* MultiSourceViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162211BF2483500C5E381 /* MultiSourceViewModel.h */; };
+		D8F1625D1BF2483500C5E381 /* ObjectNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162221BF2483500C5E381 /* ObjectNode.h */; };
+		D8F1625E1BF2483500C5E381 /* ObjectStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162231BF2483500C5E381 /* ObjectStatics.cpp */; };
+		D8F1625F1BF2483500C5E381 /* ObjectStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162241BF2483500C5E381 /* ObjectStatics.h */; };
+		D8F162611BF2483500C5E381 /* ObjectViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162261BF2483500C5E381 /* ObjectViewModel.cpp */; };
+		D8F162621BF2483500C5E381 /* ObjectViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162271BF2483500C5E381 /* ObjectViewModel.h */; };
+		D8F162631BF2483500C5E381 /* ObjectViewModelBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162281BF2483500C5E381 /* ObjectViewModelBase.h */; };
+		D8F162641BF2483500C5E381 /* ObservableCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162291BF2483500C5E381 /* ObservableCollection.cpp */; };
+		D8F162651BF2483500C5E381 /* ObservableCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1622A1BF2483500C5E381 /* ObservableCollection.h */; };
+		D8F162661BF2483500C5E381 /* ObservableCollectionStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1622B1BF2483500C5E381 /* ObservableCollectionStatics.cpp */; };
+		D8F162671BF2483500C5E381 /* ObservableCollectionStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1622C1BF2483500C5E381 /* ObservableCollectionStatics.h */; };
+		D8F162681BF2483500C5E381 /* ObservableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1622D1BF2483500C5E381 /* ObservableObject.cpp */; };
+		D8F162691BF2483500C5E381 /* ObservableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1622E1BF2483500C5E381 /* ObservableObject.h */; };
+		D8F1626A1BF2483500C5E381 /* ObservableObjectAdapters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1622F1BF2483500C5E381 /* ObservableObjectAdapters.cpp */; };
+		D8F1626B1BF2483500C5E381 /* ObservableObjectStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162301BF2483500C5E381 /* ObservableObjectStatics.cpp */; };
+		D8F1626C1BF2483500C5E381 /* ObservableObjectStatics.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162311BF2483500C5E381 /* ObservableObjectStatics.h */; };
+		D8F1626D1BF2483500C5E381 /* PropertyBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162321BF2483500C5E381 /* PropertyBinding.cpp */; };
+		D8F1626E1BF2483500C5E381 /* PropertyBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162331BF2483500C5E381 /* PropertyBinding.h */; };
+		D8F1626F1BF2483500C5E381 /* ViewModelBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162341BF2483500C5E381 /* ViewModelBase.h */; };
+		D8F162721BF2483500C5E381 /* ViewModelFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162371BF2483500C5E381 /* ViewModelFactory.cpp */; };
+		D8F162731BF2483500C5E381 /* ViewModelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162381BF2483500C5E381 /* ViewModelFactory.h */; };
+		D8F162751BF248C200C5E381 /* PtrSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F162741BF248C200C5E381 /* PtrSingleton.h */; };
+		D8F162831BF24AC400C5E381 /* LoggerTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161FB1BF246E400C5E381 /* LoggerTypeInfo.g.cpp */; };
+		D8F162841BF24AC400C5E381 /* FoundationLoggerTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161F91BF246D300C5E381 /* FoundationLoggerTypeInfo.g.cpp */; };
+		D8F162851BF24AC400C5E381 /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161CD1BF2461000C5E381 /* dump.c */; };
+		D8F162861BF24AC400C5E381 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161CE1BF2461000C5E381 /* error.c */; };
+		D8F162871BF24AC400C5E381 /* hashtable_seed.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161CF1BF2461000C5E381 /* hashtable_seed.c */; };
+		D8F162881BF24AC400C5E381 /* hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161D01BF2461000C5E381 /* hashtable.c */; };
+		D8F162891BF24AC400C5E381 /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161D71BF2461000C5E381 /* load.c */; };
+		D8F1628A1BF24AC400C5E381 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DA1BF2461000C5E381 /* memory.c */; };
+		D8F1628B1BF24AC400C5E381 /* pack_unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DB1BF2461000C5E381 /* pack_unpack.c */; };
+		D8F1628C1BF24AC400C5E381 /* strbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DC1BF2461000C5E381 /* strbuffer.c */; };
+		D8F1628D1BF24AC400C5E381 /* strconv.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DE1BF2461000C5E381 /* strconv.c */; };
+		D8F1628E1BF24AC400C5E381 /* utf.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161DF1BF2461000C5E381 /* utf.c */; };
+		D8F1628F1BF24AC400C5E381 /* value.c in Sources */ = {isa = PBXBuildFile; fileRef = D8F161E11BF2461000C5E381 /* value.c */; };
+		D8F162901BF24AC400C5E381 /* AsyncOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161551BF2452600C5E381 /* AsyncOperation.cpp */; };
+		D8F162911BF24AC400C5E381 /* BinaryLogListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161571BF2452600C5E381 /* BinaryLogListener.cpp */; };
+		D8F162921BF24AC400C5E381 /* BinaryStreamProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161591BF2452600C5E381 /* BinaryStreamProvider.cpp */; };
+		D8F162931BF24AC400C5E381 /* ExpressionFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161601BF2452600C5E381 /* ExpressionFactory.cpp */; };
+		D8F162941BF24AC400C5E381 /* FastContainerUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161621BF2452600C5E381 /* FastContainerUtil.cpp */; };
+		D8F162951BF24AC400C5E381 /* FastPropertiesContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161641BF2452600C5E381 /* FastPropertiesContainer.cpp */; };
+		D8F162961BF24AC400C5E381 /* FoundationLibraryInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161671BF2452600C5E381 /* FoundationLibraryInterfaces.cpp */; };
+		D8F162971BF24AC400C5E381 /* JsonStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161681BF2452600C5E381 /* JsonStatics.cpp */; };
+		D8F162981BF24AC400C5E381 /* LogCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1616A1BF2452600C5E381 /* LogCategory.cpp */; };
+		D8F162991BF24AC400C5E381 /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1616C1BF2452600C5E381 /* Logger.cpp */; };
+		D8F1629A1BF24AC400C5E381 /* LoggerFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1616E1BF2452600C5E381 /* LoggerFactory.cpp */; };
+		D8F1629B1BF24AC400C5E381 /* LoggerUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161701BF2452600C5E381 /* LoggerUtil.cpp */; };
+		D8F1629C1BF24AC400C5E381 /* LogRecordStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161711BF2452600C5E381 /* LogRecordStatics.cpp */; };
+		D8F1629D1BF24AC400C5E381 /* Mailbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161731BF2452600C5E381 /* Mailbox.cpp */; };
+		D8F1629E1BF24AC400C5E381 /* MailboxDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161751BF2452600C5E381 /* MailboxDispatcher.cpp */; };
+		D8F1629F1BF24AC400C5E381 /* ObjectBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161771BF2452600C5E381 /* ObjectBase.cpp */; };
+		D8F162A01BF24AC400C5E381 /* ObjectBaseFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161791BF2452600C5E381 /* ObjectBaseFactory.cpp */; };
+		D8F162A41BF24AC400C5E381 /* TextLogListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161851BF2452600C5E381 /* TextLogListener.cpp */; };
+		D8F162A51BF24AC400C5E381 /* BaseModelSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F161FD1BF2483500C5E381 /* BaseModelSource.cpp */; };
+		D8F162A71BF24AC400C5E381 /* ClassStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162041BF2483500C5E381 /* ClassStatics.cpp */; };
+		D8F162A81BF24AC400C5E381 /* CollectionViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162061BF2483500C5E381 /* CollectionViewModel.cpp */; };
+		D8F162A91BF24AC400C5E381 /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162081BF2483500C5E381 /* Command.cpp */; };
+		D8F162AA1BF24AC400C5E381 /* CommandViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1620A1BF2483500C5E381 /* CommandViewModel.cpp */; };
+		D8F162AB1BF24AC400C5E381 /* DebugUtilCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1620D1BF2483500C5E381 /* DebugUtilCommand.cpp */; };
+		D8F162AC1BF24AC400C5E381 /* ExpressionBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1620E1BF2483500C5E381 /* ExpressionBinding.cpp */; };
+		D8F162AD1BF24AC400C5E381 /* FactoryBindingConverters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162101BF2483500C5E381 /* FactoryBindingConverters.cpp */; };
+		D8F162AE1BF24AC400C5E381 /* FastItemsContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162121BF2483500C5E381 /* FastItemsContainer.cpp */; };
+		D8F162B01BF24AC400C5E381 /* ModelLibraryInstance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162171BF2483500C5E381 /* ModelLibraryInstance.cpp */; };
+		D8F162B11BF24AC400C5E381 /* ModelLibraryInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162181BF2483500C5E381 /* ModelLibraryInterfaces.cpp */; };
+		D8F162B21BF24AC400C5E381 /* ModelPrivateInterfaces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162191BF2483500C5E381 /* ModelPrivateInterfaces.cpp */; };
+		D8F162B31BF24AC400C5E381 /* ModelSerializerAdapters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1621A1BF2483500C5E381 /* ModelSerializerAdapters.cpp */; };
+		D8F162B41BF24AC400C5E381 /* MultiSourceBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1621B1BF2483500C5E381 /* MultiSourceBinding.cpp */; };
+		D8F162B51BF24AC400C5E381 /* MultiSourceCollectionViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1621D1BF2483500C5E381 /* MultiSourceCollectionViewModel.cpp */; };
+		D8F162B61BF24AC400C5E381 /* MultiSourceViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162201BF2483500C5E381 /* MultiSourceViewModel.cpp */; };
+		D8F162B71BF24AC400C5E381 /* ObjectStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162231BF2483500C5E381 /* ObjectStatics.cpp */; };
+		D8F162B91BF24AC400C5E381 /* ObjectViewModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162261BF2483500C5E381 /* ObjectViewModel.cpp */; };
+		D8F162BA1BF24AC400C5E381 /* ObservableCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162291BF2483500C5E381 /* ObservableCollection.cpp */; };
+		D8F162BB1BF24AC400C5E381 /* ObservableCollectionStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1622B1BF2483500C5E381 /* ObservableCollectionStatics.cpp */; };
+		D8F162BC1BF24AC400C5E381 /* ObservableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1622D1BF2483500C5E381 /* ObservableObject.cpp */; };
+		D8F162BD1BF24AC400C5E381 /* ObservableObjectAdapters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F1622F1BF2483500C5E381 /* ObservableObjectAdapters.cpp */; };
+		D8F162BE1BF24AC400C5E381 /* ObservableObjectStatics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162301BF2483500C5E381 /* ObservableObjectStatics.cpp */; };
+		D8F162BF1BF24AC400C5E381 /* PropertyBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162321BF2483500C5E381 /* PropertyBinding.cpp */; };
+		D8F162C11BF24AC400C5E381 /* ViewModelFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F162371BF2483500C5E381 /* ViewModelFactory.cpp */; };
+		D8F66B711CA4383C00DA856C /* FoundationUtilHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8F66B701CA4383C00DA856C /* FoundationUtilHelper.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8F162781BF24A0400C5E381 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D8A8084F1D2432AC002485F2 /* ObjectDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectDispatch.cpp; path = ../../../foundation_library/ObjectDispatch.cpp; sourceTree = "<group>"; };
+		D8A808501D2432AC002485F2 /* ObjectDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDispatch.h; path = ../../../foundation_library/ObjectDispatch.h; sourceTree = "<group>"; };
+		D8A808511D2432AC002485F2 /* ObjectDispatchFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectDispatchFactory.cpp; path = ../../../foundation_library/ObjectDispatchFactory.cpp; sourceTree = "<group>"; };
+		D8A808521D2432AC002485F2 /* ObjectDispatchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDispatchFactory.h; path = ../../../foundation_library/ObjectDispatchFactory.h; sourceTree = "<group>"; };
+		D8F161451BF244A300C5E381 /* libpmod_lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libpmod_lib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F161551BF2452600C5E381 /* AsyncOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AsyncOperation.cpp; path = ../../../foundation_library/AsyncOperation.cpp; sourceTree = "<group>"; };
+		D8F161561BF2452600C5E381 /* AsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncOperation.h; path = ../../../foundation_library/AsyncOperation.h; sourceTree = "<group>"; };
+		D8F161571BF2452600C5E381 /* BinaryLogListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryLogListener.cpp; path = ../../../foundation_library/BinaryLogListener.cpp; sourceTree = "<group>"; };
+		D8F161581BF2452600C5E381 /* BinaryLogListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryLogListener.h; path = ../../../foundation_library/BinaryLogListener.h; sourceTree = "<group>"; };
+		D8F161591BF2452600C5E381 /* BinaryStreamProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryStreamProvider.cpp; path = ../../../foundation_library/BinaryStreamProvider.cpp; sourceTree = "<group>"; };
+		D8F1615A1BF2452600C5E381 /* BinaryStreamProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryStreamProvider.h; path = ../../../foundation_library/BinaryStreamProvider.h; sourceTree = "<group>"; };
+		D8F1615B1BF2452600C5E381 /* CreateFoundationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateFoundationHelper.h; path = ../../../foundation_library/CreateFoundationHelper.h; sourceTree = "<group>"; };
+		D8F1615C1BF2452600C5E381 /* EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventHandler.h; path = ../../../foundation_library/EventHandler.h; sourceTree = "<group>"; };
+		D8F1615D1BF2452600C5E381 /* EventSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventSourceBase.h; path = ../../../foundation_library/EventSourceBase.h; sourceTree = "<group>"; };
+		D8F1615E1BF2452600C5E381 /* Expression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Expression.cpp; path = ../../../foundation_library/Expression.cpp; sourceTree = "<group>"; };
+		D8F1615F1BF2452600C5E381 /* Expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expression.h; path = ../../../foundation_library/Expression.h; sourceTree = "<group>"; };
+		D8F161601BF2452600C5E381 /* ExpressionFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExpressionFactory.cpp; path = ../../../foundation_library/ExpressionFactory.cpp; sourceTree = "<group>"; };
+		D8F161611BF2452600C5E381 /* ExpressionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressionFactory.h; path = ../../../foundation_library/ExpressionFactory.h; sourceTree = "<group>"; };
+		D8F161621BF2452600C5E381 /* FastContainerUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FastContainerUtil.cpp; path = ../../../foundation_library/FastContainerUtil.cpp; sourceTree = "<group>"; };
+		D8F161631BF2452600C5E381 /* FastContainerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FastContainerUtil.h; path = ../../../foundation_library/FastContainerUtil.h; sourceTree = "<group>"; };
+		D8F161641BF2452600C5E381 /* FastPropertiesContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FastPropertiesContainer.cpp; path = ../../../foundation_library/FastPropertiesContainer.cpp; sourceTree = "<group>"; };
+		D8F161651BF2452600C5E381 /* FastPropertiesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FastPropertiesContainer.h; path = ../../../foundation_library/FastPropertiesContainer.h; sourceTree = "<group>"; };
+		D8F161661BF2452600C5E381 /* FoundationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationBase.h; path = ../../../foundation_library/FoundationBase.h; sourceTree = "<group>"; };
+		D8F161671BF2452600C5E381 /* FoundationLibraryInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationLibraryInterfaces.cpp; path = ../../../foundation_library/FoundationLibraryInterfaces.cpp; sourceTree = "<group>"; };
+		D8F161681BF2452600C5E381 /* JsonStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JsonStatics.cpp; path = ../../../foundation_library/JsonStatics.cpp; sourceTree = "<group>"; };
+		D8F161691BF2452600C5E381 /* JsonStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonStatics.h; path = ../../../foundation_library/JsonStatics.h; sourceTree = "<group>"; };
+		D8F1616A1BF2452600C5E381 /* LogCategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogCategory.cpp; path = ../../../foundation_library/LogCategory.cpp; sourceTree = "<group>"; };
+		D8F1616B1BF2452600C5E381 /* LogCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogCategory.h; path = ../../../foundation_library/LogCategory.h; sourceTree = "<group>"; };
+		D8F1616C1BF2452600C5E381 /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logger.cpp; path = ../../../foundation_library/Logger.cpp; sourceTree = "<group>"; };
+		D8F1616D1BF2452600C5E381 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../../../foundation_library/Logger.h; sourceTree = "<group>"; };
+		D8F1616E1BF2452600C5E381 /* LoggerFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoggerFactory.cpp; path = ../../../foundation_library/LoggerFactory.cpp; sourceTree = "<group>"; };
+		D8F1616F1BF2452600C5E381 /* LoggerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerFactory.h; path = ../../../foundation_library/LoggerFactory.h; sourceTree = "<group>"; };
+		D8F161701BF2452600C5E381 /* LoggerUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoggerUtil.cpp; path = ../../../foundation_library/LoggerUtil.cpp; sourceTree = "<group>"; };
+		D8F161711BF2452600C5E381 /* LogRecordStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogRecordStatics.cpp; path = ../../../foundation_library/LogRecordStatics.cpp; sourceTree = "<group>"; };
+		D8F161721BF2452600C5E381 /* LogRecordStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogRecordStatics.h; path = ../../../foundation_library/LogRecordStatics.h; sourceTree = "<group>"; };
+		D8F161731BF2452600C5E381 /* Mailbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mailbox.cpp; path = ../../../foundation_library/Mailbox.cpp; sourceTree = "<group>"; };
+		D8F161741BF2452600C5E381 /* Mailbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mailbox.h; path = ../../../foundation_library/Mailbox.h; sourceTree = "<group>"; };
+		D8F161751BF2452600C5E381 /* MailboxDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MailboxDispatcher.cpp; path = ../../../foundation_library/MailboxDispatcher.cpp; sourceTree = "<group>"; };
+		D8F161761BF2452600C5E381 /* MailboxDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailboxDispatcher.h; path = ../../../foundation_library/MailboxDispatcher.h; sourceTree = "<group>"; };
+		D8F161771BF2452600C5E381 /* ObjectBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectBase.cpp; path = ../../../foundation_library/ObjectBase.cpp; sourceTree = "<group>"; };
+		D8F161781BF2452600C5E381 /* ObjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectBase.h; path = ../../../foundation_library/ObjectBase.h; sourceTree = "<group>"; };
+		D8F161791BF2452600C5E381 /* ObjectBaseFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectBaseFactory.cpp; path = ../../../foundation_library/ObjectBaseFactory.cpp; sourceTree = "<group>"; };
+		D8F1617A1BF2452600C5E381 /* ObjectBaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectBaseFactory.h; path = ../../../foundation_library/ObjectBaseFactory.h; sourceTree = "<group>"; };
+		D8F1617B1BF2452600C5E381 /* ObjectCreatedEventArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectCreatedEventArgs.h; path = ../../../foundation_library/ObjectCreatedEventArgs.h; sourceTree = "<group>"; };
+		D8F1617E1BF2452600C5E381 /* pch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pch.cpp; path = ../../../foundation_library/pch.cpp; sourceTree = "<group>"; };
+		D8F1617F1BF2452600C5E381 /* pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.h; path = ../../../foundation_library/pch.h; sourceTree = "<group>"; };
+		D8F161821BF2452600C5E381 /* ObjectDispatchDictionaryAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectDispatchDictionaryAdapter.h; path = ../../../foundation_library/ObjectDispatchDictionaryAdapter.h; sourceTree = "<group>"; };
+		D8F161851BF2452600C5E381 /* TextLogListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextLogListener.cpp; path = ../../../foundation_library/TextLogListener.cpp; sourceTree = "<group>"; };
+		D8F161861BF2452600C5E381 /* TextLogListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextLogListener.h; path = ../../../foundation_library/TextLogListener.h; sourceTree = "<group>"; };
+		D8F161BC1BF2455000C5E381 /* CriticalSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CriticalSection.h; path = ../../../inc/CriticalSection.h; sourceTree = "<group>"; };
+		D8F161BD1BF2455000C5E381 /* FoundationTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationTypes.h; path = ../../../inc/FoundationTypes.h; sourceTree = "<group>"; };
+		D8F161BE1BF2455000C5E381 /* FoundationUtilHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundationUtilHelper.h; path = ../../../inc/FoundationUtilHelper.h; sourceTree = "<group>"; };
+		D8F161C41BF2456A00C5E381 /* ArrayHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArrayHelper.h; path = ../../../inc/ArrayHelper.h; sourceTree = "<group>"; };
+		D8F161C61BF2458200C5E381 /* auto_delete_vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = auto_delete_vector.h; path = ../../../inc/auto_delete_vector.h; sourceTree = "<group>"; };
+		D8F161C81BF245A300C5E381 /* CastHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CastHelper.h; path = ../../../inc/CastHelper.h; sourceTree = "<group>"; };
+		D8F161CA1BF245B600C5E381 /* SerializeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerializeUtil.h; path = ../../../inc/SerializeUtil.h; sourceTree = "<group>"; };
+		D8F161CD1BF2461000C5E381 /* dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dump.c; path = ../../../jansson/src/dump.c; sourceTree = "<group>"; };
+		D8F161CE1BF2461000C5E381 /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = error.c; path = ../../../jansson/src/error.c; sourceTree = "<group>"; };
+		D8F161CF1BF2461000C5E381 /* hashtable_seed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashtable_seed.c; path = ../../../jansson/src/hashtable_seed.c; sourceTree = "<group>"; };
+		D8F161D01BF2461000C5E381 /* hashtable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashtable.c; path = ../../../jansson/src/hashtable.c; sourceTree = "<group>"; };
+		D8F161D11BF2461000C5E381 /* hashtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hashtable.h; path = ../../../jansson/src/hashtable.h; sourceTree = "<group>"; };
+		D8F161D21BF2461000C5E381 /* jansson_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jansson_config.h; path = ../../../jansson/src/jansson_config.h; sourceTree = "<group>"; };
+		D8F161D31BF2461000C5E381 /* jansson_config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jansson_config.h.in; path = ../../../jansson/src/jansson_config.h.in; sourceTree = "<group>"; };
+		D8F161D41BF2461000C5E381 /* jansson_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jansson_private.h; path = ../../../jansson/src/jansson_private.h; sourceTree = "<group>"; };
+		D8F161D51BF2461000C5E381 /* jansson.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jansson.def; path = ../../../jansson/src/jansson.def; sourceTree = "<group>"; };
+		D8F161D61BF2461000C5E381 /* jansson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jansson.h; path = ../../../jansson/src/jansson.h; sourceTree = "<group>"; };
+		D8F161D71BF2461000C5E381 /* load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = load.c; path = ../../../jansson/src/load.c; sourceTree = "<group>"; };
+		D8F161D81BF2461000C5E381 /* lookup3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lookup3.h; path = ../../../jansson/src/lookup3.h; sourceTree = "<group>"; };
+		D8F161D91BF2461000C5E381 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile.am; path = ../../../jansson/src/Makefile.am; sourceTree = "<group>"; };
+		D8F161DA1BF2461000C5E381 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memory.c; path = ../../../jansson/src/memory.c; sourceTree = "<group>"; };
+		D8F161DB1BF2461000C5E381 /* pack_unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pack_unpack.c; path = ../../../jansson/src/pack_unpack.c; sourceTree = "<group>"; };
+		D8F161DC1BF2461000C5E381 /* strbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strbuffer.c; path = ../../../jansson/src/strbuffer.c; sourceTree = "<group>"; };
+		D8F161DD1BF2461000C5E381 /* strbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = strbuffer.h; path = ../../../jansson/src/strbuffer.h; sourceTree = "<group>"; };
+		D8F161DE1BF2461000C5E381 /* strconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strconv.c; path = ../../../jansson/src/strconv.c; sourceTree = "<group>"; };
+		D8F161DF1BF2461000C5E381 /* utf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utf.c; path = ../../../jansson/src/utf.c; sourceTree = "<group>"; };
+		D8F161E01BF2461000C5E381 /* utf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf.h; path = ../../../jansson/src/utf.h; sourceTree = "<group>"; };
+		D8F161E11BF2461000C5E381 /* value.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = value.c; path = ../../../jansson/src/value.c; sourceTree = "<group>"; };
+		D8F161F41BF2462D00C5E381 /* pal_str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pal_str.h; path = ../../../inc/pal_str.h; sourceTree = "<group>"; };
+		D8F161F61BF246AA00C5E381 /* libpmod.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpmod.dylib; path = "../../../../../Library/Developer/Xcode/DerivedData/pmod-adhymodexzpkzydjnosjmuxctcjs/Build/Products/Debug/libpmod.dylib"; sourceTree = "<group>"; };
+		D8F161F91BF246D300C5E381 /* FoundationLoggerTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationLoggerTypeInfo.g.cpp; path = ../../../__generated/foundation_library/FoundationLoggerTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D8F161FB1BF246E400C5E381 /* LoggerTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoggerTypeInfo.g.cpp; path = ../../../__generated/model_library/LoggerTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D8F161FD1BF2483500C5E381 /* BaseModelSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BaseModelSource.cpp; path = ../../../model_library/BaseModelSource.cpp; sourceTree = "<group>"; };
+		D8F161FE1BF2483500C5E381 /* BaseModelSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseModelSource.h; path = ../../../model_library/BaseModelSource.h; sourceTree = "<group>"; };
+		D8F161FF1BF2483500C5E381 /* BatchPropertyChangedHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatchPropertyChangedHelper.h; path = ../../../model_library/BatchPropertyChangedHelper.h; sourceTree = "<group>"; };
+		D8F162001BF2483500C5E381 /* BindingBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BindingBase.h; path = ../../../model_library/BindingBase.h; sourceTree = "<group>"; };
+		D8F162031BF2483500C5E381 /* BindingValueChangedEventArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BindingValueChangedEventArgs.h; path = ../../../model_library/BindingValueChangedEventArgs.h; sourceTree = "<group>"; };
+		D8F162041BF2483500C5E381 /* ClassStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClassStatics.cpp; path = ../../../model_library/ClassStatics.cpp; sourceTree = "<group>"; };
+		D8F162051BF2483500C5E381 /* ClassStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassStatics.h; path = ../../../model_library/ClassStatics.h; sourceTree = "<group>"; };
+		D8F162061BF2483500C5E381 /* CollectionViewModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CollectionViewModel.cpp; path = ../../../model_library/CollectionViewModel.cpp; sourceTree = "<group>"; };
+		D8F162071BF2483500C5E381 /* CollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewModel.h; path = ../../../model_library/CollectionViewModel.h; sourceTree = "<group>"; };
+		D8F162081BF2483500C5E381 /* Command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Command.cpp; path = ../../../model_library/Command.cpp; sourceTree = "<group>"; };
+		D8F162091BF2483500C5E381 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command.h; path = ../../../model_library/Command.h; sourceTree = "<group>"; };
+		D8F1620A1BF2483500C5E381 /* CommandViewModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommandViewModel.cpp; path = ../../../model_library/CommandViewModel.cpp; sourceTree = "<group>"; };
+		D8F1620B1BF2483500C5E381 /* CommandViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandViewModel.h; path = ../../../model_library/CommandViewModel.h; sourceTree = "<group>"; };
+		D8F1620D1BF2483500C5E381 /* DebugUtilCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugUtilCommand.cpp; sourceTree = "<group>"; };
+		D8F1620E1BF2483500C5E381 /* ExpressionBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExpressionBinding.cpp; path = ../../../model_library/ExpressionBinding.cpp; sourceTree = "<group>"; };
+		D8F1620F1BF2483500C5E381 /* ExpressionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpressionBinding.h; path = ../../../model_library/ExpressionBinding.h; sourceTree = "<group>"; };
+		D8F162101BF2483500C5E381 /* FactoryBindingConverters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FactoryBindingConverters.cpp; path = ../../../model_library/FactoryBindingConverters.cpp; sourceTree = "<group>"; };
+		D8F162111BF2483500C5E381 /* FactoryBindingConverters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FactoryBindingConverters.h; path = ../../../model_library/FactoryBindingConverters.h; sourceTree = "<group>"; };
+		D8F162121BF2483500C5E381 /* FastItemsContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FastItemsContainer.cpp; path = ../../../model_library/FastItemsContainer.cpp; sourceTree = "<group>"; };
+		D8F162131BF2483500C5E381 /* FastItemsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FastItemsContainer.h; path = ../../../model_library/FastItemsContainer.h; sourceTree = "<group>"; };
+		D8F162141BF2483500C5E381 /* ItemsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemsContainer.h; path = ../../../model_library/ItemsContainer.h; sourceTree = "<group>"; };
+		D8F162171BF2483500C5E381 /* ModelLibraryInstance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelLibraryInstance.cpp; path = ../../../model_library/ModelLibraryInstance.cpp; sourceTree = "<group>"; };
+		D8F162181BF2483500C5E381 /* ModelLibraryInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelLibraryInterfaces.cpp; path = ../../../model_library/ModelLibraryInterfaces.cpp; sourceTree = "<group>"; };
+		D8F162191BF2483500C5E381 /* ModelPrivateInterfaces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelPrivateInterfaces.cpp; path = ../../../model_library/ModelPrivateInterfaces.cpp; sourceTree = "<group>"; };
+		D8F1621A1BF2483500C5E381 /* ModelSerializerAdapters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelSerializerAdapters.cpp; path = ../../../model_library/ModelSerializerAdapters.cpp; sourceTree = "<group>"; };
+		D8F1621B1BF2483500C5E381 /* MultiSourceBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MultiSourceBinding.cpp; path = ../../../model_library/MultiSourceBinding.cpp; sourceTree = "<group>"; };
+		D8F1621C1BF2483500C5E381 /* MultiSourceBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiSourceBinding.h; path = ../../../model_library/MultiSourceBinding.h; sourceTree = "<group>"; };
+		D8F1621D1BF2483500C5E381 /* MultiSourceCollectionViewModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MultiSourceCollectionViewModel.cpp; path = ../../../model_library/MultiSourceCollectionViewModel.cpp; sourceTree = "<group>"; };
+		D8F1621E1BF2483500C5E381 /* MultiSourceCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiSourceCollectionViewModel.h; path = ../../../model_library/MultiSourceCollectionViewModel.h; sourceTree = "<group>"; };
+		D8F1621F1BF2483500C5E381 /* MultiSourceModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiSourceModelBase.h; path = ../../../model_library/MultiSourceModelBase.h; sourceTree = "<group>"; };
+		D8F162201BF2483500C5E381 /* MultiSourceViewModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MultiSourceViewModel.cpp; path = ../../../model_library/MultiSourceViewModel.cpp; sourceTree = "<group>"; };
+		D8F162211BF2483500C5E381 /* MultiSourceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiSourceViewModel.h; path = ../../../model_library/MultiSourceViewModel.h; sourceTree = "<group>"; };
+		D8F162221BF2483500C5E381 /* ObjectNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectNode.h; path = ../../../model_library/ObjectNode.h; sourceTree = "<group>"; };
+		D8F162231BF2483500C5E381 /* ObjectStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectStatics.cpp; path = ../../../model_library/ObjectStatics.cpp; sourceTree = "<group>"; };
+		D8F162241BF2483500C5E381 /* ObjectStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectStatics.h; path = ../../../model_library/ObjectStatics.h; sourceTree = "<group>"; };
+		D8F162261BF2483500C5E381 /* ObjectViewModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectViewModel.cpp; path = ../../../model_library/ObjectViewModel.cpp; sourceTree = "<group>"; };
+		D8F162271BF2483500C5E381 /* ObjectViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectViewModel.h; path = ../../../model_library/ObjectViewModel.h; sourceTree = "<group>"; };
+		D8F162281BF2483500C5E381 /* ObjectViewModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectViewModelBase.h; path = ../../../model_library/ObjectViewModelBase.h; sourceTree = "<group>"; };
+		D8F162291BF2483500C5E381 /* ObservableCollection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableCollection.cpp; path = ../../../model_library/ObservableCollection.cpp; sourceTree = "<group>"; };
+		D8F1622A1BF2483500C5E381 /* ObservableCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableCollection.h; path = ../../../model_library/ObservableCollection.h; sourceTree = "<group>"; };
+		D8F1622B1BF2483500C5E381 /* ObservableCollectionStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableCollectionStatics.cpp; path = ../../../model_library/ObservableCollectionStatics.cpp; sourceTree = "<group>"; };
+		D8F1622C1BF2483500C5E381 /* ObservableCollectionStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableCollectionStatics.h; path = ../../../model_library/ObservableCollectionStatics.h; sourceTree = "<group>"; };
+		D8F1622D1BF2483500C5E381 /* ObservableObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObject.cpp; path = ../../../model_library/ObservableObject.cpp; sourceTree = "<group>"; };
+		D8F1622E1BF2483500C5E381 /* ObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableObject.h; path = ../../../model_library/ObservableObject.h; sourceTree = "<group>"; };
+		D8F1622F1BF2483500C5E381 /* ObservableObjectAdapters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObjectAdapters.cpp; path = ../../../model_library/ObservableObjectAdapters.cpp; sourceTree = "<group>"; };
+		D8F162301BF2483500C5E381 /* ObservableObjectStatics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObjectStatics.cpp; path = ../../../model_library/ObservableObjectStatics.cpp; sourceTree = "<group>"; };
+		D8F162311BF2483500C5E381 /* ObservableObjectStatics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableObjectStatics.h; path = ../../../model_library/ObservableObjectStatics.h; sourceTree = "<group>"; };
+		D8F162321BF2483500C5E381 /* PropertyBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyBinding.cpp; path = ../../../model_library/PropertyBinding.cpp; sourceTree = "<group>"; };
+		D8F162331BF2483500C5E381 /* PropertyBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyBinding.h; path = ../../../model_library/PropertyBinding.h; sourceTree = "<group>"; };
+		D8F162341BF2483500C5E381 /* ViewModelBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewModelBase.h; path = ../../../model_library/ViewModelBase.h; sourceTree = "<group>"; };
+		D8F162371BF2483500C5E381 /* ViewModelFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewModelFactory.cpp; path = ../../../model_library/ViewModelFactory.cpp; sourceTree = "<group>"; };
+		D8F162381BF2483500C5E381 /* ViewModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewModelFactory.h; path = ../../../model_library/ViewModelFactory.h; sourceTree = "<group>"; };
+		D8F162741BF248C200C5E381 /* PtrSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PtrSingleton.h; path = ../../../inc/PtrSingleton.h; sourceTree = "<group>"; };
+		D8F1627A1BF24A0400C5E381 /* libpmod_lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpmod_lib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F66B701CA4383C00DA856C /* FoundationUtilHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoundationUtilHelper.cpp; path = ../../../src/FoundationUtilHelper.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8F161421BF244A300C5E381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F161F71BF246AA00C5E381 /* libpmod.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F162771BF24A0400C5E381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8F1613C1BF244A300C5E381 = {
+			isa = PBXGroup;
+			children = (
+				D8F161F81BF246B900C5E381 /* __generated */,
+				D8F161F61BF246AA00C5E381 /* libpmod.dylib */,
+				D8F161CC1BF245E700C5E381 /* jannson */,
+				D8F161B91BF2452F00C5E381 /* inc */,
+				D8F66B6F1CA4382200DA856C /* src */,
+				D8F161541BF244CD00C5E381 /* foundation_library */,
+				D8F161531BF244C000C5E381 /* model_library */,
+				D8F161461BF244A300C5E381 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8F161461BF244A300C5E381 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8F161451BF244A300C5E381 /* libpmod_lib.dylib */,
+				D8F1627A1BF24A0400C5E381 /* libpmod_lib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8F161531BF244C000C5E381 /* model_library */ = {
+			isa = PBXGroup;
+			children = (
+				D8F161FD1BF2483500C5E381 /* BaseModelSource.cpp */,
+				D8F161FE1BF2483500C5E381 /* BaseModelSource.h */,
+				D8F161FF1BF2483500C5E381 /* BatchPropertyChangedHelper.h */,
+				D8F162001BF2483500C5E381 /* BindingBase.h */,
+				D8F162031BF2483500C5E381 /* BindingValueChangedEventArgs.h */,
+				D8F162041BF2483500C5E381 /* ClassStatics.cpp */,
+				D8F162051BF2483500C5E381 /* ClassStatics.h */,
+				D8F162061BF2483500C5E381 /* CollectionViewModel.cpp */,
+				D8F162071BF2483500C5E381 /* CollectionViewModel.h */,
+				D8F162081BF2483500C5E381 /* Command.cpp */,
+				D8F162091BF2483500C5E381 /* Command.h */,
+				D8F1620A1BF2483500C5E381 /* CommandViewModel.cpp */,
+				D8F1620B1BF2483500C5E381 /* CommandViewModel.h */,
+				D8F1620C1BF2483500C5E381 /* debug */,
+				D8F1620E1BF2483500C5E381 /* ExpressionBinding.cpp */,
+				D8F1620F1BF2483500C5E381 /* ExpressionBinding.h */,
+				D8F162101BF2483500C5E381 /* FactoryBindingConverters.cpp */,
+				D8F162111BF2483500C5E381 /* FactoryBindingConverters.h */,
+				D8F162121BF2483500C5E381 /* FastItemsContainer.cpp */,
+				D8F162131BF2483500C5E381 /* FastItemsContainer.h */,
+				D8F162141BF2483500C5E381 /* ItemsContainer.h */,
+				D8F162171BF2483500C5E381 /* ModelLibraryInstance.cpp */,
+				D8F162181BF2483500C5E381 /* ModelLibraryInterfaces.cpp */,
+				D8F162191BF2483500C5E381 /* ModelPrivateInterfaces.cpp */,
+				D8F1621A1BF2483500C5E381 /* ModelSerializerAdapters.cpp */,
+				D8F1621B1BF2483500C5E381 /* MultiSourceBinding.cpp */,
+				D8F1621C1BF2483500C5E381 /* MultiSourceBinding.h */,
+				D8F1621D1BF2483500C5E381 /* MultiSourceCollectionViewModel.cpp */,
+				D8F1621E1BF2483500C5E381 /* MultiSourceCollectionViewModel.h */,
+				D8F1621F1BF2483500C5E381 /* MultiSourceModelBase.h */,
+				D8F162201BF2483500C5E381 /* MultiSourceViewModel.cpp */,
+				D8F162211BF2483500C5E381 /* MultiSourceViewModel.h */,
+				D8F162221BF2483500C5E381 /* ObjectNode.h */,
+				D8F162231BF2483500C5E381 /* ObjectStatics.cpp */,
+				D8F162241BF2483500C5E381 /* ObjectStatics.h */,
+				D8F162261BF2483500C5E381 /* ObjectViewModel.cpp */,
+				D8F162271BF2483500C5E381 /* ObjectViewModel.h */,
+				D8F162281BF2483500C5E381 /* ObjectViewModelBase.h */,
+				D8F162291BF2483500C5E381 /* ObservableCollection.cpp */,
+				D8F1622A1BF2483500C5E381 /* ObservableCollection.h */,
+				D8F1622B1BF2483500C5E381 /* ObservableCollectionStatics.cpp */,
+				D8F1622C1BF2483500C5E381 /* ObservableCollectionStatics.h */,
+				D8F1622D1BF2483500C5E381 /* ObservableObject.cpp */,
+				D8F1622E1BF2483500C5E381 /* ObservableObject.h */,
+				D8F1622F1BF2483500C5E381 /* ObservableObjectAdapters.cpp */,
+				D8F162301BF2483500C5E381 /* ObservableObjectStatics.cpp */,
+				D8F162311BF2483500C5E381 /* ObservableObjectStatics.h */,
+				D8F162321BF2483500C5E381 /* PropertyBinding.cpp */,
+				D8F162331BF2483500C5E381 /* PropertyBinding.h */,
+				D8F162341BF2483500C5E381 /* ViewModelBase.h */,
+				D8F162371BF2483500C5E381 /* ViewModelFactory.cpp */,
+				D8F162381BF2483500C5E381 /* ViewModelFactory.h */,
+			);
+			name = model_library;
+			sourceTree = "<group>";
+		};
+		D8F161541BF244CD00C5E381 /* foundation_library */ = {
+			isa = PBXGroup;
+			children = (
+				D8A8084F1D2432AC002485F2 /* ObjectDispatch.cpp */,
+				D8A808501D2432AC002485F2 /* ObjectDispatch.h */,
+				D8A808511D2432AC002485F2 /* ObjectDispatchFactory.cpp */,
+				D8A808521D2432AC002485F2 /* ObjectDispatchFactory.h */,
+				D8F161551BF2452600C5E381 /* AsyncOperation.cpp */,
+				D8F161561BF2452600C5E381 /* AsyncOperation.h */,
+				D8F161571BF2452600C5E381 /* BinaryLogListener.cpp */,
+				D8F161581BF2452600C5E381 /* BinaryLogListener.h */,
+				D8F161591BF2452600C5E381 /* BinaryStreamProvider.cpp */,
+				D8F1615A1BF2452600C5E381 /* BinaryStreamProvider.h */,
+				D8F1615B1BF2452600C5E381 /* CreateFoundationHelper.h */,
+				D8F1615C1BF2452600C5E381 /* EventHandler.h */,
+				D8F1615D1BF2452600C5E381 /* EventSourceBase.h */,
+				D8F1615E1BF2452600C5E381 /* Expression.cpp */,
+				D8F1615F1BF2452600C5E381 /* Expression.h */,
+				D8F161601BF2452600C5E381 /* ExpressionFactory.cpp */,
+				D8F161611BF2452600C5E381 /* ExpressionFactory.h */,
+				D8F161621BF2452600C5E381 /* FastContainerUtil.cpp */,
+				D8F161631BF2452600C5E381 /* FastContainerUtil.h */,
+				D8F161641BF2452600C5E381 /* FastPropertiesContainer.cpp */,
+				D8F161651BF2452600C5E381 /* FastPropertiesContainer.h */,
+				D8F161661BF2452600C5E381 /* FoundationBase.h */,
+				D8F161671BF2452600C5E381 /* FoundationLibraryInterfaces.cpp */,
+				D8F161681BF2452600C5E381 /* JsonStatics.cpp */,
+				D8F161691BF2452600C5E381 /* JsonStatics.h */,
+				D8F1616A1BF2452600C5E381 /* LogCategory.cpp */,
+				D8F1616B1BF2452600C5E381 /* LogCategory.h */,
+				D8F1616C1BF2452600C5E381 /* Logger.cpp */,
+				D8F1616D1BF2452600C5E381 /* Logger.h */,
+				D8F1616E1BF2452600C5E381 /* LoggerFactory.cpp */,
+				D8F1616F1BF2452600C5E381 /* LoggerFactory.h */,
+				D8F161701BF2452600C5E381 /* LoggerUtil.cpp */,
+				D8F161711BF2452600C5E381 /* LogRecordStatics.cpp */,
+				D8F161721BF2452600C5E381 /* LogRecordStatics.h */,
+				D8F161731BF2452600C5E381 /* Mailbox.cpp */,
+				D8F161741BF2452600C5E381 /* Mailbox.h */,
+				D8F161751BF2452600C5E381 /* MailboxDispatcher.cpp */,
+				D8F161761BF2452600C5E381 /* MailboxDispatcher.h */,
+				D8F161771BF2452600C5E381 /* ObjectBase.cpp */,
+				D8F161781BF2452600C5E381 /* ObjectBase.h */,
+				D8F161791BF2452600C5E381 /* ObjectBaseFactory.cpp */,
+				D8F1617A1BF2452600C5E381 /* ObjectBaseFactory.h */,
+				D8F1617B1BF2452600C5E381 /* ObjectCreatedEventArgs.h */,
+				D8F1617E1BF2452600C5E381 /* pch.cpp */,
+				D8F1617F1BF2452600C5E381 /* pch.h */,
+				D8F161821BF2452600C5E381 /* ObjectDispatchDictionaryAdapter.h */,
+				D8F161851BF2452600C5E381 /* TextLogListener.cpp */,
+				D8F161861BF2452600C5E381 /* TextLogListener.h */,
+			);
+			name = foundation_library;
+			sourceTree = "<group>";
+		};
+		D8F161B91BF2452F00C5E381 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				D8F161F41BF2462D00C5E381 /* pal_str.h */,
+				D8F161CA1BF245B600C5E381 /* SerializeUtil.h */,
+				D8F161C81BF245A300C5E381 /* CastHelper.h */,
+				D8F161C61BF2458200C5E381 /* auto_delete_vector.h */,
+				D8F161C41BF2456A00C5E381 /* ArrayHelper.h */,
+				D8F161BC1BF2455000C5E381 /* CriticalSection.h */,
+				D8F161BD1BF2455000C5E381 /* FoundationTypes.h */,
+				D8F161BE1BF2455000C5E381 /* FoundationUtilHelper.h */,
+				D8F162741BF248C200C5E381 /* PtrSingleton.h */,
+			);
+			name = inc;
+			sourceTree = "<group>";
+		};
+		D8F161CC1BF245E700C5E381 /* jannson */ = {
+			isa = PBXGroup;
+			children = (
+				D8F161CD1BF2461000C5E381 /* dump.c */,
+				D8F161CE1BF2461000C5E381 /* error.c */,
+				D8F161CF1BF2461000C5E381 /* hashtable_seed.c */,
+				D8F161D01BF2461000C5E381 /* hashtable.c */,
+				D8F161D11BF2461000C5E381 /* hashtable.h */,
+				D8F161D21BF2461000C5E381 /* jansson_config.h */,
+				D8F161D31BF2461000C5E381 /* jansson_config.h.in */,
+				D8F161D41BF2461000C5E381 /* jansson_private.h */,
+				D8F161D51BF2461000C5E381 /* jansson.def */,
+				D8F161D61BF2461000C5E381 /* jansson.h */,
+				D8F161D71BF2461000C5E381 /* load.c */,
+				D8F161D81BF2461000C5E381 /* lookup3.h */,
+				D8F161D91BF2461000C5E381 /* Makefile.am */,
+				D8F161DA1BF2461000C5E381 /* memory.c */,
+				D8F161DB1BF2461000C5E381 /* pack_unpack.c */,
+				D8F161DC1BF2461000C5E381 /* strbuffer.c */,
+				D8F161DD1BF2461000C5E381 /* strbuffer.h */,
+				D8F161DE1BF2461000C5E381 /* strconv.c */,
+				D8F161DF1BF2461000C5E381 /* utf.c */,
+				D8F161E01BF2461000C5E381 /* utf.h */,
+				D8F161E11BF2461000C5E381 /* value.c */,
+			);
+			name = jannson;
+			sourceTree = "<group>";
+		};
+		D8F161F81BF246B900C5E381 /* __generated */ = {
+			isa = PBXGroup;
+			children = (
+				D8F161FB1BF246E400C5E381 /* LoggerTypeInfo.g.cpp */,
+				D8F161F91BF246D300C5E381 /* FoundationLoggerTypeInfo.g.cpp */,
+			);
+			name = __generated;
+			sourceTree = "<group>";
+		};
+		D8F1620C1BF2483500C5E381 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				D8F1620D1BF2483500C5E381 /* DebugUtilCommand.cpp */,
+			);
+			name = debug;
+			path = ../../../model_library/debug;
+			sourceTree = "<group>";
+		};
+		D8F66B6F1CA4382200DA856C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D8F66B701CA4383C00DA856C /* FoundationUtilHelper.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D8F161431BF244A300C5E381 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F161AD1BF2452600C5E381 /* ObjectCreatedEventArgs.h in Headers */,
+				D8F161CB1BF245B600C5E381 /* SerializeUtil.h in Headers */,
+				D8F161A11BF2452600C5E381 /* LoggerFactory.h in Headers */,
+				D8F1623F1BF2483500C5E381 /* BindingValueChangedEventArgs.h in Headers */,
+				D8F1625D1BF2483500C5E381 /* ObjectNode.h in Headers */,
+				D8F1623A1BF2483500C5E381 /* BaseModelSource.h in Headers */,
+				D8F162651BF2483500C5E381 /* ObservableCollection.h in Headers */,
+				D8F1619B1BF2452600C5E381 /* JsonStatics.h in Headers */,
+				D8F161B11BF2452600C5E381 /* pch.h in Headers */,
+				D8F162411BF2483500C5E381 /* ClassStatics.h in Headers */,
+				D8F161C91BF245A300C5E381 /* CastHelper.h in Headers */,
+				D8F1625F1BF2483500C5E381 /* ObjectStatics.h in Headers */,
+				D8F161F51BF2462D00C5E381 /* pal_str.h in Headers */,
+				D8F161B81BF2452600C5E381 /* TextLogListener.h in Headers */,
+				D8F161E91BF2461000C5E381 /* jansson.h in Headers */,
+				D8F161C11BF2455000C5E381 /* CriticalSection.h in Headers */,
+				D8F1626F1BF2483500C5E381 /* ViewModelBase.h in Headers */,
+				D8F162451BF2483500C5E381 /* Command.h in Headers */,
+				D8F1626E1BF2483500C5E381 /* PropertyBinding.h in Headers */,
+				D8F161F21BF2461000C5E381 /* utf.h in Headers */,
+				D8F1619D1BF2452600C5E381 /* LogCategory.h in Headers */,
+				D8F161EB1BF2461000C5E381 /* lookup3.h in Headers */,
+				D8F161A81BF2452600C5E381 /* MailboxDispatcher.h in Headers */,
+				D8F161AA1BF2452600C5E381 /* ObjectBase.h in Headers */,
+				D8F161981BF2452600C5E381 /* FoundationBase.h in Headers */,
+				D8F1623C1BF2483500C5E381 /* BindingBase.h in Headers */,
+				D8F162571BF2483500C5E381 /* MultiSourceBinding.h in Headers */,
+				D8F161A41BF2452600C5E381 /* LogRecordStatics.h in Headers */,
+				D8F1618C1BF2452600C5E381 /* BinaryStreamProvider.h in Headers */,
+				D8F162591BF2483500C5E381 /* MultiSourceCollectionViewModel.h in Headers */,
+				D8F162631BF2483500C5E381 /* ObjectViewModelBase.h in Headers */,
+				D8F1618D1BF2452600C5E381 /* CreateFoundationHelper.h in Headers */,
+				D8F161E81BF2461000C5E381 /* jansson_private.h in Headers */,
+				D8F161C71BF2458200C5E381 /* auto_delete_vector.h in Headers */,
+				D8F162751BF248C200C5E381 /* PtrSingleton.h in Headers */,
+				D8F161C31BF2455000C5E381 /* FoundationUtilHelper.h in Headers */,
+				D8F161AC1BF2452600C5E381 /* ObjectBaseFactory.h in Headers */,
+				D8F162671BF2483500C5E381 /* ObservableCollectionStatics.h in Headers */,
+				D8F1625A1BF2483500C5E381 /* MultiSourceModelBase.h in Headers */,
+				D8F161A61BF2452600C5E381 /* Mailbox.h in Headers */,
+				D8F162621BF2483500C5E381 /* ObjectViewModel.h in Headers */,
+				D8F161EF1BF2461000C5E381 /* strbuffer.h in Headers */,
+				D8F1626C1BF2483500C5E381 /* ObservableObjectStatics.h in Headers */,
+				D8F162431BF2483500C5E381 /* CollectionViewModel.h in Headers */,
+				D8A808541D2432AC002485F2 /* ObjectDispatch.h in Headers */,
+				D8F161C21BF2455000C5E381 /* FoundationTypes.h in Headers */,
+				D8F1624F1BF2483500C5E381 /* ItemsContainer.h in Headers */,
+				D8F1624C1BF2483500C5E381 /* FactoryBindingConverters.h in Headers */,
+				D8F161E61BF2461000C5E381 /* hashtable.h in Headers */,
+				D8F161C51BF2456A00C5E381 /* ArrayHelper.h in Headers */,
+				D8F1624E1BF2483500C5E381 /* FastItemsContainer.h in Headers */,
+				D8F1623B1BF2483500C5E381 /* BatchPropertyChangedHelper.h in Headers */,
+				D8F1618A1BF2452600C5E381 /* BinaryLogListener.h in Headers */,
+				D8F161B41BF2452600C5E381 /* ObjectDispatchDictionaryAdapter.h in Headers */,
+				D8F1624A1BF2483500C5E381 /* ExpressionBinding.h in Headers */,
+				D8F1625C1BF2483500C5E381 /* MultiSourceViewModel.h in Headers */,
+				D8F161911BF2452600C5E381 /* Expression.h in Headers */,
+				D8A808561D2432AC002485F2 /* ObjectDispatchFactory.h in Headers */,
+				D8F162471BF2483500C5E381 /* CommandViewModel.h in Headers */,
+				D8F161E71BF2461000C5E381 /* jansson_config.h in Headers */,
+				D8F1618F1BF2452600C5E381 /* EventSourceBase.h in Headers */,
+				D8F161931BF2452600C5E381 /* ExpressionFactory.h in Headers */,
+				D8F162731BF2483500C5E381 /* ViewModelFactory.h in Headers */,
+				D8F1618E1BF2452600C5E381 /* EventHandler.h in Headers */,
+				D8F161971BF2452600C5E381 /* FastPropertiesContainer.h in Headers */,
+				D8F161881BF2452600C5E381 /* AsyncOperation.h in Headers */,
+				D8F1619F1BF2452600C5E381 /* Logger.h in Headers */,
+				D8F162691BF2483500C5E381 /* ObservableObject.h in Headers */,
+				D8F161951BF2452600C5E381 /* FastContainerUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D8F161441BF244A300C5E381 /* pmod_lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F161501BF244A300C5E381 /* Build configuration list for PBXNativeTarget "pmod_lib" */;
+			buildPhases = (
+				D8F161411BF244A300C5E381 /* Sources */,
+				D8F161421BF244A300C5E381 /* Frameworks */,
+				D8F161431BF244A300C5E381 /* Headers */,
+				D8F162C21BF24B7700C5E381 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pmod_lib;
+			productName = pmod_lib;
+			productReference = D8F161451BF244A300C5E381 /* libpmod_lib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		D8F162791BF24A0400C5E381 /* pmod_lib_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F162801BF24A0400C5E381 /* Build configuration list for PBXNativeTarget "pmod_lib_iOS" */;
+			buildPhases = (
+				D8F162761BF24A0400C5E381 /* Sources */,
+				D8F162771BF24A0400C5E381 /* Frameworks */,
+				D8F162781BF24A0400C5E381 /* CopyFiles */,
+				D8F162C31BF24B9800C5E381 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pmod_lib_iOS;
+			productName = pmod_lib_iOS;
+			productReference = D8F1627A1BF24A0400C5E381 /* libpmod_lib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8F1613D1BF244A300C5E381 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Rodrigo Varas";
+				TargetAttributes = {
+					D8F161441BF244A300C5E381 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					D8F162791BF24A0400C5E381 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = D8F161401BF244A300C5E381 /* Build configuration list for PBXProject "pmod_lib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D8F1613C1BF244A300C5E381;
+			productRefGroup = D8F161461BF244A300C5E381 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8F161441BF244A300C5E381 /* pmod_lib */,
+				D8F162791BF24A0400C5E381 /* pmod_lib_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D8F162C21BF24B7700C5E381 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "products=../../../../bin/Products/macosx/$CONFIGURATION\n\nif [ ! -d \"$products\" ]; then\nmkdir -p $products\nfi\ncp ${TARGET_BUILD_DIR}/libpmod_lib.dylib $products";
+		};
+		D8F162C31BF24B9800C5E381 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "products=../../../../bin/Products/iOS/$CONFIGURATION/$PLATFORM_NAME\n\nif [ ! -d \"$products\" ]; then\nmkdir -p $products\nfi\ncp ${TARGET_BUILD_DIR}/libpmod_lib.a $products";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8F161411BF244A300C5E381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F161EA1BF2461000C5E381 /* load.c in Sources */,
+				D8F162441BF2483500C5E381 /* Command.cpp in Sources */,
+				D8F162641BF2483500C5E381 /* ObservableCollection.cpp in Sources */,
+				D8F161921BF2452600C5E381 /* ExpressionFactory.cpp in Sources */,
+				D8F161941BF2452600C5E381 /* FastContainerUtil.cpp in Sources */,
+				D8F162521BF2483500C5E381 /* ModelLibraryInstance.cpp in Sources */,
+				D8F161961BF2452600C5E381 /* FastPropertiesContainer.cpp in Sources */,
+				D8F162661BF2483500C5E381 /* ObservableCollectionStatics.cpp in Sources */,
+				D8F162391BF2483500C5E381 /* BaseModelSource.cpp in Sources */,
+				D8F162561BF2483500C5E381 /* MultiSourceBinding.cpp in Sources */,
+				D8F161B01BF2452600C5E381 /* pch.cpp in Sources */,
+				D8F161A71BF2452600C5E381 /* MailboxDispatcher.cpp in Sources */,
+				D8F161871BF2452600C5E381 /* AsyncOperation.cpp in Sources */,
+				D8F161A91BF2452600C5E381 /* ObjectBase.cpp in Sources */,
+				D8F161991BF2452600C5E381 /* FoundationLibraryInterfaces.cpp in Sources */,
+				D8F162721BF2483500C5E381 /* ViewModelFactory.cpp in Sources */,
+				D8F1626A1BF2483500C5E381 /* ObservableObjectAdapters.cpp in Sources */,
+				D8F162681BF2483500C5E381 /* ObservableObject.cpp in Sources */,
+				D8F1619A1BF2452600C5E381 /* JsonStatics.cpp in Sources */,
+				D8F1618B1BF2452600C5E381 /* BinaryStreamProvider.cpp in Sources */,
+				D8F162531BF2483500C5E381 /* ModelLibraryInterfaces.cpp in Sources */,
+				D8F162541BF2483500C5E381 /* ModelPrivateInterfaces.cpp in Sources */,
+				D8F161AB1BF2452600C5E381 /* ObjectBaseFactory.cpp in Sources */,
+				D8F1619E1BF2452600C5E381 /* Logger.cpp in Sources */,
+				D8F1624D1BF2483500C5E381 /* FastItemsContainer.cpp in Sources */,
+				D8F161EE1BF2461000C5E381 /* strbuffer.c in Sources */,
+				D8F66B711CA4383C00DA856C /* FoundationUtilHelper.cpp in Sources */,
+				D8F161ED1BF2461000C5E381 /* pack_unpack.c in Sources */,
+				D8F161A51BF2452600C5E381 /* Mailbox.cpp in Sources */,
+				D8F1626B1BF2483500C5E381 /* ObservableObjectStatics.cpp in Sources */,
+				D8F162421BF2483500C5E381 /* CollectionViewModel.cpp in Sources */,
+				D8F161E41BF2461000C5E381 /* hashtable_seed.c in Sources */,
+				D8F161E51BF2461000C5E381 /* hashtable.c in Sources */,
+				D8F1625B1BF2483500C5E381 /* MultiSourceViewModel.cpp in Sources */,
+				D8F1626D1BF2483500C5E381 /* PropertyBinding.cpp in Sources */,
+				D8F161F31BF2461000C5E381 /* value.c in Sources */,
+				D8F162461BF2483500C5E381 /* CommandViewModel.cpp in Sources */,
+				D8F161891BF2452600C5E381 /* BinaryLogListener.cpp in Sources */,
+				D8F161F11BF2461000C5E381 /* utf.c in Sources */,
+				D8A808551D2432AC002485F2 /* ObjectDispatchFactory.cpp in Sources */,
+				D8F162491BF2483500C5E381 /* ExpressionBinding.cpp in Sources */,
+				D8F161E31BF2461000C5E381 /* error.c in Sources */,
+				D8F161F01BF2461000C5E381 /* strconv.c in Sources */,
+				D8F161B71BF2452600C5E381 /* TextLogListener.cpp in Sources */,
+				D8F161EC1BF2461000C5E381 /* memory.c in Sources */,
+				D8F162481BF2483500C5E381 /* DebugUtilCommand.cpp in Sources */,
+				D8F161A21BF2452600C5E381 /* LoggerUtil.cpp in Sources */,
+				D8F161FC1BF246E500C5E381 /* LoggerTypeInfo.g.cpp in Sources */,
+				D8F1625E1BF2483500C5E381 /* ObjectStatics.cpp in Sources */,
+				D8F161A01BF2452600C5E381 /* LoggerFactory.cpp in Sources */,
+				D8F162611BF2483500C5E381 /* ObjectViewModel.cpp in Sources */,
+				D8F161FA1BF246D300C5E381 /* FoundationLoggerTypeInfo.g.cpp in Sources */,
+				D8F162401BF2483500C5E381 /* ClassStatics.cpp in Sources */,
+				D8F161E21BF2461000C5E381 /* dump.c in Sources */,
+				D8F161901BF2452600C5E381 /* Expression.cpp in Sources */,
+				D8F162551BF2483500C5E381 /* ModelSerializerAdapters.cpp in Sources */,
+				D8F1619C1BF2452600C5E381 /* LogCategory.cpp in Sources */,
+				D8F162581BF2483500C5E381 /* MultiSourceCollectionViewModel.cpp in Sources */,
+				D8A808531D2432AC002485F2 /* ObjectDispatch.cpp in Sources */,
+				D8F161A31BF2452600C5E381 /* LogRecordStatics.cpp in Sources */,
+				D8F1624B1BF2483500C5E381 /* FactoryBindingConverters.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8F162761BF24A0400C5E381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A8085A1D24342B002485F2 /* ObjectDispatch.cpp in Sources */,
+				D8A8085B1D24342B002485F2 /* ObjectDispatchFactory.cpp in Sources */,
+				D82240741BF267CC004A10A9 /* Expression.cpp in Sources */,
+				D8F162831BF24AC400C5E381 /* LoggerTypeInfo.g.cpp in Sources */,
+				D8F162841BF24AC400C5E381 /* FoundationLoggerTypeInfo.g.cpp in Sources */,
+				D8F162851BF24AC400C5E381 /* dump.c in Sources */,
+				D8F162861BF24AC400C5E381 /* error.c in Sources */,
+				D8F162871BF24AC400C5E381 /* hashtable_seed.c in Sources */,
+				D8F162881BF24AC400C5E381 /* hashtable.c in Sources */,
+				D8F162891BF24AC400C5E381 /* load.c in Sources */,
+				D8F1628A1BF24AC400C5E381 /* memory.c in Sources */,
+				D8F1628B1BF24AC400C5E381 /* pack_unpack.c in Sources */,
+				D8F1628C1BF24AC400C5E381 /* strbuffer.c in Sources */,
+				D8F1628D1BF24AC400C5E381 /* strconv.c in Sources */,
+				D8F1628E1BF24AC400C5E381 /* utf.c in Sources */,
+				D8F1628F1BF24AC400C5E381 /* value.c in Sources */,
+				D8F162901BF24AC400C5E381 /* AsyncOperation.cpp in Sources */,
+				D8F162911BF24AC400C5E381 /* BinaryLogListener.cpp in Sources */,
+				D8F162921BF24AC400C5E381 /* BinaryStreamProvider.cpp in Sources */,
+				D8F162931BF24AC400C5E381 /* ExpressionFactory.cpp in Sources */,
+				D8F162941BF24AC400C5E381 /* FastContainerUtil.cpp in Sources */,
+				D8F162951BF24AC400C5E381 /* FastPropertiesContainer.cpp in Sources */,
+				D8F162961BF24AC400C5E381 /* FoundationLibraryInterfaces.cpp in Sources */,
+				D8F162971BF24AC400C5E381 /* JsonStatics.cpp in Sources */,
+				D8F162981BF24AC400C5E381 /* LogCategory.cpp in Sources */,
+				D8F162991BF24AC400C5E381 /* Logger.cpp in Sources */,
+				D8F1629A1BF24AC400C5E381 /* LoggerFactory.cpp in Sources */,
+				D8F1629B1BF24AC400C5E381 /* LoggerUtil.cpp in Sources */,
+				D8F1629C1BF24AC400C5E381 /* LogRecordStatics.cpp in Sources */,
+				D8F1629D1BF24AC400C5E381 /* Mailbox.cpp in Sources */,
+				D8F1629E1BF24AC400C5E381 /* MailboxDispatcher.cpp in Sources */,
+				D8F1629F1BF24AC400C5E381 /* ObjectBase.cpp in Sources */,
+				D8F162A01BF24AC400C5E381 /* ObjectBaseFactory.cpp in Sources */,
+				D8F162A41BF24AC400C5E381 /* TextLogListener.cpp in Sources */,
+				D8F162A51BF24AC400C5E381 /* BaseModelSource.cpp in Sources */,
+				D8F162A71BF24AC400C5E381 /* ClassStatics.cpp in Sources */,
+				D8F162A81BF24AC400C5E381 /* CollectionViewModel.cpp in Sources */,
+				D8F162A91BF24AC400C5E381 /* Command.cpp in Sources */,
+				D8F162AA1BF24AC400C5E381 /* CommandViewModel.cpp in Sources */,
+				D8F162AB1BF24AC400C5E381 /* DebugUtilCommand.cpp in Sources */,
+				D8F162AC1BF24AC400C5E381 /* ExpressionBinding.cpp in Sources */,
+				D8F162AD1BF24AC400C5E381 /* FactoryBindingConverters.cpp in Sources */,
+				D8F162AE1BF24AC400C5E381 /* FastItemsContainer.cpp in Sources */,
+				D8F162B01BF24AC400C5E381 /* ModelLibraryInstance.cpp in Sources */,
+				D8F162B11BF24AC400C5E381 /* ModelLibraryInterfaces.cpp in Sources */,
+				D8F162B21BF24AC400C5E381 /* ModelPrivateInterfaces.cpp in Sources */,
+				D8F162B31BF24AC400C5E381 /* ModelSerializerAdapters.cpp in Sources */,
+				D8F162B41BF24AC400C5E381 /* MultiSourceBinding.cpp in Sources */,
+				D8F162B51BF24AC400C5E381 /* MultiSourceCollectionViewModel.cpp in Sources */,
+				D8F162B61BF24AC400C5E381 /* MultiSourceViewModel.cpp in Sources */,
+				D8F162B71BF24AC400C5E381 /* ObjectStatics.cpp in Sources */,
+				D8F162B91BF24AC400C5E381 /* ObjectViewModel.cpp in Sources */,
+				D8F162BA1BF24AC400C5E381 /* ObservableCollection.cpp in Sources */,
+				D8F162BB1BF24AC400C5E381 /* ObservableCollectionStatics.cpp in Sources */,
+				D8F162BC1BF24AC400C5E381 /* ObservableObject.cpp in Sources */,
+				D8F162BD1BF24AC400C5E381 /* ObservableObjectAdapters.cpp in Sources */,
+				D8F162BE1BF24AC400C5E381 /* ObservableObjectStatics.cpp in Sources */,
+				D8F162BF1BF24AC400C5E381 /* PropertyBinding.cpp in Sources */,
+				D8F162C11BF24AC400C5E381 /* ViewModelFactory.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D8F1614E1BF244A300C5E381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D8F1614F1BF244A300C5E381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D8F161511BF244A300C5E381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../public/inc,
+					../../../foundation,
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = ../pmod/build/Debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8F161521BF244A300C5E381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../public/inc,
+					../../../foundation,
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = ../pmod/build/Release;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D8F162811BF24A0400C5E381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../public/inc,
+					../../../foundation,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				OTHER_CFLAGS = " -fvisibility=hidden";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = pmod_lib;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D8F162821BF24A0400C5E381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../public/inc,
+					../../../foundation,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				OTHER_CFLAGS = " -fvisibility=hidden";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = pmod_lib;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8F161401BF244A300C5E381 /* Build configuration list for PBXProject "pmod_lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F1614E1BF244A300C5E381 /* Debug */,
+				D8F1614F1BF244A300C5E381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F161501BF244A300C5E381 /* Build configuration list for PBXNativeTarget "pmod_lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F161511BF244A300C5E381 /* Debug */,
+				D8F161521BF244A300C5E381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F162801BF24A0400C5E381 /* Build configuration list for PBXNativeTarget "pmod_lib_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F162811BF24A0400C5E381 /* Debug */,
+				D8F162821BF24A0400C5E381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8F1613D1BF244A300C5E381 /* Project object */;
+}

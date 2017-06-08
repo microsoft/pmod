@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\pmod.nuget.targets" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>93D66788-C061-421C-972A-2531B0C734A5</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Id>pmod.uwp</Id>
+    <Title>PMOD runtime Package</Title>
+    <Authors>rodrigov</Authors>
+    <Owners>rodrigov</Owners>
+    <Summary>UWP runtime for PMOD</Summary>
+    <Description>UWP runtime for PMOD SDK</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Microsoft</Copyright>
+    <Tags>PMOD</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+     <!-- x86 runtimes support-->
+    <File Include="$(Product)\uwp\x86\$(Configuration)\pmod.dll">
+      <TargetPath>runtimes\win10-x86\native</TargetPath>
+    </File>
+    
+    <!-- ARM runtimes support-->
+    <File Include="$(Product)\uwp\ARM\$(Configuration)\pmod.dll">
+      <TargetPath>runtimes\win10-arm\native</TargetPath>
+    </File>
+
+    <Content Include="pmod.uwp.txt" />
+  </ItemGroup>
+</Project>

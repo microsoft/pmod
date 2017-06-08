@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{FE4B884D-BF93-4B4E-8D31-D431E8A1C60D}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\md5\md5.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\CodeGenUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\Md5Util.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\ModelSchema.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\SchemaSerializer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\ToolUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\CodeGenToolBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCppBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateImplCppTemplate.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCppLibrary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCSharpBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCSharpClasses.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCSharpTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateFastCppTemplate.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateJava.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateKoJavascript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateModelAdapter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateNetInterop.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateProxyJavascript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateObjectiveC.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GeneratePtrClass.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateTypeInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateWindowsRuntimeAdapter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\propertymodelcodegen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\CodeGenUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\md5Util.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\ModelSchema.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\SchemaSerializer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\ToolUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\md5\global.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\md5\md5.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\CodeGenToolBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCppBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCppLibrary.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCSharpBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCSharpClasses.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateCSharpTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateFastCppTemplate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateImplCppTemplate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateJava.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateKoJavascript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateModelAdapter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateNetInterop.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateObjectiveC.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateProxyJavascript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GeneratePtrClass.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateTypeInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\GenerateWindowsRuntimeAdapter.h" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+{
+"namespace":"nsadapter",
+"typeId":550,
+"models":[
+"PMODAdapterLoggerTypes.cs"
+]
+}

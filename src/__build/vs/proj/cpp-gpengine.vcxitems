@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{9F97BA88-9123-4474-A328-13C60A993CB4}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\ASTCreator.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\ASTNode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\CGTFile.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\CharacterSetTable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\DFA.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\DFAStateTable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\ErrorReporter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\ErrorTable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\GrammarInfo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\LALR.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\LALRStateTable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\misc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\NonTerminal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\RuleTable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\Symbol.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\SymbolStack.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\SymbolTable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\Terminal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\include\Token.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\ASTCreator.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\ASTNode.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\CGTFile.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\CharacterSetTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\DFA.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\DFAStateTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\ErrorReporter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\ErrorTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\GrammarInfo.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\LALR.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\LALRStateTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\NonTerminal.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\RuleTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\Symbol.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\SymbolTable.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\Terminal.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\cpp-gpengine\src\Token.cpp" />
+  </ItemGroup>
+</Project>

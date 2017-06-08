@@ -1,0 +1,7 @@
+{
+"namespace":"foundation",
+"typeId":100,
+"models":[
+"FoundationLoggerTypes.cs"
+]
+}

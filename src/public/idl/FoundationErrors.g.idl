@@ -1,0 +1,62 @@
+#include "sdkddkver.h"
+
+namespace Microsoft.PropertyModel
+{
+
+    // Forward declarations
+
+
+    // Enum Types declarations
+    [version(NTDDI_WIN8)]
+    typedef [v1_enum] enum FoundationErrors
+    {
+		S_OK_ = 0x0,
+		S_FALSE_ = 0x1,
+		E_UNEXPECTED_ = 0x8000ffff,
+		E_NOTIMPL_ = 0x80004001,
+		E_OUTOFMEMORY_ = 0x8007000e,
+		E_INVALIDARG_ = 0x80070057,
+		E_NOINTERFACE_ = 0x80004002,
+		E_POINTER_ = 0x80004003,
+		E_HANDLE_ = 0x80070006,
+		E_ABORT_ = 0x80004004,
+		E_FAIL_ = 0x80004005,
+		E_ACCESSDENIED_ = 0x80070005,
+		E_BOUNDS_ = 0x8000000b,
+		E_KEY_NOT_FOUND = 0x80f60100,
+		E_ARRAY_EXPECTED = 0x80f60101,
+		E_WRONG_TYPE = 0x80f60102,
+		E_INVALID_GUID = 0x80f60103,
+		E_INVALID_ENUM_VALUE = 0x80f60108,
+		E_INVALID_ENUM_NAME = 0x80f60109,
+		E_INVALID_ENUM_TYPE_INFO = 0x80f6010a,
+		E_OBJECT_ENTRY_NOTFOUND = 0x80f6010b,
+		E_TYPE_INFO_NOT_REGISTERED = 0x80f60300,
+		E_TYPE_INFO_ALREADY_REGISTERED = 0x80f60301,
+		E_TYPE_INFO_ENUM_NOT_REGISTERED = 0x80f60302,
+		E_ASYNC_OPERATION_CANCELED = 0x80f60305,
+		E_ASYNC_OPERATION_TIMEOUT = 0x80f60306,
+		E_EVENT_HANDLER_EXIST = 0x80f60200,
+		E_EVENT_HANDLER_NOT_FOUND = 0x80f60201,
+		E_PV_E_WRONG_TYPE = 0x80f80100,
+		E_PV_E_CAST_FAILED = 0x80f80101,
+		E_TYPEMISMATCH = 0x80028ca0,
+		RPC_E_SERVER_NOT_AVAILABLE = 0x800706ba,
+
+    }FoundationErrors;
+
+
+
+
+
+    // Declare Generic IReference
+    declare
+    {
+        interface Windows.Foundation.IReference<FoundationErrors>;
+ 
+    }
+
+    // Interface Types declarations
+
+
+}

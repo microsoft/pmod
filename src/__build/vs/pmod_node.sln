@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25115.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmod.dll", "classic\pmod.dll\pmod.dll.vcxproj", "{D60DD8F7-55F3-4336-955C-42633ACC4C7C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmod_node", "proj\pmod_node.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmod_nodejs.node", "nodejs\pmod_nodejs.node\pmod_nodejs.node.vcxproj", "{36B2DB37-9B1E-40FB-9509-61925081CF77}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pmod_nodejs_4e.node", "nodejs\pmod_nodejs_4e.node\pmod_nodejs_4e.node.vcxproj", "{07544345-4219-4162-A531-778F11E5608F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		proj\model_files.vcxitems*{d60dd8f7-55f3-4336-955c-42633acc4c7c}*SharedItemsImports = 4
+		proj\foundation_files.vcxitems*{d60dd8f7-55f3-4336-955c-42633acc4c7c}*SharedItemsImports = 4
+		proj\foundation_pal_files_windows.vcxitems*{d60dd8f7-55f3-4336-955c-42633acc4c7c}*SharedItemsImports = 4
+		proj\src_files.vcxitems*{d60dd8f7-55f3-4336-955c-42633acc4c7c}*SharedItemsImports = 4
+		proj\foundation_pal_files.vcxitems*{d60dd8f7-55f3-4336-955c-42633acc4c7c}*SharedItemsImports = 4
+		proj\pmod_node.vcxitems*{36b2db37-9b1e-40fb-9509-61925081cf77}*SharedItemsImports = 4
+		proj\pmod_node.vcxitems*{07544345-4219-4162-a531-778f11e5608f}*SharedItemsImports = 4
+		proj\pmod_node.vcxitems*{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Debug|x64.ActiveCfg = Debug|x64
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Debug|x64.Build.0 = Debug|x64
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Debug|x86.ActiveCfg = Debug|Win32
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Debug|x86.Build.0 = Debug|Win32
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Release|x64.ActiveCfg = Release|x64
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Release|x64.Build.0 = Release|x64
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Release|x86.ActiveCfg = Release|Win32
+		{D60DD8F7-55F3-4336-955C-42633ACC4C7C}.Release|x86.Build.0 = Release|Win32
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Debug|x64.ActiveCfg = Debug|x64
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Debug|x64.Build.0 = Debug|x64
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Debug|x86.ActiveCfg = Debug|Win32
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Debug|x86.Build.0 = Debug|Win32
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Release|x64.ActiveCfg = Release|x64
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Release|x64.Build.0 = Release|x64
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Release|x86.ActiveCfg = Release|Win32
+		{36B2DB37-9B1E-40FB-9509-61925081CF77}.Release|x86.Build.0 = Release|Win32
+		{07544345-4219-4162-A531-778F11E5608F}.Debug|x64.ActiveCfg = Debug|x64
+		{07544345-4219-4162-A531-778F11E5608F}.Debug|x64.Build.0 = Debug|x64
+		{07544345-4219-4162-A531-778F11E5608F}.Debug|x86.ActiveCfg = Debug|Win32
+		{07544345-4219-4162-A531-778F11E5608F}.Debug|x86.Build.0 = Debug|Win32
+		{07544345-4219-4162-A531-778F11E5608F}.Release|x64.ActiveCfg = Release|x64
+		{07544345-4219-4162-A531-778F11E5608F}.Release|x64.Build.0 = Release|x64
+		{07544345-4219-4162-A531-778F11E5608F}.Release|x86.ActiveCfg = Release|Win32
+		{07544345-4219-4162-A531-778F11E5608F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

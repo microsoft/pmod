@@ -1,0 +1,55 @@
+<Project DefaultTargets="all" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <CodeGenTools Condition="Exists('..\..\..\..\bin\Product\x86\Debug')">..\..\..\..\bin\Product\x86\Debug\</CodeGenTools>
+    <SchemaCheckDependencies Condition="'$(SchemaCheckDependencies)' == ''">true</SchemaCheckDependencies>
+    <OutputDir Condition="'$(OutputDir)' == ''">.\__generated</OutputDir>
+    <ConfigFile Condition="'$(ConfigFile)' == ''">codegen.json</ConfigFile>
+
+    <pmodschemaparser>$(CodeGenTools)pmodschemaparser.exe</pmodschemaparser>
+    <pmodcodegen>$(CodeGenTools)pmodcodegen.exe</pmodcodegen>
+
+    <ModelSchemaJson>$(OutputDir)\$(ProductName).schema.json</ModelSchemaJson>
+    <WinrtNamespacelookup Condition="'$(WinrtNamespacelookup)' == ''"></WinrtNamespacelookup>
+    <!-- next properties will control the java generation -->
+    <JavaRun>false</JavaRun>
+    <JavaRun Condition="'$(JavaPackageName)' != ''">true</JavaRun>
+    <JavaSourceDir>$(OutputDir)\java\$(ProductName)\$(JavaPackageName.Replace('.', '\'))</JavaSourceDir>
+    <Grammars>.\</Grammars>
+    <Grammars Condition="Exists('$(MSBuildProjectDirectory)\..\grammars')">$(MSBuildProjectDirectory)\..\grammars\</Grammars>
+  </PropertyGroup>
+  
+  <Target Name="create_java_dirs">
+    <MakeDir Directories="$(JavaSourceDir)"/>
+    <Delete Files="$(JavaSourceDir)\*.java" />
+  </Target>
+
+  <Target Name="codegen">
+
+    <!-- create java directories if necesary -->
+    <CallTarget Condition="'$(JavaPackageName)' != ''" Targets="create_java_dirs" />
+
+    <!-- Invoke with json config file -->
+    <Exec Command="$(pmodcodegen) -pconfig_file=$(ConfigFile) -pmodelschema=$(ModelSchemaJson) -poutputdir=$(OutputDir)\ -pproductname=$(ProductName) -pgenjava.run=$(JavaRun) -pjavapackagename=$(JavaPackageName) -ptypeInfoFileReferences=$(TypeInfoFileReferences) -ptypeInterfaceAdapterReferences=$(TypeInterfaceAdapterReferences) -pwinrtNamespacelookup=$(WinrtNamespacelookup)"/>
+
+  </Target>
+
+  <Target Name="all">
+    <Error Text=" ModelSchema path not defined" Condition="'$(ModelSchema)' == ''" />
+    <Error Text=" ProductName not defined" Condition="'$(ProductName)' == ''" />
+
+    <MakeDir Directories="$(OutputDir)"/>
+
+    <!-- Parse Schema -->
+    <Exec Command="$(pmodschemaparser) -pcheckdependencies=$(SchemaCheckDependencies) -pschema=$(ModelSchema) -pschema_attributes=$(ModelSchemaAttributes) -pgrammars=$(Grammars) -poutput=$(ModelSchemaJson) -pgenerated_dir=$(OutputDir)" IgnoreExitCode='true'>
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode"/>
+    </Exec>
+    <Message Text="C# parser code:$(ErrorCode)"/>
+    <Error Text="C# parser error !" Condition="'$(ErrorCode)' == '255'" />
+    <Message Text="Schema output is up to date" Condition="'$(ErrorCode)' == '1'"/>
+
+    <CallTarget Targets="codegen" Condition="'$(ErrorCode)' == '0'"/>
+
+  </Target>
+
+</Project>

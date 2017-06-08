@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{A2124A67-39E4-4E84-8649-F0B80C8EE1A7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\AsyncOperation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\BinaryStreamProvider.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\BinaryLogListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\Expression.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ExpressionFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastContainerUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastPropertiesContainer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FoundationLibraryInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\JsonStatics.cpp"/>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\LogCategory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\LogRecordStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\Logger.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\LoggerFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\LoggerUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\Mailbox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\MailboxDispatcher.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectBaseFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectDispatch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectDispatchFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\TextLogListener.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\__generated\foundation_library\FoundationLoggerTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\AsyncOperation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\Expression.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ExpressionFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastContainerUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastPropertiesContainer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\BinaryLogListener.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\CreateFoundationHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\EventHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\EventSourceBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FoundationBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\JsonStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\LogCategory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\Logger.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\LoggerFactory.h" />    
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\Mailbox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\MailboxDispatcher.h" />    
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectCreatedEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectDispatch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\ObjectDispatchFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\TextLogListener.h" />
+  </ItemGroup>
+  
+</Project>

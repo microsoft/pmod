@@ -1,0 +1,11 @@
+{
+"namespace":"MyNamespace",
+"typeId":1000,
+"models":[
+  "model1.model",
+  "model2.model"
+],
+"references":[
+"refModel.schema"
+]
+}

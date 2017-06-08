@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{308BEC37-490D-497D-99DF-6A6D281C3307}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BaseModelSource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ClassStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\CollectionViewModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\Command.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\CommandViewModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\FactoryBindingConverters.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\FastItemsContainer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObjectStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ExpressionBinding.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ModelLibraryInstance.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ModelLibraryInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ModelPrivateInterfaces.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ModelSerializerAdapters.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceBinding.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceCollectionViewModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceViewModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\PropertyBinding.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableCollection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableCollectionStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableObjectAdapters.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableObjectStatics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObjectViewModel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ViewModelFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\debug\DebugUtilCommand.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\__generated\model_library\LoggerTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BaseModelSource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BatchPropertyChangedHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BindingBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BindingValueChangedEventArgs.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableCollection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableCollectionStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\CollectionViewModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\Command.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\CommandViewModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\FactoryBindingConverters.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\FastItemsContainer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObjectNode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObjectStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ExpressionBinding.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ItemsContainer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceBinding.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceCollectionViewModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceModelBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\MultiSourceViewModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\PropertyBinding.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ClassStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObservableObjectStatics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObjectViewModelBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ObjectViewModel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ViewModelBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\ViewModelFactory.h" />
+  </ItemGroup>
+</Project>

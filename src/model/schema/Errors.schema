@@ -1,0 +1,7 @@
+{
+"namespace":"foundation",
+"typeId":0xffff0001,
+"models":[
+"CoreErrors.cs"
+]
+}

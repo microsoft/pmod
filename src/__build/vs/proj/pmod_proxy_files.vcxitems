@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\bin\Product\__generated\Proxy\ProxyImplInternal.g.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\bin\Product\__generated\Proxy\ProxyInterfaces.g.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\..\bin\Product\__generated\Proxy\ProxyTypeInfo.g.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastContainerUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastPropertiesContainer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BaseModelSource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\model_library\FastItemsContainer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\AsyncOperationProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\BaseObjectProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\CommandProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ObjectFactoryProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ObservableCollectionProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ObservableObjectProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ProxyObjectFactory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\TBaseModelProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\TBaseObjectProxy.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ViewModelProxy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\..\bin\Product\__generated\Proxy\ProxyInterfaces.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\..\bin\Product\__generated\Proxy\ProxyTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastContainerUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\foundation_library\FastPropertiesContainer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\BaseModelSource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\model_library\FastItemsContainer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\AsyncOperationProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\BaseObjectProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\CommandProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ObservableCollectionProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ObservableObjectProxy.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ProxyObjectFactory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\proxy\ProxyObjectFactoryFactory.cpp" />
+  </ItemGroup>
+</Project>

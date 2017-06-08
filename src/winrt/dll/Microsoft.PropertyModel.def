@@ -1,0 +1,8 @@
+; Microsoft.Internal.PropertyModel.def : Declares the module parameters.
+
+LIBRARY
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetActivationFactory PRIVATE
+	

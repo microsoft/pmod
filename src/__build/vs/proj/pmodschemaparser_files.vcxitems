@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{BF6EC93E-4BD0-4B08-AEDF-2DE704AC4743}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\CodeGenUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\Md5Util.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\ModelSchema.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\SchemaSerializer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\inc\ToolUtil.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\md5\global.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\md5\md5.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\parser\csharp\ModelSymbolParser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\parser\csharp\SchemaParser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\codegen\parser\inc\ParserEngineUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\md5\md5.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\parser\csharp\ModelSymbolParser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\parser\csharp\SchemaParser.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\parser\src\ParserEngineUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\CodeGenUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\Md5Util.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\ModelSchema.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\SchemaSerializer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\src\ToolUtil.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\codegen\tool\gencsharpschema.cpp" />
+  </ItemGroup>
+</Project>

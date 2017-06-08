@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\pmod.nuget.targets" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>1e63b718-af13-4103-b15f-cb9af7ebbbbc</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Id>Microsoft.PropertyModel.Net</Id>
+    <Version>1.0.0</Version>
+    <Title>Microsoft.PropertyModel.Net</Title>
+    <Authors>rodrigov</Authors>
+    <Owners>rodrigov</Owners>
+    <Summary>.NET projection for pmod SDK</Summary>
+    <Description>.NET projection for pmod SDK</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Microsoft</Copyright>
+    <Tags>.NET pmod SDK</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="$(Product)\$(Configuration)\Microsoft.PropertyModel.Net.dll">
+      <TargetPath>lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10</TargetPath>
+    </File>
+    <File Include="$(Product)\classic\x86\$(Configuration)\pmod.dll">
+      <TargetPath>build\native\x86</TargetPath>
+    </File>
+    <File Include="$(Product)\classic\x86\$(Configuration)\pmod_pinvoke.dll">
+      <TargetPath>build\native\x86</TargetPath>
+    </File>
+    <File Include="Microsoft.PropertyModel.Net.targets">
+      <TargetPath>build\dotnet</TargetPath>
+    </File>
+    <Content Include="Microsoft.PropertyModel.Net.txt" />
+  </ItemGroup>
+</Project>
