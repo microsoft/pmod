@@ -1,0 +1,17 @@
+{
+  "name": "DemoApp",
+  "version": "1.0.0",
+  "description": "A minimal Electron application with PMOD SDK",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "keywords": [
+    "PMOD + Electron"
+  ],
+  "author": "rodrigov",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
+  }
+}

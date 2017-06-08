@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.cpp">
+      <Filter>__generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.cpp">
+      <Filter>__generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.cpp">
+      <Filter>__generated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModel.winrt.g.cpp">
+      <Filter>__generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="TestModel.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="__generated">
+      <UniqueIdentifier>{c313d345-e614-4b71-8ffc-a059b287271e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.h">
+      <Filter>__generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.h">
+      <Filter>__generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.h">
+      <Filter>__generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\__build\vs\uwp.cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C12636D6-CC05-4A54-B25A-EB839B36354F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DemoApp.dll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <TargetName>DemoApp</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="..\classic.cpp.props" />
+  <PropertyGroup>
+    <GeneratedDir>$(REPO_ROOT)\bin\samples\__generated\DemoApp</GeneratedDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GeneratedDir)\DemoAppFastInternal.g.cpp" />
+    <ClCompile Include="$(GeneratedDir)\DemoAppInterfaces.g.cpp" />
+    <ClCompile Include="$(GeneratedDir)\DemoAppTypeInfo.g.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\AppClass.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\AppClassFactory.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\ItemClass.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(GeneratedDir)\DemoAppFastInternal.g.h" />
+    <ClInclude Include="$(GeneratedDir)\DemoAppInterfaces.g.h" />
+    <ClInclude Include="$(GeneratedDir)\DemoAppTypeInfo.g.h" />
+    <ClInclude Include="..\..\..\..\src\cpp\AppClass.h" />
+    <ClInclude Include="..\..\..\..\src\cpp\ItemClass.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(REPO_ROOT)\src\public\inc;$(GeneratedDir)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>pmod.lib;pmod_lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(Configuration)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

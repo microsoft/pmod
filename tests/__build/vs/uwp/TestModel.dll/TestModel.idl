@@ -1,0 +1,32 @@
+﻿
+#include "sdkddkver.h"
+
+import "oaidl.idl";
+import "inspectable.idl";
+import "eventtoken.idl";
+import "windows.foundation.idl";
+import "Microsoft.PropertyModel.idl";
+
+#include "TestModel.g.idl"
+
+namespace TestModel
+{
+    runtimeclass Class;
+   
+    /////////////////////////////// IClassStatics ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [uuid(1FCEB2D2-179D-4044-A680-73CA4D377E1F)]
+    [exclusiveto(Class)]
+    interface IClassStatics: IInspectable
+    {
+        HRESULT Register();
+    }
+
+    /////////////////////////////// TypeInfo ////////////////////////////////
+    [version(NTDDI_WIN8)]
+    [static(IClassStatics,NTDDI_WIN8)]
+    runtimeclass Class
+    {
+    }
+
+}

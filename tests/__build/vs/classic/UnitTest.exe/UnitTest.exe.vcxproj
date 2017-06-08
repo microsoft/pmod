@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Static|Win32">
+      <Configuration>Debug Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Static|x64">
+      <Configuration>Debug Static</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static|Win32">
+      <Configuration>Release Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static|x64">
+      <Configuration>Release Static</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B7E85F8-182B-45D7-90E7-9CEEC3833D8F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <ProductConfiguration>$(Configuration)</ProductConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug Static'">
+    <ProductConfiguration>Debug</ProductConfiguration>
+    <IsStatic>true</IsStatic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release Static'">
+    <ProductConfiguration>Release</ProductConfiguration>
+    <IsStatic>true</IsStatic>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <TargetName>UnitTest</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\src\codegen\gpengine\CGTParser.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\gpengine\Parser.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\gpengine\SymbolParser.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\parser\csharp\ModelSymbolParser.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\parser\src\ParserEngineUtil.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\src\CodeGenUtil.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\src\ExePath.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\AsyncOperationImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\DictionaryImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\EnumerableImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\ErrorTypeInfoTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\ObjectDispatchImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\PplxTaskImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\PropertyDataImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\PropertyValueTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\gpengine\GoldenParserTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model\CommandImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model\ObservableCollectionImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model\ObservableObjectImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\proxy\ProxyImplTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\AsyncOperationTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\ObjectFactoryTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\ObservableCollectionTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\PplxTasksTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\PropertyDataTest.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\TestRunner.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\UnitTestBase.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\src\codegen\gpengine\CGTParser.h" />
+    <ClInclude Include="..\..\..\..\..\src\codegen\gpengine\Parser.h" />
+    <ClInclude Include="..\..\..\..\..\src\codegen\gpengine\SymbolParser.h" />
+    <ClInclude Include="..\..\..\..\..\src\codegen\inc\ExePath.h" />
+    <ClInclude Include="..\..\..\..\..\src\codegen\parser\csharp\ModelSymbolParser.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\foundation\AsyncOperationImplAdapter.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\AsyncOperationTest.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\ObservableCollectionTest.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\PplxTasksTest.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\PropertyDataTest.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_harness\pch.h" />
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_harness\UnitTestBase.h" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(IsStatic)'==''">
+    <ProjectReference Include="..\TestModel.dll\TestModel.dll.vcxproj">
+      <Project>{b4087130-a43c-48c0-a4bb-cb7a60244ac4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(IsStatic)'=='true'">
+    <ClCompile Include="..\..\..\..\src\src\cpp\TestModelRegisterCallback.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="..\test.classic.cpp.props" />
+  <PropertyGroup>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(IsStatic)'==''">
+    <CustomBuildStep>
+      <Command>
+        copy $(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(Configuration)\pmod.dll $(OutDir)
+        copy $(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(Configuration)\pmod_proxy.dll $(OutDir)
+        copy $(REPO_ROOT)\bin\Product\$(PlatformTarget)\$(Configuration)\CSharp_2.0_r7.cgt $(OutDir)
+      </Command>
+      <Outputs>$(OutDir)\pmod.dll</Outputs>
+      <Inputs>$(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(Configuration)\pmod.dll;$(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(Configuration)\pmod_proxy.dll</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(IsStatic)'==''">MODEL_API_IMPORT;MODEL_ADAPTER_API_IMPORT;Proxy_MODEL_API_IMPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(IsStatic)'=='true'">PAL_API_STATIC_LIB;FOUNDATION_LIBRARY_STATIC_LIB;PMOD_LIBRARY_STATIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\public\inc;$(SRC_DIR)\inc;$(SRC_DIR)\codegen\inc;$(SRC_DIR)\codegen\gpengine;$(SRC_DIR)\codegen\parser\inc;$(SRC_DIR)\codegen\parser\csharp;$(REPO_ROOT)\bin\Product\__generated;..\..\..\..\..\bin\tests\__generated;..\..\..\..\src\src\cpp\test_harness</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies Condition="'$(IsStatic)'==''">pmod.lib;pmod_proxy.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(IsStatic)'=='true'">runtimeobject.lib;pmod_static.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(ProductConfiguration)</AdditionalLibraryDirectories>
+      <DelayLoadDLLs Condition="'$(IsStatic)'=='true'">api-ms-win-core-winrt-string-l1-1-0.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

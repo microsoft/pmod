@@ -1,0 +1,13 @@
+{
+  "namespace":"TestModel",
+  "typeId":1000,
+  "models":[
+    "EnumTypes.cs",
+    "TypeProperties.cs",
+    "CommandTypes.cs",
+    "MethodSupport.cs",
+    "StructTypes.cs",
+    "TestFactory.cs"
+  ]
+}
+

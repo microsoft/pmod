@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8107C111C18EFE00010FAD7 /* PMODMoviesFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D8107C0F1C18EFE00010FAD7 /* PMODMoviesFactory.m */; };
+		D8E6E02B1BFFC5D1009AA607 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E6E02A1BFFC5D1009AA607 /* main.m */; };
+		D8E6E02E1BFFC5D1009AA607 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E6E02D1BFFC5D1009AA607 /* AppDelegate.m */; };
+		D8E6E0311BFFC5D1009AA607 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E6E0301BFFC5D1009AA607 /* ViewController.m */; };
+		D8E6E0341BFFC5D1009AA607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E6E0321BFFC5D1009AA607 /* Main.storyboard */; };
+		D8E6E0361BFFC5D1009AA607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8E6E0351BFFC5D1009AA607 /* Assets.xcassets */; };
+		D8E6E0391BFFC5D1009AA607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E6E0371BFFC5D1009AA607 /* LaunchScreen.storyboard */; };
+		D8EE7D2A1BFFC8DF00FDF0A3 /* MoviesFastInternal.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D211BFFC8DF00FDF0A3 /* MoviesFastInternal.g.cpp */; };
+		D8EE7D2B1BFFC8DF00FDF0A3 /* MoviesInterfaces.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D231BFFC8DF00FDF0A3 /* MoviesInterfaces.g.cpp */; };
+		D8EE7D2C1BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D261BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.cpp */; };
+		D8EE7D2D1BFFC8DF00FDF0A3 /* PMODMovies.g.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D291BFFC8DF00FDF0A3 /* PMODMovies.g.mm */; };
+		D8EE7D311BFFCAFF00FDF0A3 /* Movies.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D2F1BFFCAFF00FDF0A3 /* Movies.cpp */; };
+		D8EE7D321BFFCAFF00FDF0A3 /* MoviesApiService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D301BFFCAFF00FDF0A3 /* MoviesApiService.cpp */; };
+		D8EE7D4C1BFFFB5000FDF0A3 /* PMODCollectionController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D471BFFFB5000FDF0A3 /* PMODCollectionController.mm */; };
+		D8EE7D4D1BFFFB5000FDF0A3 /* PMODCommandController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D491BFFFB5000FDF0A3 /* PMODCommandController.mm */; };
+		D8EE7D4E1BFFFB5000FDF0A3 /* PMODKeyPathController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D4B1BFFFB5000FDF0A3 /* PMODKeyPathController.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8EE7D6D1C0E653400FDF0A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8E6E01E1BFFC5D1009AA607 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8EE7D691C0E647A00FDF0A3;
+			remoteInfo = codegen_clean;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8107C0F1C18EFE00010FAD7 /* PMODMoviesFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMODMoviesFactory.m; path = ../../../../../src/objectivec/PMODMoviesFactory.m; sourceTree = "<group>"; };
+		D8107C101C18EFE00010FAD7 /* PMODMoviesFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODMoviesFactory.h; path = ../../../../../src/objectivec/PMODMoviesFactory.h; sourceTree = "<group>"; };
+		D8E6E0261BFFC5D1009AA607 /* MoviesUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E6E02A1BFFC5D1009AA607 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8E6E02C1BFFC5D1009AA607 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8E6E02D1BFFC5D1009AA607 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8E6E02F1BFFC5D1009AA607 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D8E6E0301BFFC5D1009AA607 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D8E6E0331BFFC5D1009AA607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8E6E0351BFFC5D1009AA607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8E6E0381BFFC5D1009AA607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8E6E03A1BFFC5D1009AA607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8EE7D211BFFC8DF00FDF0A3 /* MoviesFastInternal.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoviesFastInternal.g.cpp; path = ../../../../../../../bin/samples/Movies/__generated/MoviesFastInternal.g.cpp; sourceTree = "<group>"; };
+		D8EE7D221BFFC8DF00FDF0A3 /* MoviesFastInternal.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesFastInternal.g.h; path = ../../../../../../../bin/samples/Movies/__generated/MoviesFastInternal.g.h; sourceTree = "<group>"; };
+		D8EE7D231BFFC8DF00FDF0A3 /* MoviesInterfaces.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoviesInterfaces.g.cpp; path = ../../../../../../../bin/samples/Movies/__generated/MoviesInterfaces.g.cpp; sourceTree = "<group>"; };
+		D8EE7D241BFFC8DF00FDF0A3 /* MoviesInterfaces.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesInterfaces.g.h; path = ../../../../../../../bin/samples/Movies/__generated/MoviesInterfaces.g.h; sourceTree = "<group>"; };
+		D8EE7D251BFFC8DF00FDF0A3 /* MoviesPrivateInterfaces.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesPrivateInterfaces.g.h; path = ../../../../../../../bin/samples/Movies/__generated/MoviesPrivateInterfaces.g.h; sourceTree = "<group>"; };
+		D8EE7D261BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoviesTypeInfo.g.cpp; path = ../../../../../../../bin/samples/Movies/__generated/MoviesTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D8EE7D271BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MoviesTypeInfo.g.h; path = ../../../../../../../bin/samples/Movies/__generated/MoviesTypeInfo.g.h; sourceTree = "<group>"; };
+		D8EE7D281BFFC8DF00FDF0A3 /* PMODMovies.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODMovies.g.h; path = ../../../../../../../bin/samples/Movies/__generated/PMODMovies.g.h; sourceTree = "<group>"; };
+		D8EE7D291BFFC8DF00FDF0A3 /* PMODMovies.g.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODMovies.g.mm; path = ../../../../../../../bin/samples/Movies/__generated/PMODMovies.g.mm; sourceTree = "<group>"; };
+		D8EE7D2F1BFFCAFF00FDF0A3 /* Movies.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Movies.cpp; path = ../../../../../src/cpp/Movies.cpp; sourceTree = "<group>"; };
+		D8EE7D301BFFCAFF00FDF0A3 /* MoviesApiService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoviesApiService.cpp; path = ../../../../../src/cpp/MoviesApiService.cpp; sourceTree = "<group>"; };
+		D8EE7D461BFFFB5000FDF0A3 /* PMODCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODCollectionController.h; path = ../../../../../../shared/objectivec/PMODController/PMODCollectionController.h; sourceTree = "<group>"; };
+		D8EE7D471BFFFB5000FDF0A3 /* PMODCollectionController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODCollectionController.mm; path = ../../../../../../shared/objectivec/PMODController/PMODCollectionController.mm; sourceTree = "<group>"; };
+		D8EE7D481BFFFB5000FDF0A3 /* PMODCommandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODCommandController.h; path = ../../../../../../shared/objectivec/PMODController/PMODCommandController.h; sourceTree = "<group>"; };
+		D8EE7D491BFFFB5000FDF0A3 /* PMODCommandController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODCommandController.mm; path = ../../../../../../shared/objectivec/PMODController/PMODCommandController.mm; sourceTree = "<group>"; };
+		D8EE7D4A1BFFFB5000FDF0A3 /* PMODKeyPathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODKeyPathController.h; path = ../../../../../../shared/objectivec/PMODController/PMODKeyPathController.h; sourceTree = "<group>"; };
+		D8EE7D4B1BFFFB5000FDF0A3 /* PMODKeyPathController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODKeyPathController.mm; path = ../../../../../../shared/objectivec/PMODController/PMODKeyPathController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8E6E0231BFFC5D1009AA607 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8E6E01D1BFFC5D1009AA607 = {
+			isa = PBXGroup;
+			children = (
+				D8E6E0281BFFC5D1009AA607 /* MoviesUI */,
+				D8E6E0271BFFC5D1009AA607 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8E6E0271BFFC5D1009AA607 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6E0261BFFC5D1009AA607 /* MoviesUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8E6E0281BFFC5D1009AA607 /* MoviesUI */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D451BFFFB3E00FDF0A3 /* PMODController */,
+				D8EE7D331BFFD0E200FDF0A3 /* objectivec */,
+				D8EE7D2E1BFFCAE500FDF0A3 /* cpp */,
+				D8EE7D201BFFC88F00FDF0A3 /* __generated */,
+				D8E6E02C1BFFC5D1009AA607 /* AppDelegate.h */,
+				D8E6E02D1BFFC5D1009AA607 /* AppDelegate.m */,
+				D8E6E02F1BFFC5D1009AA607 /* ViewController.h */,
+				D8E6E0301BFFC5D1009AA607 /* ViewController.m */,
+				D8E6E0321BFFC5D1009AA607 /* Main.storyboard */,
+				D8E6E0351BFFC5D1009AA607 /* Assets.xcassets */,
+				D8E6E0371BFFC5D1009AA607 /* LaunchScreen.storyboard */,
+				D8E6E03A1BFFC5D1009AA607 /* Info.plist */,
+				D8E6E0291BFFC5D1009AA607 /* Supporting Files */,
+			);
+			path = MoviesUI;
+			sourceTree = "<group>";
+		};
+		D8E6E0291BFFC5D1009AA607 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6E02A1BFFC5D1009AA607 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8EE7D201BFFC88F00FDF0A3 /* __generated */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D211BFFC8DF00FDF0A3 /* MoviesFastInternal.g.cpp */,
+				D8EE7D221BFFC8DF00FDF0A3 /* MoviesFastInternal.g.h */,
+				D8EE7D231BFFC8DF00FDF0A3 /* MoviesInterfaces.g.cpp */,
+				D8EE7D241BFFC8DF00FDF0A3 /* MoviesInterfaces.g.h */,
+				D8EE7D251BFFC8DF00FDF0A3 /* MoviesPrivateInterfaces.g.h */,
+				D8EE7D261BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.cpp */,
+				D8EE7D271BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.h */,
+				D8EE7D281BFFC8DF00FDF0A3 /* PMODMovies.g.h */,
+				D8EE7D291BFFC8DF00FDF0A3 /* PMODMovies.g.mm */,
+			);
+			name = __generated;
+			sourceTree = "<group>";
+		};
+		D8EE7D2E1BFFCAE500FDF0A3 /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D2F1BFFCAFF00FDF0A3 /* Movies.cpp */,
+				D8EE7D301BFFCAFF00FDF0A3 /* MoviesApiService.cpp */,
+			);
+			name = cpp;
+			sourceTree = "<group>";
+		};
+		D8EE7D331BFFD0E200FDF0A3 /* objectivec */ = {
+			isa = PBXGroup;
+			children = (
+				D8107C0F1C18EFE00010FAD7 /* PMODMoviesFactory.m */,
+				D8107C101C18EFE00010FAD7 /* PMODMoviesFactory.h */,
+			);
+			name = objectivec;
+			sourceTree = "<group>";
+		};
+		D8EE7D451BFFFB3E00FDF0A3 /* PMODController */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D461BFFFB5000FDF0A3 /* PMODCollectionController.h */,
+				D8EE7D471BFFFB5000FDF0A3 /* PMODCollectionController.mm */,
+				D8EE7D481BFFFB5000FDF0A3 /* PMODCommandController.h */,
+				D8EE7D491BFFFB5000FDF0A3 /* PMODCommandController.mm */,
+				D8EE7D4A1BFFFB5000FDF0A3 /* PMODKeyPathController.h */,
+				D8EE7D4B1BFFFB5000FDF0A3 /* PMODKeyPathController.mm */,
+			);
+			name = PMODController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D8EE7D691C0E647A00FDF0A3 /* codegen_clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "\"../../../../../../src/codegen/util/codegen_clean.sh\" -o ../../../../../../bin/samples/Movies/__generated";
+			buildConfigurationList = D8EE7D6A1C0E647A00FDF0A3 /* Build configuration list for PBXLegacyTarget "codegen_clean" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = codegen_clean;
+			passBuildSettingsInEnvironment = 1;
+			productName = codegen_clean;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		D8E6E0251BFFC5D1009AA607 /* MoviesUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8E6E03D1BFFC5D1009AA607 /* Build configuration list for PBXNativeTarget "MoviesUI" */;
+			buildPhases = (
+				D8EE7D1F1BFFC6BF00FDF0A3 /* ShellScript */,
+				D8E6E0221BFFC5D1009AA607 /* Sources */,
+				D8E6E0231BFFC5D1009AA607 /* Frameworks */,
+				D8E6E0241BFFC5D1009AA607 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8EE7D6E1C0E653400FDF0A3 /* PBXTargetDependency */,
+			);
+			name = MoviesUI;
+			productName = MoviesUI;
+			productReference = D8E6E0261BFFC5D1009AA607 /* MoviesUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8E6E01E1BFFC5D1009AA607 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Rodrigo Varas";
+				TargetAttributes = {
+					D8E6E0251BFFC5D1009AA607 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					D8EE7D691C0E647A00FDF0A3 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = D8E6E0211BFFC5D1009AA607 /* Build configuration list for PBXProject "MoviesUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8E6E01D1BFFC5D1009AA607;
+			productRefGroup = D8E6E0271BFFC5D1009AA607 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8E6E0251BFFC5D1009AA607 /* MoviesUI */,
+				D8EE7D691C0E647A00FDF0A3 /* codegen_clean */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8E6E0241BFFC5D1009AA607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E6E0391BFFC5D1009AA607 /* LaunchScreen.storyboard in Resources */,
+				D8E6E0361BFFC5D1009AA607 /* Assets.xcassets in Resources */,
+				D8E6E0341BFFC5D1009AA607 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D8EE7D1F1BFFC6BF00FDF0A3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../../../../../../bin/Products/macosx/Debug/pmodcodegentask -pModelSchema=../../../../src/schema/Movies.schema -pProductName=Movies -pOutputDir=../../../../../../bin/samples/Movies/__generated";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8E6E0221BFFC5D1009AA607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8EE7D2A1BFFC8DF00FDF0A3 /* MoviesFastInternal.g.cpp in Sources */,
+				D8EE7D2B1BFFC8DF00FDF0A3 /* MoviesInterfaces.g.cpp in Sources */,
+				D8EE7D2D1BFFC8DF00FDF0A3 /* PMODMovies.g.mm in Sources */,
+				D8EE7D4D1BFFFB5000FDF0A3 /* PMODCommandController.mm in Sources */,
+				D8EE7D4C1BFFFB5000FDF0A3 /* PMODCollectionController.mm in Sources */,
+				D8E6E0311BFFC5D1009AA607 /* ViewController.m in Sources */,
+				D8EE7D4E1BFFFB5000FDF0A3 /* PMODKeyPathController.mm in Sources */,
+				D8EE7D321BFFCAFF00FDF0A3 /* MoviesApiService.cpp in Sources */,
+				D8EE7D2C1BFFC8DF00FDF0A3 /* MoviesTypeInfo.g.cpp in Sources */,
+				D8E6E02E1BFFC5D1009AA607 /* AppDelegate.m in Sources */,
+				D8107C111C18EFE00010FAD7 /* PMODMoviesFactory.m in Sources */,
+				D8EE7D311BFFCAFF00FDF0A3 /* Movies.cpp in Sources */,
+				D8E6E02B1BFFC5D1009AA607 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8EE7D6E1C0E653400FDF0A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8EE7D691C0E647A00FDF0A3 /* codegen_clean */;
+			targetProxy = D8EE7D6D1C0E653400FDF0A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8E6E0321BFFC5D1009AA607 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E6E0331BFFC5D1009AA607 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8E6E0371BFFC5D1009AA607 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8E6E0381BFFC5D1009AA607 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8E6E03B1BFFC5D1009AA607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8E6E03C1BFFC5D1009AA607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8E6E03E1BFFC5D1009AA607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					../../../../../../src/public/inc,
+					../../../../../../src/public/objectivec/PMODAdapter,
+					../../../../../../../github/cpprestsdk/Release/include,
+					../../../../../../../github/cpprestsdk/Build_iOS/boost.framework/Headers,
+					../../../../../../../github/cpprestsdk/Build_iOS/openssl/include,
+				);
+				INFOPLIST_FILE = MoviesUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					../../../../../../bin/Products/iOS/Debug/iphonesimulator/libpmod.a,
+					../../../../../../bin/Products/iOS/Debug/iphonesimulator/libpmod_lib.a,
+					../../../../../../../github/cpprestsdk/Build_iOS/build.ios/build.x86_64/Binaries/Release/libcpprest.a,
+					../../../../../../../github/cpprestsdk/Build_iOS/boostoniphone/ios/build/x86_64/libboost.a,
+					../../../../../../../github/cpprestsdk/Build_iOS/openssl/lib/libcrypto.a,
+					../../../../../../../github/cpprestsdk/Build_iOS/openssl/lib/libssl.a,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.MoviesUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8E6E03F1BFFC5D1009AA607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					../../../../../../src/public/inc,
+					../../../../../../src/public/objectivec/PMODAdapter,
+					../../../../../../../github/cpprestsdk/Release/include,
+					../../../../../../../github/cpprestsdk/Build_iOS/boost.framework/Headers,
+					../../../../../../../github/cpprestsdk/Build_iOS/openssl/include,
+				);
+				INFOPLIST_FILE = MoviesUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.MoviesUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D8EE7D6B1C0E647A00FDF0A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8EE7D6C1C0E647A00FDF0A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8E6E0211BFFC5D1009AA607 /* Build configuration list for PBXProject "MoviesUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E6E03B1BFFC5D1009AA607 /* Debug */,
+				D8E6E03C1BFFC5D1009AA607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8E6E03D1BFFC5D1009AA607 /* Build configuration list for PBXNativeTarget "MoviesUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8E6E03E1BFFC5D1009AA607 /* Debug */,
+				D8E6E03F1BFFC5D1009AA607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8EE7D6A1C0E647A00FDF0A3 /* Build configuration list for PBXLegacyTarget "codegen_clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8EE7D6B1C0E647A00FDF0A3 /* Debug */,
+				D8EE7D6C1C0E647A00FDF0A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8E6E01E1BFFC5D1009AA607 /* Project object */;
+}

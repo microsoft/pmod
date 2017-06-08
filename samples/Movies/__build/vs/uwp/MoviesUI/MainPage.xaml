@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="MoviesUI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoviesUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <local:ImageMoviesSourceConverter x:Key="ImageMoviesSourceConverter" />
+    </Page.Resources>
+
+    <Grid HorizontalAlignment="Stretch" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Row="1" 
+                  x:Name="MoviesPageListView" 
+                  HorizontalContentAlignment="Stretch"
+                  SelectionChanged="MoviesPageListView_SelectionChanged">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Image Margin="0" 
+                           Stretch="Fill" 
+                           Source="{Binding PosterUri, Converter={StaticResource ImageMoviesSourceConverter},ConverterParameter=w342}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

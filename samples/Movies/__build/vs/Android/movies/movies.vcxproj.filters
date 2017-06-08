@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="..\..\__generated\MoviesFastInternal.g.h" />
+    <ClInclude Include="..\..\__generated\MoviesInterfaces.g.h" />
+    <ClInclude Include="..\..\__generated\MoviesPrivateInterfaces.g.h" />
+    <ClInclude Include="..\..\__generated\MoviesTypeInfo.g.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="__generated">
+      <UniqueIdentifier>{8d5ec925-e2cc-4443-b7bc-564ef137d083}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\cpp\Movies.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\MoviesApiService.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\jni\jniCppRestSdk.cpp" />
+    <ClCompile Include="..\..\__generated\MoviesFastInternal.g.cpp" />
+    <ClCompile Include="..\..\__generated\MoviesInterfaces.g.cpp" />
+    <ClCompile Include="..\..\__generated\MoviesTypeInfo.g.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

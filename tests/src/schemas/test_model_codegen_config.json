@@ -1,0 +1,98 @@
+{
+    "outputdir":"outputdir_placeholder",
+    "productname":"productname_placeholder",
+    "modelschema":"modelschema_placeholder",
+    "typeInfoFile": "$(outputdir)$(productname)TypeInfo.g.h",
+    "interfaceFile": "$(outputdir)$(productname)Interfaces.g.h",
+    "ptrFile": "$(outputdir)$(productname)Ptr.g.h",
+
+    "codegen":
+    {
+        "gentypeinfo":
+        {
+            "model":"$(modelschema)",
+            "modelInc":"$(typeInfoFile)",
+            "enumsInc":"$(outputdir)$(productname)Enums.g.h",
+            "modelSrc":"$(outputdir)$(productname)TypeInfo.g.cpp",
+            "modelapi":"MODEL_API"
+        },
+        "genmodeladapter":
+        {
+            "model":"$(modelschema)",
+            "modelAdapterInc":"$(interfaceFile)",
+            "modelAdapterSrc":"$(outputdir)$(productname)Interfaces.g.cpp",
+            "modeladapterapi":"MODEL_ADAPTER_API",
+            "modelIncReferences":"$(typeInfoFile)"
+        },
+        "genmodelptr":
+        {
+            "model":"$(modelschema)",
+            "modelPtrInc":"$(ptrFile)",
+            "modelAdapterInc":"$(interfaceFile)"
+        },
+        "genfastcpptemplate":
+        {
+            "model":"$(modelschema)",
+            "modelIncReferences":"$(typeInfoFile)",
+            "delegateTypeInfoOption":"interface",
+            "modelAdapterInc":"$(interfaceFile)",
+            "modelFastCppTemplateInc":"$(outputdir)$(productname)FastInternal.g.h",
+            "modelFastInterfaceHeaderInc": "$(outputdir)$(productname)PrivateInterfaces.g.h",
+            "useAsyncOperationClassPtr": true,
+            "generateMethodInternal": true
+        },
+        "genimplcpptemplate":
+        {
+            "model":"$(modelschema)",
+            "modelAdapterInc":"$(interfaceFile)",
+            "implCppTemplateInc":"$(outputdir)$(productname)ImplInternal.g.h"
+        },
+        "genwinrtadapter":
+        {
+            "model":"$(modelschema)",
+            "modelAdapterIdl":"$(outputdir){namespace}.g.idl",
+            "modelAdapterSrc":"$(outputdir)$(productname).winrt.g.cpp"
+        },
+        "gencsharptypeinfo":
+        {
+            "model":"$(modelschema)",
+            "csharpTypeInfoSrc": "$(outputdir)$(productname).TypeInfo.g.cs",
+            "exportModelMetadata": false
+        },
+        "gencsharpclasses":
+        {
+            "model":"$(modelschema)",
+            "csharpClassSrc":"$(outputdir)$(productname)Library.g.cs",
+            "csharpClassEnumsSrc":"$(outputdir)$(productname).Enums.g.cs"
+        },
+        "gennetinterop":
+        {
+            "model":"$(modelschema)",
+            "netInteropSrc":"$(outputdir)$(productname).Interop.g.cs"
+        },
+        "genjsproxy":
+        {
+            "model":"$(modelschema)",
+            "jsProxyFile":"$(outputdir)$(productname).g.js"
+        },
+        "genkojsmodel":
+        {
+            "model":"$(modelschema)",
+            "jsProxyFile":"$(outputdir)$(productname).ko.g.js"
+        },
+        "gennsadapter":
+        {
+            "model":"$(modelschema)",
+            "modelPMODAdapterInc":"$(outputdir)PMOD$(productname).g.h",
+            "modelPMODAdapterSrc":"$(outputdir)PMOD$(productname).g.mm",
+            "modelIncReferences":"$(typeInfoFile),$(interfaceFile)",
+            "adapterPrefix":"PMODUnitTestModel_"
+        },
+        "genjava":
+        {
+            "model":"$(modelschema)",
+            "javapackagename":"com.microsoft.testmodel",
+            "javasourcedir":"$(outputdir)java/testmodel"
+        }
+    }
+}

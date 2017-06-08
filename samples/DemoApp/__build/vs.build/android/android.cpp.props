@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <REPO_ROOT>..\..\..\..\..\..</REPO_ROOT>
+    <IntDirPrefix>samples\DemoApp\android</IntDirPrefix>
+    <Product>samples\DemoApp\android</Product>
+  </PropertyGroup>
+  <Import Project="..\..\..\..\..\src\__build\vs\cpp.props"/>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <AdditionalOptions>-Wno-unused-variable -Wno-reorder -Wno-unknown-pragmas -Wno-overloaded-virtual -Wno-unused-function %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <PreprocessorDefinitions>ANDROID</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+</Project>

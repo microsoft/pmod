@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D86A51331BEF0BCC007D3AA7 /* UnitTestBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51311BEF0BCC007D3AA7 /* UnitTestBase.cpp */; };
+		D86A513C1BEF12E6007D3AA7 /* AsyncOperationImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51381BEF12E6007D3AA7 /* AsyncOperationImplTest.cpp */; };
+		D86A513D1BEF12E6007D3AA7 /* DictionaryImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51391BEF12E6007D3AA7 /* DictionaryImplTest.cpp */; };
+		D86A513E1BEF12E6007D3AA7 /* ErrorTypeInfoTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A513A1BEF12E6007D3AA7 /* ErrorTypeInfoTest.cpp */; };
+		D86A513F1BEF12E6007D3AA7 /* PropertyDataImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A513B1BEF12E6007D3AA7 /* PropertyDataImplTest.cpp */; };
+		D86A51461BEF155F007D3AA7 /* AsyncOperationTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51421BEF155F007D3AA7 /* AsyncOperationTest.cpp */; };
+		D86A51471BEF155F007D3AA7 /* PropertyDataTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51441BEF155F007D3AA7 /* PropertyDataTest.cpp */; };
+		D86A514D1BEF15A9007D3AA7 /* TestModelInterfaces.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51491BEF15A9007D3AA7 /* TestModelInterfaces.g.cpp */; };
+		D86A514E1BEF15A9007D3AA7 /* TestModelTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A514B1BEF15A9007D3AA7 /* TestModelTypeInfo.g.cpp */; };
+		D86A51511BEF1A14007D3AA7 /* RunTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86A51501BEF1A14007D3AA7 /* RunTests.mm */; };
+		D88D0A371BEFD0FA0077E57D /* RunTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = D86A51501BEF1A14007D3AA7 /* RunTests.mm */; };
+		D88D0A381BEFD0FA0077E57D /* TestModelInterfaces.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51491BEF15A9007D3AA7 /* TestModelInterfaces.g.cpp */; };
+		D88D0A391BEFD0FA0077E57D /* TestModelTypeInfo.g.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A514B1BEF15A9007D3AA7 /* TestModelTypeInfo.g.cpp */; };
+		D88D0A3A1BEFD0FA0077E57D /* AsyncOperationTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51421BEF155F007D3AA7 /* AsyncOperationTest.cpp */; };
+		D88D0A3B1BEFD0FA0077E57D /* PropertyDataTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51441BEF155F007D3AA7 /* PropertyDataTest.cpp */; };
+		D88D0A3C1BEFD0FA0077E57D /* AsyncOperationImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51381BEF12E6007D3AA7 /* AsyncOperationImplTest.cpp */; };
+		D88D0A3D1BEFD0FA0077E57D /* DictionaryImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51391BEF12E6007D3AA7 /* DictionaryImplTest.cpp */; };
+		D88D0A3E1BEFD0FA0077E57D /* ErrorTypeInfoTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A513A1BEF12E6007D3AA7 /* ErrorTypeInfoTest.cpp */; };
+		D88D0A3F1BEFD0FA0077E57D /* PropertyDataImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A513B1BEF12E6007D3AA7 /* PropertyDataImplTest.cpp */; };
+		D88D0A401BEFD0FA0077E57D /* UnitTestBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D86A51311BEF0BCC007D3AA7 /* UnitTestBase.cpp */; };
+		D89662601BEFF17200451877 /* PMODTestModel.g.mm in Sources */ = {isa = PBXBuildFile; fileRef = D896625F1BEFF17200451877 /* PMODTestModel.g.mm */; };
+		D89662711BEFF48E00451877 /* PMODTestModel.g.mm in Sources */ = {isa = PBXBuildFile; fileRef = D896625F1BEFF17200451877 /* PMODTestModel.g.mm */; };
+		D89662761BF01AB100451877 /* PMODTypePropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D89662751BF01AB100451877 /* PMODTypePropertiesTest.m */; };
+		D896627B1BF0266400451877 /* CommandImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D89662781BF0266400451877 /* CommandImplTest.cpp */; };
+		D896627C1BF0266400451877 /* ObservableCollectionImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D89662791BF0266400451877 /* ObservableCollectionImplTest.cpp */; };
+		D896627D1BF0266400451877 /* ObservableObjectImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896627A1BF0266400451877 /* ObservableObjectImplTest.cpp */; };
+		D89662811BF02A2600451877 /* ObservableCollectionTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896627F1BF02A2600451877 /* ObservableCollectionTest.cpp */; };
+		D89662831BF02B9D00451877 /* PMODTypePropertiesImplTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = D89662821BF02B9D00451877 /* PMODTypePropertiesImplTest.mm */; };
+		D89662851BF02FBA00451877 /* TestModelRegisterIf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D89662841BF02FBA00451877 /* TestModelRegisterIf.cpp */; };
+		D89662861BF0329100451877 /* CommandImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D89662781BF0266400451877 /* CommandImplTest.cpp */; };
+		D89662871BF0329100451877 /* ObservableCollectionImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D89662791BF0266400451877 /* ObservableCollectionImplTest.cpp */; };
+		D89662881BF0329100451877 /* ObservableObjectImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896627A1BF0266400451877 /* ObservableObjectImplTest.cpp */; };
+		D89662891BF0329100451877 /* PMODTypePropertiesImplTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = D89662821BF02B9D00451877 /* PMODTypePropertiesImplTest.mm */; };
+		D896628A1BF0329100451877 /* ObservableCollectionTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D896627F1BF02A2600451877 /* ObservableCollectionTest.cpp */; };
+		D896628B1BF0329100451877 /* TestModelRegisterIf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D89662841BF02FBA00451877 /* TestModelRegisterIf.cpp */; };
+		D896628C1BF032D300451877 /* PMODTypePropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D89662751BF01AB100451877 /* PMODTypePropertiesTest.m */; };
+		D8CE12451BF51D04001DE311 /* ObjectFactoryTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CE12441BF51D04001DE311 /* ObjectFactoryTest.cpp */; };
+		D8CE12471BF51F80001DE311 /* ObjectFactoryTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CE12441BF51D04001DE311 /* ObjectFactoryTest.cpp */; };
+		D8EE7D651C0E622600FDF0A3 /* EnumerableImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D631C0E622600FDF0A3 /* EnumerableImplTest.cpp */; };
+		D8EE7D661C0E622600FDF0A3 /* PropertyValueTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D641C0E622600FDF0A3 /* PropertyValueTest.cpp */; };
+		D8EE7D671C0E624200FDF0A3 /* EnumerableImplTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D631C0E622600FDF0A3 /* EnumerableImplTest.cpp */; };
+		D8EE7D681C0E624200FDF0A3 /* PropertyValueTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D641C0E622600FDF0A3 /* PropertyValueTest.cpp */; };
+		D8EE7D761C0EA1B500FDF0A3 /* PMODDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D751C0EA1B500FDF0A3 /* PMODDictionaryTest.m */; };
+		D8EE7D771C0EB2BE00FDF0A3 /* PMODDictionaryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EE7D751C0EA1B500FDF0A3 /* PMODDictionaryTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D88D0A491BEFD9450077E57D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D86A510D1BEF0AA9007D3AA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D88D0A451BEFD82E0077E57D;
+			remoteInfo = codegen_clean;
+		};
+		D88D0A4B1BEFD94B0077E57D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D86A510D1BEF0AA9007D3AA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D88D0A451BEFD82E0077E57D;
+			remoteInfo = codegen_clean;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D86A51251BEF0AEC007D3AA7 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86A51291BEF0AEC007D3AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86A51311BEF0BCC007D3AA7 /* UnitTestBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnitTestBase.cpp; path = ../../../../src/src/cpp/test_harness/UnitTestBase.cpp; sourceTree = "<group>"; };
+		D86A51321BEF0BCC007D3AA7 /* UnitTestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitTestBase.h; path = ../../../../src/src/cpp/test_harness/UnitTestBase.h; sourceTree = "<group>"; };
+		D86A51371BEF12E6007D3AA7 /* AsyncOperationImplAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncOperationImplAdapter.h; path = ../../../../src/src/cpp/test_cases/foundation/AsyncOperationImplAdapter.h; sourceTree = "<group>"; };
+		D86A51381BEF12E6007D3AA7 /* AsyncOperationImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AsyncOperationImplTest.cpp; path = ../../../../src/src/cpp/test_cases/foundation/AsyncOperationImplTest.cpp; sourceTree = "<group>"; };
+		D86A51391BEF12E6007D3AA7 /* DictionaryImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DictionaryImplTest.cpp; path = ../../../../src/src/cpp/test_cases/foundation/DictionaryImplTest.cpp; sourceTree = "<group>"; };
+		D86A513A1BEF12E6007D3AA7 /* ErrorTypeInfoTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ErrorTypeInfoTest.cpp; path = ../../../../src/src/cpp/test_cases/foundation/ErrorTypeInfoTest.cpp; sourceTree = "<group>"; };
+		D86A513B1BEF12E6007D3AA7 /* PropertyDataImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyDataImplTest.cpp; path = ../../../../src/src/cpp/test_cases/foundation/PropertyDataImplTest.cpp; sourceTree = "<group>"; };
+		D86A51401BEF1308007D3AA7 /* pch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pch.h; path = ../../../../src/src/cpp/test_harness/pch.h; sourceTree = "<group>"; };
+		D86A51421BEF155F007D3AA7 /* AsyncOperationTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AsyncOperationTest.cpp; path = ../../../../src/src/cpp/test_cases/shared/AsyncOperationTest.cpp; sourceTree = "<group>"; };
+		D86A51431BEF155F007D3AA7 /* AsyncOperationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncOperationTest.h; path = ../../../../src/src/cpp/test_cases/shared/AsyncOperationTest.h; sourceTree = "<group>"; };
+		D86A51441BEF155F007D3AA7 /* PropertyDataTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyDataTest.cpp; path = ../../../../src/src/cpp/test_cases/shared/PropertyDataTest.cpp; sourceTree = "<group>"; };
+		D86A51451BEF155F007D3AA7 /* PropertyDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyDataTest.h; path = ../../../../src/src/cpp/test_cases/shared/PropertyDataTest.h; sourceTree = "<group>"; };
+		D86A51491BEF15A9007D3AA7 /* TestModelInterfaces.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestModelInterfaces.g.cpp; path = ../../../../../bin/tests/__generated/TestModelInterfaces.g.cpp; sourceTree = "<group>"; };
+		D86A514A1BEF15A9007D3AA7 /* TestModelInterfaces.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestModelInterfaces.g.h; path = ../../../../../bin/tests/__generated/TestModelInterfaces.g.h; sourceTree = "<group>"; };
+		D86A514B1BEF15A9007D3AA7 /* TestModelTypeInfo.g.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestModelTypeInfo.g.cpp; path = ../../../../../bin/tests/__generated/TestModelTypeInfo.g.cpp; sourceTree = "<group>"; };
+		D86A514C1BEF15A9007D3AA7 /* TestModelTypeInfo.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestModelTypeInfo.g.h; path = ../../../../../bin/tests/__generated/TestModelTypeInfo.g.h; sourceTree = "<group>"; };
+		D86A51501BEF1A14007D3AA7 /* RunTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RunTests.mm; path = ../../../../src/src/objectivec/RunTests.mm; sourceTree = "<group>"; };
+		D86A51561BEF1B59007D3AA7 /* Test_iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test_iOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D86A515A1BEF1B59007D3AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D896625E1BEFF17200451877 /* PMODTestModel.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODTestModel.g.h; path = ../../../../../bin/tests/__generated/PMODTestModel.g.h; sourceTree = "<group>"; };
+		D896625F1BEFF17200451877 /* PMODTestModel.g.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODTestModel.g.mm; path = ../../../../../bin/tests/__generated/PMODTestModel.g.mm; sourceTree = "<group>"; };
+		D89662741BF01AB100451877 /* PMODTypePropertiesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMODTypePropertiesTest.h; path = ../../../../src/src/objectivec/PMODTypePropertiesTest.h; sourceTree = "<group>"; };
+		D89662751BF01AB100451877 /* PMODTypePropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMODTypePropertiesTest.m; path = ../../../../src/src/objectivec/PMODTypePropertiesTest.m; sourceTree = "<group>"; };
+		D89662781BF0266400451877 /* CommandImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommandImplTest.cpp; path = ../../../../src/src/cpp/test_cases/model/CommandImplTest.cpp; sourceTree = "<group>"; };
+		D89662791BF0266400451877 /* ObservableCollectionImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableCollectionImplTest.cpp; path = ../../../../src/src/cpp/test_cases/model/ObservableCollectionImplTest.cpp; sourceTree = "<group>"; };
+		D896627A1BF0266400451877 /* ObservableObjectImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableObjectImplTest.cpp; path = ../../../../src/src/cpp/test_cases/model/ObservableObjectImplTest.cpp; sourceTree = "<group>"; };
+		D896627E1BF026C400451877 /* TestModelImplInternal.g.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestModelImplInternal.g.h; path = ../../../../../bin/tests/__generated/TestModelImplInternal.g.h; sourceTree = "<group>"; };
+		D896627F1BF02A2600451877 /* ObservableCollectionTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObservableCollectionTest.cpp; path = ../../../../src/src/cpp/test_cases/shared/ObservableCollectionTest.cpp; sourceTree = "<group>"; };
+		D89662801BF02A2600451877 /* ObservableCollectionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservableCollectionTest.h; path = ../../../../src/src/cpp/test_cases/shared/ObservableCollectionTest.h; sourceTree = "<group>"; };
+		D89662821BF02B9D00451877 /* PMODTypePropertiesImplTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PMODTypePropertiesImplTest.mm; path = ../../../../src/src/objectivec/PMODTypePropertiesImplTest.mm; sourceTree = "<group>"; };
+		D89662841BF02FBA00451877 /* TestModelRegisterIf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestModelRegisterIf.cpp; path = ../../../../src/src/cpp/TestModelRegisterIf.cpp; sourceTree = "<group>"; };
+		D8CE12441BF51D04001DE311 /* ObjectFactoryTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectFactoryTest.cpp; path = ../../../../src/src/cpp/test_cases/shared/ObjectFactoryTest.cpp; sourceTree = "<group>"; };
+		D8EE7D631C0E622600FDF0A3 /* EnumerableImplTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnumerableImplTest.cpp; path = ../../../../src/src/cpp/test_cases/foundation/EnumerableImplTest.cpp; sourceTree = "<group>"; };
+		D8EE7D641C0E622600FDF0A3 /* PropertyValueTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyValueTest.cpp; path = ../../../../src/src/cpp/test_cases/foundation/PropertyValueTest.cpp; sourceTree = "<group>"; };
+		D8EE7D751C0EA1B500FDF0A3 /* PMODDictionaryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PMODDictionaryTest.m; path = ../../../../src/src/objectivec/PMODDictionaryTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D86A51221BEF0AEC007D3AA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D86A51531BEF1B59007D3AA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D86A510C1BEF0AA9007D3AA7 = {
+			isa = PBXGroup;
+			children = (
+				D86A51261BEF0AEC007D3AA7 /* Tests */,
+				D86A51571BEF1B59007D3AA7 /* Test_iOS */,
+				D86A51161BEF0AA9007D3AA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D86A51161BEF0AA9007D3AA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D86A51251BEF0AEC007D3AA7 /* Tests.xctest */,
+				D86A51561BEF1B59007D3AA7 /* Test_iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D86A51261BEF0AEC007D3AA7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D86A51481BEF157D007D3AA7 /* __generated */,
+				D86A51351BEF12AF007D3AA7 /* test_cases */,
+				D86A51301BEF0B98007D3AA7 /* test_harness */,
+				D86A51291BEF0AEC007D3AA7 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D86A51301BEF0B98007D3AA7 /* test_harness */ = {
+			isa = PBXGroup;
+			children = (
+				D89662841BF02FBA00451877 /* TestModelRegisterIf.cpp */,
+				D86A51401BEF1308007D3AA7 /* pch.h */,
+				D86A51311BEF0BCC007D3AA7 /* UnitTestBase.cpp */,
+				D86A51321BEF0BCC007D3AA7 /* UnitTestBase.h */,
+			);
+			name = test_harness;
+			sourceTree = "<group>";
+		};
+		D86A51351BEF12AF007D3AA7 /* test_cases */ = {
+			isa = PBXGroup;
+			children = (
+				D89662771BF0264D00451877 /* model */,
+				D89662731BF01A9300451877 /* objectivec */,
+				D86A51411BEF1545007D3AA7 /* shared */,
+				D86A51361BEF12BB007D3AA7 /* foundation */,
+			);
+			name = test_cases;
+			sourceTree = "<group>";
+		};
+		D86A51361BEF12BB007D3AA7 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D86A51371BEF12E6007D3AA7 /* AsyncOperationImplAdapter.h */,
+				D86A51381BEF12E6007D3AA7 /* AsyncOperationImplTest.cpp */,
+				D86A51391BEF12E6007D3AA7 /* DictionaryImplTest.cpp */,
+				D86A513A1BEF12E6007D3AA7 /* ErrorTypeInfoTest.cpp */,
+				D86A513B1BEF12E6007D3AA7 /* PropertyDataImplTest.cpp */,
+			);
+			name = foundation;
+			sourceTree = "<group>";
+		};
+		D86A51411BEF1545007D3AA7 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				D8CE12441BF51D04001DE311 /* ObjectFactoryTest.cpp */,
+				D896627F1BF02A2600451877 /* ObservableCollectionTest.cpp */,
+				D89662801BF02A2600451877 /* ObservableCollectionTest.h */,
+				D86A51421BEF155F007D3AA7 /* AsyncOperationTest.cpp */,
+				D86A51431BEF155F007D3AA7 /* AsyncOperationTest.h */,
+				D86A51441BEF155F007D3AA7 /* PropertyDataTest.cpp */,
+				D86A51451BEF155F007D3AA7 /* PropertyDataTest.h */,
+			);
+			name = shared;
+			sourceTree = "<group>";
+		};
+		D86A51481BEF157D007D3AA7 /* __generated */ = {
+			isa = PBXGroup;
+			children = (
+				D896627E1BF026C400451877 /* TestModelImplInternal.g.h */,
+				D896625E1BEFF17200451877 /* PMODTestModel.g.h */,
+				D896625F1BEFF17200451877 /* PMODTestModel.g.mm */,
+				D86A51491BEF15A9007D3AA7 /* TestModelInterfaces.g.cpp */,
+				D86A514A1BEF15A9007D3AA7 /* TestModelInterfaces.g.h */,
+				D86A514B1BEF15A9007D3AA7 /* TestModelTypeInfo.g.cpp */,
+				D86A514C1BEF15A9007D3AA7 /* TestModelTypeInfo.g.h */,
+			);
+			name = __generated;
+			sourceTree = "<group>";
+		};
+		D86A51571BEF1B59007D3AA7 /* Test_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D86A515A1BEF1B59007D3AA7 /* Info.plist */,
+			);
+			path = Test_iOS;
+			sourceTree = "<group>";
+		};
+		D89662731BF01A9300451877 /* objectivec */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D751C0EA1B500FDF0A3 /* PMODDictionaryTest.m */,
+				D89662821BF02B9D00451877 /* PMODTypePropertiesImplTest.mm */,
+				D86A51501BEF1A14007D3AA7 /* RunTests.mm */,
+				D89662741BF01AB100451877 /* PMODTypePropertiesTest.h */,
+				D89662751BF01AB100451877 /* PMODTypePropertiesTest.m */,
+			);
+			name = objectivec;
+			sourceTree = "<group>";
+		};
+		D89662771BF0264D00451877 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE7D631C0E622600FDF0A3 /* EnumerableImplTest.cpp */,
+				D8EE7D641C0E622600FDF0A3 /* PropertyValueTest.cpp */,
+				D89662781BF0266400451877 /* CommandImplTest.cpp */,
+				D89662791BF0266400451877 /* ObservableCollectionImplTest.cpp */,
+				D896627A1BF0266400451877 /* ObservableObjectImplTest.cpp */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D88D0A451BEFD82E0077E57D /* codegen_clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "\"../../../../src/codegen/util/codegen_clean.sh\" -o ../../../../bin/tests/__generated";
+			buildConfigurationList = D88D0A461BEFD82E0077E57D /* Build configuration list for PBXLegacyTarget "codegen_clean" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = codegen_clean;
+			passBuildSettingsInEnvironment = 1;
+			productName = codegen_clean;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		D86A51241BEF0AEC007D3AA7 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D86A512D1BEF0AEC007D3AA7 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				D88D0A361BEFCEC80077E57D /* ShellScript */,
+				D86A51211BEF0AEC007D3AA7 /* Sources */,
+				D86A51221BEF0AEC007D3AA7 /* Frameworks */,
+				D86A51231BEF0AEC007D3AA7 /* Resources */,
+				D86A514F1BEF1774007D3AA7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D88D0A4A1BEFD9450077E57D /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = D86A51251BEF0AEC007D3AA7 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D86A51551BEF1B59007D3AA7 /* Test_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D86A515B1BEF1B59007D3AA7 /* Build configuration list for PBXNativeTarget "Test_iOS" */;
+			buildPhases = (
+				D88D0A4E1BEFDAA50077E57D /* ShellScript */,
+				D86A51521BEF1B59007D3AA7 /* Sources */,
+				D86A51531BEF1B59007D3AA7 /* Frameworks */,
+				D86A51541BEF1B59007D3AA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D88D0A4C1BEFD94B0077E57D /* PBXTargetDependency */,
+			);
+			name = Test_iOS;
+			productName = Test_iOS;
+			productReference = D86A51561BEF1B59007D3AA7 /* Test_iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D86A510D1BEF0AA9007D3AA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Rodrigo Varas";
+				TargetAttributes = {
+					D86A51241BEF0AEC007D3AA7 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					D86A51551BEF1B59007D3AA7 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					D88D0A451BEFD82E0077E57D = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = D86A51101BEF0AA9007D3AA7 /* Build configuration list for PBXProject "pmod.test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D86A510C1BEF0AA9007D3AA7;
+			productRefGroup = D86A51161BEF0AA9007D3AA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D86A51241BEF0AEC007D3AA7 /* Tests */,
+				D86A51551BEF1B59007D3AA7 /* Test_iOS */,
+				D88D0A451BEFD82E0077E57D /* codegen_clean */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D86A51231BEF0AEC007D3AA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D86A51541BEF1B59007D3AA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D86A514F1BEF1774007D3AA7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ../../../../bin/Products/macosx/$CONFIGURATION/libpmod.dylib ${TARGET_BUILD_DIR}\n";
+		};
+		D88D0A361BEFCEC80077E57D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../../../src/schemas\n../../../bin/Products/macosx/Debug/pmodcodegentask -pModelSchema=test_model.schema -pProductName=TestModel -pConfigFile=test_model_codegen_config.json -pOutputDir=../../../bin/tests/__generated";
+		};
+		D88D0A4E1BEFDAA50077E57D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../../../src/schemas\n../../../bin/Products/macosx/Debug/pmodcodegentask -pModelSchema=test_model.schema -pProductName=TestModel -pConfigFile=test_model_codegen_config.json -pOutputDir=../../../bin/tests/__generated";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D86A51211BEF0AEC007D3AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D86A514E1BEF15A9007D3AA7 /* TestModelTypeInfo.g.cpp in Sources */,
+				D8EE7D651C0E622600FDF0A3 /* EnumerableImplTest.cpp in Sources */,
+				D8CE12451BF51D04001DE311 /* ObjectFactoryTest.cpp in Sources */,
+				D89662851BF02FBA00451877 /* TestModelRegisterIf.cpp in Sources */,
+				D86A51331BEF0BCC007D3AA7 /* UnitTestBase.cpp in Sources */,
+				D896627C1BF0266400451877 /* ObservableCollectionImplTest.cpp in Sources */,
+				D89662761BF01AB100451877 /* PMODTypePropertiesTest.m in Sources */,
+				D896627B1BF0266400451877 /* CommandImplTest.cpp in Sources */,
+				D86A51461BEF155F007D3AA7 /* AsyncOperationTest.cpp in Sources */,
+				D86A513C1BEF12E6007D3AA7 /* AsyncOperationImplTest.cpp in Sources */,
+				D8EE7D661C0E622600FDF0A3 /* PropertyValueTest.cpp in Sources */,
+				D8EE7D761C0EA1B500FDF0A3 /* PMODDictionaryTest.m in Sources */,
+				D896627D1BF0266400451877 /* ObservableObjectImplTest.cpp in Sources */,
+				D86A51511BEF1A14007D3AA7 /* RunTests.mm in Sources */,
+				D86A51471BEF155F007D3AA7 /* PropertyDataTest.cpp in Sources */,
+				D86A513D1BEF12E6007D3AA7 /* DictionaryImplTest.cpp in Sources */,
+				D89662601BEFF17200451877 /* PMODTestModel.g.mm in Sources */,
+				D89662831BF02B9D00451877 /* PMODTypePropertiesImplTest.mm in Sources */,
+				D86A514D1BEF15A9007D3AA7 /* TestModelInterfaces.g.cpp in Sources */,
+				D86A513F1BEF12E6007D3AA7 /* PropertyDataImplTest.cpp in Sources */,
+				D89662811BF02A2600451877 /* ObservableCollectionTest.cpp in Sources */,
+				D86A513E1BEF12E6007D3AA7 /* ErrorTypeInfoTest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D86A51521BEF1B59007D3AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8EE7D771C0EB2BE00FDF0A3 /* PMODDictionaryTest.m in Sources */,
+				D8EE7D671C0E624200FDF0A3 /* EnumerableImplTest.cpp in Sources */,
+				D8EE7D681C0E624200FDF0A3 /* PropertyValueTest.cpp in Sources */,
+				D8CE12471BF51F80001DE311 /* ObjectFactoryTest.cpp in Sources */,
+				D896628C1BF032D300451877 /* PMODTypePropertiesTest.m in Sources */,
+				D89662861BF0329100451877 /* CommandImplTest.cpp in Sources */,
+				D89662871BF0329100451877 /* ObservableCollectionImplTest.cpp in Sources */,
+				D89662881BF0329100451877 /* ObservableObjectImplTest.cpp in Sources */,
+				D89662891BF0329100451877 /* PMODTypePropertiesImplTest.mm in Sources */,
+				D896628A1BF0329100451877 /* ObservableCollectionTest.cpp in Sources */,
+				D896628B1BF0329100451877 /* TestModelRegisterIf.cpp in Sources */,
+				D89662711BEFF48E00451877 /* PMODTestModel.g.mm in Sources */,
+				D88D0A371BEFD0FA0077E57D /* RunTests.mm in Sources */,
+				D88D0A381BEFD0FA0077E57D /* TestModelInterfaces.g.cpp in Sources */,
+				D88D0A391BEFD0FA0077E57D /* TestModelTypeInfo.g.cpp in Sources */,
+				D88D0A3A1BEFD0FA0077E57D /* AsyncOperationTest.cpp in Sources */,
+				D88D0A3B1BEFD0FA0077E57D /* PropertyDataTest.cpp in Sources */,
+				D88D0A3C1BEFD0FA0077E57D /* AsyncOperationImplTest.cpp in Sources */,
+				D88D0A3D1BEFD0FA0077E57D /* DictionaryImplTest.cpp in Sources */,
+				D88D0A3E1BEFD0FA0077E57D /* ErrorTypeInfoTest.cpp in Sources */,
+				D88D0A3F1BEFD0FA0077E57D /* PropertyDataImplTest.cpp in Sources */,
+				D88D0A401BEFD0FA0077E57D /* UnitTestBase.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D88D0A4A1BEFD9450077E57D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D88D0A451BEFD82E0077E57D /* codegen_clean */;
+			targetProxy = D88D0A491BEFD9450077E57D /* PBXContainerItemProxy */;
+		};
+		D88D0A4C1BEFD94B0077E57D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D88D0A451BEFD82E0077E57D /* codegen_clean */;
+			targetProxy = D88D0A4B1BEFD94B0077E57D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D86A511C1BEF0AA9007D3AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D86A511D1BEF0AA9007D3AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D86A512E1BEF0AEC007D3AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../src/public/inc,
+					../../../../src/public/objectivec/PMODAdapter,
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = ../../../../bin/Products/macosx/Debug/libpmod.dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D86A512F1BEF0AEC007D3AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../../src/public/inc,
+					../../../../src/public/objectivec/PMODAdapter,
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D86A515C1BEF1B59007D3AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					../../../../src/public/inc,
+					../../../../src/public/objectivec/PMODAdapter,
+				);
+				INFOPLIST_FILE = Test_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = ../../../../bin/Products/iOS/Debug/iphonesimulator/libpmod.a;
+				PRODUCT_BUNDLE_IDENTIFIER = "Microsoft.Test-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D86A515D1BEF1B59007D3AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					../../../../src/public/inc,
+					../../../../src/public/objectivec/PMODAdapter,
+				);
+				INFOPLIST_FILE = Test_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Microsoft.Test-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D88D0A471BEFD82E0077E57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D88D0A481BEFD82E0077E57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D86A51101BEF0AA9007D3AA7 /* Build configuration list for PBXProject "pmod.test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D86A511C1BEF0AA9007D3AA7 /* Debug */,
+				D86A511D1BEF0AA9007D3AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D86A512D1BEF0AEC007D3AA7 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D86A512E1BEF0AEC007D3AA7 /* Debug */,
+				D86A512F1BEF0AEC007D3AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D86A515B1BEF1B59007D3AA7 /* Build configuration list for PBXNativeTarget "Test_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D86A515C1BEF1B59007D3AA7 /* Debug */,
+				D86A515D1BEF1B59007D3AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D88D0A461BEFD82E0077E57D /* Build configuration list for PBXLegacyTarget "codegen_clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D88D0A471BEFD82E0077E57D /* Debug */,
+				D88D0A481BEFD82E0077E57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D86A510D1BEF0AA9007D3AA7 /* Project object */;
+}

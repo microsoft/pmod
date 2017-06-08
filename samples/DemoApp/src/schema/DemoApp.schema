@@ -1,0 +1,7 @@
+{
+  "namespace":"DemoApp",
+  "typeId":10000,
+  "models":[
+  "DemoApp.cs"
+  ]
+}

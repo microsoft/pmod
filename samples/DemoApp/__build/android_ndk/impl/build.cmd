@@ -1,0 +1,1 @@
+call %NDK_PATH%\ndk-build NDK_OUT=../../../../../bin/obj/android_ndk/samples/DemoApp/impl NDK_APP_DST_DIR=../../../../../bin/samples/DemoApp/android_ndk/impl/libs/armeabi

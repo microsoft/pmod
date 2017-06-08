@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:pmod_lib.test/pmod_lib.test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:pmod.test/pmod.test.xcodeproj">
+   </FileRef>
+</Workspace>

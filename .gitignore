@@ -286,3 +286,30 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+
+# Android NDK shared libs generated from build
+*.so
+
+#WinStore generated files
+[Gg]enerated Files/
+
+# Xcode specific
+xcuserdata/
+xcshareddata/
+
+# Movies App exclude
+/samples/Movies/__build/vs/uwp/Movies.dll/Movies.winmd
+/samples/Movies/__build/vs/uwp/Movies.dll/Movies.h
+/samples/Movies/__build/vs/__generated
+/samples/Movies/__build/vs/Android/MoviesUI/app/src/main/jniLibs/armeabi-v7a
+/samples/Movies/__build/vs/Android/MoviesUI/app/src/main/java/com/microsoft
+
+# Demo App exclude
+/samples/DemoApp/__build/vs/uwp/DemoApp/DemoApp.winmd
+/samples/DemoApp/__build/vs/uwp/DemoApp/DemoApp.h
+/samples/DemoApp/__build/vs/__generated
+/samples/DemoApp/__build/vs.build/uwp/DemoApp.dll/DemoApp.winmd
+/samples/DemoApp/__build/vs.build/uwp/DemoApp.dll/DemoApp.h
+/tests/__build/vs/uwp/TestModel.dll/TestModel.winmd
+/tests/__build/vs/uwp/TestModel.dll/TestModel.h

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\src\__build\vs\uwp\uwp.cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9CA5B867-2695-4613-90DE-1870258B1D2E}</ProjectGuid>
+    <Keyword>DynamicLibrary</Keyword>
+    <ProjectName>TestModel_uwp.dll</ProjectName>
+    <RootNamespace>TestModel_uwp_dll</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <TargetName>TestModel</TargetName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="..\uwp.cpp.props" />
+  <PropertyGroup>
+    <GeneratedDir>$(REPO_ROOT)\bin\tests\__generated</GeneratedDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModel.winrt.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="TestModel.idl">
+      <AdditionalIncludeDirectories>$(REPO_ROOT)\src\public\idl;$(GeneratedDir)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">DEBUG</PreprocessorDefinitions>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <MetadataFileName>%(Filename).winmd</MetadataFileName>
+      <!--<OutputDirectory>$(IntDir)</OutputDirectory>-->
+      <Enumclass>false</Enumclass>
+    </Midl>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINDOWS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(REPO_ROOT)\src\public\inc;$(GeneratedDir);$(REPO_ROOT)\bin\obj\uwp\$(PlatformTarget)\$(Configuration)\pmod_projection.dll;.\</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <AdditionalDependencies>pmod.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(REPO_ROOT)\bin\Product\uwp\$(PlatformTarget)\$(Configuration)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>TestModel.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="merge" AfterTargets="ClCompile" Inputs="$(GeneratedDir)\TestModel.g.idl" Outputs="$(OutDir)\TestModel.winmd">
+    <!-- Invoke mdmerge -->
+    <Exec Command="&quot;$(WindowsSdkDir)bin\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir $(REPO_ROOT)\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\winmd -i .\ -o $(OutDir)" />
+  </Target>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <REPO_ROOT>..\..\..\..\..\..</REPO_ROOT>
+    <IntDirPrefix>samples\DemoApp\classic</IntDirPrefix>
+    <Product>samples\DemoApp\classic</Product>
+  </PropertyGroup>
+  <Import Project="..\..\..\..\..\src\__build\vs\cpp.props"/>
+</Project>

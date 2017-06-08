@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="TestCases">
+      <UniqueIdentifier>{368254e4-bddc-41bb-9582-e8e5a357512a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\foundation">
+      <UniqueIdentifier>{91821e9c-2e4a-427b-9c05-9f2cb1851e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\model_library">
+      <UniqueIdentifier>{dbf9b287-1ad6-45d7-a1c0-3964f6aa077c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\shared">
+      <UniqueIdentifier>{ff9dd3e9-3204-4167-9a2c-ff631506e52a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\UnitTestBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\TestRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\ObservableCollectionTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\FastModelTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\ObservableObjectClassTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\ObservableCollectionClassTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\AsyncOperationClassTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\AsyncOperationTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\PropertyDataClassTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\PropertyDataTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\ObjectFactoryTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\ObjectFactoryLibTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model_library\JsonParserTest.cpp">
+      <Filter>TestCases\model_library</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_harness\UnitTestBase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_harness\pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\ObservableCollectionTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\AsyncOperationTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\PropertyDataTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

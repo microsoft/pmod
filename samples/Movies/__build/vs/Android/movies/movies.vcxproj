@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{bca4a77b-49bd-4247-b750-dcc2caa1b786}</ProjectGuid>
+    <Keyword>Android</Keyword>
+    <RootNamespace>movies</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Android</ApplicationType>
+    <ApplicationTypeRevision>3.0</ApplicationTypeRevision>
+    <REPO_ROOT>..\..\..\..\..\..\</REPO_ROOT>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Clang_3_8</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\..\packages\boost.1.55.0.16\build\native\boost.targets" Condition="Exists('..\..\packages\boost.1.55.0.16\build\native\boost.targets')" />
+    <Import Project="..\..\packages\boost_atomic-android.1.55.0.1\build\native\boost_atomic-android.targets" Condition="Exists('..\..\packages\boost_atomic-android.1.55.0.1\build\native\boost_atomic-android.targets')" />
+    <Import Project="..\..\packages\boost_chrono-android.1.55.0.1\build\native\boost_chrono-android.targets" Condition="Exists('..\..\packages\boost_chrono-android.1.55.0.1\build\native\boost_chrono-android.targets')" />
+    <Import Project="..\..\packages\boost_date_time-android.1.55.0.1\build\native\boost_date_time-android.targets" Condition="Exists('..\..\packages\boost_date_time-android.1.55.0.1\build\native\boost_date_time-android.targets')" />
+    <Import Project="..\..\packages\boost_filesystem-android.1.55.0.1\build\native\boost_filesystem-android.targets" Condition="Exists('..\..\packages\boost_filesystem-android.1.55.0.1\build\native\boost_filesystem-android.targets')" />
+    <Import Project="..\..\packages\boost_system-android.1.55.0.1\build\native\boost_system-android.targets" Condition="Exists('..\..\packages\boost_system-android.1.55.0.1\build\native\boost_system-android.targets')" />
+    <Import Project="..\..\packages\boost_thread-android.1.55.0.1\build\native\boost_thread-android.targets" Condition="Exists('..\..\packages\boost_thread-android.1.55.0.1\build\native\boost_thread-android.targets')" />
+    <Import Project="..\..\packages\openssl-android.1.0.2.0\build\native\openssl-android.targets" Condition="Exists('..\..\packages\openssl-android.1.0.2.0\build\native\openssl-android.targets')" />
+    <Import Project="..\..\packages\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.2.8.0\build\native\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.targets" Condition="Exists('..\..\packages\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.2.8.0\build\native\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.targets')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <GeneratedDir>..\..\__generated</GeneratedDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(REPO_ROOT)\src\public\inc;$(GeneratedDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <ExceptionHandling>Enabled</ExceptionHandling>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalOptions>-Wno-unused-variable -Wno-reorder -Wno-unknown-pragmas -Wno-unused-local-typedef %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>pmod;pmod_lib;%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(REPO_ROOT)\bin\Product\android\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\__generated\MoviesFastInternal.g.h" />
+    <ClInclude Include="..\..\__generated\MoviesInterfaces.g.h" />
+    <ClInclude Include="..\..\__generated\MoviesPrivateInterfaces.g.h" />
+    <ClInclude Include="..\..\__generated\MoviesTypeInfo.g.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\__generated\MoviesFastInternal.g.cpp" />
+    <ClCompile Include="..\..\__generated\MoviesInterfaces.g.cpp" />
+    <ClCompile Include="..\..\__generated\MoviesTypeInfo.g.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\jni\jniCppRestSdk.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\Movies.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\MoviesApiService.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\boost.1.55.0.16\build\native\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost.1.55.0.16\build\native\boost.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost_atomic-android.1.55.0.1\build\native\boost_atomic-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost_atomic-android.1.55.0.1\build\native\boost_atomic-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost_chrono-android.1.55.0.1\build\native\boost_chrono-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost_chrono-android.1.55.0.1\build\native\boost_chrono-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost_date_time-android.1.55.0.1\build\native\boost_date_time-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost_date_time-android.1.55.0.1\build\native\boost_date_time-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost_filesystem-android.1.55.0.1\build\native\boost_filesystem-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost_filesystem-android.1.55.0.1\build\native\boost_filesystem-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost_system-android.1.55.0.1\build\native\boost_system-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost_system-android.1.55.0.1\build\native\boost_system-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\boost_thread-android.1.55.0.1\build\native\boost_thread-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\boost_thread-android.1.55.0.1\build\native\boost_thread-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\openssl-android.1.0.2.0\build\native\openssl-android.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\openssl-android.1.0.2.0\build\native\openssl-android.targets'))" />
+    <Error Condition="!Exists('..\..\packages\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.2.8.0\build\native\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.2.8.0\build\native\cpprestsdk.clang-3-6.android-19.libstdcxx.static.rt-static.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="__generated">
+      <UniqueIdentifier>{d06e3588-a363-4d21-8b11-2c05c20ddfd5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\Movies\Movies.winrt.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesFastInternal.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesInterfaces.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesTypeInfo.g.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\Movies.cpp" />
+    <ClCompile Include="..\..\..\..\src\cpp\MoviesApiService.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesFastInternal.g.h" />
+    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesImplInternal.g.h" />
+    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesInterfaces.g.h" />
+    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesPrivateInterfaces.g.h" />
+    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\Movies\MoviesTypeInfo.g.h" />
+    <ClInclude Include="..\..\..\..\src\cpp\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Movies.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

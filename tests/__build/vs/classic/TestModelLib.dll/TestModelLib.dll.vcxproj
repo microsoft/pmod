@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\src\__build\vs\cpp.configs.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A01A5F41-33E4-4B46-A612-03179FDC90E0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <TargetName>TestModelLib</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.cpp" />
+    <ClCompile Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\TestModelRegister.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_factory\MethodSupportImpl.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_factory\TestFactory.cpp" />
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_factory\TypePropertiesTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelFastInternal.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelInterfaces.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelInternal.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelPrivateInterfaces.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelPtr.g.h" />
+    <ClInclude Include="..\..\..\..\..\bin\tests\__generated\TestModelTypeInfo.g.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="..\test.classic.cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SRC_DIR)\public\inc;..\..\..\..\..\bin\tests\__generated</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>pmod.lib;pmod_lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(REPO_ROOT)\bin\Product\classic\$(PlatformTarget)\$(Configuration)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

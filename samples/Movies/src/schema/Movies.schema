@@ -1,0 +1,8 @@
+{
+  "namespace":"Movies",
+  "typeId":10500,
+  "models":[
+    "MoviesApiService.cs",
+    "MoviesApp.cs"
+  ]
+}

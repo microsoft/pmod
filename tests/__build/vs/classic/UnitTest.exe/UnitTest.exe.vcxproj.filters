@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="TestCases">
+      <UniqueIdentifier>{368254e4-bddc-41bb-9582-e8e5a357512a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\foundation">
+      <UniqueIdentifier>{91821e9c-2e4a-427b-9c05-9f2cb1851e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\model">
+      <UniqueIdentifier>{dbf9b287-1ad6-45d7-a1c0-3964f6aa077c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\shared">
+      <UniqueIdentifier>{0e348899-746b-4994-b92a-c1ffe8674e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\proxy">
+      <UniqueIdentifier>{b63c02a5-f725-489d-b823-bb5699b98ef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\gpengine">
+      <UniqueIdentifier>{0ec58c46-43b2-487d-b72f-bc885fd8b1cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\codegen">
+      <UniqueIdentifier>{7c11f0bf-d641-435c-8f38-04146f1bb764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\codegen\gpengine">
+      <UniqueIdentifier>{ee914555-de7d-4536-8615-b8e6da504842}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\codegen\inc">
+      <UniqueIdentifier>{c22d402d-b7f8-4c79-b483-3c89859a8ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\codegen\src">
+      <UniqueIdentifier>{68179ccc-7121-4fc1-ab39-8d9a7aaec257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestCases\codegen\parser">
+      <UniqueIdentifier>{6bc32d45-55f6-4b99-9bf6-b0ffb516af50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\UnitTestBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\TestRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_harness\pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\ObservableCollectionTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\DictionaryImplTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model\ObservableCollectionImplTest.cpp">
+      <Filter>TestCases\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model\ObservableObjectImplTest.cpp">
+      <Filter>TestCases\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\model\CommandImplTest.cpp">
+      <Filter>TestCases\model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\AsyncOperationImplTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\AsyncOperationTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\PplxTasksTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\PplxTaskImplTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\PropertyDataImplTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\PropertyDataTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\ErrorTypeInfoTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\shared\ObjectFactoryTest.cpp">
+      <Filter>TestCases\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\PropertyValueTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\EnumerableImplTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\proxy\ProxyImplTest.cpp">
+      <Filter>TestCases\proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\foundation\ObjectDispatchImplTest.cpp">
+      <Filter>TestCases\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\src\cpp\test_cases\gpengine\GoldenParserTest.cpp">
+      <Filter>TestCases\gpengine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\gpengine\CGTParser.cpp">
+      <Filter>TestCases\codegen\gpengine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\gpengine\Parser.cpp">
+      <Filter>TestCases\codegen\gpengine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\gpengine\SymbolParser.cpp">
+      <Filter>TestCases\codegen\gpengine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\src\ExePath.cpp">
+      <Filter>TestCases\codegen\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\parser\src\ParserEngineUtil.cpp">
+      <Filter>TestCases\codegen\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\parser\csharp\ModelSymbolParser.cpp">
+      <Filter>TestCases\codegen\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\src\codegen\src\CodeGenUtil.cpp">
+      <Filter>TestCases\codegen\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_harness\UnitTestBase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_harness\pch.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\ObservableCollectionTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\AsyncOperationTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\PplxTasksTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\foundation\AsyncOperationImplAdapter.h">
+      <Filter>TestCases\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\src\cpp\test_cases\shared\PropertyDataTest.h">
+      <Filter>TestCases\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\src\codegen\gpengine\CGTParser.h">
+      <Filter>TestCases\codegen\gpengine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\src\codegen\gpengine\Parser.h">
+      <Filter>TestCases\codegen\gpengine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\src\codegen\gpengine\SymbolParser.h">
+      <Filter>TestCases\codegen\gpengine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\src\codegen\inc\ExePath.h">
+      <Filter>TestCases\codegen\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\src\codegen\parser\csharp\ModelSymbolParser.h">
+      <Filter>TestCases\codegen\parser</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
