@@ -298,6 +298,9 @@ __pycache__/
 xcuserdata/
 xcshareddata/
 
+#xcode build results
+build/
+
 # Movies App exclude
 /samples/Movies/__build/vs/uwp/Movies.dll/Movies.winmd
 /samples/Movies/__build/vs/uwp/Movies.dll/Movies.h
