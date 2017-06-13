@@ -13,6 +13,6 @@ set targets=x86;x64;ARM;Xamarin.Droid
 for %%t in (%targets%) do (
     echo "Building target:"%%i
 
-    msbuild pmod.sln /t:%target% /p:Configuration=Debug /p:Platform=%%t
-    msbuild pmod.sln /t:%target% /p:Configuration=Release /p:Platform=%%t
+    msbuild pmod.sln /t:%target% /p:Configuration=Debug /p:Platform=%%t /v:m
+    msbuild pmod.sln /t:%target% /p:Configuration=Release /p:Platform=%%t /v:m
 )
