@@ -3,9 +3,9 @@
     "Microsoft.ApplicationInsights": "1.0.0",
     "Microsoft.ApplicationInsights.PersistenceChannel": "1.0.0",
     "Microsoft.ApplicationInsights.WindowsApps": "1.0.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Microsoft.PropertyModel.uwp": "1.0.103-pre-g36d1970db2",
-    "pmod_lib.uwp": "1.0.103-pre-g36d1970db2"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+    "Microsoft.PropertyModel.uwp": "1.0.3-pre-g72960da81c",
+    "pmod_lib.uwp": "1.0.3-pre-g72960da81c"
   },
   "frameworks": {
     "uap10.0": {}

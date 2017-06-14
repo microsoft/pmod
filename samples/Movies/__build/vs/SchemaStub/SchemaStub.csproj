@@ -15,7 +15,7 @@
     <ModelSchemaPath>$(MSBuildProjectDirectory)\..\..\..\src\schema\Movies.schema</ModelSchemaPath>
     <CodegenOutputDir>$(MSBuildProjectDirectory)\..\__generated</CodegenOutputDir>
     <JavaPackageName>com.microsoft.movies</JavaPackageName>
-    <PmodNuGetVersion>1.0.103-pre-g36d1970db2</PmodNuGetVersion>
+    <PmodNuGetVersion>1.0.3-pre-g72960da81c</PmodNuGetVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>

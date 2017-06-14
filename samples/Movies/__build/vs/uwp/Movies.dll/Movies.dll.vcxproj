@@ -34,12 +34,12 @@
     <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
     <TargetName>Movies</TargetName>
-    <PmodNuGetVersion>1.0.103-pre-g36d1970db2</PmodNuGetVersion>
+    <PmodNuGetVersion>1.0.3-pre-g72960da81c</PmodNuGetVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
@@ -126,21 +126,21 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Target Name="merge" AfterTargets="ClCompile" Inputs="..\..\__generated\Movies.g.idl" Outputs="$(OutDir)\Movies.winmd">
     <!-- Invoke mdmerge -->
-    <Exec Command="&quot;$(WindowsSdkDir)bin\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir ..\..\packages\pmodsdk.redist.$(PmodNuGetVersion)\build\native\bin\$(Platform)\$(Configuration)\dynamic\WinRT -i .\ -o $(OutDir)" />
+    <Exec Command="&quot;$(WindowsSdkDir)bin\$(WindowsTargetPlatformVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir ..\..\packages\pmodsdk.redist.$(PmodNuGetVersion)\build\native\bin\$(Platform)\$(Configuration)\dynamic\WinRT -i .\ -o $(OutDir)" />
   </Target>
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\..\packages\pmodsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmodsdk.redist.targets" Condition="Exists('..\..\packages\pmodsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmodsdk.redist.targets')" />
-    <Import Project="..\..\packages\pmodsdk.1.0.103-pre-g36d1970db2\build\native\pmodsdk.targets" Condition="Exists('..\..\packages\pmodsdk.1.0.103-pre-g36d1970db2\build\native\pmodsdk.targets')" />
-    <Import Project="..\..\packages\pmod_libsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.redist.targets" Condition="Exists('..\..\packages\pmod_libsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.redist.targets')" />
-    <Import Project="..\..\packages\pmod_libsdk.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.targets" Condition="Exists('..\..\packages\pmod_libsdk.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.targets')" />
+    <Import Project="..\..\packages\pmodsdk.redist.1.0.3-pre-g72960da81c\build\native\pmodsdk.redist.targets" Condition="Exists('..\..\packages\pmodsdk.redist.1.0.3-pre-g72960da81c\build\native\pmodsdk.redist.targets')" />
+    <Import Project="..\..\packages\pmodsdk.1.0.3-pre-g72960da81c\build\native\pmodsdk.targets" Condition="Exists('..\..\packages\pmodsdk.1.0.3-pre-g72960da81c\build\native\pmodsdk.targets')" />
+    <Import Project="..\..\packages\pmod_libsdk.redist.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.redist.targets" Condition="Exists('..\..\packages\pmod_libsdk.redist.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.redist.targets')" />
+    <Import Project="..\..\packages\pmod_libsdk.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.targets" Condition="Exists('..\..\packages\pmod_libsdk.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\pmodsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmodsdk.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmodsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmodsdk.redist.targets'))" />
-    <Error Condition="!Exists('..\..\packages\pmodsdk.1.0.103-pre-g36d1970db2\build\native\pmodsdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmodsdk.1.0.103-pre-g36d1970db2\build\native\pmodsdk.targets'))" />
-    <Error Condition="!Exists('..\..\packages\pmod_libsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmod_libsdk.redist.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.redist.targets'))" />
-    <Error Condition="!Exists('..\..\packages\pmod_libsdk.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmod_libsdk.1.0.103-pre-g36d1970db2\build\native\pmod_libsdk.targets'))" />
+    <Error Condition="!Exists('..\..\packages\pmodsdk.redist.1.0.3-pre-g72960da81c\build\native\pmodsdk.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmodsdk.redist.1.0.3-pre-g72960da81c\build\native\pmodsdk.redist.targets'))" />
+    <Error Condition="!Exists('..\..\packages\pmodsdk.1.0.3-pre-g72960da81c\build\native\pmodsdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmodsdk.1.0.3-pre-g72960da81c\build\native\pmodsdk.targets'))" />
+    <Error Condition="!Exists('..\..\packages\pmod_libsdk.redist.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmod_libsdk.redist.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.redist.targets'))" />
+    <Error Condition="!Exists('..\..\packages\pmod_libsdk.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\pmod_libsdk.1.0.3-pre-g72960da81c\build\native\pmod_libsdk.targets'))" />
   </Target>
 </Project>
