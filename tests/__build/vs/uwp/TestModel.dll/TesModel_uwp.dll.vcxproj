@@ -10,14 +10,14 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <TargetName>TestModel</TargetName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -70,7 +70,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Target Name="merge" AfterTargets="ClCompile" Inputs="$(GeneratedDir)\TestModel.g.idl" Outputs="$(OutDir)\TestModel.winmd">
     <!-- Invoke mdmerge -->
-    <Exec Command="&quot;$(WindowsSdkDir)bin\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir $(REPO_ROOT)\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\winmd -i .\ -o $(OutDir)" />
+    <Exec Command="&quot;$(WindowsSdkDir)bin\$(WindowsTargetPlatformVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir $(REPO_ROOT)\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\winmd -i .\ -o $(OutDir)" />
   </Target>
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
