@@ -62,13 +62,13 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <ProjectName>DemoApp.uwp</ProjectName>
     <TargetName>DemoApp</TargetName>
     <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
-    <PmodNuGetVersion>1.0.82-pre-ga401c05c38</PmodNuGetVersion>
+    <PmodNuGetVersion>1.0.3-pre-g72960da81c</PmodNuGetVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
@@ -123,7 +123,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Target Name="merge" AfterTargets="ClCompile" Inputs="..\..\__generated\DemoApp.g.idl" Outputs="$(OutDir)\DemoApp.winmd">
     <!-- Invoke mdmerge -->
-    <Exec Command="&quot;$(WindowsSdkDir)bin\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir ..\..\packages\pmodsdk.redist.$(PmodNuGetVersion)\build\native\bin\$(Platform)\$(Configuration)\dynamic\WinRT -i .\ -o $(OutDir)" />
+    <Exec Command="&quot;$(WindowsSdkDir)bin\$(WindowsTargetPlatformVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir ..\..\packages\pmodsdk.redist.$(PmodNuGetVersion)\build\native\bin\$(Platform)\$(Configuration)\dynamic\WinRT -i .\ -o $(OutDir)" />
   </Target>
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\..\packages\pmodsdk.redist.$(PmodNuGetVersion)\build\native\pmodsdk.redist.targets" Condition="Exists('..\..\packages\pmodsdk.redist.$(PmodNuGetVersion)\build\native\pmodsdk.redist.targets')" />

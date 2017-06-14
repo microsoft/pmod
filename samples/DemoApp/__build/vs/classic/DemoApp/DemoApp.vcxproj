@@ -6,7 +6,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DemoApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
-    <PmodNuGetVersion>1.0.82-pre-ga401c05c38</PmodNuGetVersion>
+    <PmodNuGetVersion>1.0.3-pre-g72960da81c</PmodNuGetVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>

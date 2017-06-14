@@ -16,7 +16,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PmodNuGetVersion>1.0.82-pre-ga401c05c38</PmodNuGetVersion>
+    <PmodNuGetVersion>1.0.3-pre-g72960da81c</PmodNuGetVersion>
 
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
