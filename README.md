@@ -6,6 +6,10 @@ The pmod SDK is a Microsoft project to allow native code to be used on different
 
 For Windows open the pmod.sln to browse the code and build. For iOS/MacOSX there are XCode projects that facilitate the browsing and build.
 
+### Quick Links
+
+*   [SDK quick intro](https://github.com/Microsoft/pmod/pmod-SDK.docx)
+
 # Contributing
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
