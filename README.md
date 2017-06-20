@@ -8,7 +8,8 @@ For Windows open the pmod.sln to browse the code and build. For iOS/MacOSX there
 
 ### Quick Links
 
-*   [SDK quick intro](https://github.com/Microsoft/pmod/pmod-SDK.docx)
+*   [FAQ](https://github.com/Microsoft/pmod/wiki/FAQ)
+*   Directly contact us: <rodrigov@microsoft.com>
 
 # Contributing
 
