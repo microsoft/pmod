@@ -1,6 +1,6 @@
 ## Welcome!
 
-The pmod SDK is a Microsoft project to allow native code to be used on different languages an platforms with cross-platform in mind. The SDK offer both a runtime implementation and also code generation tools to easily produce 'projection' code into other languages like C#, WinRT, Objective-C, Java, NodeJS.
+The pmod SDK is a Microsoft project to allow native code to be used on different languages and platforms with cross-platform in mind. The SDK offer both a runtime implementation and also code generation tools to easily produce 'projection' code into other languages like C#, WinRT, Objective-C, Java, NodeJS.
 
 ## Getting Started
 
