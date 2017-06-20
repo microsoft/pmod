@@ -49,7 +49,7 @@ HRESULT STDMETHODCALLTYPE CMoAsyncOperationAdapter::add_ResultCompleted(
         IFR_ASSERT(CResultCompletedEventArgs::CreateInstance(spResultCompletedEventArgs.GetAddressOf()));
 
         IFR(value->Invoke(static_cast<foundation::ctl::ComInspectableBase *>(this),spResultCompletedEventArgs));
-        // Note rodrigov:3/13/2015
+        // Note:
         // We will return instead of adding the handler since it would cause in some cases
         // (when using a proxy layer) to trigger a fire notification and so causing firing
         // twice

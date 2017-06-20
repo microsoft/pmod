@@ -15,7 +15,6 @@
 //
 // Classes:     CInterfaceAdapterFactoryBase
 //
-// History:     rodrigov    2/7/2014    Created
 //
 //------------------------------------------------------------------------------
 
