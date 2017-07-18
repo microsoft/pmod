@@ -1,14 +1,15 @@
 ## Welcome!
 
-The pmod SDK is a Microsoft project to allow native code to be used on different languages and platforms with cross-platform in mind. The SDK offer both a runtime implementation and also code generation tools to easily produce 'projection' code into other languages like C#, WinRT, Objective-C, Java, NodeJS.
+The pmod SDK is a Microsoft project to allow native code to be used on different languages and platforms with cross-platform in mind. The SDK offer both a runtime implementation and also code generation tools to easily produce 'projection' code into other languages like C#, WinRT, Objective-C, Java, NodeJS. It also offer additional support for MVVM pattern with support of observable obejcts that willl work on different platforms.
 
 ## Getting Started
 
-For Windows open the pmod.sln to browse the code and build. For iOS/MacOSX there are XCode projects that facilitate the browsing and build.
+For Windows platform open the VS 2017 pmod.sln solution to browse the code and build. For iOS/MacOSX there are XCode projects that facilitate the browsing and build. For Android you can use the Android SDK tools or VS 2017 to build the binaries
 
 ### Quick Links
 
 *   [FAQ](https://github.com/Microsoft/pmod/wiki/FAQ)
+*   [Source Code introduction](https://github.com/Microsoft/pmod/wiki/Introduction%Source)
 *   Directly contact us: <rodrigov@microsoft.com>
 
 # Contributing
