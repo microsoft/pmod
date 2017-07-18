@@ -10,6 +10,8 @@ For Windows platform open the VS 2017 pmod.sln solution to browse the code and b
 
 *   [FAQ](https://github.com/Microsoft/pmod/wiki/FAQ)
 *   [Source Code introduction](https://github.com/Microsoft/pmod/wiki/Introduction%20Source)
+*   [Introduction (Word)](https://github.com/Microsoft/pmod/wiki/pmod-SDK.docx)
+*   [Tutorial (Word)](https://github.com/Microsoft/pmod/wiki/SDK%20Tutorial.docx)
 *   Directly contact us: <rodrigov@microsoft.com>
 
 # Contributing
