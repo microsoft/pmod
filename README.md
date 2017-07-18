@@ -9,7 +9,7 @@ For Windows platform open the VS 2017 pmod.sln solution to browse the code and b
 ### Quick Links
 
 *   [FAQ](https://github.com/Microsoft/pmod/wiki/FAQ)
-*   [Source Code introduction](https://github.com/Microsoft/pmod/wiki/Introduction%Source)
+*   [Source Code introduction](https://github.com/Microsoft/pmod/wiki/Introduction%20Source)
 *   Directly contact us: <rodrigov@microsoft.com>
 
 # Contributing
