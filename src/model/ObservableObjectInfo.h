@@ -100,7 +100,7 @@ protected:
     UINT32     m_TypeId;
     size_t     m_CountProperties;
     UINT32     m_StartPropertyId;
-    std::auto_ptr<IPropertyInfoContainer> m_spPropertyInfoContainer;
+    std::unique_ptr<IPropertyInfoContainer> m_spPropertyInfoContainer;
 private:
     bool       m_IsNormalized;
     bool       m_AllowChanges;

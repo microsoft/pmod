@@ -364,7 +364,7 @@ protected:
     }
 
 protected:
-    std::auto_ptr< foundation::ReferenceHolderBase<T> > m_spReferenceHolder;
+    std::unique_ptr< foundation::ReferenceHolderBase<T> > m_spReferenceHolder;
 };
 
 //------------------------------------------------------------------------------

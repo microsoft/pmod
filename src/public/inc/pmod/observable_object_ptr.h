@@ -8,8 +8,11 @@
 
 #include "object_node_ptr.h"
 #include <foundation/pv_util.h>
-#include <foundation/exception.h>
 #include <pmod/interfaces.h>
+
+#if defined(NO_EXCEPTIONS)
+#include <foundation/exception.h>
+#endif
 
 namespace pmod
 {
@@ -150,7 +153,8 @@ protected:
         return ptr;
     }
 
-    template <class value_t>
+#if !defined(NO_EXCEPTIONS)
+	template <class value_t>
     value_t GetValueWithException(
         _In_ HRESULT(T::*pGetPropertyValue)(value_t* pT)
         )
@@ -214,6 +218,7 @@ protected:
         THROW_IFR(GetComPtr(pGetPropertyValue, ptr));
         return ptr;
     }
+#endif
 
 };
 

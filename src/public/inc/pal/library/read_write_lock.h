@@ -129,7 +129,7 @@ namespace pal {
                 // Only one call to exclusive access will obtain the mutex. All other will
                 // Wait on the mutex till exclusive release of this thread.
                 //
-                _shared_owners = _pal_atomic_exchange(&_lock, MAX_SHARED_OWNERS) + MAX_SHARED_OWNERS;
+                _shared_owners = _pal_AtomicExchange(&_lock, MAX_SHARED_OWNERS) + MAX_SHARED_OWNERS;
 
                 //
                 // After interlocked exchange we have the number of shared owners of the resource.
@@ -156,7 +156,7 @@ namespace pal {
                 // Exchange will mark resource available for shared access.
                 //
                 pal_atomic_signed_integer_t shared_waiters =
-                    _pal_atomic_exchange(&_lock, -MAX_SHARED_OWNERS) - MAX_SHARED_OWNERS + _shared_owners;
+                    _pal_AtomicExchange(&_lock, -MAX_SHARED_OWNERS) - MAX_SHARED_OWNERS + _shared_owners;
 
                 //
                 // The number of shared waiters is obtained. It is a difference between lock

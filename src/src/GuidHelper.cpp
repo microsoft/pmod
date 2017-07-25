@@ -5,7 +5,7 @@
 * File:GuidHelper.cpp
 ****/
 
-#include "guidhelper.h"
+#include "GuidHelper.h"
 
 void SwapUInt16(UINT8 *p)
 {

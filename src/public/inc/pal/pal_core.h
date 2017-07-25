@@ -26,6 +26,11 @@
 
 #endif
 
+// check exception support (for Android -fno-exceptions is default)
+#if !defined(NO_EXCEPTIONS) && defined(ANDROID) && !defined(__EXCEPTIONS)
+#define NO_EXCEPTIONS
+#endif
+
 // check variadic support support
 #if defined(_NO_VARIADIC_SUPPORT)
 #undef _VARIADIC_SUPPORT

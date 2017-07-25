@@ -174,6 +174,6 @@ protected:
 
 private:
     // Model Adapter support
-    std::auto_ptr<InterfaceAdapterFactoryVector> m_InterfaceAdapterFactories;
+    std::unique_ptr<InterfaceAdapterFactoryVector> m_InterfaceAdapterFactories;
 
 };

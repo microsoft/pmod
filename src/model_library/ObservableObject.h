@@ -446,10 +446,10 @@ private:
     foundation::library::IPropertiesContainer           *m_pProperties;
 
     // For binding support
-    std::auto_ptr<_PropertyInfoSupport>                 m_spPropertyInfoSupport;
+    std::unique_ptr<_PropertyInfoSupport>                 m_spPropertyInfoSupport;
 
     // Begin/End Model Changes support
-    std::auto_ptr<_MapValueChanges_Type>               m_ModelChanges;
+    std::unique_ptr<_MapValueChanges_Type>               m_ModelChanges;
 
     // MethodOnInvoke delegate object
     foundation::ComPtr<pmod::library::IMethodOnInvokeDelegate>         m_MethodOnInvokeDelegate;

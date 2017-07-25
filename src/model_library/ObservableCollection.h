@@ -302,7 +302,7 @@ private:
     foundation::ComPtr<pmod::library::IItemsContainer>   m_spItemsContainer;
     // Value Converter storage
     foundation::ComPtr<pmod::library::IValueConverter>   m_spItemConverter;
-    std::auto_ptr<_CollectionModelChangesType>                      m_CollectionModelChanges;
+    std::unique_ptr<_CollectionModelChangesType>                      m_CollectionModelChanges;
     bool m_IsReadOnly:1;
     bool m_IsCollectionSet:1;
     bool m_UseFastItemsContainer : 1;

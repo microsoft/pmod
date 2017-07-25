@@ -1,1 +1,2 @@
-call %NDK_PATH%\ndk-build NDK_OUT=../../../../bin/obj/android_ndk/pmod_lib NDK_APP_DST_DIR=../../../../bin/Product/android_ndk/pmod_lib/libs/armeabi
+call %NDK_PATH%\ndk-build -C .\jannson NDK_OUT=../../../../../bin/obj/android_ndk/pmod_lib/jannson NDK_APP_LIBS_OUT=../../../../bin/Product/android_ndk/pmod_lib/libs/jannson
+call %NDK_PATH%\ndk-build NDK_OUT=../../../../bin/obj/android_ndk/pmod_lib NDK_APP_LIBS_OUT=../../../../bin/Product/android_ndk/pmod_lib/libs

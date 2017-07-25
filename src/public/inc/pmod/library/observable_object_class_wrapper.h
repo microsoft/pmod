@@ -43,6 +43,7 @@ namespace pmod
                 return foundation::pv_util::GetValue(valuePtr, value);
             }
 
+#if !defined(NO_EXCEPTIONS)
             template <class T>
             T GetModelProperty(_In_ UINT32 propertyId)
             {
@@ -60,6 +61,7 @@ namespace pmod
                     arrayWrapper.GetBufferAddressOf()));
                 return arrayWrapper;
             }
+#endif
 
             template <class Q>
             HRESULT GetModelProperty(_In_ UINT32 propertyId, REFIID riid, _COM_Outptr_result_maybenull_ Q ** pp)

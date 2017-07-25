@@ -650,7 +650,7 @@ CModelSchema *CSchemaParser::parse(
 
     std::wstring _namespace = to_wstring(_namespaceVal);
     // Create the Model Schema
-    std::auto_ptr<CModelSchema> modelSchema(new CModelSchema(_namespace.data()));
+    std::unique_ptr<CModelSchema> modelSchema(new CModelSchema(_namespace.data()));
 
     AutoDeleteVector<CModelSchemaSymbols *> modelSchemaSymbolsVector;
 
