@@ -116,7 +116,7 @@ private:
 // Purpose: Static template for a FoundationTracker class
 //
 //------------------------------------------------------------------------------
-template <class T>
+template <typename T>
 class _FoundationTrackerInstance
 {
 public:
@@ -141,6 +141,16 @@ private:
         return T::_GetInstance();
     }
 };
+
+template<typename T> void _FoundationTrackerInstance<T>::SetIsTrackEnabled(bool value)
+{
+    _isTrackEnabled = value;
+}
+
+template<typename T> bool _FoundationTrackerInstance<T>::IsTrackEnabled()
+{
+    return _isTrackEnabled;
+}
 
 #endif
 
