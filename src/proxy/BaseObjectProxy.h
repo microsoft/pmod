@@ -224,7 +224,7 @@ protected:
         return this->GetModelIId();
     }
 
-    HRESULT _QuerCcreateAdapterInterfaceImpl(
+    HRESULT _QueryCreateAdapterInterfaceImpl(
         IInspectable* pOuter,
         IInspectable* pInner,
         REFIID iid,

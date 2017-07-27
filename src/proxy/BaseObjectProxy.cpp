@@ -452,7 +452,7 @@ HRESULT BaseObjectProxy::QueryInterfaceImpl(REFIID iid, IUnknown **ppInterface)
     return S_OK;
 }
 
-HRESULT BaseObjectProxy::_QuerCcreateAdapterInterfaceImpl(
+HRESULT BaseObjectProxy::_QueryCreateAdapterInterfaceImpl(
         IInspectable* pOuter,
         IInspectable* pInner,
         REFIID iid,
@@ -468,7 +468,7 @@ HRESULT BaseObjectProxy::_QuerCcreateAdapterInterfaceImpl(
     //            iid,
     //            ppModeAdapterNewInstance);
     //}
-    return foundation::library::_AdapterHostResolverBase::_QuerCcreateAdapterInterfaceImpl(pOuter, pInner, iid, iidHostType, ppModeAdapterNewInstance);
+    return foundation::library::_AdapterHostResolverBase::_QueryCreateAdapterInterfaceImpl(pOuter, pInner, iid, iidHostType, ppModeAdapterNewInstance);
 }
 
 

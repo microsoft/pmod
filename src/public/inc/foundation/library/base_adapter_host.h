@@ -29,7 +29,7 @@ namespace foundation
         class _AdapterHostResolverBase
         {
         public:
-            static HRESULT _QuerCcreateAdapterInterfaceImpl(
+            static HRESULT _QueryCreateAdapterInterfaceImpl(
                 _In_ foundation::IInspectable* pOuter,
                 _In_ foundation::IInspectable* pInner,
                 REFIID iid,
@@ -107,7 +107,7 @@ namespace foundation
                 TAdapterHostResolver *pThis = this->GetAdapterHostResolver();
                 IID iidHostInterface = pThis->_GetHostInterfaceType(iid);
 
-                HRESULT hr = pThis->_QuerCcreateAdapterInterfaceImpl(
+                HRESULT hr = pThis->_QueryCreateAdapterInterfaceImpl(
                     pOuter,
                     pInner,
                     iid,

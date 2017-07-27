@@ -130,7 +130,7 @@ public:
     }
 
 
-    HRESULT _QuerCcreateAdapterInterfaceImpl(
+    HRESULT _QueryCreateAdapterInterfaceImpl(
         foundation::IInspectable* pOuter,
         foundation::IInspectable* pInner,
         REFIID iid,
@@ -191,7 +191,7 @@ public:
 
         if(hr == E_NOINTERFACE)
         {
-            return this->_BaseType::_QuerCcreateAdapterInterfaceImpl(
+            return this->_BaseType::_QueryCreateAdapterInterfaceImpl(
                 pOuter,
                 pInner,
                 iid,

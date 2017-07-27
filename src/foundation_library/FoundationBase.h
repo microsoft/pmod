@@ -335,14 +335,14 @@ protected:
     {
     }
 
-    virtual HRESULT _QuerCcreateAdapterInterfaceImpl(
+    virtual HRESULT _QueryCreateAdapterInterfaceImpl(
         foundation::IInspectable* pOuter,
         foundation::IInspectable* pInner,
         REFIID iid,
         REFIID iidHostType,
         foundation::IInspectable **ppModeAdapterNewInstance)
     {
-        return foundation::library::_AdapterHostResolverBase::_QuerCcreateAdapterInterfaceImpl(
+        return foundation::library::_AdapterHostResolverBase::_QueryCreateAdapterInterfaceImpl(
             pOuter,
             pInner,
             iid,
