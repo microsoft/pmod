@@ -10,7 +10,17 @@
 
 #if defined(TRACK_FOUNDATION_ENABLED) && defined(DEBUG)
 
-template<> bool _FoundationTrackerInstance<CFoundationTracker>::_isTrackEnabled = true;
+bool _FoundationTrackerInstance<CFoundationTracker>::_isTrackEnabled = true;
+template<> void _FoundationTrackerInstance<CFoundationTracker>::SetIsTrackEnabled(bool value)
+{
+    _isTrackEnabled = value;
+}
+
+template<> bool _FoundationTrackerInstance<CFoundationTracker>::IsTrackEnabled()
+{
+    return _isTrackEnabled;
+}
+
 
 EXTERN_C FOUNDATION_API IFoundationTracker *STDAPICALLTYPE GetFoundationTracker()
 {

@@ -9,8 +9,12 @@ LOCAL_SRC_FILES := ../../../../../bin/obj/android_ndk/pmod_lib/jannson/local/$(T
 include $(PREBUILT_STATIC_LIBRARY)
 
 # pmod prebuilt shared library
-include $(LOCAL_PATH)/pmod/Android.mk
+include $(CLEAR_VARS)
+LOCAL_MODULE := pmod-prebuilt
+LOCAL_SRC_FILES := ../../../../../bin/Product/android_ndk/pmod/libs/$(TARGET_ARCH_ABI)/libpmod.so
+include $(PREBUILT_SHARED_LIBRARY)
 
+# define local build info
 LOCAL_PATH := $(MY_LOCAL_PATH)
 include $(CLEAR_VARS)
 

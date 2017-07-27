@@ -132,14 +132,8 @@ public:
     {
         return InternalGetInstance().GetCountTrackedInstance();
     }
-    static void SetIsTrackEnabled(bool value)
-    {
-        _isTrackEnabled = value;
-    }
-    static bool IsTrackEnabled()
-    {
-        return _isTrackEnabled;
-    }
+    static void SetIsTrackEnabled(bool value);
+    static bool IsTrackEnabled();
 private:
     static bool _isTrackEnabled;
     inline static FoundationTracker& InternalGetInstance()

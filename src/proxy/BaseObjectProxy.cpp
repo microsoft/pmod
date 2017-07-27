@@ -81,6 +81,15 @@ bool CBaseProxyTrackerTracker::is_trace_count_enabled()
 
 template<> bool _FoundationTrackerInstance<CBaseProxyTrackerTracker>::_isTrackEnabled = true;
 
+template<> void _FoundationTrackerInstance<CBaseProxyTrackerTracker>::SetIsTrackEnabled(bool value)
+{
+    _isTrackEnabled = value;
+}
+
+template<> bool _FoundationTrackerInstance<CBaseProxyTrackerTracker>::IsTrackEnabled()
+{
+    return _isTrackEnabled;
+}
 #endif
 
 static void GetProxyRuntimeClass(
