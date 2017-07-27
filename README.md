@@ -4,16 +4,16 @@ The pmod SDK is a Microsoft project to allow native code to be used on different
 
 ## Getting Started
 
-For Windows platform open the VS 2017 pmod.sln solution to browse the code and build. For iOS/MacOSX there are XCode projects that facilitate the browsing and build. For Android you can use the Android SDK tools or VS 2017 to build the binaries, make sure you add the proper workloads to build C++ cross platform and UWP.
+For Windows platform open the VS 2017 pmod.sln solution to browse the code and build the runtime components. For iOS/MacOSX there are XCode projects that facilitate the browsing and build. For Android you can use the Android SDK tools or VS 2017 to build the binaries, make sure you add the proper workloads to build C++ cross platform and UWP.
 
 ## NuGet packages
 
 For Windows there is support for NuGet packages for most of the components being build. Your VS 2017 projects can add a reference to the packages (both native and managed) usign this NuGet feed: [my pmod](https://www.myget.org/F/pmod/api/v3/index.json)
 
 ## Building the samples
-Running and building the sample is the best way to evaluate the SDK. The repo contains two supported samples
+Running and building the sample is the best way to evaluate the SDK. The repo contains two supported samples:
 * DemoApp: shows and observable collection with items and connect it to different UI components in XAML, Cocoa and Android activities
-* Movies: Use [MSFT Cpp REST SDK](https://github.com/Microsoft/cpprestsdk) library to connect to a REST service and display mvoies being played.
+* Movies: Use [MSFT Cpp REST SDK](https://github.com/Microsoft/cpprestsdk) library to connect to a REST service and display movies being played in theaters.
 
 
 ### Quick Links
