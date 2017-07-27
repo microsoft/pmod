@@ -58,6 +58,10 @@ BEGIN_DECLARE_CLASS(class, _CObjectDispatchInfoBase, foundation::IUnknown, FOUND
 
     void AddMethodInfoInternal(foundation::IMethodInfo *pMethodInfo);
 
+    // Note: next methods are virtual only to allow beign invoked by othre separate dll's 
+    // Attempt to retrieve a Method Info
+    virtual bool TryGetMethodInfoById(UINT32 methodId, foundation::IMethodInfo **ppMethodInfo);
+
 protected:
     friend class CObjectDispatch;
 

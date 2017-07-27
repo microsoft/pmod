@@ -29,6 +29,33 @@ protected:
 
 };
 
+class MethodSupportImpl : public TestModel::_FastMethodSupport<>
+{
+protected:
+    HRESULT VoidEmptyInternal() override
+    {
+        return S_OK;
+    }
+};
+
+class MethodBaseImpl : public TestModel::_FastMethodBase<>
+{
+protected:
+    HRESULT Method1Internal() override
+    {
+        return S_OK;
+    }
+};
+
+class MethodDerivedImpl : public TestModel::_FastMethodDerived<MethodBaseImpl>
+{
+protected:
+    HRESULT Method2Internal() override
+    {
+        return S_OK;
+    }
+};
+
 class CFastModelTest : public CUnitTestBase
 {
 protected:
@@ -60,11 +87,42 @@ protected:
         ctl::inspectable::ReleaseInterface(pCommandTypes);
     }
 
+    void TestMethodSupport()
+    {
+        MethodSupportImpl *pMethodSupportImpl;
+        UT_VERIFY_HR(foundation::library::CreateObjectClass(
+            TestModel::MethodSupport::IIDType,
+            pmod::library::ObservableObjectOptions::None,
+            &pMethodSupportImpl));
+
+        foundation::InspectablePtr resultPtr;
+        UT_VERIFY_HR(pMethodSupportImpl->InvokeMethod(TestModel::MethodSupport::Method_VoidEmpty, 0, nullptr, resultPtr.GetAddressOf()));
+        ctl::inspectable::ReleaseInterface(pMethodSupportImpl);
+    }
+
+    void TestMethodDerived()
+    {
+        MethodDerivedImpl *pMethodDerivedImpl;
+        UT_VERIFY_HR(foundation::library::CreateObjectClass(
+            TestModel::MethodDerived::IIDType,
+            pmod::library::ObservableObjectOptions::None,
+            &pMethodDerivedImpl));
+
+        pmod::ObservableObjectPtr<> ptr;
+        UT_VERIFY_HR(QueryInterface(pMethodDerivedImpl->CastToInspectable(), ptr.GetAddressOf()));
+
+        foundation::InspectablePtr resultPtr;
+        UT_VERIFY_HR(ptr->InvokeMethod(TestModel::MethodBase::Method_Method1, 0, nullptr, resultPtr.ReleaseAndGetAddressOf()));
+        UT_VERIFY_HR(ptr->InvokeMethod(TestModel::MethodDerived::Method_Method2, 0, nullptr, resultPtr.ReleaseAndGetAddressOf()));
+
+        ctl::inspectable::ReleaseInterface(pMethodDerivedImpl);
+    }
 public:
 	BeginTestMethodMap(CFastModelTest)
         TestMethod(TestFastModel)
-	EndTestMethodMap()
-
+        TestMethod(TestMethodSupport)
+        TestMethod(TestMethodDerived)
+        EndTestMethodMap()
 };
 ImplementTestClass(CFastModelTest);
 

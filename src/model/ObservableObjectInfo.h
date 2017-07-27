@@ -81,9 +81,6 @@ private:
     // Attempt to retrieve an Event Info
     virtual bool TryGetEventInfoById(UINT32 eventId,pmod::IEventInfo **ppEventInfo);
 
-    // Attempt to retrieve a Method Info
-    virtual bool TryGetMethodInfoById(UINT32 methodId, foundation::IMethodInfo **ppMethodInfo);
-
     struct _FuncProperty
     {
         virtual bool NextProperty(CObservableObjectInfo *pThis,CPropertyInfo *pPropertyInfo) = 0;

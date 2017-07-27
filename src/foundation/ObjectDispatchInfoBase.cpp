@@ -334,3 +334,23 @@ HRESULT _CObjectDispatchInfoBase::AddMethodInfo(
 
     return S_OK;
 }
+
+bool _CObjectDispatchInfoBase::TryGetMethodInfoById(UINT32 methodId, foundation::IMethodInfo **ppMethodInfo)
+{
+    HRESULT hr = this->GetMethodByIdInternal(methodId, ppMethodInfo);
+    if (FAILED(hr))
+    {
+        return false;
+    }
+    if (hr == S_OK)
+    {
+        return true;
+    }
+    _CObjectDispatchInfoBase *baseType = GetBaseTypeAs<_CObjectDispatchInfoBase>();
+
+    if (baseType)
+    {
+        return baseType->TryGetMethodInfoById(methodId, ppMethodInfo);
+    }
+    return false;
+}

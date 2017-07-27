@@ -256,26 +256,6 @@ bool CObservableObjectInfo::TryGetEventInfoById(UINT32 eventId,pmod::IEventInfo 
     return false;
 }
 
-bool CObservableObjectInfo::TryGetMethodInfoById(UINT32 methodId,foundation::IMethodInfo **ppMethodInfo)
-{
-    HRESULT hr = this->GetMethodByIdInternal(methodId,ppMethodInfo);
-    if (FAILED(hr))
-    {
-        return false;
-    }
-    if(hr == S_OK)
-    {
-        return true;
-    }
-    CObservableObjectInfo *baseType = GetBaseType();
-
-    if(baseType)
-    {
-        return baseType->TryGetMethodInfoById(methodId,ppMethodInfo);
-    }
-    return false;
-}
-
 void CObservableObjectInfo::NextPropertyModelInfo(_FuncProperty& _Func)
 {
     CObservableObjectInfo *baseType = GetBaseType();
