@@ -78,7 +78,7 @@ public:
             IFHR_ASSERT(foundation::ctl::CreateInstanceWithInitialize(&m_pCritsec));
         }
         // Weak reference source support
-        this->_Initialize_composable_weak_reference_source(
+        this->_InitializeComposableWeakReferenceSource(
             !isFreeThreaded,
             IsOptionEnabled(modelImpl->m_options, foundation::library::FoundationClassOptions_ComposedWeakReference)
             );

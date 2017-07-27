@@ -61,7 +61,7 @@ namespace foundation
 {
     namespace library
     {
-        inline library::IMailboxDispatcherFactory *get_mailbox_dispatcher_factory()
+        inline library::IMailboxDispatcherFactory *GetMailboxDispatcherFactory()
         {
             return GetFoundationLibraryFactory<library::IMailboxDispatcherFactory>(U("foundation.MailboxDispatcher"));
         }
@@ -75,7 +75,7 @@ namespace foundation
 
             InspectablePtr spInstance;
 
-            IFR_ASSERT(get_mailbox_dispatcher_factory()->CreateMailboxDispatacher(
+            IFR_ASSERT(GetMailboxDispatcherFactory()->CreateMailboxDispatacher(
                 parameters,
                 nullptr,
                 spInstance.GetAddressOf()));

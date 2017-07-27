@@ -166,7 +166,7 @@ protected:
     {
         IFCPTR_ASSERT(_pitems);
         T value_t;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(value, value_t));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(value, value_t));
         (*_pitems)[index] = value_t;
         return S_OK;
     }
@@ -175,7 +175,7 @@ protected:
     {
         IFCPTR_ASSERT(_pitems);
         T value_t;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(value, value_t));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(value, value_t));
 
         _pitems->push_back(value_t);
         return S_OK;
@@ -185,7 +185,7 @@ protected:
     {
         IFCPTR_ASSERT(_pitems);
         T value_t;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(value, value_t));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(value, value_t));
 
         _pitems->insert(_pitems->begin() + index, value_t);
         return S_OK;
@@ -210,7 +210,7 @@ protected:
     {
         IFCPTR_ASSERT(_pitems);
         T value;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(pValue, value));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(pValue, value));
 
         typename std::vector<T>::iterator iter = std::lower_bound(
             _pitems->begin(),
@@ -425,7 +425,7 @@ protected:
     {
         IFCPTR_ASSERT(_pitems);
         T value_t;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(value, value_t));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(value, value_t));
 
         auto result =_pitems->insert(value_t);
         HRESULT hr = result.second ? S_OK : S_FALSE;
@@ -443,7 +443,7 @@ protected:
     {
         IFCPTR_ASSERT(_pitems);
         T value_t;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(value, value_t));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(value, value_t));
 
         return _pitems->erase(value_t) ? S_OK:S_FALSE;
     }
@@ -477,7 +477,7 @@ protected:
         foundation_assert(pIndex);
 
         T value_t;
-        IFR_ASSERT(_Unbox_adapter_t::_From_inspectable_value(value, value_t));
+        IFR_ASSERT(_Unbox_adapter_t::_FromInspectableValue(value, value_t));
 
 
         typename std::set<T>::const_iterator iter = _pitems->find(value_t);

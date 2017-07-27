@@ -148,7 +148,7 @@ HRESULT BaseObjectProxy::_Initialize(CProxyObjectFactory *pProxyObjectFactory, b
 
     foundation_assert(pProxyObjectFactory);
     // Weak reference source support
-    this->_Initialize_composable_weak_reference_source(false,false);
+    this->_InitializeComposableWeakReferenceSource(false,false);
 
     m_pProxyObjectFactory = pProxyObjectFactory;
     // Add Factory Class Ref

@@ -71,7 +71,7 @@ STDMETHODIMP MoAsyncOperationFactory::CreateInstanceWithType(
     param.m_options = (foundation::AsyncOperationOptions)modelOptions;
 
     foundation::InspectablePtr spInner;
-    hr = foundation::library::get_async_operation_factory()->
+    hr = foundation::library::GetAsyncOperationFactory()->
         CreateAsyncOperation(&param,pOuter,spInner.GetAddressOf());
 
     IFHR(hr);

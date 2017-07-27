@@ -238,7 +238,7 @@ namespace pmod {
                 params.m_iid_type = iidType;
                 params.m_p_delegate = this;
                 params.m_options = foundation::library::ToDelegateWeakRefOptions(options);
-                IFR_ASSERT(foundation::library::get_async_operation_factory()->CreateAsyncOperation(
+                IFR_ASSERT(foundation::library::GetAsyncOperationFactory()->CreateAsyncOperation(
                     &params,
                     pOuter,
                     this->GetInnerAddressOf()));

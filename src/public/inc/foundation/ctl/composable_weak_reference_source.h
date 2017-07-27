@@ -112,7 +112,7 @@ namespace foundation {
             public _ComposableWeakRefSourceBaseType
         {
         public:
-            HRESULT _Initialize_composable_weak_reference_source(
+            HRESULT _InitializeComposableWeakReferenceSource(
                 bool isComposedSafe,
                 bool isComposedWeakRef
                 )

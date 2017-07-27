@@ -15,7 +15,7 @@ namespace foundation {
         struct _UnboxAdapter
         {
             template <class T>
-            static HRESULT _From_inspectable_value(foundation::IInspectable *pValue,T& value)
+            static HRESULT _FromInspectableValue(foundation::IInspectable *pValue,T& value)
             {
                 return foundation::GetValue(pValue,value);
             }
@@ -23,7 +23,7 @@ namespace foundation {
         struct _NoUnboxAdapter
         {
             template <class T>
-            static HRESULT _From_inspectable_value(foundation::IInspectable *pValue,T& value)
+            static HRESULT _FromInspectableValue(foundation::IInspectable *pValue,T& value)
             {
                 foundation_assert(false);
                 return E_INVALIDARG;
@@ -35,7 +35,7 @@ namespace foundation {
         struct _UnboxComClassPtrAdapter
         {
             template <class com_ptr_class_t>
-            static HRESULT _From_inspectable_value(foundation::IInspectable *pValue,com_ptr_class_t& value)
+            static HRESULT _FromInspectableValue(foundation::IInspectable *pValue,com_ptr_class_t& value)
             {
                 foundation::ComPtr<TInterface> ptr;
                 IFR_ASSERT(foundation::QueryInterfaceIf(pValue, ptr.GetAddressOf()));
@@ -52,7 +52,7 @@ namespace foundation {
         struct _UnboxComBaseAdapter
         {
             template <class com_base_ptr>
-            static HRESULT _From_inspectable_value(foundation::IInspectable *pValue, com_base_ptr& value)
+            static HRESULT _FromInspectableValue(foundation::IInspectable *pValue, com_base_ptr& value)
             {
                 foundation::ComPtr<TInterface> ptr;
                 IFR_ASSERT(foundation::QueryInterfaceIf(pValue, ptr.GetAddressOf()));

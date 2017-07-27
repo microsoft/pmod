@@ -23,7 +23,7 @@ namespace foundation
 
     namespace library
     {
-        inline library::IAsyncOperationFactory *get_async_operation_factory()
+        inline library::IAsyncOperationFactory *GetAsyncOperationFactory()
         {
             return GetFoundationLibraryFactory<library::IAsyncOperationFactory>(U("foundation.AsyncOperation"));
         }
@@ -41,7 +41,7 @@ namespace foundation
 
             ctor_params.m_iid_type = iidType;
             ctor_params.m_options = (AsyncOperationOptions)(static_cast<UINT32>(options) | library::FoundationClassOptions_IsFreeThreadApartment);
-            IFR_ASSERT(get_async_operation_factory()->CreateAsyncOperation(
+            IFR_ASSERT(GetAsyncOperationFactory()->CreateAsyncOperation(
                 &ctor_params,
                 nullptr,
                 spInstance.GetAddressOf()));
