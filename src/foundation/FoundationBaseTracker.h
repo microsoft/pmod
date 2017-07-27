@@ -55,14 +55,14 @@ public:
     {
         CFoundationLock<CCriticalSection> critSecLock(m_critsec);
         m_ModelTrackerSet.insert(modelTracker);
-        trace_count_objects(true);
+        TraceCountObjects(true);
     }
 
     void RemoveInstance(IFoundationTrackerInstance *modelTracker)  override
     {
         CFoundationLock<CCriticalSection> critSecLock(m_critsec);
         m_ModelTrackerSet.erase(modelTracker);
-        trace_count_objects(false);
+        TraceCountObjects(false);
     }
 
     void DumpTrackedInstance()
@@ -90,11 +90,11 @@ public:
         return m_ModelTrackerSet.size();
     }
 protected:
-    virtual bool is_trace_count_enabled() = 0;
+    virtual bool IsTraceCountEnabled() = 0;
 private:
-    void trace_count_objects(bool add)
+    void TraceCountObjects(bool add)
     {
-        if (is_trace_count_enabled())
+        if (IsTraceCountEnabled())
         {
             _traceMessage(U("%s ProcessId=%ld %s Count=%d\n"),
                 _track_id, 

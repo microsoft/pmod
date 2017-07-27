@@ -74,7 +74,7 @@ CBaseProxyTrackerTracker::~CBaseProxyTrackerTracker()
     SetIsTrackEnabled(false);
 }
 
-bool CBaseProxyTrackerTracker::is_trace_count_enabled()
+bool CBaseProxyTrackerTracker::IsTraceCountEnabled()
 {
     return foundation::debug_util::IsOptionsFlag(0x0100 /*_OptionTrackProxyCountObjects*/);
 }

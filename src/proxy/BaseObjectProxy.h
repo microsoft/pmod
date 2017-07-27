@@ -75,7 +75,7 @@ private:
     CBaseProxyTrackerTracker();
         ~CBaseProxyTrackerTracker();
 protected:
-    bool is_trace_count_enabled() override;
+    bool IsTraceCountEnabled() override;
 };
 #endif
 

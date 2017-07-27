@@ -36,7 +36,7 @@ private:
         SetIsTrackEnabled(false);
     }
 protected:
-    bool is_trace_count_enabled() override
+    bool IsTraceCountEnabled() override
     {
         return (GetDebugUtilOptionsFlagsInternal() & foundation::library::_OptionTrackCountObjects) != 0;
     }
