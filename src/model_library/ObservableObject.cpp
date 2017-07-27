@@ -190,7 +190,7 @@ const CLogCategory* CPropertyModelLogFactory::GetLogCategory()
             foundation::Foundation_CategoryEnum::TypeId,
             foundation::Object_CategoryEnum::TypeId,
             ObjectNode_CategoryEnum::TypeId,
-            PropertyModel_CategoryEnum::TypeId,
+            foundation::ObjectDispatch_CategoryEnum ::TypeId,
             -1);
     });
 }
@@ -669,7 +669,7 @@ HRESULT CObservableObject::GetPropertyInternal(
 
     // logging support for 'GetProperty Call'
     if (IsLevelEnabled(foundation::LoggingLevel::Trace,
-            PropertyModel_Category_GetProperty_Id))
+        foundation::ObjectDispatch_Category_GetProperty_Id))
     {
         LogGetProperty((UINT32)this->m_UniqueId, propertyId);
     }
@@ -732,7 +732,7 @@ STDMETHODIMP CObservableObject::InvokeMethod(UINT32 methodId,_In_ UINT32 size,fo
     {
         if(!GetPropertyModelInfoClass()->TryGetMethodInfoById(methodId,&pMethodInfo))
         {
-            return pmod::Errors::E_METHOD_NOT_DEFINED;
+            return foundation::Errors::E_METHOD_NOT_DEFINED;
         }
 
         // verify arguments
@@ -914,7 +914,7 @@ HRESULT CObservableObject::InvokeInternal(
 
     // logging support for 'OnInvoke Call' 
     if (IsLevelEnabled(foundation::LoggingLevel::Info,
-            PropertyModel_Category_Invoke_Id))
+            foundation::ObjectDispatch_Category_Invoke_Id))
     {
         LogInvokeMethod((UINT32)this->m_UniqueId, pMethodInfo, methodId, size, parameters);
     }
@@ -1298,7 +1298,7 @@ HRESULT CObservableObject::InternalSetProperty(
 
     // logging support for 'SetProperty Call'
     if (IsLevelEnabled(foundation::LoggingLevel::Trace,
-            PropertyModel_Category_SetProperty_Id))
+        foundation::ObjectDispatch_Category_SetProperty_Id))
     {
         LogSetProperty((UINT32)this->m_UniqueId, propertyId);
     }
@@ -2168,18 +2168,18 @@ void CObservableObject::LogInvokeMethod(
         foundation::logger_util::GetFoundationLogger(),
         this->AsInspectable(),
         foundation::LoggingLevel::Info,
-        pmod::PropertyModel_Category_Invoke_Id,
+        foundation::ObjectDispatch_Category_Invoke_Id,
         CPropertyModelLogFactory::GetLogCategory()->AsInterface(),
-        pmod::PropertyModelInvoke_LogRecordEnum::TypeId,
+        foundation::ObjectDispatchInvoke_LogRecordEnum::TypeId,
         // Unique Id
         pmod::Model_LogRecord::UniqueId,
         foundation::pv_util::CreateValue(uniqueId).Get(),
         // Method Id
-        pmod::PropertyModelInvoke_LogRecord::MethodId,
+        foundation::ObjectDispatchInvoke_LogRecord::MethodId,
         foundation::pv_util::CreateValue(methodId).Get(),
-        pmod::PropertyModelInvoke_LogRecord::ParamSize,
+        foundation::ObjectDispatchInvoke_LogRecord::ParamSize,
         foundation::pv_util::CreateValue(size).Get(),
-        pmod::PropertyModelInvoke_LogRecord::Parameters,
+        foundation::ObjectDispatchInvoke_LogRecord::Parameters,
         foundation::pv_util::CreateValue(size, parameters).Get(),
         -1);
 }
@@ -2192,14 +2192,14 @@ void CObservableObject::LogGetProperty(
         foundation::logger_util::GetFoundationLogger(),
         this->AsInspectable(),
         foundation::LoggingLevel::Trace,
-        pmod::PropertyModel_Category_GetProperty_Id,
+        foundation::ObjectDispatch_Category_GetProperty_Id,
         CPropertyModelLogFactory::GetLogCategory()->AsInterface(),
-        pmod::PropertyModelGetProperty_LogRecordEnum::TypeId,
+        foundation::ObjectDispatchGetProperty_LogRecordEnum::TypeId,
         // Unique Id
         pmod::Model_LogRecord::UniqueId,
         foundation::pv_util::CreateValue(uniqueId).Get(),
         // property id
-        pmod::PropertyModelGetProperty_LogRecord::PropertyId,
+        foundation::ObjectDispatchGetProperty_LogRecord::PropertyId,
         foundation::pv_util::CreateValue((UINT32)propertyId).Get(),
         -1);
 }
@@ -2212,14 +2212,14 @@ void CObservableObject::LogSetProperty(
         foundation::logger_util::GetFoundationLogger(),
         this->AsInspectable(),
         foundation::LoggingLevel::Trace,
-        pmod::PropertyModel_Category_SetProperty_Id,
+        foundation::ObjectDispatch_Category_SetProperty_Id,
         CPropertyModelLogFactory::GetLogCategory()->AsInterface(),
-        pmod::PropertyModelSetProperty_LogRecordEnum::TypeId,
+        foundation::ObjectDispatchSetProperty_LogRecordEnum::TypeId,
         // Unique Id
         pmod::Model_LogRecord::UniqueId,
         foundation::pv_util::CreateValue(uniqueId).Get(),
         // property id
-        pmod::PropertyModelSetProperty_LogRecord::PropertyId,
+        foundation::ObjectDispatchSetProperty_LogRecord::PropertyId,
         foundation::pv_util::CreateValue((UINT32)propertyId).Get(),
         -1);
 }

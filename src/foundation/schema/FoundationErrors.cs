@@ -40,7 +40,7 @@ namespace foundation
         E_TYPE_INFO_ALREADY_REGISTERED     = 0x80f60301L,
         E_TYPE_INFO_ENUM_NOT_REGISTERED    = 0x80f60302L,
 
-// async operation error types
+// Async operation error types
         E_ASYNC_OPERATION_CANCELED         = 0x80f60305L,
         E_ASYNC_OPERATION_TIMEOUT          = 0x80f60306L,
 

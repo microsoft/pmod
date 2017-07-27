@@ -75,6 +75,14 @@ namespace foundation
         FireEvent,
         IsObserved
     }
+    public enum ObjectDispatch_Category
+    {
+        Invoke,
+        GetProperty,
+        SetProperty
+    }
+
+
     /// <summary>
     /// Root.Foundation.AsyncOperation
     /// </summary>
@@ -135,6 +143,29 @@ namespace foundation
         ObjectId,
         ParameterName,
         ParameterValue,
+    }
+
+
+    [EnumBaseType(BaseType = typeof(Object_LogRecord))]
+    public enum ObjectDispatchInvoke_LogRecord
+    {
+        Parameters,
+        MethodId,
+        MethodInfo,
+        ParamSize,
+        Result
+    }
+
+    [EnumBaseType(BaseType = typeof(Object_LogRecord))]
+    public enum ObjectDispatchGetProperty_LogRecord
+    {
+        PropertyId,
+    }
+
+    [EnumBaseType(BaseType = typeof(Object_LogRecord))]
+    public enum ObjectDispatchSetProperty_LogRecord
+    {
+        PropertyId,
     }
 
     /// <summary>

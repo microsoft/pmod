@@ -6,7 +6,7 @@
 ****/
 using System;
 
-namespace propertymodelcore
+namespace pmod
 {
     public enum Errors
     {

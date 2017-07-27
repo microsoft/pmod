@@ -12,7 +12,7 @@
 #include <foundation/library/foundation_lib_api.h>
 
 
-namespace foundation { 
+namespace foundation {
 
     struct EnumTypeInfo;
 
@@ -78,12 +78,23 @@ namespace foundation {
     const UINT32 Object_Category_FireEvent_Id = 0x1060002;
     const UINT32 Object_Category_IsObserved_Id = 0x1060003;
 
+	enum class ObjectDispatch_Category
+	{
+		Invoke = 0,
+		GetProperty = 1,
+		SetProperty = 2,
+	};
+
+    const UINT32 ObjectDispatch_Category_Invoke_Id = 0x1070000;
+    const UINT32 ObjectDispatch_Category_GetProperty_Id = 0x1070001;
+    const UINT32 ObjectDispatch_Category_SetProperty_Id = 0x1070002;
+
 	enum class AsyncOperation_Category
 	{
 		SetCompleted = 10,
 	};
 
-    const UINT32 AsyncOperation_Category_SetCompleted_Id = 0x107000a;
+    const UINT32 AsyncOperation_Category_SetCompleted_Id = 0x108000a;
 
 	enum class Object_LogRecord
 	{
@@ -91,15 +102,15 @@ namespace foundation {
 		TypeId = 1,
 	};
 
-    const UINT32 Object_LogRecord_UniqueId_Id = 0x1080000;
-    const UINT32 Object_LogRecord_TypeId_Id = 0x1080001;
+    const UINT32 Object_LogRecord_UniqueId_Id = 0x1090000;
+    const UINT32 Object_LogRecord_TypeId_Id = 0x1090001;
 
 	enum class ObjectInitialize_LogRecord
 	{
 		Options = 2,
 	};
 
-    const UINT32 ObjectInitialize_LogRecord_Options_Id = 0x1090002;
+    const UINT32 ObjectInitialize_LogRecord_Options_Id = 0x10a0002;
 
 	enum class ObjectFinalRelease_LogRecord
 	{
@@ -111,14 +122,14 @@ namespace foundation {
 		EventArgs = 2,
 	};
 
-    const UINT32 ObjectFireEvent_LogRecord_EventArgs_Id = 0x10b0002;
+    const UINT32 ObjectFireEvent_LogRecord_EventArgs_Id = 0x10c0002;
 
 	enum class ObjectIsObserved_LogRecord
 	{
 		Observed = 2,
 	};
 
-    const UINT32 ObjectIsObserved_LogRecord_Observed_Id = 0x10c0002;
+    const UINT32 ObjectIsObserved_LogRecord_Observed_Id = 0x10d0002;
 
 	enum class ObjectTrace_LogRecord
 	{
@@ -127,9 +138,38 @@ namespace foundation {
 		ParameterValue = 2,
 	};
 
-    const UINT32 ObjectTrace_LogRecord_ObjectId_Id = 0x10d0000;
-    const UINT32 ObjectTrace_LogRecord_ParameterName_Id = 0x10d0001;
-    const UINT32 ObjectTrace_LogRecord_ParameterValue_Id = 0x10d0002;
+    const UINT32 ObjectTrace_LogRecord_ObjectId_Id = 0x10e0000;
+    const UINT32 ObjectTrace_LogRecord_ParameterName_Id = 0x10e0001;
+    const UINT32 ObjectTrace_LogRecord_ParameterValue_Id = 0x10e0002;
+
+	enum class ObjectDispatchInvoke_LogRecord
+	{
+		Parameters = 2,
+		MethodId = 3,
+		MethodInfo = 4,
+		ParamSize = 5,
+		Result = 6,
+	};
+
+    const UINT32 ObjectDispatchInvoke_LogRecord_Parameters_Id = 0x10f0002;
+    const UINT32 ObjectDispatchInvoke_LogRecord_MethodId_Id = 0x10f0003;
+    const UINT32 ObjectDispatchInvoke_LogRecord_MethodInfo_Id = 0x10f0004;
+    const UINT32 ObjectDispatchInvoke_LogRecord_ParamSize_Id = 0x10f0005;
+    const UINT32 ObjectDispatchInvoke_LogRecord_Result_Id = 0x10f0006;
+
+	enum class ObjectDispatchGetProperty_LogRecord
+	{
+		PropertyId = 2,
+	};
+
+    const UINT32 ObjectDispatchGetProperty_LogRecord_PropertyId_Id = 0x1100002;
+
+	enum class ObjectDispatchSetProperty_LogRecord
+	{
+		PropertyId = 2,
+	};
+
+    const UINT32 ObjectDispatchSetProperty_LogRecord_PropertyId_Id = 0x1110002;
 
 	enum class AsyncOperationSetCompleted_LogRecord
 	{
@@ -138,16 +178,16 @@ namespace foundation {
 		Result = 2,
 	};
 
-    const UINT32 AsyncOperationSetCompleted_LogRecord_UniqueId_Id = 0x10e0000;
-    const UINT32 AsyncOperationSetCompleted_LogRecord_HResult_Id = 0x10e0001;
-    const UINT32 AsyncOperationSetCompleted_LogRecord_Result_Id = 0x10e0002;
+    const UINT32 AsyncOperationSetCompleted_LogRecord_UniqueId_Id = 0x1120000;
+    const UINT32 AsyncOperationSetCompleted_LogRecord_HResult_Id = 0x1120001;
+    const UINT32 AsyncOperationSetCompleted_LogRecord_Result_Id = 0x1120002;
 
 	enum class BaseEventArgs_LogRecord
 	{
 		TypeIID = 0,
 	};
 
-    const UINT32 BaseEventArgs_LogRecord_TypeIID_Id = 0x10f0000;
+    const UINT32 BaseEventArgs_LogRecord_TypeIID_Id = 0x1130000;
 
 	enum class ObjectFactory_Category
 	{
@@ -155,8 +195,8 @@ namespace foundation {
 		CreateObject = 1,
 	};
 
-    const UINT32 ObjectFactory_Category_RegisterObject_Id = 0x1100000;
-    const UINT32 ObjectFactory_Category_CreateObject_Id = 0x1100001;
+    const UINT32 ObjectFactory_Category_RegisterObject_Id = 0x1140000;
+    const UINT32 ObjectFactory_Category_CreateObject_Id = 0x1140001;
 
 	enum class ObjectFactory_LogRecord
 	{
@@ -164,8 +204,8 @@ namespace foundation {
 		Context = 1,
 	};
 
-    const UINT32 ObjectFactory_LogRecord_TypeIID_Id = 0x1110000;
-    const UINT32 ObjectFactory_LogRecord_Context_Id = 0x1110001;
+    const UINT32 ObjectFactory_LogRecord_TypeIID_Id = 0x1150000;
+    const UINT32 ObjectFactory_LogRecord_Context_Id = 0x1150001;
 
 
 	// uuid(3e202745-091d-63d8-e973-0cef24e0d2b4)
@@ -238,10 +278,20 @@ namespace foundation {
 		static const UINT32  Values[];
 	};
 
+	// uuid(09601b0c-de1e-7ef9-cb4f-62940425f55e)
+	struct ObjectDispatch_CategoryEnum
+	{
+		static const UINT32 TypeId = 0x107;
+		static FOUNDATION_LIB_API const IID IIDType;
+		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
+		static const LPCSTR_t Names[];
+		static const UINT32  Values[];
+	};
+
 	// uuid(942a85af-05cd-c073-3746-4ccf6412b41d)
 	struct AsyncOperation_CategoryEnum
 	{
-		static const UINT32 TypeId = 0x107;
+		static const UINT32 TypeId = 0x108;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -251,7 +301,7 @@ namespace foundation {
 	// uuid(c5a18d29-9d8c-0789-099e-4f968b44dfb7)
 	struct Object_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x108;
+		static const UINT32 TypeId = 0x109;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -261,7 +311,7 @@ namespace foundation {
 	// uuid(a1c01618-5a6f-e661-d58a-3132eab988ff)
 	struct ObjectInitialize_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x109;
+		static const UINT32 TypeId = 0x10a;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -271,7 +321,7 @@ namespace foundation {
 	// uuid(559b224d-8932-f41b-e7f2-3d445ae92463)
 	struct ObjectFinalRelease_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x10a;
+		static const UINT32 TypeId = 0x10b;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -281,7 +331,7 @@ namespace foundation {
 	// uuid(a4e9468e-b566-4952-8700-8c3bd1d300a9)
 	struct ObjectFireEvent_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x10b;
+		static const UINT32 TypeId = 0x10c;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -291,7 +341,7 @@ namespace foundation {
 	// uuid(ca8a0938-f8c3-62ae-143b-71b41a12c387)
 	struct ObjectIsObserved_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x10c;
+		static const UINT32 TypeId = 0x10d;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -301,7 +351,37 @@ namespace foundation {
 	// uuid(f515f064-df1c-1590-ea15-867d01f29633)
 	struct ObjectTrace_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x10d;
+		static const UINT32 TypeId = 0x10e;
+		static FOUNDATION_LIB_API const IID IIDType;
+		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
+		static const LPCSTR_t Names[];
+		static const UINT32  Values[];
+	};
+
+	// uuid(71659dbc-683c-6129-6df2-ace3efa77a49)
+	struct ObjectDispatchInvoke_LogRecordEnum
+	{
+		static const UINT32 TypeId = 0x10f;
+		static FOUNDATION_LIB_API const IID IIDType;
+		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
+		static const LPCSTR_t Names[];
+		static const UINT32  Values[];
+	};
+
+	// uuid(b029f013-760d-a244-1486-4d4c8c5fb60d)
+	struct ObjectDispatchGetProperty_LogRecordEnum
+	{
+		static const UINT32 TypeId = 0x110;
+		static FOUNDATION_LIB_API const IID IIDType;
+		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
+		static const LPCSTR_t Names[];
+		static const UINT32  Values[];
+	};
+
+	// uuid(3f4a2d6a-abd0-9e02-3b24-55c54a451930)
+	struct ObjectDispatchSetProperty_LogRecordEnum
+	{
+		static const UINT32 TypeId = 0x111;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -311,7 +391,7 @@ namespace foundation {
 	// uuid(fe208879-0386-b70d-d99a-58cb29c42d02)
 	struct AsyncOperationSetCompleted_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x10e;
+		static const UINT32 TypeId = 0x112;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -321,7 +401,7 @@ namespace foundation {
 	// uuid(2a98a20f-9b5d-5897-8752-f576f96e8937)
 	struct BaseEventArgs_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x10f;
+		static const UINT32 TypeId = 0x113;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -331,7 +411,7 @@ namespace foundation {
 	// uuid(7b5d44b2-83bc-c950-465b-80a576020190)
 	struct ObjectFactory_CategoryEnum
 	{
-		static const UINT32 TypeId = 0x110;
+		static const UINT32 TypeId = 0x114;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -341,7 +421,7 @@ namespace foundation {
 	// uuid(b60cbdc2-52cf-71b2-b24b-3aac5e4305ef)
 	struct ObjectFactory_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x111;
+		static const UINT32 TypeId = 0x115;
 		static FOUNDATION_LIB_API const IID IIDType;
 		static FOUNDATION_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];

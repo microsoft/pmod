@@ -119,46 +119,6 @@ namespace pmod {
 	};
 
 
-	enum class PropertyModel_Category
-	{
-		Invoke = 0,
-		GetProperty = 1,
-		SetProperty = 2,
-	};
-
-    const UINT32 PropertyModel_Category_Invoke_Id = 0x20b0000;
-    const UINT32 PropertyModel_Category_GetProperty_Id = 0x20b0001;
-    const UINT32 PropertyModel_Category_SetProperty_Id = 0x20b0002;
-
-	enum class PropertyModelInvoke_LogRecord
-	{
-		Parameters = 1,
-		MethodId = 2,
-		m_parameterName = 3,
-		ParamSize = 4,
-		Result = 5,
-	};
-
-    const UINT32 PropertyModelInvoke_LogRecord_Parameters_Id = 0x20c0001;
-    const UINT32 PropertyModelInvoke_LogRecord_MethodId_Id = 0x20c0002;
-    const UINT32 PropertyModelInvoke_LogRecord_MethodInfo_Id = 0x20c0003;
-    const UINT32 PropertyModelInvoke_LogRecord_ParamSize_Id = 0x20c0004;
-    const UINT32 PropertyModelInvoke_LogRecord_Result_Id = 0x20c0005;
-
-	enum class PropertyModelGetProperty_LogRecord
-	{
-		PropertyId = 1,
-	};
-
-    const UINT32 PropertyModelGetProperty_LogRecord_PropertyId_Id = 0x20d0001;
-
-	enum class PropertyModelSetProperty_LogRecord
-	{
-		PropertyId = 1,
-	};
-
-    const UINT32 PropertyModelSetProperty_LogRecord_PropertyId_Id = 0x20e0001;
-
 	enum class PropertyChangedEventArgs_LogRecord
 	{
 		PropertyId = 0,
@@ -166,9 +126,9 @@ namespace pmod {
 		NewValue = 2,
 	};
 
-    const UINT32 PropertyChangedEventArgs_LogRecord_PropertyId_Id = 0x20f0000;
-    const UINT32 PropertyChangedEventArgs_LogRecord_OldValue_Id = 0x20f0001;
-    const UINT32 PropertyChangedEventArgs_LogRecord_NewValue_Id = 0x20f0002;
+    const UINT32 PropertyChangedEventArgs_LogRecord_PropertyId_Id = 0x20b0000;
+    const UINT32 PropertyChangedEventArgs_LogRecord_OldValue_Id = 0x20b0001;
+    const UINT32 PropertyChangedEventArgs_LogRecord_NewValue_Id = 0x20b0002;
 
 	enum class EventModelEventArgs_LogRecord
 	{
@@ -176,8 +136,8 @@ namespace pmod {
 		EventArgs = 1,
 	};
 
-    const UINT32 EventModelEventArgs_LogRecord_EventId_Id = 0x2100000;
-    const UINT32 EventModelEventArgs_LogRecord_EventArgs_Id = 0x2100001;
+    const UINT32 EventModelEventArgs_LogRecord_EventId_Id = 0x20c0000;
+    const UINT32 EventModelEventArgs_LogRecord_EventArgs_Id = 0x20c0001;
 
 	enum class NotifyCollectionChangedEventArgs_LogRecord
 	{
@@ -186,9 +146,9 @@ namespace pmod {
 		NewStartingIndex = 2,
 	};
 
-    const UINT32 NotifyCollectionChangedEventArgs_LogRecord_Action_Id = 0x2110000;
-    const UINT32 NotifyCollectionChangedEventArgs_LogRecord_OldStartingIndex_Id = 0x2110001;
-    const UINT32 NotifyCollectionChangedEventArgs_LogRecord_NewStartingIndex_Id = 0x2110002;
+    const UINT32 NotifyCollectionChangedEventArgs_LogRecord_Action_Id = 0x20d0000;
+    const UINT32 NotifyCollectionChangedEventArgs_LogRecord_OldStartingIndex_Id = 0x20d0001;
+    const UINT32 NotifyCollectionChangedEventArgs_LogRecord_NewStartingIndex_Id = 0x20d0002;
 
 	enum class CanExecuteChangedEventArgs_LogRecord
 	{
@@ -196,8 +156,8 @@ namespace pmod {
 		NewState = 1,
 	};
 
-    const UINT32 CanExecuteChangedEventArgs_LogRecord_OldState_Id = 0x2120000;
-    const UINT32 CanExecuteChangedEventArgs_LogRecord_NewState_Id = 0x2120001;
+    const UINT32 CanExecuteChangedEventArgs_LogRecord_OldState_Id = 0x20e0000;
+    const UINT32 CanExecuteChangedEventArgs_LogRecord_NewState_Id = 0x20e0001;
 
 	enum class JsonProxyServer_Category
 	{
@@ -205,8 +165,8 @@ namespace pmod {
 		SendPluginResult = 1,
 	};
 
-    const UINT32 JsonProxyServer_Category_Execute_Id = 0x2130000;
-    const UINT32 JsonProxyServer_Category_SendPluginResult_Id = 0x2130001;
+    const UINT32 JsonProxyServer_Category_Execute_Id = 0x20f0000;
+    const UINT32 JsonProxyServer_Category_SendPluginResult_Id = 0x20f0001;
 
 	enum class JsonProxyServerExecute_LogRecord
 	{
@@ -215,9 +175,9 @@ namespace pmod {
 		JsonArgs = 2,
 	};
 
-    const UINT32 JsonProxyServerExecute_LogRecord_CallbackId_Id = 0x2140000;
-    const UINT32 JsonProxyServerExecute_LogRecord_Action_Id = 0x2140001;
-    const UINT32 JsonProxyServerExecute_LogRecord_JsonArgs_Id = 0x2140002;
+    const UINT32 JsonProxyServerExecute_LogRecord_CallbackId_Id = 0x2100000;
+    const UINT32 JsonProxyServerExecute_LogRecord_Action_Id = 0x2100001;
+    const UINT32 JsonProxyServerExecute_LogRecord_JsonArgs_Id = 0x2100002;
 
 	enum class JsonProxyServerSendResult_LogRecord
 	{
@@ -227,10 +187,10 @@ namespace pmod {
 		JsonEventArgs = 3,
 	};
 
-    const UINT32 JsonProxyServerSendResult_LogRecord_CallbackId_Id = 0x2150000;
-    const UINT32 JsonProxyServerSendResult_LogRecord_KeepCallback_Id = 0x2150001;
-    const UINT32 JsonProxyServerSendResult_LogRecord_HResult_Id = 0x2150002;
-    const UINT32 JsonProxyServerSendResult_LogRecord_JsonEventArgs_Id = 0x2150003;
+    const UINT32 JsonProxyServerSendResult_LogRecord_CallbackId_Id = 0x2110000;
+    const UINT32 JsonProxyServerSendResult_LogRecord_KeepCallback_Id = 0x2110001;
+    const UINT32 JsonProxyServerSendResult_LogRecord_HResult_Id = 0x2110002;
+    const UINT32 JsonProxyServerSendResult_LogRecord_JsonEventArgs_Id = 0x2110003;
 
 
 	// uuid(c993f9d8-7550-212d-9d3c-2a67d3336b79)
@@ -343,50 +303,10 @@ namespace pmod {
 		static const UINT32  Values[];
 	};
 
-	// uuid(c9e65f48-1fb4-f44f-40c2-3ebc2fe18bab)
-	struct PropertyModel_CategoryEnum
-	{
-		static const UINT32 TypeId = 0x20b;
-		static PMOD_LIB_API const IID IIDType;
-		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
-		static const LPCSTR_t Names[];
-		static const UINT32  Values[];
-	};
-
-	// uuid(33c87af3-0f9c-a27e-41b1-f59260f4dcba)
-	struct PropertyModelInvoke_LogRecordEnum
-	{
-		static const UINT32 TypeId = 0x20c;
-		static PMOD_LIB_API const IID IIDType;
-		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
-		static const LPCSTR_t Names[];
-		static const UINT32  Values[];
-	};
-
-	// uuid(a6db6a47-454b-86dd-cad7-b1553e0c5327)
-	struct PropertyModelGetProperty_LogRecordEnum
-	{
-		static const UINT32 TypeId = 0x20d;
-		static PMOD_LIB_API const IID IIDType;
-		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
-		static const LPCSTR_t Names[];
-		static const UINT32  Values[];
-	};
-
-	// uuid(5e3049a6-5c40-082c-0d27-05c41ac42f2a)
-	struct PropertyModelSetProperty_LogRecordEnum
-	{
-		static const UINT32 TypeId = 0x20e;
-		static PMOD_LIB_API const IID IIDType;
-		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
-		static const LPCSTR_t Names[];
-		static const UINT32  Values[];
-	};
-
 	// uuid(cb013216-e000-f071-9e14-510f47ed8227)
 	struct PropertyChangedEventArgs_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x20f;
+		static const UINT32 TypeId = 0x20b;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -396,7 +316,7 @@ namespace pmod {
 	// uuid(4b2e2cdd-17c3-296d-237a-ac54dfd65044)
 	struct EventModelEventArgs_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x210;
+		static const UINT32 TypeId = 0x20c;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -406,7 +326,7 @@ namespace pmod {
 	// uuid(749b85b3-7478-8a6b-2ad6-2e84bd5db5d2)
 	struct NotifyCollectionChangedEventArgs_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x211;
+		static const UINT32 TypeId = 0x20d;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -416,7 +336,7 @@ namespace pmod {
 	// uuid(ffcfaa80-921d-ff86-872f-c67d9585b2fa)
 	struct CanExecuteChangedEventArgs_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x212;
+		static const UINT32 TypeId = 0x20e;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -426,7 +346,7 @@ namespace pmod {
 	// uuid(6b7f2daa-a27d-b803-4a12-49a8c537598b)
 	struct JsonProxyServer_CategoryEnum
 	{
-		static const UINT32 TypeId = 0x213;
+		static const UINT32 TypeId = 0x20f;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -436,7 +356,7 @@ namespace pmod {
 	// uuid(fa6b5f6e-f083-926f-6827-0ac5ec9c1ca1)
 	struct JsonProxyServerExecute_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x214;
+		static const UINT32 TypeId = 0x210;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];
@@ -446,7 +366,7 @@ namespace pmod {
 	// uuid(d0343c17-e223-e0f9-be9b-472e7b649c14)
 	struct JsonProxyServerSendResult_LogRecordEnum
 	{
-		static const UINT32 TypeId = 0x215;
+		static const UINT32 TypeId = 0x211;
 		static PMOD_LIB_API const IID IIDType;
 		static PMOD_LIB_API const foundation::EnumTypeInfo EnumTypeInfo;
 		static const LPCSTR_t Names[];

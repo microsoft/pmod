@@ -1,0 +1,58 @@
+<Project DefaultTargets="codegen" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+
+  <PropertyGroup>
+
+    <Product>..\..\..\..\bin\Product</Product>
+    <pmodschemaparser>$(Product)\x86\Debug\pmodschemaparser.exe</pmodschemaparser>
+    <pmodcodegen>$(Product)\x86\Debug\pmodcodegen.exe</pmodcodegen>
+    <src>..\..\..</src>
+    <FoundationSchema>$(src)\foundation\schema</FoundationSchema>
+    <ModelSchema>$(src)\model\schema</ModelSchema>
+
+    <GrammarsDir>$(src)\codegen\parser\csharp\grammars\</GrammarsDir>
+
+    <!-- Foundation Errors properties-->
+    <FoundationErrorsSchema>$(FoundationSchema)\FoundationErrors.schema</FoundationErrorsSchema>
+    <FoundationErrorsIncFile>$(src)\public\inc\foundation\errors.h</FoundationErrorsIncFile>
+    <FoundationErrorsSrcFile>$(src)\__generated\foundation\FoundationErrorsTypeInfo.g.cpp</FoundationErrorsSrcFile>
+    <FoundationErrorsSchemaJson>$(Product)\__generated\FoundationErrorsSchema.json</FoundationErrorsSchemaJson>
+
+    <!-- Foundation Logger properties-->
+    <FoundationLoggerTypesIncFile>$(src)\public\inc\foundation\logger_type_info.h</FoundationLoggerTypesIncFile>
+    <FoundationLoggerTypesSrcFile>$(src)\__generated\foundation_library\FoundationLoggerTypeInfo.g.cpp</FoundationLoggerTypesSrcFile>
+    <FoundationLoggerTypesSchemaJson>$(Product)\__generated\FoundationLoggerTypesSchema.json</FoundationLoggerTypesSchemaJson>
+
+    <!-- Model Logger properties-->
+    <ModelLoggerTypesIncFile>$(src)\public\inc\pmod\logger_type_info.h</ModelLoggerTypesIncFile>
+    <ModelLoggerTypesSrcFile>$(src)\__generated\model_library\LoggerTypeInfo.g.cpp</ModelLoggerTypesSrcFile>
+    <ModelLoggerTypesSchemaJson>$(Product)\__generated\ModelLoggerTypesSchema.json</ModelLoggerTypesSchemaJson>
+
+  </PropertyGroup>
+
+  <Target Name="foundationErrors">
+
+    <!-- Generate Foundation Error Types -->
+    <Exec Command="$(pmodschemaparser) -pschema=$(FoundationErrorsSchema) -pgrammars=$(GrammarsDir) -poutput=$(FoundationErrorsSchemaJson)"/>
+    <Exec Command="$(pmodcodegen) gentypeinfo -pregisterEntryPoint=register_foundation_errors_type_info -pmodel=$(FoundationErrorsSchemaJson) -pprivate=true -pmodelInc=$(FoundationErrorsIncFile) -pmodelSrc=$(FoundationErrorsSrcFile) -pmodelapi=FOUNDATION_API -penumPrefixValues=false"/>
+    <Exec Command="$(pmodcodegen) genwinrtadapter -pmodelFactoryEntries=_foundationErrorsFactoryEntries -pmodel=$(FoundationErrorsSchemaJson) -pmodelAdapterIdl=$(src)\public\winrt\idl\FoundationErrors.g.idl -pmodelAdapterSrc=$(src)\__generated\winrt\FoundationErrors.winrt.g.cpp -pnamespacelookup=foundation:Microsoft.PropertyModel" />
+
+  </Target>
+  
+  <Target Name="foundationLogger">
+
+    <!-- Generate Foundation Logger Types -->
+    <Exec Command="$(pmodschemaparser) -pschema=$(FoundationSchema)\FoundationLoggerTypes.schema -pgrammars=$(GrammarsDir) -poutput=$(FoundationLoggerTypesSchemaJson)"/>
+    <Exec Command="$(pmodcodegen) gentypeinfo -pregisterEntryPoint=register_foundation_logger_type_info -pmodel=$(FoundationLoggerTypesSchemaJson) -pprivate=true -pmodelInc=$(FoundationLoggerTypesIncFile) -pmodelSrc=$(FoundationLoggerTypesSrcFile) -penumUniqueValues=true -pmodelapi=FOUNDATION_LIB_API" />
+
+  </Target>
+
+  <Target Name="modelLogger">
+
+    <!-- Generate Model Logger Types -->
+    <Exec Command="$(pmodschemaparser) -pschema=$(ModelSchema)\LoggerTypes.schema -pgrammars=$(GrammarsDir) -poutput=$(ModelLoggerTypesSchemaJson)"/>
+    <Exec Command="$(pmodcodegen) gentypeinfo -pregisterEntryPoint=register_core_logger_type_info -pmodel=$(ModelLoggerTypesSchemaJson) -pprivate=true -pmodelInc=$(ModelLoggerTypesIncFile) -pmodelSrc=$(ModelLoggerTypesSrcFile) -penumUniqueValues=true -pmodelapi=PMOD_LIB_API" />
+
+  </Target>
+
+</Project>
