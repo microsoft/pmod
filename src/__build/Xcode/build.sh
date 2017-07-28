@@ -5,9 +5,9 @@
 flavor=
 clean=
 build_target=
-iphonesimulator_sdk=iphonesimulator10.2
+iphonesimulator_sdk=iphonesimulator10.3
 
-while getopts ":t:c:b:s" opt; do
+while getopts ":t:c:b:s:" opt; do
     case "${opt}" in
     c)
         clean=clean
@@ -33,6 +33,7 @@ done
 echo "clean=${clean}"
 echo "flavor=${flavor}"
 echo "build_target=${build_target}"
+echo "sdk=${iphonesimulator_sdk}"
 #exit 1;
 
 projects=( "pmod" "pmod_lib" )
