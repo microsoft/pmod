@@ -48,6 +48,13 @@ bool CParserEngineUtil::loadSource(const char *filename, string& source)
 
     ifs.seekg(0, ios::beg);
     source.assign(istreambuf_iterator<char>(ifs), istreambuf_iterator<char>());
+
+    // detect BOM marker
+    if (source.length() >= 3 && source[0] == (char)0xEF || source[1] == (char)0xBB || source[2] == (char)0xBF)
+    {
+        source = source.substr(3);
+    }
+
     return true;
 }
 
