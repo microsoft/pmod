@@ -411,19 +411,19 @@
 				HEADER_SEARCH_PATHS = (
 					../../../../../../src/public/inc,
 					../../../../../../src/public/objectivec/PMODAdapter,
-					../../../../../../../github/cpprestsdk/Release/include,
-					../../../../../../../github/cpprestsdk/Build_iOS/boost.framework/Headers,
-					../../../../../../../github/cpprestsdk/Build_iOS/openssl/include,
+					../../../../../../../cpprestsdk/Release/include,
+					../../../../../../../cpprestsdk/Build_iOS/boost.framework/Headers,
+					../../../../../../../cpprestsdk/Build_iOS/openssl/include,
 				);
 				INFOPLIST_FILE = MoviesUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
 					../../../../../../bin/Products/iOS/Debug/iphonesimulator/libpmod.a,
 					../../../../../../bin/Products/iOS/Debug/iphonesimulator/libpmod_lib.a,
-					../../../../../../../github/cpprestsdk/Build_iOS/build.ios/build.x86_64/Binaries/Release/libcpprest.a,
-					../../../../../../../github/cpprestsdk/Build_iOS/boostoniphone/ios/build/x86_64/libboost.a,
-					../../../../../../../github/cpprestsdk/Build_iOS/openssl/lib/libcrypto.a,
-					../../../../../../../github/cpprestsdk/Build_iOS/openssl/lib/libssl.a,
+					../../../../../../../cpprestsdk/Build_iOS/build.ios/build.x86_64/Binaries/Release/libcpprest.a,
+					../../../../../../../cpprestsdk/Build_iOS/boostoniphone/ios/build/x86_64/libboost.a,
+					../../../../../../../cpprestsdk/Build_iOS/openssl/lib/libcrypto.a,
+					../../../../../../../cpprestsdk/Build_iOS/openssl/lib/libssl.a,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.MoviesUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,9 +437,9 @@
 				HEADER_SEARCH_PATHS = (
 					../../../../../../src/public/inc,
 					../../../../../../src/public/objectivec/PMODAdapter,
-					../../../../../../../github/cpprestsdk/Release/include,
-					../../../../../../../github/cpprestsdk/Build_iOS/boost.framework/Headers,
-					../../../../../../../github/cpprestsdk/Build_iOS/openssl/include,
+					../../../../../../../cpprestsdk/Release/include,
+					../../../../../../../cpprestsdk/Build_iOS/boost.framework/Headers,
+					../../../../../../../cpprestsdk/Build_iOS/openssl/include,
 				);
 				INFOPLIST_FILE = MoviesUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
