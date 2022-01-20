@@ -27,8 +27,10 @@ public:
 
     static void Create(Isolate* isolate, ICanExecuteChangedEventArgs *p, v8::Local<v8::Object>& instance)
     {
+        LocalContext context(isolate);
+
         CanExecuteChangedEventArgsWrap* obj = new CanExecuteChangedEventArgsWrap(p);
-        instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+        instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
         obj->Wrap(instance);
     }
 protected:
@@ -94,8 +96,10 @@ CommandWrap::~CommandWrap() {
 v8::Local<v8::Value> CommandWrap::Create(ICommand *p)
 {
     Isolate* isolate = Isolate::GetCurrent();
+    LocalContext context(isolate);
+
     CommandWrap* obj = new CommandWrap(p);
-    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
     obj->Wrap(instance);
     return instance;
 }
@@ -215,11 +219,12 @@ void CommandWrap::OnCanExecuteChangedCallback(ICanExecuteChangedEventArgs *pEven
     CanExecuteChangedEventArgsWrap::Create(isolate, pEventArgs, eventArgs);
     const unsigned argc = 1;
     Local<Value> argv[argc] = { eventArgs };
+    Local<Value> rcv = Undefined(isolate);
 
     for (auto iter = _canExecutedChangedCallbacks.begin(); iter != _canExecutedChangedCallbacks.end(); ++iter)
     {
         auto cb = Local<Function>::New(isolate, (*iter));
-        cb->Call(isolate->GetCurrentContext()->Global(), argc, argv);
+        cb->Call(isolate->GetCurrentContext(), rcv, argc, argv);
     }
 }
 

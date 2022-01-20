@@ -27,8 +27,9 @@ ObjectDispatchWrap::~ObjectDispatchWrap() {
 v8::Local<v8::Value> ObjectDispatchWrap::Create(IObjectDispatch *p)
 {
     Isolate* isolate = Isolate::GetCurrent();
+    LocalContext context(isolate);
     ObjectDispatchWrap* obj = new ObjectDispatchWrap(p);
-    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
     obj->Wrap(instance);
     return instance;
 }

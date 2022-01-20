@@ -32,7 +32,8 @@ v8::Local<v8::Value> DictionaryWrap::Create(foundation::IDictionary *p)
 {
     Isolate* isolate = Isolate::GetCurrent();
     DictionaryWrap* obj = new DictionaryWrap(p);
-    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+    LocalContext context(isolate);
+    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
     obj->Wrap(instance);
     return instance;
 }
@@ -65,11 +66,12 @@ void DictionaryWrap::New(const FunctionCallbackInfo<Value>& args) {
     obj->Wrap(args.This());
     args.GetReturnValue().Set(args.This());
   } else {
+    LocalContext context(isolate);
     // Invoked as plain function `MyObject(...)`, turn into construct call.
     const int argc = 1;
     Local<Value> argv[argc] = { args[0] };
     Local<Function> cons = Local<Function>::New(isolate, _constructor);
-    args.GetReturnValue().Set(cons->NewInstance(argc, argv));
+    args.GetReturnValue().Set(cons->NewInstance(context.local(), argc, argv).ToLocalChecked());
   }
 }
 

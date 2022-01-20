@@ -5,12 +5,12 @@
     <ProjectGuid>{07544345-4219-4162-A531-778F11E5608F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>pmod_node.node</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <TargetName>pmod_nodejs_4e</TargetName>
   </PropertyGroup>
@@ -30,7 +30,8 @@
   </ItemGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		<DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+		<PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SRC_DIR)\public\inc;$(NodeJsInc)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>

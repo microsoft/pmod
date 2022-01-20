@@ -21,10 +21,11 @@ void InspectableBaseWrap::Init(
     v8::FunctionCallback _new)
 {
     Isolate* isolate = Isolate::GetCurrent();
+    LocalContext context(isolate);
 
     // Prepare constructor template
     Local<FunctionTemplate> tpl = FunctionTemplate::New(isolate, _new);
-    tpl->SetClassName(String::NewFromUtf8(isolate, className));
+    tpl->SetClassName(String::NewFromUtf8(isolate, className).ToLocalChecked());
     tpl->InstanceTemplate()->SetInternalFieldCount(1);
 
     function.Reset(isolate, tpl);
@@ -32,9 +33,10 @@ void InspectableBaseWrap::Init(
     // Prototype
     (*_InitPrototypes)(tpl);
 
-    ctor.Reset(isolate, tpl->GetFunction());
-    exports->Set(String::NewFromUtf8(isolate, className),
-        tpl->GetFunction());
+    auto func = tpl->GetFunction(context.local());
+
+    ctor.Reset(isolate, func.ToLocalChecked());
+    exports->Set(context.local(), String::NewFromUtf8(isolate, className).ToLocalChecked(), func.ToLocalChecked());
 }
 
 void InspectableBaseWrap::SetPrototypeMethods(v8::Local<v8::FunctionTemplate>& tpl)

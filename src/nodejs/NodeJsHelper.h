@@ -44,7 +44,7 @@ bool ThrowIfArgumentFunction(
 
 static inline void ThrowErrorException(v8::Isolate* isolate,const char* errorMsg)
 {
-    isolate->ThrowException(v8::Exception::Error(v8::String::NewFromUtf8(isolate, errorMsg)));
+    isolate->ThrowException(v8::Exception::Error(v8::String::NewFromUtf8(isolate, errorMsg).ToLocalChecked()));
 }
 
 static inline void ThrowErrorExceptionWithFormat(v8::Isolate* isolate, const char* _Format, ...)
@@ -60,7 +60,7 @@ void ThrowHResultException(v8::Isolate* isolate, const CHAR_t *msg, HRESULT hr);
 
 static inline void ThrowTypeErrorException(v8::Isolate* isolate, const char* errorMsg)
 {
-    isolate->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8(isolate, errorMsg)));
+    isolate->ThrowException(v8::Exception::TypeError(v8::String::NewFromUtf8(isolate, errorMsg).ToLocalChecked()));
 }
 
 template <class T>
@@ -91,3 +91,34 @@ bool GetArgumentValue(
 #define _NODEJS_RETURN_VALUE_EXCP_(p) { if(FAILED(ReturnInspectableValue(isolate,p,args))) { ThrowErrorException(isolate,"NodeJsHelper::ReturnInspectableValue"); return; } }
 
 
+// A LocalContext holds a reference to a v8::Context.
+class LocalContext {
+public:
+    LocalContext(v8::Isolate* isolate,
+        v8::ExtensionConfiguration* extensions = nullptr,
+        v8::Local<v8::ObjectTemplate> global_template =
+        v8::Local<v8::ObjectTemplate>(),
+        v8::Local<v8::Value> global_object = v8::Local<v8::Value>()) {
+        Initialize(isolate, extensions, global_template, global_object);
+    }
+
+    virtual ~LocalContext();
+
+    v8::Context* operator->() {
+        return *reinterpret_cast<v8::Context**>(&context_);
+    }
+    v8::Context* operator*() { return operator->(); }
+    bool IsReady() { return !context_.IsEmpty(); }
+
+    v8::Local<v8::Context> local() const {
+        return v8::Local<v8::Context>::New(isolate_, context_);
+    }
+
+private:
+    void Initialize(v8::Isolate* isolate, v8::ExtensionConfiguration* extensions,
+        v8::Local<v8::ObjectTemplate> global_template,
+        v8::Local<v8::Value> global_object);
+
+    v8::Persistent<v8::Context> context_;
+    v8::Isolate* isolate_;
+};

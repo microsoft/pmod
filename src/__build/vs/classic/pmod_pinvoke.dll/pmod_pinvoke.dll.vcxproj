@@ -5,12 +5,12 @@
     <ProjectGuid>{AD2B0816-E5A1-4E06-888D-8054C83D9A94}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>pmod_pinvoke.dll</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <TargetName>pmod_pinvoke</TargetName>
   </PropertyGroup>

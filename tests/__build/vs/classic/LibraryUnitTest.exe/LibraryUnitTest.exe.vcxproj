@@ -37,7 +37,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{364F6532-DDBA-4E4F-A84F-FF555F5AF876}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProductConfiguration>$(Configuration)</ProductConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug Static'">
@@ -51,7 +51,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <TargetName>LibraryUnitTest</TargetName>
   </PropertyGroup>

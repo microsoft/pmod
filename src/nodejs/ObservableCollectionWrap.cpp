@@ -28,8 +28,10 @@ public:
 
     static void Create(Isolate* isolate, INotifyCollectionChangedEventArgs *p, v8::Local<v8::Object>& instance)
     {
+        LocalContext context(isolate);
+
         NotifyCollectionChangedEventArgsWrap* obj = new NotifyCollectionChangedEventArgsWrap(p);
-        instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+        instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
         obj->Wrap(instance);
     }
 protected:
@@ -142,8 +144,10 @@ ObservableCollectionWrap::~ObservableCollectionWrap() {
 v8::Local<v8::Value> ObservableCollectionWrap::Create(IObservableCollection *p)
 {
     Isolate* isolate = Isolate::GetCurrent();
+    LocalContext context(isolate);
+
     ObservableCollectionWrap* obj = new ObservableCollectionWrap(p);
-    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
     obj->Wrap(instance);
     return instance;
 }
@@ -240,11 +244,12 @@ void ObservableCollectionWrap::OnNotifyCollectionChangedCallback(INotifyCollecti
     NotifyCollectionChangedEventArgsWrap::Create(isolate, pEventArgs, eventArgs);
     const unsigned argc = 1;
     Local<Value> argv[argc] = { eventArgs };
+    Local<Value> rcv = Undefined(isolate);
 
     for (auto iter = _notifyCollectionChangedCallbacks.begin(); iter != _notifyCollectionChangedCallbacks.end(); ++iter)
     {
         auto cb = Local<Function>::New(isolate, (*iter));
-        cb->Call(isolate->GetCurrentContext()->Global(), argc, argv);
+        cb->Call(isolate->GetCurrentContext(), rcv, argc, argv);
     }
 }
 

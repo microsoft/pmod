@@ -28,8 +28,10 @@ public:
 
     static void Create(Isolate* isolate, IPropertyChangedEventArgs *p, v8::Local<v8::Object>& instance)
     {
+        LocalContext context(isolate);
+
         PropertyChangedEventArgsWrap* obj = new PropertyChangedEventArgsWrap(p);
-        instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+        instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
         obj->Wrap(instance);
     }
 protected:
@@ -109,8 +111,9 @@ ObservableObjectWrap::~ObservableObjectWrap() {
 v8::Local<v8::Value> ObservableObjectWrap::Create(IObservableObject *p)
 {
     Isolate* isolate = Isolate::GetCurrent();
+    LocalContext context(isolate);
     ObservableObjectWrap* obj = new ObservableObjectWrap(p);
-    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
     obj->Wrap(instance);
     return instance;
 }
@@ -162,11 +165,12 @@ void ObservableObjectWrap::OnPropertyChangedCallback(pmod::IPropertyChangedEvent
     PropertyChangedEventArgsWrap::Create(isolate, pEventArgs, eventArgs);
     const unsigned argc = 1;
     Local<Value> argv[argc] = { eventArgs };
+    Local<Value> rcv = Undefined(isolate);
 
     for (auto iter = _propertyChangesCallbacks.begin(); iter != _propertyChangesCallbacks.end(); ++iter)
     {
         auto cb = Local<Function>::New(isolate, (*iter));
-        cb->Call(isolate->GetCurrentContext()->Global(), argc, argv);
+        cb->Call(isolate->GetCurrentContext(), rcv, argc, argv);
     }
 }
 

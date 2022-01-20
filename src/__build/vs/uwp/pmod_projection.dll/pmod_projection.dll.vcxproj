@@ -10,14 +10,14 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.10586.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <TargetName>Microsoft.PropertyModel</TargetName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -71,7 +71,7 @@
     <MergedWinmdFiles Include="$(IntermediateOutputPath)\winmdfiles\Microsoft.PropertyModel.winmd" />
     <!-- Master winmd Files -->
     <MasterWinmdFiles Include="$(OutDir)\Microsoft.PropertyModel.winmd" />
-    <MasterWinmdFiles Include="$(WindowsSdkDir)\UnionMetadata\$(WindowsTargetPlatformVersion)\Windows.winmd" />
+    <MasterWinmdFiles Include="$(WindowsSdkDir)\UnionMetadata\$(WindowsTargetPlatformMinVersion)\Windows.winmd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\pmod.dll\pmod.dll.vcxproj">
@@ -81,7 +81,7 @@
   <Target Name="merge" AfterTargets="ClCompile" Inputs="$(SRC_DIR)\public\idl\Microsoft.PropertyModel.idl" Outputs="$(OutDir)\Microsoft.PropertyModel.winmd">
     <MakeDir Directories="$(IntermediateOutputPath)\winmdfiles" />
     <!-- Invoke mdmerge -->
-    <Exec Command="&quot;$(WindowsSdkDir)\bin\$(WindowsTargetPlatformVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir &quot;$(WindowsSdkDir)\UnionMetadata\$(WindowsTargetPlatformVersion)&quot; -i $(IntermediateOutputPath) -o $(IntermediateOutputPath)\winmdfiles" />
+    <Exec Command="&quot;$(WindowsSdkDir)\bin\$(WindowsTargetPlatformMinVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir &quot;$(WindowsSdkDir)\UnionMetadata\$(WindowsTargetPlatformMinVersion)&quot; -i $(IntermediateOutputPath) -o $(IntermediateOutputPath)\winmdfiles" />
     <Copy SourceFiles="@(MergedWinmdFiles)" DestinationFolder="$(OutDir)" />
     <!-- Create the 'Master' winmd file in our Output directory -->
     <MakeDir Directories="$(OutDir)\winmd" />

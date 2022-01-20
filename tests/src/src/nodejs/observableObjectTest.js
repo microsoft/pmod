@@ -26,7 +26,7 @@ var value = typeProperties.getProperty(6);
 console.log('Int Property:' + value);
 
 var propertyChangedFunc = function (evtArgs) {
-    console.log('PropertyChanged Property:' + evtArgs.getProperty());
+    console.log('PropertyChanged Property:' + evtArgs.getProperty() + ' new value:' + evtArgs.getNewValue());
 }
 
 typeProperties.addPropertyChanged(propertyChangedFunc);

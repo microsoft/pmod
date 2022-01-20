@@ -28,8 +28,9 @@ AsyncOperationWrap::~AsyncOperationWrap() {
 Local<Value> AsyncOperationWrap::Create(foundation::IAsyncOperation *p)
 {
     Isolate* isolate = Isolate::GetCurrent();
+    LocalContext context(isolate);
     AsyncOperationWrap* obj = new AsyncOperationWrap(p);
-    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance();
+    auto instance = Local<Function>::New(isolate, _constructor)->NewInstance(context.local()).ToLocalChecked();
     obj->Wrap(instance);
     return instance;
 }
@@ -137,9 +138,11 @@ void AsyncOperationWrap::OnCompletedCallback()
     Isolate* isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
 
+    Local<Value> rcv = Undefined(isolate);
+
     for(auto iter = _onCompletedCallbacks.begin();iter != _onCompletedCallbacks.end();++iter)
     {
         auto cb = Local<Function>::New(isolate, (*iter));
-        cb->Call(isolate->GetCurrentContext()->Global(), 0, nullptr);
+        cb->Call(isolate->GetCurrentContext(), rcv, 0, nullptr);
     }
 }

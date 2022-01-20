@@ -267,7 +267,7 @@ namespace utils
 
     template<>
     class Iterator<ABI::Windows::Foundation::DateTime>: 
-        public ValueTypeIterator<ABI::Windows::Foundation::DateTime>
+        public ValueTypeIterator<struct ABI::Windows::Foundation::DateTime>
     {
     };
 }

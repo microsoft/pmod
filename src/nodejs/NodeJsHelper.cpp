@@ -110,8 +110,9 @@ void ThrowHResultException(v8::Isolate* isolate, const CHAR_t *msg,HRESULT hr)
 
 HStringPtr ToHstringPtr(Local<Value>& value)
 {
-    v8::String::Value key(value->ToString());
-   return HStringPtr(reinterpret_cast<LPCSTR_t>(key.operator*()));
+    Isolate* isolate = Isolate::GetCurrent();
+    v8::String::Utf8Value utf8(isolate, value);
+    return HStringPtr(utf8.operator*());
 }
 
 #else
@@ -126,6 +127,8 @@ HStringPtr ToHstringPtr(Local<Value>& value)
 
 HRESULT ToFoundationValue(v8::Isolate* isolate, Local<Value>& value, foundation::IInspectable **ppValue)
 {
+    LocalContext context(isolate);
+
     if (value->IsNull())
     {
         *ppValue = nullptr;
@@ -145,15 +148,15 @@ HRESULT ToFoundationValue(v8::Isolate* isolate, Local<Value>& value, foundation:
     }
     else if (value->IsInt32())
     {
-        return pv_util::CreateInt32Value(value->Int32Value(), ppValue);
+        return pv_util::CreateInt32Value(value->Int32Value(context.local()).ToChecked(), ppValue);
     }
     else if (value->IsUint32())
     {
-        return pv_util::CreateInt32Value(value->Uint32Value(), ppValue);
+        return pv_util::CreateInt32Value(value->Uint32Value(context.local()).ToChecked(), ppValue);
     }
     else if (value->IsNumber())
     {
-        return pv_util::CreateDoubleValue(value->NumberValue(), ppValue);
+        return pv_util::CreateDoubleValue(value->NumberValue(context.local()).ToChecked(), ppValue);
     }
     else if (value->IsString())
     {
@@ -168,7 +171,7 @@ HRESULT ToFoundationValue(v8::Isolate* isolate, Local<Value>& value, foundation:
             ObservableCollectionWrap::IsInstanceOf(isolate, value) ||
             CommandWrap::IsInstanceOf(isolate, value))
         {
-            InspectableBaseWrap* pInspectableBaseWrap = node::ObjectWrap::Unwrap<InspectableBaseWrap>(value->ToObject());
+            InspectableBaseWrap* pInspectableBaseWrap = node::ObjectWrap::Unwrap<InspectableBaseWrap>(value->ToObject(context.local()).ToLocalChecked());
             foundation::IInspectable **pp = pInspectableBaseWrap->GetInspectablePtr();
             *ppValue = *pp;
             if (*pp != nullptr)
@@ -186,6 +189,8 @@ HRESULT InspectableArrayToLocalValue(
     foundation::InspectableArrayWrapper &array,
     v8::Local<v8::Value>& localValue)
 {
+    LocalContext context(isolate);
+
     // Create a new empty array.
     Handle<Array> hArray = Array::New(isolate, (int)array.GetSize());
 
@@ -198,7 +203,7 @@ HRESULT InspectableArrayToLocalValue(
     {
         Local<Value> localValue;
         _IFR_(InspectableToLocalValue(isolate, array[index], localValue));
-        hArray->Set(index, localValue);
+        hArray->Set(context.local(), index, localValue);
     }
 
     localValue = hArray;
@@ -291,7 +296,7 @@ HRESULT InspectableToLocalValue(
             HStringPtr value;
             _IFR_(pv_util::GetStringValue(pValue, value.GetAddressOf()));
 #ifdef __UTF16_STRINGS
-            localValue = v8::String::NewFromUtf8(isolate, foundation::to_utf8_string(value).c_str());
+            localValue = v8::String::NewFromUtf8(isolate, foundation::to_utf8_string(value).c_str()).ToLocalChecked();
 #else
             localValue = v8::String::NewFromUtf8(isolate, value.GetRawBuffer().c_str());
 #endif
@@ -392,3 +397,21 @@ HRESULT InspectableToLocalValue(
 }
 
 
+LocalContext::~LocalContext() {
+    v8::HandleScope scope(isolate_);
+    v8::Local<v8::Context>::New(isolate_, context_)->Exit();
+    context_.Reset();
+}
+
+void LocalContext::Initialize(v8::Isolate* isolate,
+    v8::ExtensionConfiguration* extensions,
+    v8::Local<v8::ObjectTemplate> global_template,
+    v8::Local<v8::Value> global_object) {
+    v8::HandleScope scope(isolate);
+    v8::Local<v8::Context> context =
+        v8::Context::New(isolate, extensions, global_template, global_object);
+    context_.Reset(isolate, context);
+    context->Enter();
+    // We can't do this later perhaps because of a fatal error.
+    isolate_ = isolate;
+}

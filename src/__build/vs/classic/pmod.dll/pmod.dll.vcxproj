@@ -5,12 +5,12 @@
     <ProjectGuid>{D60DD8F7-55F3-4336-955C-42633ACC4C7C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>pmod.dll</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <TargetName>pmod</TargetName>
   </PropertyGroup>

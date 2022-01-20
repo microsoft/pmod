@@ -152,6 +152,7 @@ void DispatcherWrap::SetPrototypeMethods(v8::Local<v8::FunctionTemplate>& tpl)
 void DispatcherWrap::New(const FunctionCallbackInfo<Value>& args) {
     Isolate* isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
+    LocalContext context(isolate);
 
     if (args.IsConstructCall()) {
         // Invoked as constructor: `new DispatcherWrap()`
@@ -164,6 +165,6 @@ void DispatcherWrap::New(const FunctionCallbackInfo<Value>& args) {
         const int argc = 1;
         Local<Value> argv[argc] = { args[0] };
         Local<Function> cons = Local<Function>::New(isolate, _constructor);
-        args.GetReturnValue().Set(cons->NewInstance(argc, argv));
+        args.GetReturnValue().Set(cons->NewInstance(context.local(), argc, argv).ToLocalChecked());
     }
 }

@@ -114,7 +114,8 @@ private:
             _current_position((unsigned int)-1)
         {
         }
-        inline LPVOID operator*()
+
+        inline LPVOID operator*() const
         {
             return _pItemsContainer ? _pItemsContainer->GetItemSlotValuePtr(_current_position):nullptr;
         }

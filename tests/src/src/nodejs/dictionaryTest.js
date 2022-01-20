@@ -3,14 +3,16 @@ console.log('pmodNodeJs:' + pmodNodeJs);
 
 var pmod = require(pmodNodeJs + 'pmod_nodejs');
 
+pmod.loadLibrary('foo');
+
 //Next, create a new instance of our object:
 var dictionary = new pmod.Dictionary();
 
+dictionary.insert('str', 'rodrigov');
 dictionary.insert('int', 100);
 dictionary.insert('double', 4.5);
 dictionary.insert('yes', true);
 dictionary.insert('false', false);
-dictionary.insert('str', 'rodrigov');
 
 var oChild = new pmod.Dictionary();
 oChild.insert('int', 200);

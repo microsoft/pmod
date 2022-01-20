@@ -56,10 +56,6 @@ namespace Microsoft.PropertyModel
     declare
     {
         // IVector<T>
-#if defined(_WINDOWS_PHONE_80) || defined(_WINDOWS_PHONE_81)
-        interface Windows.Foundation.Collections.IVector<DOUBLE>;
-        interface Windows.Foundation.Collections.IVector<FLOAT>;
-#endif
 #if !defined(_UWP)
         interface Windows.Foundation.Collections.IVector<INT32>;
         interface Windows.Foundation.Collections.IVector<UINT32>;
@@ -92,6 +88,22 @@ namespace Microsoft.PropertyModel
         interface Windows.Foundation.IAsyncOperation<IDictionary*>;
 
     }
+
+    // Note: next interface serve the puprose to make the IDL compiler to generate interface GUID
+    // declarations on our header declaration file
+    [version(NTDDI_WIN8)]
+    [uuid(AAAE2FC4-8155-4017-B2BA-C1E65A5E1A75)]
+    interface IStubGeneration : IInspectable
+    {
+        HRESULT GetVectorUInt32([out][retval] Windows.Foundation.Collections.IVector<UINT32>** result);
+        HRESULT GetAsyncOperationInt32([out][retval] Windows.Foundation.IAsyncOperation<INT32>** result);
+        HRESULT GetAsyncOperationInt64([out][retval] Windows.Foundation.IAsyncOperation<INT64>** result);
+        HRESULT GetAsyncOperationUInt64([out][retval] Windows.Foundation.IAsyncOperation<UINT64>** result);
+        HRESULT GetIterableDouble([out][retval] Windows.Foundation.Collections.IIterable<DOUBLE>** result);
+        HRESULT GetIterableDateTime([out][retval] Windows.Foundation.Collections.IIterable<Windows.Foundation.DateTime>** result);
+        HRESULT GetVectorViewDouble([out][retval] Windows.Foundation.Collections.IVectorView<DOUBLE>** result);
+        HRESULT GetVectorViewDateTime([out][retval] Windows.Foundation.Collections.IVectorView<Windows.Foundation.DateTime>** result);
+    };
 
     ///////////////////////////// Delegates defined ////////////////////////////////
     [version(NTDDI_WIN8)]
