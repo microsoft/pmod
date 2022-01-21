@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-	  <NodeGyp>C:\Users\rodrigov\AppData\Local\node-gyp\Cache\16.0.0</NodeGyp>
-	  <NodeJsInc>$(NodeGyp)\include\node</NodeJsInc>
-    <NodeJsLibx86>$(NodeGyp)\ia32</NodeJsLibx86>
-    <NodeJsLibx64>$(NodeGyp)\x64</NodeJsLibx64>
-  </PropertyGroup>
+	<PropertyGroup>
+		<ElectronGyp>C:\Users\rodrigov\.electron-gyp\16.0.7</ElectronGyp>
+		<NodeJsInc>$(ElectronGyp)\include\node</NodeJsInc>
+		<NodeJsLibx86>$(ElectronGyp)\ia32</NodeJsLibx86>
+		<NodeJsLibx64>$(ElectronGyp)\x64</NodeJsLibx64>
+	</PropertyGroup>
 
 </Project>

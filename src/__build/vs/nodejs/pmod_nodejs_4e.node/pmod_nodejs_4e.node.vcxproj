@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup Label="Globals">
+		<Product>Product\electron</Product>
+		<IntDirPrefix>electron</IntDirPrefix>
+	</PropertyGroup>
   <Import Project="..\..\cpp.configs.props" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>{07544345-4219-4162-A531-778F11E5608F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>pmod_node.node</RootNamespace>
+    <RootNamespace>pmod.node</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -12,7 +16,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <TargetName>pmod_nodejs_4e</TargetName>
+    <TargetName>pmod</TargetName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="Shared">
@@ -21,6 +25,18 @@
   <Import Project="..\nodejs.cpp.props" />
   <Import Project="nodejs.props" />
   <PropertyGroup>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <CustomBuildStep>
+      <Command>
+				copy $(OutDir)..\..\..\classic\$(PlatformTarget)\$(Configuration)\pmod.dll "$(OutDir)"
+				copy $(OutDir)..\..\..\classic\$(PlatformTarget)\$(Configuration)\pmod_lib.dll "$(OutDir)"
+			</Command>
+      <Outputs>$(OutDir)\pmod.dll;$(OutDir)\pmod_lib.dll</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <PropertyGroup>
     <TargetExt>.node</TargetExt>
   </PropertyGroup>
   <ItemGroup>
@@ -28,16 +44,24 @@
       <Project>{d60dd8f7-55f3-4336-955c-42633acc4c7c}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="win_delay_load_hook.cc">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-		<DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-		<PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SRC_DIR)\public\inc;$(NodeJsInc)</AdditionalIncludeDirectories>
+        <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+        <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=pmod_nodejs;USING_UV_SHARED=1;USING_V8_SHARED=1;_GLIBCXX_USE_CXX11_ABI=1;V8_COMPRESS_POINTERS;V8_COMPRESS_POINTERS_IN_ISOLATE_CAGE;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_REVERSE_JSARGS;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;OPENSSL_NO_ASM;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;V8_ENABLE_CHECKS;%(PreprocessorDefinitions)</PreprocessorDefinitions>		
+        <AdditionalIncludeDirectories>$(SRC_DIR)\public\inc;$(NodeJsInc)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories Condition="'$(Platform)'=='Win32'">$(NodeJsLibx86)</AdditionalLibraryDirectories>
       <AdditionalLibraryDirectories Condition="'$(Platform)'=='x64'">$(NodeJsLibx64)</AdditionalLibraryDirectories>
       <AdditionalDependencies>node.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4199 %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

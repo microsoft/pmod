@@ -1,9 +1,7 @@
-var pmodNodeJs = process.argv[2];
-console.log('pmodNodeJs:' + pmodNodeJs);
+var pmodPath = process.argv[2];
+console.log('pmodPath:' + pmodPath);
 
-var pmod = require(pmodNodeJs + 'pmod_nodejs');
-
-pmod.loadLibrary('foo');
+var pmod = require(pmodPath + 'pmod');
 
 //Next, create a new instance of our object:
 var dictionary = new pmod.Dictionary();
