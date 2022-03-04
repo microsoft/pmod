@@ -11,8 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\Debug\dynamic\pmod.dll" />
-    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\Debug\dynamic\pmod_lib.dll" />
     <None Include="DemoApp.def" />
   </ItemGroup>
   <ItemGroup>

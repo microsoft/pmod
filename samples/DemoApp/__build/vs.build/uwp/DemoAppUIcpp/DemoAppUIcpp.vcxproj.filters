@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DemoAppUIcpp_TemporaryKey.pfx" />
-    <None Include="..\..\..\..\..\..\bin\Product\uwp\x86\Debug\pmod.dll" />
-    <None Include="..\..\..\..\..\..\bin\Product\uwp\x86\Debug\pmod_lib.dll" />
+    <None Include="..\..\..\..\..\..\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\pmod.dll" />
+    <None Include="..\..\..\..\..\..\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\pmod_lib.dll" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />

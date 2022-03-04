@@ -5,13 +5,13 @@
     <ProjectGuid>{AAC2B333-7329-4F74-A292-134014DEDA0D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DemoApp</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <PmodNuGetVersion>1.0.3-pre-g72960da81c</PmodNuGetVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <TargetName>DemoApp</TargetName>
   </PropertyGroup>

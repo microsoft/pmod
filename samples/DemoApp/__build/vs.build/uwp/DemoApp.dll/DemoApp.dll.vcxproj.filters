@@ -7,20 +7,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\DemoApp\DemoAppTypeInfo.g.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\DemoApp\DemoAppInterfaces.g.cpp" />
     <ClCompile Include="..\..\..\..\src\cpp\AppClass.cpp" />
     <ClCompile Include="..\..\..\..\src\cpp\ItemClass.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\bin\samples\__generated\DemoApp\DemoAppFastInternal.g.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="$(GeneratedDir)\DemoAppFastInternal.g.cpp" />
+    <ClCompile Include="$(GeneratedDir)\DemoAppInterfaces.g.cpp" />
+    <ClCompile Include="$(GeneratedDir)\DemoAppTypeInfo.g.cpp" />
+    <ClCompile Include="$(GeneratedDir)\DemoApp.winrt.g.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\DemoApp\DemoAppTypeInfo.g.h" />
-    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\DemoApp\DemoAppInterfaces.g.h" />
     <ClInclude Include="..\..\..\..\src\cpp\AppClass.h" />
     <ClInclude Include="..\..\..\..\src\cpp\ItemClass.h" />
     <ClInclude Include="..\..\..\..\src\cpp\pch.h" />
-    <ClInclude Include="..\..\..\..\..\..\bin\samples\__generated\DemoApp\DemoAppFastInternal.g.h" />
+    <ClInclude Include="$(GeneratedDir)\DemoAppFastInternal.g.h" />
+    <ClInclude Include="$(GeneratedDir)\DemoAppInterfaces.g.h" />
+    <ClInclude Include="$(GeneratedDir)\DemoAppTypeInfo.g.h" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="DemoApp.idl" />
