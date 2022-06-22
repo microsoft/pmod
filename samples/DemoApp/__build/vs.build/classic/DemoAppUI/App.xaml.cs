@@ -1,10 +1,5 @@
-/***
-* Copyright (C) Microsoft. All rights reserved.
-* Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
-*
-* File:App.xaml.cs
-****/
-#define NOLIB_IMPL
+﻿#define NOLIB_IMPL
+
 using DemoApp.Net;
 using Microsoft.PropertyModel;
 using System;
@@ -12,9 +7,9 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows;
+
 
 namespace DemoAppUI
 {
@@ -40,5 +35,6 @@ namespace DemoAppUI
 #endif
             base.OnStartup(e);
         }
+
     }
 }

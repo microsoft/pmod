@@ -1,10 +1,4 @@
-/***
-* Copyright (C) Microsoft. All rights reserved.
-* Licensed under the MIT license. See LICENSE.txt file in the project root for full license information.
-*
-* File:MainWindow.xaml.cs
-****/
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -63,7 +57,6 @@ namespace DemoAppUI
         {
             System.GC.Collect();
             System.GC.Collect();
-        }
-
+        } 
     }
 }

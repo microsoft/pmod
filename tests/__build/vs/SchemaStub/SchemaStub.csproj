@@ -1,87 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27700B10-B08B-43F7-A545-59B39F86CD7E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SchemaStub</RootNamespace>
-    <AssemblyName>SchemaStub</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup>
-    <BaseIntermediateOutputPath>..\..\..\..\bin\tests\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-    <IntermediateOutputPath Condition=" '$(PlatformName)' == 'AnyCPU' ">$(BaseIntermediateOutputPath)\$(Configuration)\</IntermediateOutputPath>
-    <OutputPath>..\..\..\..\bin\tests\</OutputPath>
-    <SchemasDirPath>$(MSBuildProjectDirectory)\..\..\..\src\schemas</SchemasDirPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.PropertyModel.Codegen">
-      <HintPath>..\..\..\..\bin\Product\$(Configuration)\Microsoft.PropertyModel.Codegen.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\..\src\schemas\CommandTypes.cs">
-      <Link>CommandTypes.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\schemas\EnumTypes.cs">
-      <Link>EnumTypes.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\schemas\MethodSupport.cs">
-      <Link>MethodSupport.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\schemas\StructTypes.cs">
-      <Link>StructTypes.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\schemas\TestFactory.cs">
-      <Link>TestFactory.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\schemas\TypeProperties.cs">
-      <Link>TypeProperties.cs</Link>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\src\schemas\test_model.schema">
-      <Link>test_model.schema</Link>
-    </None>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <Target Name="AfterBuild">
-    <Exec Command="..\..\..\..\bin\Product\x86\Debug\pmodcodegentask.exe -pModelSchema=$(SchemasDirPath)\test_model.schema -pConfigFile=$(SchemasDirPath)\test_model_codegen_config.json -pModelSchemaAttributes=$(SchemasDirPath)\test_model_attributes.json -pProductName=TestModel -pSchemaCheckDependencies=false -pOutputDir=$(MSBuildProjectDirectory)\..\..\..\..\bin\tests\__generated -pJavaPackageName=com.microsoft.testmodel" />
-  </Target>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<OutputName>$(MSBuildProjectName)_Test</OutputName>
+		<SchemasDirPath>$(MSBuildProjectDirectory)\..\..\..\src\schemas</SchemasDirPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\..\src\schemas\*.cs">
+			<Link>%(RecursiveDir)/%(FileName)%(Extension)</Link>
+		</Compile>
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Microsoft.PropertyModel.Codegen">
+			<HintPath>$(REPO_ROOT)\bin\Product\$(Configuration)\Microsoft.PropertyModel.Codegen\Microsoft.PropertyModel.Codegen.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="$(REPO_ROOT)\bin\Product\x64\Debug\pmodcodegentask.exe -pModelSchema=$(SchemasDirPath)\test_model.schema -pConfigFile=$(SchemasDirPath)\test_model_codegen_config.json -pModelSchemaAttributes=$(SchemasDirPath)\test_model_attributes.json -pProductName=TestModel -pSchemaCheckDependencies=false -pOutputDir=$(MSBuildProjectDirectory)\..\..\..\..\bin\tests\__generated -pJavaPackageName=com.microsoft.testmodel" />
+	</Target>
 </Project>

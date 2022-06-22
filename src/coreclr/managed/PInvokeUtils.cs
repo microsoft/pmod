@@ -43,7 +43,7 @@ namespace Microsoft.PropertyModel
             IntPtr pStr = IntPtr.Zero;
             int result = pInvokeAction(ref pStr);
             ThrowIfResult(result);
-#if _WINDOWS
+#if true || _WINDOWS
             string str = Marshal.PtrToStringUni(pStr);
 #else
             string str = Marshal.PtrToStringAnsi(pStr);

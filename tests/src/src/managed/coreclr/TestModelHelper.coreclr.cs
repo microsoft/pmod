@@ -11,7 +11,7 @@ namespace Microsoft.PropertyModel.Test
 {
     internal partial class TestModelHelper
     {
-        [DllImport("TestModel.dll")]
+        [DllImport("TestModelLib.dll")]
         private static extern int LoadLibraryStub();
 
         private static void RegisterTypes()

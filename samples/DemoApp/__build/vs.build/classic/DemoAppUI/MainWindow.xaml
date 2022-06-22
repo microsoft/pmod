@@ -6,38 +6,38 @@
         xmlns:local="clr-namespace:DemoAppUI"
         mc:Ignorable="d"
         Title="DemoApp sample" Height="350" Width="525">
+    
+    <Window.Resources>
+        <local:VisibilityConverter x:Key="VisibilityConverter" />
+    </Window.Resources>
 
-  <Window.Resources>
-    <local:VisibilityConverter x:Key="VisibilityConverter" />
-  </Window.Resources>
-  
     <Grid>
-      <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="*" />
-      </Grid.RowDefinitions>
-      <StackPanel Orientation="Horizontal" >
-        <TextBlock Text="Item Name:"  />
-        <TextBox x:Name="tbName" Text="rodrigov@microsoft.com" Width="150" />
-        <Button Content="Add" Command="{Binding AddItem}" CommandParameter="{Binding Text, ElementName=tbName}"/>
-        <Button x:Name="btnRemove" Content="Remove" IsEnabled="False" Click="btnRemove_Click" />
-        <Button x:Name="btnRemoveAll" Content="Remove All" Command="{Binding ClearItems}" />
-        <Button x:Name="btnCollect" Content="GC" Click="btnCollect_Click" />
-      </StackPanel>
-      <Grid Grid.Row="1">
-        <ListView x:Name="lbCurrentItems" SelectionMode="Single"  Grid.Column="0" ItemsSource="{Binding Items}">
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <TextBlock Text="{Binding Name}" />
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
-        <TextBlock
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" >
+            <TextBlock Text="Item Name:"  />
+            <TextBox x:Name="tbName" Text="rodrigov@microsoft.com" Width="150" />
+            <Button Content="Add" Command="{Binding AddItem}" CommandParameter="{Binding Text, ElementName=tbName}"/>
+            <Button x:Name="btnRemove" Content="Remove" IsEnabled="False" Click="btnRemove_Click" />
+            <Button x:Name="btnRemoveAll" Content="Remove All" Command="{Binding ClearItems}" />
+            <Button x:Name="btnCollect" Content="GC" Click="btnCollect_Click" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <ListView x:Name="lbCurrentItems" SelectionMode="Single"  Grid.Column="0" ItemsSource="{Binding Items}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TextBlock
           Text="No Items"
           Visibility="{Binding Items.IsEmpty, Converter={StaticResource VisibilityConverter}}"
           HorizontalAlignment="Center"
           VerticalAlignment="Center" />
-      </Grid>
+        </Grid>
 
     </Grid>
 </Window>

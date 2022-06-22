@@ -16,7 +16,7 @@ namespace Microsoft.PropertyModel
         internal delegate int HasThreadAccessCallback(ref byte result);
         internal delegate int RunAsyncCallback(IntPtr pDelegateDispatchable, IntPtr pAsyncOperation);
 
-#if _WINDOWS
+#if true || _WINDOWS
         const string _DllImport = "pmod_pinvoke";
         const CharSet _PlatformCharSet = CharSet.Unicode;
 #else

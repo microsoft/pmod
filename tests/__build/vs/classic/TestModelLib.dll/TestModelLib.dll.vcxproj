@@ -35,7 +35,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;_WINDOWS_CLASSIC;MODEL_API_EXPORT;MODEL_ADAPTER_API_EXPORT;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SRC_DIR)\public\inc;..\..\..\..\..\bin\tests\__generated</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>

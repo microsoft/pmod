@@ -18,10 +18,10 @@ namespace Microsoft.PropertyModel.Test
             TestModelHelper.EnsureRegisterTypes();
 
             var typeProperties = ActivateHelper.Activate<
-#if _CORECLR
-                TypeProperties
-#else
+#if WINDOWS_UWP
                 ITypeProperties
+#else
+                TypeProperties
 #endif
                 >(TypeInfo.TypePropertiesType, null);
             // Enum Property

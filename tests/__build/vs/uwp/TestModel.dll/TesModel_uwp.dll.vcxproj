@@ -68,9 +68,9 @@
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <Target Name="merge" AfterTargets="ClCompile" Inputs="$(GeneratedDir)\TestModel.g.idl" Outputs="$(OutDir)\TestModel.winmd">
+	<Target Name="merge" AfterTargets="ClCompile" Inputs="$(GeneratedDir)\TestModel.g.idl" Outputs="$(OutDir)\TestModel.winmd">
     <!-- Invoke mdmerge -->
-    <Exec Command="&quot;$(WindowsSdkDir)bin\$(WindowsTargetPlatformVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir $(REPO_ROOT)\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\winmd -i .\ -o $(OutDir)" />
+    <Exec Command="&quot;$(WindowsSdkDir)\bin\$(WindowsTargetPlatformMinVersion)\x86\mdmerge.exe&quot; -partial -n -1 -metadata_dir $(REPO_ROOT)\bin\Product\uwp\$(PlatformTarget)\$(Configuration)\winmd -i .\ -o $(OutDir)" />
   </Target>
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
